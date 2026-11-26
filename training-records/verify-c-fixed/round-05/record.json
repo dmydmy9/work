@@ -1,0 +1,140 @@
+{
+  "candidate_metrics": {},
+  "decision": {
+    "change_summary": "C continuation actions [].",
+    "configuration": {
+      "context": {
+        "available": {
+          "accelerated-5": "double the official learning rate",
+          "conservative-5": "lower the official learning rate by four",
+          "engine-balanced-5": "sample engines with equal probability at the official rate",
+          "official-5": "continue at the official learning rate"
+        },
+        "budget": {
+          "actions": 1,
+          "max_output_tokens": 128,
+          "wall_seconds": 60
+        },
+        "history": {
+          "current": [
+            {
+              "action": "regime-kernel-5",
+              "first_round": 2,
+              "gain": -0.007296194387578225,
+              "rmse": 49.122502972797
+            }
+          ],
+          "prior": [
+            {
+              "outcomes": [
+                {
+                  "action": "regime-kernel-5",
+                  "first_round": 1,
+                  "gain": 3.753365787702087,
+                  "rmse": 49.11520677840942
+                }
+              ],
+              "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+            }
+          ]
+        },
+        "parent": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+        "parent_metrics": {
+          "mae": 35.19305791821807,
+          "nasa_score": 2104493920.3744612,
+          "rmse": 49.11520677840942
+        },
+        "preference": [
+          "conservative-5",
+          "official-5",
+          "engine-balanced-5",
+          "accelerated-5"
+        ],
+        "profile": "C",
+        "round": 5
+      },
+      "cpu_seconds": 1.3177506540000001,
+      "execution": {
+        "optimizer_steps": 0,
+        "reused_candidates": 0,
+        "reused_scores": 0,
+        "scored_candidates": 0,
+        "trained_candidates": 0,
+        "training_rows": 0
+      },
+      "host_candidate_rmse": null,
+      "parent_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+      "parent_metrics": {
+        "mae": 35.19305791821807,
+        "nasa_score": 2104493920.3744612,
+        "rmse": 49.11520677840942
+      },
+      "plan": {
+        "actions": [],
+        "expected": "Reduce validation RMSE.",
+        "failure": "Retain the parent without an improvement.",
+        "hypothesis": "Compare an allowed continuation with the current parent."
+      },
+      "planner_fallback": false,
+      "profile": "C",
+      "selected_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+      "selected_rmse": 49.11520677840942,
+      "trials": []
+    },
+    "history_ids": [
+      "C-round-01",
+      "C-round-02",
+      "C-round-03",
+      "C-round-04"
+    ],
+    "hypothesis": "Compare an allowed continuation with the current parent.",
+    "model_call_ids": [
+      "school-wire-call-5"
+    ],
+    "reason": "Parent RMSE 49.115207, selected RMSE 49.115207 cycles.",
+    "seed": 42,
+    "selected_artifact_id": "candidate-01"
+  },
+  "metrics": {
+    "mae": 35.19305791821807,
+    "nasa_score": 2104493920.3744614,
+    "rmse": 49.11520677840943
+  },
+  "requests": [
+    "history_request",
+    "model_request",
+    "upload_begin_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_finish_request",
+    "state_request",
+    "round_complete"
+  ],
+  "round": 5
+}

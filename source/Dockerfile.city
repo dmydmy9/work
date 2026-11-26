@@ -1,0 +1,23 @@
+# syntax=docker/dockerfile:1
+FROM python:3.11-slim@sha256:61e01f72680f86a5279ad510818ab7b2ee9f049822589d4e34e33e044360356c
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    OPENBLAS_NUM_THREADS=1 \
+    OMP_NUM_THREADS=1 \
+    CONTEST_SUBMISSION=school_city_submission
+
+COPY --from=contest_sdk pyproject.toml README.md /opt/contest-sdk/
+COPY --from=contest_sdk contest_harness/*.py /opt/contest-sdk/contest_harness/
+RUN python -m pip install --no-cache-dir numpy==1.26.4 /opt/contest-sdk
+
+WORKDIR /app
+COPY --from=contest_sdk template/harness.py /app/harness.py
+COPY --from=baselines __init__.py model.py data.py predict.py /app/baselines/
+COPY --from=frozen_a contest_submission.py school_cache.py /app/a_frozen/
+COPY school_city_submission.py school_c_submission.py school_c_recipes.py school_c_kernel.py /app/
+COPY school_b_submission.py school_b_adaptation.py school_b_transfer.py school_b_histograms.py /app/
+COPY school_runtime.py school_cache.py school_profile.py school_planner.py /app/
+RUN mkdir -p /workspace && chown 65534:65534 /workspace
+USER 65534:65534
+ENTRYPOINT ["python3", "/app/harness.py"]

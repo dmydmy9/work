@@ -1,0 +1,1441 @@
+{
+  "arm": "dynamic",
+  "final": {
+    "mae": 38.11613074737875,
+    "nasa_score": 3788806796.491436,
+    "rmse": 51.876215725099165
+  },
+  "image": "sha256:1198c8a8fab53f1aee1f9720d5542e2b43d845fe48de892ab454394983ae6578",
+  "model_call_source": "native_pytrio",
+  "official": {
+    "mae": 38.89982982666355,
+    "nasa_score": 5823439325.342465,
+    "rmse": 52.86857256611151
+  },
+  "rounds": [
+    {
+      "candidate_metrics": {
+        "candidate-01": {
+          "mae": 38.11613074737875,
+          "nasa_score": 3788806796.491436,
+          "rmse": 51.876215725099165
+        }
+      },
+      "decision": {
+        "change_summary": "C continuation actions ['conservative-5'].",
+        "configuration": {
+          "context": {
+            "available": {
+              "accelerated-5": "double the official learning rate",
+              "conservative-5": "lower the official learning rate by four",
+              "engine-balanced-5": "sample engines with equal probability at the official rate",
+              "official-5": "continue at the official learning rate"
+            },
+            "budget": {
+              "actions": 1,
+              "max_output_tokens": 128,
+              "wall_seconds": 60
+            },
+            "history": {
+              "current": [],
+              "prior": []
+            },
+            "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e",
+            "parent_metrics": {
+              "mae": 38.899829826663556,
+              "nasa_score": 5823439325.3424635,
+              "rmse": 52.86857256611151
+            },
+            "preference": [
+              "conservative-5",
+              "official-5",
+              "engine-balanced-5",
+              "accelerated-5"
+            ],
+            "profile": "C",
+            "round": 1
+          },
+          "cpu_seconds": 8.285902948,
+          "execution": {
+            "optimizer_steps": 2210,
+            "reused_candidates": 0,
+            "reused_scores": 0,
+            "scored_candidates": 1,
+            "trained_candidates": 1,
+            "training_rows": 565445
+          },
+          "host_candidate_rmse": 51.876215725099165,
+          "parent_checkpoint_sha256": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e",
+          "parent_metrics": {
+            "mae": 38.899829826663556,
+            "nasa_score": 5823439325.3424635,
+            "rmse": 52.86857256611151
+          },
+          "plan": {
+            "actions": [
+              "conservative-5"
+            ],
+            "expected": "RMSE decreases below 52.87.",
+            "failure": "RMSE increases or training diverges.",
+            "hypothesis": "Lowering the learning rate stabilizes training and reduces RMSE."
+          },
+          "planner_fallback": false,
+          "profile": "C",
+          "selected_checkpoint_sha256": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+          "selected_rmse": 51.876215725099165,
+          "trials": [
+            {
+              "actual_optimizer_steps": 2210,
+              "actual_training_rows": 565445,
+              "cache": {
+                "checkpoint_sha256": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+                "prediction_sha256": "16bf9163c3f66eb2581262a790dedcd40ccf54072cb3d5c743f8822369691193",
+                "score_first_round": 1,
+                "score_key": "222b6f073c8cdb9d79c331f04125d847152eee2c8df956bebae74f84c68a3fb4",
+                "score_reused_from_round": null,
+                "training_key": "2940a578ce55f4ba3a30f409c21e5a4c3fe65332486481d533241633578edaa1",
+                "training_reused_from_round": null
+              },
+              "final_steps": 8840,
+              "initial_steps": 6630,
+              "mae": 38.11613074737875,
+              "nasa_score": 3788806796.491438,
+              "recipe": "conservative-5",
+              "rmse": 51.876215725099165,
+              "training_rows": 565445
+            }
+          ]
+        },
+        "history_ids": [],
+        "hypothesis": "Lowering the learning rate stabilizes training and reduces RMSE.",
+        "model_call_ids": [
+          "school-wire-call-1"
+        ],
+        "reason": "Parent RMSE 52.868573, selected RMSE 51.876216 cycles.",
+        "seed": 42,
+        "selected_artifact_id": "candidate-01"
+      },
+      "metrics": {
+        "mae": 38.11613074737875,
+        "nasa_score": 3788806796.491436,
+        "rmse": 51.876215725099165
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "candidate_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 1
+    },
+    {
+      "candidate_metrics": {
+        "candidate-02": {
+          "mae": 38.11178205771577,
+          "nasa_score": 4174251540.3254304,
+          "rmse": 51.96513834459032
+        }
+      },
+      "decision": {
+        "change_summary": "C continuation actions ['conservative-5'].",
+        "configuration": {
+          "context": {
+            "available": {
+              "accelerated-5": "double the official learning rate",
+              "conservative-5": "lower the official learning rate by four",
+              "engine-balanced-5": "sample engines with equal probability at the official rate",
+              "official-5": "continue at the official learning rate"
+            },
+            "budget": {
+              "actions": 1,
+              "max_output_tokens": 128,
+              "wall_seconds": 60
+            },
+            "history": {
+              "current": [],
+              "prior": [
+                {
+                  "outcomes": [
+                    {
+                      "action": "conservative-5",
+                      "first_round": 1,
+                      "gain": 0.9923568410123451,
+                      "rmse": 51.876215725099165
+                    }
+                  ],
+                  "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+                }
+              ]
+            },
+            "parent": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+            "parent_metrics": {
+              "mae": 38.11613074737875,
+              "nasa_score": 3788806796.491438,
+              "rmse": 51.876215725099165
+            },
+            "preference": [
+              "conservative-5",
+              "official-5",
+              "engine-balanced-5",
+              "accelerated-5"
+            ],
+            "profile": "C",
+            "round": 2
+          },
+          "cpu_seconds": 8.840477206000001,
+          "execution": {
+            "optimizer_steps": 2210,
+            "reused_candidates": 0,
+            "reused_scores": 0,
+            "scored_candidates": 1,
+            "trained_candidates": 1,
+            "training_rows": 565445
+          },
+          "host_candidate_rmse": 51.96513834459032,
+          "parent_checkpoint_sha256": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+          "parent_metrics": {
+            "mae": 38.11613074737875,
+            "nasa_score": 3788806796.491438,
+            "rmse": 51.876215725099165
+          },
+          "plan": {
+            "actions": [
+              "conservative-5"
+            ],
+            "expected": "RMSE decreases below 51.87.",
+            "failure": "RMSE increases or training diverges.",
+            "hypothesis": "Lowering the learning rate stabilizes training and reduces RMSE."
+          },
+          "planner_fallback": false,
+          "profile": "C",
+          "selected_checkpoint_sha256": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+          "selected_rmse": 51.876215725099165,
+          "trials": [
+            {
+              "actual_optimizer_steps": 2210,
+              "actual_training_rows": 565445,
+              "cache": {
+                "checkpoint_sha256": "sha256:e282dbd67453570473daa940750ec4e09d949960e4b90b7dfb374bc1e085f133",
+                "prediction_sha256": "b5ccf88da005d8e82b96b0834093073b48e63a161cdec393cd906cd7c5ed11ed",
+                "score_first_round": 2,
+                "score_key": "87f2013e5968be1001b8810aa8e92553c15b9b3042300c49e7d46cef30dcc6ca",
+                "score_reused_from_round": null,
+                "training_key": "d039b45d94cac5c99995da3cb046556d53273d2ca829a029341593ef7e0326d0",
+                "training_reused_from_round": null
+              },
+              "final_steps": 11050,
+              "initial_steps": 8840,
+              "mae": 38.11178205771577,
+              "nasa_score": 4174251540.3254294,
+              "recipe": "conservative-5",
+              "rmse": 51.965138344590315,
+              "training_rows": 565445
+            }
+          ]
+        },
+        "history_ids": [
+          "C-round-01"
+        ],
+        "hypothesis": "Lowering the learning rate stabilizes training and reduces RMSE.",
+        "model_call_ids": [
+          "school-wire-call-2"
+        ],
+        "reason": "Parent RMSE 51.876216, selected RMSE 51.876216 cycles.",
+        "seed": 42,
+        "selected_artifact_id": "candidate-01"
+      },
+      "metrics": {
+        "mae": 38.11613074737875,
+        "nasa_score": 3788806796.491436,
+        "rmse": 51.876215725099165
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "candidate_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 2
+    },
+    {
+      "candidate_metrics": {
+        "candidate-03": {
+          "mae": 38.1665605634015,
+          "nasa_score": 4754204740.479519,
+          "rmse": 52.469678572369176
+        }
+      },
+      "decision": {
+        "change_summary": "C continuation actions ['official-5'].",
+        "configuration": {
+          "context": {
+            "available": {
+              "accelerated-5": "double the official learning rate",
+              "engine-balanced-5": "sample engines with equal probability at the official rate",
+              "official-5": "continue at the official learning rate"
+            },
+            "budget": {
+              "actions": 1,
+              "max_output_tokens": 128,
+              "wall_seconds": 60
+            },
+            "history": {
+              "current": [
+                {
+                  "action": "conservative-5",
+                  "first_round": 2,
+                  "gain": -0.0889226194911501,
+                  "rmse": 51.965138344590315
+                }
+              ],
+              "prior": [
+                {
+                  "outcomes": [
+                    {
+                      "action": "conservative-5",
+                      "first_round": 1,
+                      "gain": 0.9923568410123451,
+                      "rmse": 51.876215725099165
+                    }
+                  ],
+                  "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+                }
+              ]
+            },
+            "parent": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+            "parent_metrics": {
+              "mae": 38.11613074737875,
+              "nasa_score": 3788806796.491438,
+              "rmse": 51.876215725099165
+            },
+            "preference": [
+              "official-5",
+              "engine-balanced-5",
+              "accelerated-5"
+            ],
+            "profile": "C",
+            "round": 3
+          },
+          "cpu_seconds": 8.580311044,
+          "execution": {
+            "optimizer_steps": 2210,
+            "reused_candidates": 0,
+            "reused_scores": 0,
+            "scored_candidates": 1,
+            "trained_candidates": 1,
+            "training_rows": 565445
+          },
+          "host_candidate_rmse": 52.469678572369176,
+          "parent_checkpoint_sha256": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+          "parent_metrics": {
+            "mae": 38.11613074737875,
+            "nasa_score": 3788806796.491438,
+            "rmse": 51.876215725099165
+          },
+          "plan": {
+            "actions": [
+              "official-5"
+            ],
+            "expected": "Lower RMSE than parent.",
+            "failure": "Higher RMSE indicates rate mismatch.",
+            "hypothesis": "Continuing at official rate minimizes RMSE."
+          },
+          "planner_fallback": false,
+          "profile": "C",
+          "selected_checkpoint_sha256": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+          "selected_rmse": 51.876215725099165,
+          "trials": [
+            {
+              "actual_optimizer_steps": 2210,
+              "actual_training_rows": 565445,
+              "cache": {
+                "checkpoint_sha256": "sha256:cf94389a618662ea155ec191aa32248e76ea6086ee7785c9276889df9c62cc19",
+                "prediction_sha256": "64b5db16e4315b89004a237bf013a8107ccbeb4734d55aad7fa02c968e99a742",
+                "score_first_round": 3,
+                "score_key": "bbf54e11e8f03bfbf7c4c40f07fc1145bbb29bc0c910c715528d0abc3a7f6fe9",
+                "score_reused_from_round": null,
+                "training_key": "68b3d66bebcc6a3ce3fd347777269b1dc834385b26ba15e19289d9ec0866df21",
+                "training_reused_from_round": null
+              },
+              "final_steps": 11050,
+              "initial_steps": 8840,
+              "mae": 38.1665605634015,
+              "nasa_score": 4754204740.479519,
+              "recipe": "official-5",
+              "rmse": 52.469678572369176,
+              "training_rows": 565445
+            }
+          ]
+        },
+        "history_ids": [
+          "C-round-01",
+          "C-round-02"
+        ],
+        "hypothesis": "Continuing at official rate minimizes RMSE.",
+        "model_call_ids": [
+          "school-wire-call-3"
+        ],
+        "reason": "Parent RMSE 51.876216, selected RMSE 51.876216 cycles.",
+        "seed": 42,
+        "selected_artifact_id": "candidate-01"
+      },
+      "metrics": {
+        "mae": 38.11613074737875,
+        "nasa_score": 3788806796.491436,
+        "rmse": 51.876215725099165
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "candidate_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 3
+    },
+    {
+      "candidate_metrics": {
+        "candidate-04": {
+          "mae": 39.136744941601364,
+          "nasa_score": 4121988096.373622,
+          "rmse": 52.840882372677854
+        }
+      },
+      "decision": {
+        "change_summary": "C continuation actions ['accelerated-5'].",
+        "configuration": {
+          "context": {
+            "available": {
+              "accelerated-5": "double the official learning rate",
+              "engine-balanced-5": "sample engines with equal probability at the official rate"
+            },
+            "budget": {
+              "actions": 1,
+              "max_output_tokens": 128,
+              "wall_seconds": 60
+            },
+            "history": {
+              "current": [
+                {
+                  "action": "official-5",
+                  "first_round": 3,
+                  "gain": -0.5934628472700112,
+                  "rmse": 52.469678572369176
+                },
+                {
+                  "action": "conservative-5",
+                  "first_round": 2,
+                  "gain": -0.0889226194911501,
+                  "rmse": 51.965138344590315
+                }
+              ],
+              "prior": [
+                {
+                  "outcomes": [
+                    {
+                      "action": "conservative-5",
+                      "first_round": 1,
+                      "gain": 0.9923568410123451,
+                      "rmse": 51.876215725099165
+                    }
+                  ],
+                  "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+                }
+              ]
+            },
+            "parent": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+            "parent_metrics": {
+              "mae": 38.11613074737875,
+              "nasa_score": 3788806796.491438,
+              "rmse": 51.876215725099165
+            },
+            "preference": [
+              "engine-balanced-5",
+              "accelerated-5"
+            ],
+            "profile": "C",
+            "round": 4
+          },
+          "cpu_seconds": 8.12988768,
+          "execution": {
+            "optimizer_steps": 2210,
+            "reused_candidates": 0,
+            "reused_scores": 0,
+            "scored_candidates": 1,
+            "trained_candidates": 1,
+            "training_rows": 565445
+          },
+          "host_candidate_rmse": 52.840882372677854,
+          "parent_checkpoint_sha256": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+          "parent_metrics": {
+            "mae": 38.11613074737875,
+            "nasa_score": 3788806796.491438,
+            "rmse": 51.876215725099165
+          },
+          "plan": {
+            "actions": [
+              "accelerated-5"
+            ],
+            "expected": "Lower RMSE in fewer cycles.",
+            "failure": "No RMSE improvement observed.",
+            "hypothesis": "Higher learning rate reduces RMSE faster."
+          },
+          "planner_fallback": false,
+          "profile": "C",
+          "selected_checkpoint_sha256": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+          "selected_rmse": 51.876215725099165,
+          "trials": [
+            {
+              "actual_optimizer_steps": 2210,
+              "actual_training_rows": 565445,
+              "cache": {
+                "checkpoint_sha256": "sha256:b22822cb647f267440c9661598bf5a3b50dd9fe21b288c6c049909c5c7b364ca",
+                "prediction_sha256": "fc8391699ec9b7a5939a284d582ffdf0a829794394efe36a76122ee4911a61bb",
+                "score_first_round": 4,
+                "score_key": "fb8cfee5152e4912f4089eed9d413dd3bd5f8b2d4f213ada531e690cf3770d3e",
+                "score_reused_from_round": null,
+                "training_key": "f3fec41cf207b90278d856fd9674053ac4af1d1da14a30ff6812c31412adf9c2",
+                "training_reused_from_round": null
+              },
+              "final_steps": 11050,
+              "initial_steps": 8840,
+              "mae": 39.136744941601364,
+              "nasa_score": 4121988096.37362,
+              "recipe": "accelerated-5",
+              "rmse": 52.840882372677854,
+              "training_rows": 565445
+            }
+          ]
+        },
+        "history_ids": [
+          "C-round-01",
+          "C-round-02",
+          "C-round-03"
+        ],
+        "hypothesis": "Higher learning rate reduces RMSE faster.",
+        "model_call_ids": [
+          "school-wire-call-4"
+        ],
+        "reason": "Parent RMSE 51.876216, selected RMSE 51.876216 cycles.",
+        "seed": 42,
+        "selected_artifact_id": "candidate-01"
+      },
+      "metrics": {
+        "mae": 38.11613074737875,
+        "nasa_score": 3788806796.491436,
+        "rmse": 51.876215725099165
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "candidate_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 4
+    },
+    {
+      "candidate_metrics": {
+        "candidate-05": {
+          "mae": 37.08843873523946,
+          "nasa_score": 11025352137.935265,
+          "rmse": 52.8806679346196
+        }
+      },
+      "decision": {
+        "change_summary": "C continuation actions ['engine-balanced-5'].",
+        "configuration": {
+          "context": {
+            "available": {
+              "engine-balanced-5": "sample engines with equal probability at the official rate"
+            },
+            "budget": {
+              "actions": 1,
+              "max_output_tokens": 128,
+              "wall_seconds": 60
+            },
+            "history": {
+              "current": [
+                {
+                  "action": "accelerated-5",
+                  "first_round": 4,
+                  "gain": -0.9646666475786887,
+                  "rmse": 52.840882372677854
+                },
+                {
+                  "action": "official-5",
+                  "first_round": 3,
+                  "gain": -0.5934628472700112,
+                  "rmse": 52.469678572369176
+                },
+                {
+                  "action": "conservative-5",
+                  "first_round": 2,
+                  "gain": -0.0889226194911501,
+                  "rmse": 51.965138344590315
+                }
+              ],
+              "prior": [
+                {
+                  "outcomes": [
+                    {
+                      "action": "conservative-5",
+                      "first_round": 1,
+                      "gain": 0.9923568410123451,
+                      "rmse": 51.876215725099165
+                    }
+                  ],
+                  "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+                }
+              ]
+            },
+            "parent": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+            "parent_metrics": {
+              "mae": 38.11613074737875,
+              "nasa_score": 3788806796.491438,
+              "rmse": 51.876215725099165
+            },
+            "preference": [
+              "engine-balanced-5"
+            ],
+            "profile": "C",
+            "round": 5
+          },
+          "cpu_seconds": 8.288881218,
+          "execution": {
+            "optimizer_steps": 2210,
+            "reused_candidates": 0,
+            "reused_scores": 0,
+            "scored_candidates": 1,
+            "trained_candidates": 1,
+            "training_rows": 565445
+          },
+          "host_candidate_rmse": 52.8806679346196,
+          "parent_checkpoint_sha256": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+          "parent_metrics": {
+            "mae": 38.11613074737875,
+            "nasa_score": 3788806796.491438,
+            "rmse": 51.876215725099165
+          },
+          "plan": {
+            "actions": [
+              "engine-balanced-5"
+            ],
+            "expected": "RMSE decreases below 51.87.",
+            "failure": "No RMSE improvement after 60 seconds.",
+            "hypothesis": "Balanced engines reduce variance and lower RMSE."
+          },
+          "planner_fallback": false,
+          "profile": "C",
+          "selected_checkpoint_sha256": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+          "selected_rmse": 51.876215725099165,
+          "trials": [
+            {
+              "actual_optimizer_steps": 2210,
+              "actual_training_rows": 565445,
+              "cache": {
+                "checkpoint_sha256": "sha256:04fcf300b3aabff21009516ff3615e0e792a9a7ad6e83b93ef06c20512aee189",
+                "prediction_sha256": "295ccb87645d3a7f8fef1f1e2f31d779740b81d4f7c729433511ad74ff3de3cf",
+                "score_first_round": 5,
+                "score_key": "069abf431c4aea5938dfe32415ce9692f58ad78abfbc92f1410d2cceaa62f5d1",
+                "score_reused_from_round": null,
+                "training_key": "51af4658cee934461aa6ea1acb4c6dc499155ba6c7aad60071b660ad592dc830",
+                "training_reused_from_round": null
+              },
+              "final_steps": 11050,
+              "initial_steps": 8840,
+              "mae": 37.08843873523946,
+              "nasa_score": 11025352137.935265,
+              "recipe": "engine-balanced-5",
+              "rmse": 52.8806679346196,
+              "training_rows": 565445
+            }
+          ]
+        },
+        "history_ids": [
+          "C-round-01",
+          "C-round-02",
+          "C-round-03",
+          "C-round-04"
+        ],
+        "hypothesis": "Balanced engines reduce variance and lower RMSE.",
+        "model_call_ids": [
+          "school-wire-call-5"
+        ],
+        "reason": "Parent RMSE 51.876216, selected RMSE 51.876216 cycles.",
+        "seed": 42,
+        "selected_artifact_id": "candidate-01"
+      },
+      "metrics": {
+        "mae": 38.11613074737875,
+        "nasa_score": 3788806796.491436,
+        "rmse": 51.876215725099165
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "candidate_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 5
+    },
+    {
+      "candidate_metrics": {},
+      "decision": {
+        "change_summary": "C continuation actions [].",
+        "configuration": {
+          "context": {
+            "available": {},
+            "budget": {
+              "actions": 1,
+              "max_output_tokens": 128,
+              "wall_seconds": 60
+            },
+            "history": {
+              "current": [
+                {
+                  "action": "engine-balanced-5",
+                  "first_round": 5,
+                  "gain": -1.0044522095204371,
+                  "rmse": 52.8806679346196
+                },
+                {
+                  "action": "accelerated-5",
+                  "first_round": 4,
+                  "gain": -0.9646666475786887,
+                  "rmse": 52.840882372677854
+                },
+                {
+                  "action": "official-5",
+                  "first_round": 3,
+                  "gain": -0.5934628472700112,
+                  "rmse": 52.469678572369176
+                },
+                {
+                  "action": "conservative-5",
+                  "first_round": 2,
+                  "gain": -0.0889226194911501,
+                  "rmse": 51.965138344590315
+                }
+              ],
+              "prior": [
+                {
+                  "outcomes": [
+                    {
+                      "action": "conservative-5",
+                      "first_round": 1,
+                      "gain": 0.9923568410123451,
+                      "rmse": 51.876215725099165
+                    }
+                  ],
+                  "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+                }
+              ]
+            },
+            "parent": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+            "parent_metrics": {
+              "mae": 38.11613074737875,
+              "nasa_score": 3788806796.491438,
+              "rmse": 51.876215725099165
+            },
+            "preference": [],
+            "profile": "C",
+            "round": 6
+          },
+          "cpu_seconds": 8.020165068,
+          "execution": {
+            "optimizer_steps": 0,
+            "reused_candidates": 0,
+            "reused_scores": 0,
+            "scored_candidates": 0,
+            "trained_candidates": 0,
+            "training_rows": 0
+          },
+          "host_candidate_rmse": null,
+          "parent_checkpoint_sha256": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+          "parent_metrics": {
+            "mae": 38.11613074737875,
+            "nasa_score": 3788806796.491438,
+            "rmse": 51.876215725099165
+          },
+          "plan": {
+            "actions": [],
+            "expected": "RMSE remains high without new data.",
+            "failure": "Budget exhausted with no improvement.",
+            "hypothesis": "No further trials reduce RMSE below current 51.88."
+          },
+          "planner_fallback": false,
+          "profile": "C",
+          "selected_checkpoint_sha256": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+          "selected_rmse": 51.876215725099165,
+          "trials": []
+        },
+        "history_ids": [
+          "C-round-01",
+          "C-round-02",
+          "C-round-03",
+          "C-round-04",
+          "C-round-05"
+        ],
+        "hypothesis": "No further trials reduce RMSE below current 51.88.",
+        "model_call_ids": [
+          "school-wire-call-6"
+        ],
+        "reason": "Parent RMSE 51.876216, selected RMSE 51.876216 cycles.",
+        "seed": 42,
+        "selected_artifact_id": "candidate-01"
+      },
+      "metrics": {
+        "mae": 38.11613074737875,
+        "nasa_score": 3788806796.491436,
+        "rmse": 51.876215725099165
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 6
+    },
+    {
+      "candidate_metrics": {},
+      "decision": {
+        "change_summary": "C continuation actions [].",
+        "configuration": {
+          "context": {
+            "available": {},
+            "budget": {
+              "actions": 1,
+              "max_output_tokens": 128,
+              "wall_seconds": 60
+            },
+            "history": {
+              "current": [
+                {
+                  "action": "engine-balanced-5",
+                  "first_round": 5,
+                  "gain": -1.0044522095204371,
+                  "rmse": 52.8806679346196
+                },
+                {
+                  "action": "accelerated-5",
+                  "first_round": 4,
+                  "gain": -0.9646666475786887,
+                  "rmse": 52.840882372677854
+                },
+                {
+                  "action": "official-5",
+                  "first_round": 3,
+                  "gain": -0.5934628472700112,
+                  "rmse": 52.469678572369176
+                },
+                {
+                  "action": "conservative-5",
+                  "first_round": 2,
+                  "gain": -0.0889226194911501,
+                  "rmse": 51.965138344590315
+                }
+              ],
+              "prior": [
+                {
+                  "outcomes": [
+                    {
+                      "action": "conservative-5",
+                      "first_round": 1,
+                      "gain": 0.9923568410123451,
+                      "rmse": 51.876215725099165
+                    }
+                  ],
+                  "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+                }
+              ]
+            },
+            "parent": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+            "parent_metrics": {
+              "mae": 38.11613074737875,
+              "nasa_score": 3788806796.491438,
+              "rmse": 51.876215725099165
+            },
+            "preference": [],
+            "profile": "C",
+            "round": 7
+          },
+          "cpu_seconds": 7.579756456,
+          "execution": {
+            "optimizer_steps": 0,
+            "reused_candidates": 0,
+            "reused_scores": 0,
+            "scored_candidates": 0,
+            "trained_candidates": 0,
+            "training_rows": 0
+          },
+          "host_candidate_rmse": null,
+          "parent_checkpoint_sha256": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+          "parent_metrics": {
+            "mae": 38.11613074737875,
+            "nasa_score": 3788806796.491438,
+            "rmse": 51.876215725099165
+          },
+          "plan": {
+            "actions": [],
+            "expected": "RMSE remains high without new data.",
+            "failure": "Budget exhausted; no actionable candidates remain.",
+            "hypothesis": "No further trials reduce RMSE below current 51.88."
+          },
+          "planner_fallback": false,
+          "profile": "C",
+          "selected_checkpoint_sha256": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+          "selected_rmse": 51.876215725099165,
+          "trials": []
+        },
+        "history_ids": [
+          "C-round-01",
+          "C-round-02",
+          "C-round-03",
+          "C-round-04",
+          "C-round-05",
+          "C-round-06"
+        ],
+        "hypothesis": "No further trials reduce RMSE below current 51.88.",
+        "model_call_ids": [
+          "school-wire-call-7"
+        ],
+        "reason": "Parent RMSE 51.876216, selected RMSE 51.876216 cycles.",
+        "seed": 42,
+        "selected_artifact_id": "candidate-01"
+      },
+      "metrics": {
+        "mae": 38.11613074737875,
+        "nasa_score": 3788806796.491436,
+        "rmse": 51.876215725099165
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 7
+    },
+    {
+      "candidate_metrics": {},
+      "decision": {
+        "change_summary": "C continuation actions [].",
+        "configuration": {
+          "context": {
+            "available": {},
+            "budget": {
+              "actions": 1,
+              "max_output_tokens": 128,
+              "wall_seconds": 60
+            },
+            "history": {
+              "current": [
+                {
+                  "action": "engine-balanced-5",
+                  "first_round": 5,
+                  "gain": -1.0044522095204371,
+                  "rmse": 52.8806679346196
+                },
+                {
+                  "action": "accelerated-5",
+                  "first_round": 4,
+                  "gain": -0.9646666475786887,
+                  "rmse": 52.840882372677854
+                },
+                {
+                  "action": "official-5",
+                  "first_round": 3,
+                  "gain": -0.5934628472700112,
+                  "rmse": 52.469678572369176
+                },
+                {
+                  "action": "conservative-5",
+                  "first_round": 2,
+                  "gain": -0.0889226194911501,
+                  "rmse": 51.965138344590315
+                }
+              ],
+              "prior": [
+                {
+                  "outcomes": [
+                    {
+                      "action": "conservative-5",
+                      "first_round": 1,
+                      "gain": 0.9923568410123451,
+                      "rmse": 51.876215725099165
+                    }
+                  ],
+                  "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+                }
+              ]
+            },
+            "parent": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+            "parent_metrics": {
+              "mae": 38.11613074737875,
+              "nasa_score": 3788806796.491438,
+              "rmse": 51.876215725099165
+            },
+            "preference": [],
+            "profile": "C",
+            "round": 8
+          },
+          "cpu_seconds": 7.662265131,
+          "execution": {
+            "optimizer_steps": 0,
+            "reused_candidates": 0,
+            "reused_scores": 0,
+            "scored_candidates": 0,
+            "trained_candidates": 0,
+            "training_rows": 0
+          },
+          "host_candidate_rmse": null,
+          "parent_checkpoint_sha256": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+          "parent_metrics": {
+            "mae": 38.11613074737875,
+            "nasa_score": 3788806796.491438,
+            "rmse": 51.876215725099165
+          },
+          "plan": {
+            "actions": [],
+            "expected": "RMSE remains high without new data.",
+            "failure": "Budget exhausted; no actionable candidates remain.",
+            "hypothesis": "No further trials reduce RMSE below current 51.88."
+          },
+          "planner_fallback": false,
+          "profile": "C",
+          "selected_checkpoint_sha256": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+          "selected_rmse": 51.876215725099165,
+          "trials": []
+        },
+        "history_ids": [
+          "C-round-01",
+          "C-round-02",
+          "C-round-03",
+          "C-round-04",
+          "C-round-05",
+          "C-round-06",
+          "C-round-07"
+        ],
+        "hypothesis": "No further trials reduce RMSE below current 51.88.",
+        "model_call_ids": [
+          "school-wire-call-8"
+        ],
+        "reason": "Parent RMSE 51.876216, selected RMSE 51.876216 cycles.",
+        "seed": 42,
+        "selected_artifact_id": "candidate-01"
+      },
+      "metrics": {
+        "mae": 38.11613074737875,
+        "nasa_score": 3788806796.491436,
+        "rmse": 51.876215725099165
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 8
+    },
+    {
+      "candidate_metrics": {},
+      "decision": {
+        "change_summary": "C continuation actions [].",
+        "configuration": {
+          "context": {
+            "available": {},
+            "budget": {
+              "actions": 1,
+              "max_output_tokens": 128,
+              "wall_seconds": 60
+            },
+            "history": {
+              "current": [
+                {
+                  "action": "engine-balanced-5",
+                  "first_round": 5,
+                  "gain": -1.0044522095204371,
+                  "rmse": 52.8806679346196
+                },
+                {
+                  "action": "accelerated-5",
+                  "first_round": 4,
+                  "gain": -0.9646666475786887,
+                  "rmse": 52.840882372677854
+                },
+                {
+                  "action": "official-5",
+                  "first_round": 3,
+                  "gain": -0.5934628472700112,
+                  "rmse": 52.469678572369176
+                },
+                {
+                  "action": "conservative-5",
+                  "first_round": 2,
+                  "gain": -0.0889226194911501,
+                  "rmse": 51.965138344590315
+                }
+              ],
+              "prior": [
+                {
+                  "outcomes": [
+                    {
+                      "action": "conservative-5",
+                      "first_round": 1,
+                      "gain": 0.9923568410123451,
+                      "rmse": 51.876215725099165
+                    }
+                  ],
+                  "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+                }
+              ]
+            },
+            "parent": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+            "parent_metrics": {
+              "mae": 38.11613074737875,
+              "nasa_score": 3788806796.491438,
+              "rmse": 51.876215725099165
+            },
+            "preference": [],
+            "profile": "C",
+            "round": 9
+          },
+          "cpu_seconds": 7.631761611,
+          "execution": {
+            "optimizer_steps": 0,
+            "reused_candidates": 0,
+            "reused_scores": 0,
+            "scored_candidates": 0,
+            "trained_candidates": 0,
+            "training_rows": 0
+          },
+          "host_candidate_rmse": null,
+          "parent_checkpoint_sha256": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+          "parent_metrics": {
+            "mae": 38.11613074737875,
+            "nasa_score": 3788806796.491438,
+            "rmse": 51.876215725099165
+          },
+          "plan": {
+            "actions": [],
+            "expected": "RMSE remains high without new data.",
+            "failure": "Budget exhausted; no actionable candidates remain.",
+            "hypothesis": "No further trials reduce RMSE below current 51.88."
+          },
+          "planner_fallback": false,
+          "profile": "C",
+          "selected_checkpoint_sha256": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+          "selected_rmse": 51.876215725099165,
+          "trials": []
+        },
+        "history_ids": [
+          "C-round-01",
+          "C-round-02",
+          "C-round-03",
+          "C-round-04",
+          "C-round-05",
+          "C-round-06",
+          "C-round-07",
+          "C-round-08"
+        ],
+        "hypothesis": "No further trials reduce RMSE below current 51.88.",
+        "model_call_ids": [
+          "school-wire-call-9"
+        ],
+        "reason": "Parent RMSE 51.876216, selected RMSE 51.876216 cycles.",
+        "seed": 42,
+        "selected_artifact_id": "candidate-01"
+      },
+      "metrics": {
+        "mae": 38.11613074737875,
+        "nasa_score": 3788806796.491436,
+        "rmse": 51.876215725099165
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 9
+    },
+    {
+      "candidate_metrics": {},
+      "decision": {
+        "change_summary": "C continuation actions [].",
+        "configuration": {
+          "context": {
+            "available": {},
+            "budget": {
+              "actions": 1,
+              "max_output_tokens": 128,
+              "wall_seconds": 60
+            },
+            "history": {
+              "current": [
+                {
+                  "action": "engine-balanced-5",
+                  "first_round": 5,
+                  "gain": -1.0044522095204371,
+                  "rmse": 52.8806679346196
+                },
+                {
+                  "action": "accelerated-5",
+                  "first_round": 4,
+                  "gain": -0.9646666475786887,
+                  "rmse": 52.840882372677854
+                },
+                {
+                  "action": "official-5",
+                  "first_round": 3,
+                  "gain": -0.5934628472700112,
+                  "rmse": 52.469678572369176
+                },
+                {
+                  "action": "conservative-5",
+                  "first_round": 2,
+                  "gain": -0.0889226194911501,
+                  "rmse": 51.965138344590315
+                }
+              ],
+              "prior": [
+                {
+                  "outcomes": [
+                    {
+                      "action": "conservative-5",
+                      "first_round": 1,
+                      "gain": 0.9923568410123451,
+                      "rmse": 51.876215725099165
+                    }
+                  ],
+                  "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+                }
+              ]
+            },
+            "parent": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+            "parent_metrics": {
+              "mae": 38.11613074737875,
+              "nasa_score": 3788806796.491438,
+              "rmse": 51.876215725099165
+            },
+            "preference": [],
+            "profile": "C",
+            "round": 10
+          },
+          "cpu_seconds": 7.997224128,
+          "execution": {
+            "optimizer_steps": 0,
+            "reused_candidates": 0,
+            "reused_scores": 0,
+            "scored_candidates": 0,
+            "trained_candidates": 0,
+            "training_rows": 0
+          },
+          "host_candidate_rmse": null,
+          "parent_checkpoint_sha256": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+          "parent_metrics": {
+            "mae": 38.11613074737875,
+            "nasa_score": 3788806796.491438,
+            "rmse": 51.876215725099165
+          },
+          "plan": {
+            "actions": [],
+            "expected": "RMSE remains high without new data.",
+            "failure": "Budget exhausted; no actionable candidates remain.",
+            "hypothesis": "No further trials reduce RMSE below current 51.88."
+          },
+          "planner_fallback": false,
+          "profile": "C",
+          "selected_checkpoint_sha256": "sha256:357442f2fb20bc2e612ce7cb924ba5f422b877523d34042e034f0a357686650b",
+          "selected_rmse": 51.876215725099165,
+          "trials": []
+        },
+        "history_ids": [
+          "C-round-01",
+          "C-round-02",
+          "C-round-03",
+          "C-round-04",
+          "C-round-05",
+          "C-round-06",
+          "C-round-07",
+          "C-round-08",
+          "C-round-09"
+        ],
+        "hypothesis": "No further trials reduce RMSE below current 51.88.",
+        "model_call_ids": [
+          "school-wire-call-10"
+        ],
+        "reason": "Parent RMSE 51.876216, selected RMSE 51.876216 cycles.",
+        "seed": 42,
+        "selected_artifact_id": "candidate-01"
+      },
+      "metrics": {
+        "mae": 38.11613074737875,
+        "nasa_score": 3788806796.491436,
+        "rmse": 51.876215725099165
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 10
+    }
+  ]
+}

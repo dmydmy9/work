@@ -1,0 +1,1501 @@
+{
+  "arm": "fixed",
+  "final": {
+    "mae": 35.19305791821807,
+    "nasa_score": 2104493920.3744614,
+    "rmse": 49.11520677840943
+  },
+  "fixed_recipe": "regime-kernel-5",
+  "image": "sha256:0ebd6a1a6db8b907a26c030eab731c8ed140a64d88e952b3bd6ea61b7a694bde",
+  "model_call_source": "local_deterministic",
+  "official": {
+    "mae": 38.89982982666355,
+    "nasa_score": 5823439325.342465,
+    "rmse": 52.86857256611151
+  },
+  "rounds": [
+    {
+      "candidate_metrics": {
+        "candidate-01": {
+          "mae": 35.19305791821807,
+          "nasa_score": 2104493920.3744614,
+          "rmse": 49.11520677840943
+        }
+      },
+      "decision": {
+        "change_summary": "C continuation actions ['regime-kernel-5'].",
+        "configuration": {
+          "context": {
+            "available": {
+              "accelerated-5": "double the official learning rate",
+              "conservative-5": "lower the official learning rate by four",
+              "engine-balanced-5": "sample engines with equal probability at the official rate",
+              "official-5": "continue at the official learning rate",
+              "regime-kernel-5": "continue with lower learning rate and refit nonlinear sensor residuals by regime"
+            },
+            "budget": {
+              "actions": 1,
+              "max_output_tokens": 128,
+              "wall_seconds": 60
+            },
+            "history": {
+              "current": [],
+              "prior": []
+            },
+            "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e",
+            "parent_metrics": {
+              "mae": 38.899829826663556,
+              "nasa_score": 5823439325.3424635,
+              "rmse": 52.86857256611151
+            },
+            "preference": [
+              "regime-kernel-5",
+              "conservative-5",
+              "official-5",
+              "engine-balanced-5",
+              "accelerated-5"
+            ],
+            "profile": "C",
+            "round": 1
+          },
+          "cpu_seconds": 2.3965128019999997,
+          "execution": {
+            "optimizer_steps": 2210,
+            "reused_candidates": 0,
+            "reused_scores": 0,
+            "scored_candidates": 1,
+            "trained_candidates": 1,
+            "training_rows": 565445
+          },
+          "host_candidate_rmse": 49.11520677840943,
+          "parent_checkpoint_sha256": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e",
+          "parent_metrics": {
+            "mae": 38.899829826663556,
+            "nasa_score": 5823439325.3424635,
+            "rmse": 52.86857256611151
+          },
+          "plan": {
+            "actions": [
+              "regime-kernel-5"
+            ],
+            "expected": "Reduce validation RMSE.",
+            "failure": "Retain the parent without an improvement.",
+            "hypothesis": "Compare an allowed continuation with the current parent."
+          },
+          "planner_fallback": false,
+          "profile": "C",
+          "selected_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "selected_rmse": 49.11520677840943,
+          "trials": [
+            {
+              "actual_optimizer_steps": 2210,
+              "actual_training_rows": 565445,
+              "cache": {
+                "checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+                "prediction_sha256": "01f7a8144690af366345aceaf439295dd64706e2eac9e8fd8fdf985ed3d47a76",
+                "score_first_round": 1,
+                "score_key": "0351fd55e6335a175d85dcf849ec45c02abc8cf75f9d55708f80eb121480ebc0",
+                "score_reused_from_round": null,
+                "training_key": "f2185446139bf28c62f1b951fcb51a8442d8b38f1b1f01adb96a6d9aa0abb15c",
+                "training_reused_from_round": null
+              },
+              "final_steps": 8840,
+              "initial_steps": 6630,
+              "mae": 35.19305791821807,
+              "nasa_score": 2104493920.3744612,
+              "recipe": "regime-kernel-5",
+              "rmse": 49.11520677840942,
+              "training_rows": 565445
+            }
+          ]
+        },
+        "history_ids": [],
+        "hypothesis": "Compare an allowed continuation with the current parent.",
+        "model_call_ids": [
+          "school-wire-call-1"
+        ],
+        "reason": "Parent RMSE 52.868573, selected RMSE 49.115207 cycles.",
+        "seed": 42,
+        "selected_artifact_id": "candidate-01"
+      },
+      "metrics": {
+        "mae": 35.19305791821807,
+        "nasa_score": 2104493920.3744614,
+        "rmse": 49.11520677840943
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "candidate_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 1
+    },
+    {
+      "candidate_metrics": {
+        "candidate-02": {
+          "mae": 35.18978757133505,
+          "nasa_score": 2347747681.5176935,
+          "rmse": 49.122502972797
+        }
+      },
+      "decision": {
+        "change_summary": "C continuation actions ['regime-kernel-5'].",
+        "configuration": {
+          "context": {
+            "available": {
+              "accelerated-5": "double the official learning rate",
+              "conservative-5": "lower the official learning rate by four",
+              "engine-balanced-5": "sample engines with equal probability at the official rate",
+              "official-5": "continue at the official learning rate",
+              "regime-kernel-5": "continue with lower learning rate and refit nonlinear sensor residuals by regime"
+            },
+            "budget": {
+              "actions": 1,
+              "max_output_tokens": 128,
+              "wall_seconds": 60
+            },
+            "history": {
+              "current": [],
+              "prior": [
+                {
+                  "outcomes": [
+                    {
+                      "action": "regime-kernel-5",
+                      "first_round": 1,
+                      "gain": 3.753365787702087,
+                      "rmse": 49.11520677840942
+                    }
+                  ],
+                  "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+                }
+              ]
+            },
+            "parent": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+            "parent_metrics": {
+              "mae": 35.19305791821807,
+              "nasa_score": 2104493920.3744612,
+              "rmse": 49.11520677840942
+            },
+            "preference": [
+              "regime-kernel-5",
+              "conservative-5",
+              "official-5",
+              "engine-balanced-5",
+              "accelerated-5"
+            ],
+            "profile": "C",
+            "round": 2
+          },
+          "cpu_seconds": 2.405506915,
+          "execution": {
+            "optimizer_steps": 2210,
+            "reused_candidates": 0,
+            "reused_scores": 0,
+            "scored_candidates": 1,
+            "trained_candidates": 1,
+            "training_rows": 565445
+          },
+          "host_candidate_rmse": 49.122502972797,
+          "parent_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "parent_metrics": {
+            "mae": 35.19305791821807,
+            "nasa_score": 2104493920.3744612,
+            "rmse": 49.11520677840942
+          },
+          "plan": {
+            "actions": [
+              "regime-kernel-5"
+            ],
+            "expected": "Reduce validation RMSE.",
+            "failure": "Retain the parent without an improvement.",
+            "hypothesis": "Compare an allowed continuation with the current parent."
+          },
+          "planner_fallback": false,
+          "profile": "C",
+          "selected_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "selected_rmse": 49.11520677840942,
+          "trials": [
+            {
+              "actual_optimizer_steps": 2210,
+              "actual_training_rows": 565445,
+              "cache": {
+                "checkpoint_sha256": "sha256:0c9419e20aaedca46ad0be35ac84cb95172b147162e417124d233f1a6de3aa6f",
+                "prediction_sha256": "bef8df8ce201e0cd0b6facd77d8a4086f5f97c2086e8c7abfb374860d22d808b",
+                "score_first_round": 2,
+                "score_key": "af1fe3a4ab0e71582b121841ea218979c45ebd9c785c4a390a6e198198d39236",
+                "score_reused_from_round": null,
+                "training_key": "b0acaad9536d6cd9dee7aa26e5b314cc84f95ed55e22a2f5d693282f2639d72e",
+                "training_reused_from_round": null
+              },
+              "final_steps": 11050,
+              "initial_steps": 8840,
+              "mae": 35.18978757133505,
+              "nasa_score": 2347747681.517693,
+              "recipe": "regime-kernel-5",
+              "rmse": 49.122502972797,
+              "training_rows": 565445
+            }
+          ]
+        },
+        "history_ids": [
+          "C-round-01"
+        ],
+        "hypothesis": "Compare an allowed continuation with the current parent.",
+        "model_call_ids": [
+          "school-wire-call-2"
+        ],
+        "reason": "Parent RMSE 49.115207, selected RMSE 49.115207 cycles.",
+        "seed": 42,
+        "selected_artifact_id": "candidate-01"
+      },
+      "metrics": {
+        "mae": 35.19305791821807,
+        "nasa_score": 2104493920.3744614,
+        "rmse": 49.11520677840943
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "candidate_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 2
+    },
+    {
+      "candidate_metrics": {},
+      "decision": {
+        "change_summary": "C continuation actions [].",
+        "configuration": {
+          "context": {
+            "available": {
+              "accelerated-5": "double the official learning rate",
+              "conservative-5": "lower the official learning rate by four",
+              "engine-balanced-5": "sample engines with equal probability at the official rate",
+              "official-5": "continue at the official learning rate"
+            },
+            "budget": {
+              "actions": 1,
+              "max_output_tokens": 128,
+              "wall_seconds": 60
+            },
+            "history": {
+              "current": [
+                {
+                  "action": "regime-kernel-5",
+                  "first_round": 2,
+                  "gain": -0.007296194387578225,
+                  "rmse": 49.122502972797
+                }
+              ],
+              "prior": [
+                {
+                  "outcomes": [
+                    {
+                      "action": "regime-kernel-5",
+                      "first_round": 1,
+                      "gain": 3.753365787702087,
+                      "rmse": 49.11520677840942
+                    }
+                  ],
+                  "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+                }
+              ]
+            },
+            "parent": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+            "parent_metrics": {
+              "mae": 35.19305791821807,
+              "nasa_score": 2104493920.3744612,
+              "rmse": 49.11520677840942
+            },
+            "preference": [
+              "conservative-5",
+              "official-5",
+              "engine-balanced-5",
+              "accelerated-5"
+            ],
+            "profile": "C",
+            "round": 3
+          },
+          "cpu_seconds": 1.44853461,
+          "execution": {
+            "optimizer_steps": 0,
+            "reused_candidates": 0,
+            "reused_scores": 0,
+            "scored_candidates": 0,
+            "trained_candidates": 0,
+            "training_rows": 0
+          },
+          "host_candidate_rmse": null,
+          "parent_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "parent_metrics": {
+            "mae": 35.19305791821807,
+            "nasa_score": 2104493920.3744612,
+            "rmse": 49.11520677840942
+          },
+          "plan": {
+            "actions": [],
+            "expected": "Reduce validation RMSE.",
+            "failure": "Retain the parent without an improvement.",
+            "hypothesis": "Compare an allowed continuation with the current parent."
+          },
+          "planner_fallback": false,
+          "profile": "C",
+          "selected_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "selected_rmse": 49.11520677840942,
+          "trials": []
+        },
+        "history_ids": [
+          "C-round-01",
+          "C-round-02"
+        ],
+        "hypothesis": "Compare an allowed continuation with the current parent.",
+        "model_call_ids": [
+          "school-wire-call-3"
+        ],
+        "reason": "Parent RMSE 49.115207, selected RMSE 49.115207 cycles.",
+        "seed": 42,
+        "selected_artifact_id": "candidate-01"
+      },
+      "metrics": {
+        "mae": 35.19305791821807,
+        "nasa_score": 2104493920.3744614,
+        "rmse": 49.11520677840943
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 3
+    },
+    {
+      "candidate_metrics": {},
+      "decision": {
+        "change_summary": "C continuation actions [].",
+        "configuration": {
+          "context": {
+            "available": {
+              "accelerated-5": "double the official learning rate",
+              "conservative-5": "lower the official learning rate by four",
+              "engine-balanced-5": "sample engines with equal probability at the official rate",
+              "official-5": "continue at the official learning rate"
+            },
+            "budget": {
+              "actions": 1,
+              "max_output_tokens": 128,
+              "wall_seconds": 60
+            },
+            "history": {
+              "current": [
+                {
+                  "action": "regime-kernel-5",
+                  "first_round": 2,
+                  "gain": -0.007296194387578225,
+                  "rmse": 49.122502972797
+                }
+              ],
+              "prior": [
+                {
+                  "outcomes": [
+                    {
+                      "action": "regime-kernel-5",
+                      "first_round": 1,
+                      "gain": 3.753365787702087,
+                      "rmse": 49.11520677840942
+                    }
+                  ],
+                  "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+                }
+              ]
+            },
+            "parent": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+            "parent_metrics": {
+              "mae": 35.19305791821807,
+              "nasa_score": 2104493920.3744612,
+              "rmse": 49.11520677840942
+            },
+            "preference": [
+              "conservative-5",
+              "official-5",
+              "engine-balanced-5",
+              "accelerated-5"
+            ],
+            "profile": "C",
+            "round": 4
+          },
+          "cpu_seconds": 1.3619006150000001,
+          "execution": {
+            "optimizer_steps": 0,
+            "reused_candidates": 0,
+            "reused_scores": 0,
+            "scored_candidates": 0,
+            "trained_candidates": 0,
+            "training_rows": 0
+          },
+          "host_candidate_rmse": null,
+          "parent_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "parent_metrics": {
+            "mae": 35.19305791821807,
+            "nasa_score": 2104493920.3744612,
+            "rmse": 49.11520677840942
+          },
+          "plan": {
+            "actions": [],
+            "expected": "Reduce validation RMSE.",
+            "failure": "Retain the parent without an improvement.",
+            "hypothesis": "Compare an allowed continuation with the current parent."
+          },
+          "planner_fallback": false,
+          "profile": "C",
+          "selected_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "selected_rmse": 49.11520677840942,
+          "trials": []
+        },
+        "history_ids": [
+          "C-round-01",
+          "C-round-02",
+          "C-round-03"
+        ],
+        "hypothesis": "Compare an allowed continuation with the current parent.",
+        "model_call_ids": [
+          "school-wire-call-4"
+        ],
+        "reason": "Parent RMSE 49.115207, selected RMSE 49.115207 cycles.",
+        "seed": 42,
+        "selected_artifact_id": "candidate-01"
+      },
+      "metrics": {
+        "mae": 35.19305791821807,
+        "nasa_score": 2104493920.3744614,
+        "rmse": 49.11520677840943
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 4
+    },
+    {
+      "candidate_metrics": {},
+      "decision": {
+        "change_summary": "C continuation actions [].",
+        "configuration": {
+          "context": {
+            "available": {
+              "accelerated-5": "double the official learning rate",
+              "conservative-5": "lower the official learning rate by four",
+              "engine-balanced-5": "sample engines with equal probability at the official rate",
+              "official-5": "continue at the official learning rate"
+            },
+            "budget": {
+              "actions": 1,
+              "max_output_tokens": 128,
+              "wall_seconds": 60
+            },
+            "history": {
+              "current": [
+                {
+                  "action": "regime-kernel-5",
+                  "first_round": 2,
+                  "gain": -0.007296194387578225,
+                  "rmse": 49.122502972797
+                }
+              ],
+              "prior": [
+                {
+                  "outcomes": [
+                    {
+                      "action": "regime-kernel-5",
+                      "first_round": 1,
+                      "gain": 3.753365787702087,
+                      "rmse": 49.11520677840942
+                    }
+                  ],
+                  "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+                }
+              ]
+            },
+            "parent": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+            "parent_metrics": {
+              "mae": 35.19305791821807,
+              "nasa_score": 2104493920.3744612,
+              "rmse": 49.11520677840942
+            },
+            "preference": [
+              "conservative-5",
+              "official-5",
+              "engine-balanced-5",
+              "accelerated-5"
+            ],
+            "profile": "C",
+            "round": 5
+          },
+          "cpu_seconds": 1.3177506540000001,
+          "execution": {
+            "optimizer_steps": 0,
+            "reused_candidates": 0,
+            "reused_scores": 0,
+            "scored_candidates": 0,
+            "trained_candidates": 0,
+            "training_rows": 0
+          },
+          "host_candidate_rmse": null,
+          "parent_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "parent_metrics": {
+            "mae": 35.19305791821807,
+            "nasa_score": 2104493920.3744612,
+            "rmse": 49.11520677840942
+          },
+          "plan": {
+            "actions": [],
+            "expected": "Reduce validation RMSE.",
+            "failure": "Retain the parent without an improvement.",
+            "hypothesis": "Compare an allowed continuation with the current parent."
+          },
+          "planner_fallback": false,
+          "profile": "C",
+          "selected_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "selected_rmse": 49.11520677840942,
+          "trials": []
+        },
+        "history_ids": [
+          "C-round-01",
+          "C-round-02",
+          "C-round-03",
+          "C-round-04"
+        ],
+        "hypothesis": "Compare an allowed continuation with the current parent.",
+        "model_call_ids": [
+          "school-wire-call-5"
+        ],
+        "reason": "Parent RMSE 49.115207, selected RMSE 49.115207 cycles.",
+        "seed": 42,
+        "selected_artifact_id": "candidate-01"
+      },
+      "metrics": {
+        "mae": 35.19305791821807,
+        "nasa_score": 2104493920.3744614,
+        "rmse": 49.11520677840943
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 5
+    },
+    {
+      "candidate_metrics": {},
+      "decision": {
+        "change_summary": "C continuation actions [].",
+        "configuration": {
+          "context": {
+            "available": {
+              "accelerated-5": "double the official learning rate",
+              "conservative-5": "lower the official learning rate by four",
+              "engine-balanced-5": "sample engines with equal probability at the official rate",
+              "official-5": "continue at the official learning rate"
+            },
+            "budget": {
+              "actions": 1,
+              "max_output_tokens": 128,
+              "wall_seconds": 60
+            },
+            "history": {
+              "current": [
+                {
+                  "action": "regime-kernel-5",
+                  "first_round": 2,
+                  "gain": -0.007296194387578225,
+                  "rmse": 49.122502972797
+                }
+              ],
+              "prior": [
+                {
+                  "outcomes": [
+                    {
+                      "action": "regime-kernel-5",
+                      "first_round": 1,
+                      "gain": 3.753365787702087,
+                      "rmse": 49.11520677840942
+                    }
+                  ],
+                  "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+                }
+              ]
+            },
+            "parent": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+            "parent_metrics": {
+              "mae": 35.19305791821807,
+              "nasa_score": 2104493920.3744612,
+              "rmse": 49.11520677840942
+            },
+            "preference": [
+              "conservative-5",
+              "official-5",
+              "engine-balanced-5",
+              "accelerated-5"
+            ],
+            "profile": "C",
+            "round": 6
+          },
+          "cpu_seconds": 1.281154713,
+          "execution": {
+            "optimizer_steps": 0,
+            "reused_candidates": 0,
+            "reused_scores": 0,
+            "scored_candidates": 0,
+            "trained_candidates": 0,
+            "training_rows": 0
+          },
+          "host_candidate_rmse": null,
+          "parent_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "parent_metrics": {
+            "mae": 35.19305791821807,
+            "nasa_score": 2104493920.3744612,
+            "rmse": 49.11520677840942
+          },
+          "plan": {
+            "actions": [],
+            "expected": "Reduce validation RMSE.",
+            "failure": "Retain the parent without an improvement.",
+            "hypothesis": "Compare an allowed continuation with the current parent."
+          },
+          "planner_fallback": false,
+          "profile": "C",
+          "selected_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "selected_rmse": 49.11520677840942,
+          "trials": []
+        },
+        "history_ids": [
+          "C-round-01",
+          "C-round-02",
+          "C-round-03",
+          "C-round-04",
+          "C-round-05"
+        ],
+        "hypothesis": "Compare an allowed continuation with the current parent.",
+        "model_call_ids": [
+          "school-wire-call-6"
+        ],
+        "reason": "Parent RMSE 49.115207, selected RMSE 49.115207 cycles.",
+        "seed": 42,
+        "selected_artifact_id": "candidate-01"
+      },
+      "metrics": {
+        "mae": 35.19305791821807,
+        "nasa_score": 2104493920.3744614,
+        "rmse": 49.11520677840943
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 6
+    },
+    {
+      "candidate_metrics": {},
+      "decision": {
+        "change_summary": "C continuation actions [].",
+        "configuration": {
+          "context": {
+            "available": {
+              "accelerated-5": "double the official learning rate",
+              "conservative-5": "lower the official learning rate by four",
+              "engine-balanced-5": "sample engines with equal probability at the official rate",
+              "official-5": "continue at the official learning rate"
+            },
+            "budget": {
+              "actions": 1,
+              "max_output_tokens": 128,
+              "wall_seconds": 60
+            },
+            "history": {
+              "current": [
+                {
+                  "action": "regime-kernel-5",
+                  "first_round": 2,
+                  "gain": -0.007296194387578225,
+                  "rmse": 49.122502972797
+                }
+              ],
+              "prior": [
+                {
+                  "outcomes": [
+                    {
+                      "action": "regime-kernel-5",
+                      "first_round": 1,
+                      "gain": 3.753365787702087,
+                      "rmse": 49.11520677840942
+                    }
+                  ],
+                  "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+                }
+              ]
+            },
+            "parent": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+            "parent_metrics": {
+              "mae": 35.19305791821807,
+              "nasa_score": 2104493920.3744612,
+              "rmse": 49.11520677840942
+            },
+            "preference": [
+              "conservative-5",
+              "official-5",
+              "engine-balanced-5",
+              "accelerated-5"
+            ],
+            "profile": "C",
+            "round": 7
+          },
+          "cpu_seconds": 1.309149316,
+          "execution": {
+            "optimizer_steps": 0,
+            "reused_candidates": 0,
+            "reused_scores": 0,
+            "scored_candidates": 0,
+            "trained_candidates": 0,
+            "training_rows": 0
+          },
+          "host_candidate_rmse": null,
+          "parent_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "parent_metrics": {
+            "mae": 35.19305791821807,
+            "nasa_score": 2104493920.3744612,
+            "rmse": 49.11520677840942
+          },
+          "plan": {
+            "actions": [],
+            "expected": "Reduce validation RMSE.",
+            "failure": "Retain the parent without an improvement.",
+            "hypothesis": "Compare an allowed continuation with the current parent."
+          },
+          "planner_fallback": false,
+          "profile": "C",
+          "selected_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "selected_rmse": 49.11520677840942,
+          "trials": []
+        },
+        "history_ids": [
+          "C-round-01",
+          "C-round-02",
+          "C-round-03",
+          "C-round-04",
+          "C-round-05",
+          "C-round-06"
+        ],
+        "hypothesis": "Compare an allowed continuation with the current parent.",
+        "model_call_ids": [
+          "school-wire-call-7"
+        ],
+        "reason": "Parent RMSE 49.115207, selected RMSE 49.115207 cycles.",
+        "seed": 42,
+        "selected_artifact_id": "candidate-01"
+      },
+      "metrics": {
+        "mae": 35.19305791821807,
+        "nasa_score": 2104493920.3744614,
+        "rmse": 49.11520677840943
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 7
+    },
+    {
+      "candidate_metrics": {},
+      "decision": {
+        "change_summary": "C continuation actions [].",
+        "configuration": {
+          "context": {
+            "available": {
+              "accelerated-5": "double the official learning rate",
+              "conservative-5": "lower the official learning rate by four",
+              "engine-balanced-5": "sample engines with equal probability at the official rate",
+              "official-5": "continue at the official learning rate"
+            },
+            "budget": {
+              "actions": 1,
+              "max_output_tokens": 128,
+              "wall_seconds": 60
+            },
+            "history": {
+              "current": [
+                {
+                  "action": "regime-kernel-5",
+                  "first_round": 2,
+                  "gain": -0.007296194387578225,
+                  "rmse": 49.122502972797
+                }
+              ],
+              "prior": [
+                {
+                  "outcomes": [
+                    {
+                      "action": "regime-kernel-5",
+                      "first_round": 1,
+                      "gain": 3.753365787702087,
+                      "rmse": 49.11520677840942
+                    }
+                  ],
+                  "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+                }
+              ]
+            },
+            "parent": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+            "parent_metrics": {
+              "mae": 35.19305791821807,
+              "nasa_score": 2104493920.3744612,
+              "rmse": 49.11520677840942
+            },
+            "preference": [
+              "conservative-5",
+              "official-5",
+              "engine-balanced-5",
+              "accelerated-5"
+            ],
+            "profile": "C",
+            "round": 8
+          },
+          "cpu_seconds": 1.703731453,
+          "execution": {
+            "optimizer_steps": 0,
+            "reused_candidates": 0,
+            "reused_scores": 0,
+            "scored_candidates": 0,
+            "trained_candidates": 0,
+            "training_rows": 0
+          },
+          "host_candidate_rmse": null,
+          "parent_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "parent_metrics": {
+            "mae": 35.19305791821807,
+            "nasa_score": 2104493920.3744612,
+            "rmse": 49.11520677840942
+          },
+          "plan": {
+            "actions": [],
+            "expected": "Reduce validation RMSE.",
+            "failure": "Retain the parent without an improvement.",
+            "hypothesis": "Compare an allowed continuation with the current parent."
+          },
+          "planner_fallback": false,
+          "profile": "C",
+          "selected_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "selected_rmse": 49.11520677840942,
+          "trials": []
+        },
+        "history_ids": [
+          "C-round-01",
+          "C-round-02",
+          "C-round-03",
+          "C-round-04",
+          "C-round-05",
+          "C-round-06",
+          "C-round-07"
+        ],
+        "hypothesis": "Compare an allowed continuation with the current parent.",
+        "model_call_ids": [
+          "school-wire-call-8"
+        ],
+        "reason": "Parent RMSE 49.115207, selected RMSE 49.115207 cycles.",
+        "seed": 42,
+        "selected_artifact_id": "candidate-01"
+      },
+      "metrics": {
+        "mae": 35.19305791821807,
+        "nasa_score": 2104493920.3744614,
+        "rmse": 49.11520677840943
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 8
+    },
+    {
+      "candidate_metrics": {},
+      "decision": {
+        "change_summary": "C continuation actions [].",
+        "configuration": {
+          "context": {
+            "available": {
+              "accelerated-5": "double the official learning rate",
+              "conservative-5": "lower the official learning rate by four",
+              "engine-balanced-5": "sample engines with equal probability at the official rate",
+              "official-5": "continue at the official learning rate"
+            },
+            "budget": {
+              "actions": 1,
+              "max_output_tokens": 128,
+              "wall_seconds": 60
+            },
+            "history": {
+              "current": [
+                {
+                  "action": "regime-kernel-5",
+                  "first_round": 2,
+                  "gain": -0.007296194387578225,
+                  "rmse": 49.122502972797
+                }
+              ],
+              "prior": [
+                {
+                  "outcomes": [
+                    {
+                      "action": "regime-kernel-5",
+                      "first_round": 1,
+                      "gain": 3.753365787702087,
+                      "rmse": 49.11520677840942
+                    }
+                  ],
+                  "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+                }
+              ]
+            },
+            "parent": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+            "parent_metrics": {
+              "mae": 35.19305791821807,
+              "nasa_score": 2104493920.3744612,
+              "rmse": 49.11520677840942
+            },
+            "preference": [
+              "conservative-5",
+              "official-5",
+              "engine-balanced-5",
+              "accelerated-5"
+            ],
+            "profile": "C",
+            "round": 9
+          },
+          "cpu_seconds": 1.3908538750000001,
+          "execution": {
+            "optimizer_steps": 0,
+            "reused_candidates": 0,
+            "reused_scores": 0,
+            "scored_candidates": 0,
+            "trained_candidates": 0,
+            "training_rows": 0
+          },
+          "host_candidate_rmse": null,
+          "parent_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "parent_metrics": {
+            "mae": 35.19305791821807,
+            "nasa_score": 2104493920.3744612,
+            "rmse": 49.11520677840942
+          },
+          "plan": {
+            "actions": [],
+            "expected": "Reduce validation RMSE.",
+            "failure": "Retain the parent without an improvement.",
+            "hypothesis": "Compare an allowed continuation with the current parent."
+          },
+          "planner_fallback": false,
+          "profile": "C",
+          "selected_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "selected_rmse": 49.11520677840942,
+          "trials": []
+        },
+        "history_ids": [
+          "C-round-01",
+          "C-round-02",
+          "C-round-03",
+          "C-round-04",
+          "C-round-05",
+          "C-round-06",
+          "C-round-07",
+          "C-round-08"
+        ],
+        "hypothesis": "Compare an allowed continuation with the current parent.",
+        "model_call_ids": [
+          "school-wire-call-9"
+        ],
+        "reason": "Parent RMSE 49.115207, selected RMSE 49.115207 cycles.",
+        "seed": 42,
+        "selected_artifact_id": "candidate-01"
+      },
+      "metrics": {
+        "mae": 35.19305791821807,
+        "nasa_score": 2104493920.3744614,
+        "rmse": 49.11520677840943
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 9
+    },
+    {
+      "candidate_metrics": {},
+      "decision": {
+        "change_summary": "C continuation actions [].",
+        "configuration": {
+          "context": {
+            "available": {
+              "accelerated-5": "double the official learning rate",
+              "conservative-5": "lower the official learning rate by four",
+              "engine-balanced-5": "sample engines with equal probability at the official rate",
+              "official-5": "continue at the official learning rate"
+            },
+            "budget": {
+              "actions": 1,
+              "max_output_tokens": 128,
+              "wall_seconds": 60
+            },
+            "history": {
+              "current": [
+                {
+                  "action": "regime-kernel-5",
+                  "first_round": 2,
+                  "gain": -0.007296194387578225,
+                  "rmse": 49.122502972797
+                }
+              ],
+              "prior": [
+                {
+                  "outcomes": [
+                    {
+                      "action": "regime-kernel-5",
+                      "first_round": 1,
+                      "gain": 3.753365787702087,
+                      "rmse": 49.11520677840942
+                    }
+                  ],
+                  "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+                }
+              ]
+            },
+            "parent": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+            "parent_metrics": {
+              "mae": 35.19305791821807,
+              "nasa_score": 2104493920.3744612,
+              "rmse": 49.11520677840942
+            },
+            "preference": [
+              "conservative-5",
+              "official-5",
+              "engine-balanced-5",
+              "accelerated-5"
+            ],
+            "profile": "C",
+            "round": 10
+          },
+          "cpu_seconds": 1.335521687,
+          "execution": {
+            "optimizer_steps": 0,
+            "reused_candidates": 0,
+            "reused_scores": 0,
+            "scored_candidates": 0,
+            "trained_candidates": 0,
+            "training_rows": 0
+          },
+          "host_candidate_rmse": null,
+          "parent_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "parent_metrics": {
+            "mae": 35.19305791821807,
+            "nasa_score": 2104493920.3744612,
+            "rmse": 49.11520677840942
+          },
+          "plan": {
+            "actions": [],
+            "expected": "Reduce validation RMSE.",
+            "failure": "Retain the parent without an improvement.",
+            "hypothesis": "Compare an allowed continuation with the current parent."
+          },
+          "planner_fallback": false,
+          "profile": "C",
+          "selected_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "selected_rmse": 49.11520677840942,
+          "trials": []
+        },
+        "history_ids": [
+          "C-round-01",
+          "C-round-02",
+          "C-round-03",
+          "C-round-04",
+          "C-round-05",
+          "C-round-06",
+          "C-round-07",
+          "C-round-08",
+          "C-round-09"
+        ],
+        "hypothesis": "Compare an allowed continuation with the current parent.",
+        "model_call_ids": [
+          "school-wire-call-10"
+        ],
+        "reason": "Parent RMSE 49.115207, selected RMSE 49.115207 cycles.",
+        "seed": 42,
+        "selected_artifact_id": "candidate-01"
+      },
+      "metrics": {
+        "mae": 35.19305791821807,
+        "nasa_score": 2104493920.3744614,
+        "rmse": 49.11520677840943
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 10
+    }
+  ]
+}

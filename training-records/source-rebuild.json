@@ -1,0 +1,100 @@
+{
+  "source_archive": "harness-city-source-rc03.zip",
+  "source_archive_sha256": "2b5c1083b8f814498abf7b4ac4591988388ad97d2e02fbb9d63c77c35cfe1b3e",
+  "reference_image": "sha256:0ebd6a1a6db8b907a26c030eab731c8ed140a64d88e952b3bd6ea61b7a694bde",
+  "rebuilt_image": "sha256:62ad4c87987760fc7ad72f5c51cce2c8d4b0c731dd9e6cffb5c0dbb00086f543",
+  "build_command": [
+    "docker",
+    "build",
+    "--no-cache",
+    "--platform",
+    "linux/amd64",
+    "--provenance=false",
+    "--file",
+    "Dockerfile.city",
+    "--build-context",
+    "contest_sdk=sdk",
+    "--build-context",
+    "baselines=baselines",
+    "--build-context",
+    "frozen_a=frozen-a",
+    "--tag",
+    "zhixun-harness:city-rc-03-source-fresh",
+    "."
+  ],
+  "deployed_app_sha256": {
+    "school_planner.py": "83d2dbdf7453e1e95ed2587848788e23608db3a4eea6bcbf5c03c0dff5dc1646",
+    "school_cache.py": "2f82ead9b9e0fffa5dcb026ee3d431ab519fe3f3b9bb584c68f6b6a341f00889",
+    "school_profile.py": "fdaffaba60d939d6874b645e87fc4ee0e93f13f427e014d69680eae397a2d36b",
+    "school_runtime.py": "20c8c0e101c829f40a831e4277ca096795c8f5910bbad6c77ce69b2fd9bdf4b4",
+    "school_b_histograms.py": "43a2723f92c84c16ad5f83bd2828ae2a2232a0f89402b2e1472b4537d5206738",
+    "school_b_transfer.py": "064e74657e6f669a3d8cf0a5083b0734b8299ec6b1355ebc4c7fa48d9e84239c",
+    "school_b_adaptation.py": "42a0504fc5df149592b5b203b29bb86e0d3c8d5383d8453e7f4c504ce0d383a8",
+    "school_b_submission.py": "275a8ed75efc9f983fdfcb0ca30163366502a3342faf9ed4a0c871c435a309a9",
+    "school_c_recipes.py": "720ea5ace61db944830b153b27c434cf6e8efbb2edeabd605c4add967ec7916f",
+    "school_city_submission.py": "23482d93d3aaa220af196d1646a87bb32508bbb4df56c122edbce6508cf448f3",
+    "school_c_submission.py": "10da833ebfc8b7968ccc47eed7d017e1041112e31197ccd08dfe0862bd655a33",
+    "school_c_kernel.py": "0c748f691b59aa8b67f104bdc82b705e1479866bfc3ada5413097dff191c887f",
+    "a_frozen/contest_submission.py": "534b4cd9235f06de9770e47c775aa3bfb53eec58b1d2ee841a073a2776000b07",
+    "a_frozen/school_cache.py": "231305464ebac2896c81d6bf6fa45627b7c0074393b710cb7bc146da11b88be1",
+    "baselines/model.py": "325026d80747eb36f39c8df1be02b640ae21b3cd082827c66aacbdf273dd61c5",
+    "baselines/data.py": "6099e312829ac3aaf48209ec1f618532c4a8552fedf73f09cf31c8876261db65",
+    "baselines/__init__.py": "3363d6112a78e5b4de3508da13e543708fc6a9019c65f3c8bcecb5178a321d7a",
+    "baselines/predict.py": "80e6787cd862dfefd85cd6bfcd73b5577dd90e202dd3d5bb9f18a52761807452",
+    "harness.py": "6ef17e7dfd73558daf8464f7be8b1e963ccf103c76638c623911ec5c334c93f5"
+  },
+  "runtime": {
+    "os": "linux",
+    "arch": "amd64",
+    "entrypoint": [
+      "python3",
+      "/app/harness.py"
+    ],
+    "user": "65534:65534",
+    "working_dir": "/app",
+    "dependencies": {
+      "python": "3.11.18",
+      "numpy": "1.26.4",
+      "sdk": "1.0.4"
+    },
+    "descriptor": {
+      "protocol": "contest.harness.workspace.v2",
+      "model_access": "host_gateway_rpc",
+      "sdk": "contest_harness",
+      "sdk_version": "1.0.4",
+      "tasks": [
+        "classification",
+        "regression"
+      ]
+    }
+  },
+  "independent_predictions": {
+    "A": {
+      "rows": 621,
+      "primary": "macro_f1",
+      "value": 0.7215526855459675,
+      "predictions_sha256": "0140920b7ffb501122fa026ee401f4febf9fa52f5c391d49794b2eec19da0d34",
+      "checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+      "projection_sha256": "dcca4dc58fb33eb58e8244e1c3614ca507581a1f12177e6df4a908833d5dc196",
+      "rowwise_outputs_equal": true
+    },
+    "B": {
+      "rows": 1679,
+      "primary": "rmse",
+      "value": 588.9499823820236,
+      "predictions_sha256": "838fb2a7fccd1d551c1229b2d0c856ff07f350b96897ccff8e63aac42b7847d0",
+      "checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+      "projection_sha256": "23673a66bc22a166bf2f47b18f9c9d594f7e66a9aad88ddbccbcaea2310d9eb3",
+      "rowwise_outputs_equal": true
+    },
+    "C": {
+      "rows": 23049,
+      "primary": "rmse",
+      "value": 49.11520677840942,
+      "predictions_sha256": "68366fa3f0efedac32379f66e905b64e574b871b8a9b4681bf6cf0bcbd116396",
+      "checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+      "projection_sha256": "0cc747f9998c5d7ee1e4eac6aec0db9f5ed4d2de149a1b1cbe689cce6b6aaca7",
+      "rowwise_outputs_equal": true
+    }
+  }
+}

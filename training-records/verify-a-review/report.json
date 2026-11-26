@@ -1,0 +1,220 @@
+{
+  "image": "sha256:0ebd6a1a6db8b907a26c030eab731c8ed140a64d88e952b3bd6ea61b7a694bde",
+  "projection": "f91b4d89e1a0cf876c3df30e45e2dff7b72cab1476cd59ece818c07e3f6a22c8",
+  "rows": 623,
+  "protocol_sha256": "b847dfad5703681caaff35b809f39cef90c727148bb6149700927c0f39f1eff3",
+  "checkpoint_sha256": {
+    "official": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+    "fixed": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+    "dynamic": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb"
+  },
+  "scope": "preregistered D2 review; historical full batch was scored before",
+  "support": {
+    "Ethanol": 82,
+    "Ethylene": 167,
+    "Toluene": 3,
+    "Ammonia": 50,
+    "Acetaldehyde": 55,
+    "Acetone": 266
+  },
+  "metrics": {
+    "official": {
+      "macro_f1": 0.7260352533154538,
+      "accuracy": 0.8731942215088283,
+      "class_f1": {
+        "Ethanol": 0.6804979253112033,
+        "Ethylene": 0.9294871794871795,
+        "Ammonia": 1.0,
+        "Acetaldehyde": 0.0,
+        "Acetone": 0.9962264150943396,
+        "Toluene": 0.75
+      },
+      "confusion": [
+        [
+          82,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          22,
+          145,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          50,
+          0,
+          0,
+          0
+        ],
+        [
+          55,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          264,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          3
+        ]
+      ]
+    },
+    "fixed": {
+      "macro_f1": 0.72916409750483,
+      "accuracy": 0.8780096308186196,
+      "class_f1": {
+        "Ethanol": 0.6890756302521008,
+        "Ethylene": 0.9396825396825397,
+        "Ammonia": 1.0,
+        "Acetaldehyde": 0.0,
+        "Acetone": 0.9962264150943396,
+        "Toluene": 0.75
+      },
+      "confusion": [
+        [
+          82,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          19,
+          148,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          50,
+          0,
+          0,
+          0
+        ],
+        [
+          55,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          264,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          3
+        ]
+      ]
+    },
+    "dynamic": {
+      "macro_f1": 0.72916409750483,
+      "accuracy": 0.8780096308186196,
+      "class_f1": {
+        "Ethanol": 0.6890756302521008,
+        "Ethylene": 0.9396825396825397,
+        "Ammonia": 1.0,
+        "Acetaldehyde": 0.0,
+        "Acetone": 0.9962264150943396,
+        "Toluene": 0.75
+      },
+      "confusion": [
+        [
+          82,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          19,
+          148,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          50,
+          0,
+          0,
+          0
+        ],
+        [
+          55,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          264,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          3
+        ]
+      ]
+    }
+  },
+  "prediction_sha256": {
+    "official": "712143aef089641b589160f55be4890b8fd181ca486b7396c7a0cb92811c6baa",
+    "fixed": "df78b33cb28acff65d02964656cd63dac5fed530a8fcea73bee6cd8ba7218acc",
+    "dynamic": "df78b33cb28acff65d02964656cd63dac5fed530a8fcea73bee6cd8ba7218acc"
+  },
+  "dynamic_minus_official_macro_f1": 0.003128844189376201,
+  "dynamic_minus_fixed_macro_f1": 0.0,
+  "paired_by_class_ci95": [
+    0.0,
+    0.007298033016187783
+  ],
+  "bootstrap_scope": "fixed review batch, paired within class, 2000 replicates, seed 42"
+}

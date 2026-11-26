@@ -1,0 +1,67 @@
+{
+  "context": {
+    "available": [
+      "stable",
+      "balanced",
+      "explore",
+      "polish",
+      "augment"
+    ],
+    "class_f1": [
+      0.70046,
+      0.96407,
+      1.0,
+      0.0,
+      0.99812,
+      0.66667
+    ],
+    "history": [
+      {
+        "gain": 0.0,
+        "recipe": "polish"
+      },
+      {
+        "gain": -0.01034,
+        "recipe": "augment"
+      },
+      {
+        "gain": -0.00274,
+        "recipe": "balanced"
+      },
+      {
+        "gain": 0.0,
+        "recipe": "polish"
+      },
+      {
+        "gain": -0.01034,
+        "recipe": "augment"
+      },
+      {
+        "gain": -0.00274,
+        "recipe": "balanced"
+      },
+      {
+        "gain": 0.0,
+        "recipe": "polish"
+      },
+      {
+        "gain": -0.01034,
+        "recipe": "augment"
+      }
+    ],
+    "parent_macro_f1": 0.72155,
+    "parent_steps": 220,
+    "profile": "A",
+    "round": 10,
+    "train_counts": [
+      90,
+      98,
+      83,
+      30,
+      70,
+      74
+    ]
+  },
+  "response": "{\"order\":[\"polish\",\"balanced\",\"augment\"]}",
+  "source": "exact_archived_model_reply"
+}

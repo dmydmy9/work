@@ -1,0 +1,34 @@
+{
+  "context": {
+    "available": [
+      "stable",
+      "balanced",
+      "explore",
+      "polish",
+      "augment"
+    ],
+    "class_f1": [
+      0.68778,
+      0.95441,
+      0.9901,
+      0.0,
+      0.99623,
+      0.57143
+    ],
+    "history": [],
+    "parent_macro_f1": 0.69999,
+    "parent_steps": 80,
+    "profile": "A",
+    "round": 1,
+    "train_counts": [
+      90,
+      98,
+      83,
+      30,
+      70,
+      74
+    ]
+  },
+  "response": "{\"order\":[\"balanced\",\"polish\",\"explore\"]}",
+  "source": "exact_archived_model_reply"
+}

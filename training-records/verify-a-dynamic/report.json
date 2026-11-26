@@ -1,0 +1,4529 @@
+{
+  "final": {
+    "accuracy": 0.8921095008051529,
+    "class_f1": {
+      "Acetaldehyde": 0.0,
+      "Acetone": 0.9981167608286252,
+      "Ammonia": 1.0,
+      "Ethanol": 0.7004608294930875,
+      "Ethylene": 0.9640718562874252,
+      "Toluene": 0.6666666666666666
+    },
+    "confusion": [
+      [
+        76,
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        161,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        50,
+        0,
+        0,
+        0
+      ],
+      [
+        53,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        265,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    ],
+    "macro_f1": 0.7215526855459675
+  },
+  "image": "sha256:0ebd6a1a6db8b907a26c030eab731c8ed140a64d88e952b3bd6ea61b7a694bde",
+  "official": {
+    "accuracy": 0.8840579710144928,
+    "class_f1": {
+      "Acetaldehyde": 0.0,
+      "Acetone": 0.9962264150943396,
+      "Ammonia": 0.9900990099009901,
+      "Ethanol": 0.6877828054298643,
+      "Ethylene": 0.9544072948328267,
+      "Toluene": 0.5714285714285714
+    },
+    "confusion": [
+      [
+        76,
+        5,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        10,
+        157,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        50,
+        0,
+        0,
+        0
+      ],
+      [
+        53,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        264,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    ],
+    "macro_f1": 0.6999906827810985
+  },
+  "projections": {
+    "train": {
+      "rows": 445,
+      "sha256": "011ea71ec5b3a8ac71e1ab2220eea501c3fb2bed373bce222f92417ae41b25ec"
+    },
+    "validation": {
+      "rows": 621,
+      "sha256": "dcca4dc58fb33eb58e8244e1c3614ca507581a1f12177e6df4a908833d5dc196"
+    }
+  },
+  "reply_source": "outputs\\goal\\city-live-rc01-retry\\A-full\\model",
+  "rounds": [
+    {
+      "candidates": {
+        "candidate-1-1": {
+          "accuracy": 0.8921095008051529,
+          "class_f1": {
+            "Acetaldehyde": 0.0,
+            "Acetone": 0.9981167608286252,
+            "Ammonia": 1.0,
+            "Ethanol": 0.7004608294930875,
+            "Ethylene": 0.9640718562874252,
+            "Toluene": 0.6666666666666666
+          },
+          "confusion": [
+            [
+              76,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              6,
+              161,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              0,
+              0
+            ],
+            [
+              53,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              265,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ],
+          "macro_f1": 0.7215526855459675
+        }
+      },
+      "decision": {
+        "change_summary": "比较 balanced, polish, explore 配方，新训练 3 个，复用 0 个。采纳最佳候选。",
+        "configuration": {
+          "execution": {
+            "cpu_seconds": 0.464642509,
+            "optimizer_steps": 364,
+            "reused_candidates": 0,
+            "reused_scores": 0,
+            "scored_candidates": 3,
+            "trained_candidates": 3,
+            "training_rows": 17800
+          },
+          "parent_checkpoint_sha256": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+          "parent_prediction_sha256": "afaa47695f6ea9250d30adb2598954999a3bc49f328bf5fafec876133f768b2a",
+          "planner_fallback": false,
+          "recipe": "explore",
+          "trials": [
+            {
+              "accuracy": 0.8856682769726248,
+              "actual_optimizer_steps": 56,
+              "actual_training_rows": 3560,
+              "cache": {
+                "checkpoint_sha256": "sha256:8ca0b1fd6ebfd4cea72faaccfbc4993861d47d914e046349d04adb1ef886ed82",
+                "prediction_sha256": "b19274ddca082f18b3852d5c7cbad17ce15fcaceee477e05b1bb664168f87e19",
+                "score_key": "ff1ab7652867b9b9868bddcdcdeb9b66c49f3559447e55add8e0cce1e3208276",
+                "score_reused_from_round": null,
+                "training_key": "d302ee54f1dfb45df3dc88ef12c466a2bb9b67d64ad35f1e5b8f862d9b8d8a20",
+                "training_reused_from_round": null
+              },
+              "class_f1": [
+                0.6940639269406392,
+                0.9607250755287009,
+                0.9900990099009901,
+                0.0,
+                0.994328922495274,
+                0.5714285714285714
+              ],
+              "confusion": [
+                [
+                  76,
+                  5,
+                  1,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  8,
+                  159,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  1,
+                  263,
+                  2
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 136,
+              "initial_steps": 80,
+              "macro_f1": 0.7017742510490294,
+              "recipe": "balanced",
+              "training_rows": 3560
+            },
+            {
+              "accuracy": 0.893719806763285,
+              "actual_optimizer_steps": 168,
+              "actual_training_rows": 5340,
+              "cache": {
+                "checkpoint_sha256": "sha256:f24e23d1cba1d7405594874d3d8f2b94a62fbb560c233cb59e3e19d7c7f404aa",
+                "prediction_sha256": "529e4297adb51dc112941dc1452f27ab44b3cf361988b323890db657f6e1a987",
+                "score_key": "27876000745c7be377453b1e17d7459f5eab514f840f939a8abed95c18a8eaa6",
+                "score_reused_from_round": null,
+                "training_key": "264b35860ca3d57f224553b4b69c811553a26ae41e8d0106b2989a54f417a1be",
+                "training_reused_from_round": null
+              },
+              "class_f1": [
+                0.7069767441860465,
+                0.9731343283582089,
+                0.9900990099009901,
+                0.0,
+                0.9962264150943396,
+                0.5714285714285714
+              ],
+              "confusion": [
+                [
+                  76,
+                  5,
+                  1,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  4,
+                  163,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  264,
+                  2
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 248,
+              "initial_steps": 80,
+              "macro_f1": 0.706310844828026,
+              "recipe": "polish",
+              "training_rows": 5340
+            },
+            {
+              "accuracy": 0.8921095008051529,
+              "actual_optimizer_steps": 140,
+              "actual_training_rows": 8900,
+              "cache": {
+                "checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+                "prediction_sha256": "3bdb48eb54d4e2a39b225a91d549094dc2b92cf21b13b6fb44e80fd00fcdd7f0",
+                "score_key": "1c0f0579daf17dfb90bda25790f216f443190c3e62c54385eaab1aa261e0eb63",
+                "score_reused_from_round": null,
+                "training_key": "84db069df97b1605cd578baa5e5901ffdc64be7c2592527251784fe74a019fe0",
+                "training_reused_from_round": null
+              },
+              "class_f1": [
+                0.7004608294930875,
+                0.9640718562874252,
+                1.0,
+                0.0,
+                0.9981167608286252,
+                0.6666666666666666
+              ],
+              "confusion": [
+                [
+                  76,
+                  6,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  6,
+                  161,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  265,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 220,
+              "initial_steps": 80,
+              "macro_f1": 0.7215526855459675,
+              "recipe": "explore",
+              "training_rows": 8900
+            }
+          ]
+        },
+        "history_ids": [],
+        "hypothesis": "根据历史记录和公开验证比较续训候选。",
+        "model_call_ids": [
+          "school-wire-call-1"
+        ],
+        "reason": "父模型 Macro-F1 0.699991，候选 0.721553。模型回执 school-wire-call-1。",
+        "seed": 42,
+        "selected_artifact_id": "candidate-1-1"
+      },
+      "metrics": {
+        "accuracy": 0.8921095008051529,
+        "class_f1": {
+          "Acetaldehyde": 0.0,
+          "Acetone": 0.9981167608286252,
+          "Ammonia": 1.0,
+          "Ethanol": 0.7004608294930875,
+          "Ethylene": 0.9640718562874252,
+          "Toluene": 0.6666666666666666
+        },
+        "confusion": [
+          [
+            76,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            161,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            50,
+            0,
+            0,
+            0
+          ],
+          [
+            53,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            265,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ]
+        ],
+        "macro_f1": 0.7215526855459675
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "candidate_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 1,
+      "selected_checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb"
+    },
+    {
+      "candidates": {
+        "candidate-2-1": {
+          "accuracy": 0.8921095008051529,
+          "class_f1": {
+            "Acetaldehyde": 0.0,
+            "Acetone": 0.9981167608286252,
+            "Ammonia": 1.0,
+            "Ethanol": 0.7004608294930875,
+            "Ethylene": 0.9640718562874252,
+            "Toluene": 0.6666666666666666
+          },
+          "confusion": [
+            [
+              76,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              6,
+              161,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              0,
+              0
+            ],
+            [
+              53,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              265,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ],
+          "macro_f1": 0.7215526855459675
+        }
+      },
+      "decision": {
+        "change_summary": "比较 explore, polish, balanced 配方，新训练 3 个，复用 0 个。保留父模型。",
+        "configuration": {
+          "execution": {
+            "cpu_seconds": 0.47263229300000004,
+            "optimizer_steps": 364,
+            "reused_candidates": 0,
+            "reused_scores": 0,
+            "scored_candidates": 3,
+            "trained_candidates": 3,
+            "training_rows": 17800
+          },
+          "parent_checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "parent_prediction_sha256": "3bdb48eb54d4e2a39b225a91d549094dc2b92cf21b13b6fb44e80fd00fcdd7f0",
+          "planner_fallback": false,
+          "recipe": "polish",
+          "trials": [
+            {
+              "accuracy": 0.8824476650563607,
+              "actual_optimizer_steps": 140,
+              "actual_training_rows": 8900,
+              "cache": {
+                "checkpoint_sha256": "sha256:77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084",
+                "prediction_sha256": "57ac71401364db093c5ba5dffc19c2ebab0afea27b9abbef6f7445588c6ab0e3",
+                "score_key": "21faf73d6ab6c5a876f07bf73e1b9814b5fc0f03a341c4b0a643f8348e2d4c72",
+                "score_reused_from_round": null,
+                "training_key": "9476dec40f53b344b484d4c2016c101394045cd22d5ec5ef110e60ce4dcd5d9f",
+                "training_reused_from_round": null
+              },
+              "class_f1": [
+                0.6816143497757847,
+                0.9515151515151515,
+                0.9795918367346939,
+                0.0,
+                0.9981167608286252,
+                0.6666666666666666
+              ],
+              "confusion": [
+                [
+                  76,
+                  6,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  10,
+                  157,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  2,
+                  0,
+                  48,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  265,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 360,
+              "initial_steps": 220,
+              "macro_f1": 0.7129174609201537,
+              "recipe": "explore",
+              "training_rows": 8900
+            },
+            {
+              "accuracy": 0.8921095008051529,
+              "actual_optimizer_steps": 168,
+              "actual_training_rows": 5340,
+              "cache": {
+                "checkpoint_sha256": "sha256:3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9",
+                "prediction_sha256": "3bdb48eb54d4e2a39b225a91d549094dc2b92cf21b13b6fb44e80fd00fcdd7f0",
+                "score_key": "fe9c59bdb5d85f5a0ff8eeba3c48900a6b141aa606641101d73cf1f1bccbdd58",
+                "score_reused_from_round": null,
+                "training_key": "e095ff27954aebc5a34fb89fd319507e678574bddc13ae55cb3d112c78329f7a",
+                "training_reused_from_round": null
+              },
+              "class_f1": [
+                0.7004608294930875,
+                0.9640718562874252,
+                1.0,
+                0.0,
+                0.9981167608286252,
+                0.6666666666666666
+              ],
+              "confusion": [
+                [
+                  76,
+                  6,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  6,
+                  161,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  265,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 388,
+              "initial_steps": 220,
+              "macro_f1": 0.7215526855459675,
+              "recipe": "polish",
+              "training_rows": 5340
+            },
+            {
+              "accuracy": 0.8856682769726248,
+              "actual_optimizer_steps": 56,
+              "actual_training_rows": 3560,
+              "cache": {
+                "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de",
+                "prediction_sha256": "c404e692173f3e7041a958a2291386a2a4eda941c876b3a75dd51d1df6a447c4",
+                "score_key": "f38a899b11028e5f8e1de9daa77d3a98147a385ed0fe27c2f2db540bd10f4db6",
+                "score_reused_from_round": null,
+                "training_key": "05e108300f8d82f7b64925754fce4323b1424b283fa97c5c600f94142d3e65fa",
+                "training_reused_from_round": null
+              },
+              "class_f1": [
+                0.6940639269406392,
+                0.9578313253012049,
+                1.0,
+                0.0,
+                0.994328922495274,
+                0.6666666666666666
+              ],
+              "confusion": [
+                [
+                  76,
+                  6,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  8,
+                  159,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  2,
+                  263,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 276,
+              "initial_steps": 220,
+              "macro_f1": 0.7188151402339642,
+              "recipe": "balanced",
+              "training_rows": 3560
+            }
+          ]
+        },
+        "history_ids": [
+          "A-round-01"
+        ],
+        "hypothesis": "根据历史记录和公开验证比较续训候选。",
+        "model_call_ids": [
+          "school-wire-call-2"
+        ],
+        "reason": "父模型 Macro-F1 0.721553，候选 0.721553。模型回执 school-wire-call-2。",
+        "seed": 42,
+        "selected_artifact_id": "candidate-1-1"
+      },
+      "metrics": {
+        "accuracy": 0.8921095008051529,
+        "class_f1": {
+          "Acetaldehyde": 0.0,
+          "Acetone": 0.9981167608286252,
+          "Ammonia": 1.0,
+          "Ethanol": 0.7004608294930875,
+          "Ethylene": 0.9640718562874252,
+          "Toluene": 0.6666666666666666
+        },
+        "confusion": [
+          [
+            76,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            161,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            50,
+            0,
+            0,
+            0
+          ],
+          [
+            53,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            265,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ]
+        ],
+        "macro_f1": 0.7215526855459675
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "candidate_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 2,
+      "selected_checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb"
+    },
+    {
+      "candidates": {
+        "candidate-3-1": {
+          "accuracy": 0.8921095008051529,
+          "class_f1": {
+            "Acetaldehyde": 0.0,
+            "Acetone": 0.9981167608286252,
+            "Ammonia": 1.0,
+            "Ethanol": 0.7004608294930875,
+            "Ethylene": 0.9640718562874252,
+            "Toluene": 0.6666666666666666
+          },
+          "confusion": [
+            [
+              76,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              6,
+              161,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              0,
+              0
+            ],
+            [
+              53,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              265,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ],
+          "macro_f1": 0.7215526855459675
+        }
+      },
+      "decision": {
+        "change_summary": "比较 explore, polish, balanced 配方，新训练 0 个，复用 3 个。保留父模型。",
+        "configuration": {
+          "execution": {
+            "cpu_seconds": 0.460408335,
+            "optimizer_steps": 0,
+            "reused_candidates": 3,
+            "reused_scores": 3,
+            "scored_candidates": 0,
+            "trained_candidates": 0,
+            "training_rows": 0
+          },
+          "parent_checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "parent_prediction_sha256": "3bdb48eb54d4e2a39b225a91d549094dc2b92cf21b13b6fb44e80fd00fcdd7f0",
+          "planner_fallback": false,
+          "recipe": "polish",
+          "trials": [
+            {
+              "accuracy": 0.8824476650563607,
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084",
+                "prediction_sha256": "57ac71401364db093c5ba5dffc19c2ebab0afea27b9abbef6f7445588c6ab0e3",
+                "score_key": "21faf73d6ab6c5a876f07bf73e1b9814b5fc0f03a341c4b0a643f8348e2d4c72",
+                "score_reused_from_round": 2,
+                "training_key": "9476dec40f53b344b484d4c2016c101394045cd22d5ec5ef110e60ce4dcd5d9f",
+                "training_reused_from_round": 2
+              },
+              "class_f1": [
+                0.6816143497757847,
+                0.9515151515151515,
+                0.9795918367346939,
+                0.0,
+                0.9981167608286252,
+                0.6666666666666666
+              ],
+              "confusion": [
+                [
+                  76,
+                  6,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  10,
+                  157,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  2,
+                  0,
+                  48,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  265,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 360,
+              "initial_steps": 220,
+              "macro_f1": 0.7129174609201537,
+              "recipe": "explore",
+              "training_rows": 8900
+            },
+            {
+              "accuracy": 0.8921095008051529,
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9",
+                "prediction_sha256": "3bdb48eb54d4e2a39b225a91d549094dc2b92cf21b13b6fb44e80fd00fcdd7f0",
+                "score_key": "fe9c59bdb5d85f5a0ff8eeba3c48900a6b141aa606641101d73cf1f1bccbdd58",
+                "score_reused_from_round": 2,
+                "training_key": "e095ff27954aebc5a34fb89fd319507e678574bddc13ae55cb3d112c78329f7a",
+                "training_reused_from_round": 2
+              },
+              "class_f1": [
+                0.7004608294930875,
+                0.9640718562874252,
+                1.0,
+                0.0,
+                0.9981167608286252,
+                0.6666666666666666
+              ],
+              "confusion": [
+                [
+                  76,
+                  6,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  6,
+                  161,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  265,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 388,
+              "initial_steps": 220,
+              "macro_f1": 0.7215526855459675,
+              "recipe": "polish",
+              "training_rows": 5340
+            },
+            {
+              "accuracy": 0.8856682769726248,
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de",
+                "prediction_sha256": "c404e692173f3e7041a958a2291386a2a4eda941c876b3a75dd51d1df6a447c4",
+                "score_key": "f38a899b11028e5f8e1de9daa77d3a98147a385ed0fe27c2f2db540bd10f4db6",
+                "score_reused_from_round": 2,
+                "training_key": "05e108300f8d82f7b64925754fce4323b1424b283fa97c5c600f94142d3e65fa",
+                "training_reused_from_round": 2
+              },
+              "class_f1": [
+                0.6940639269406392,
+                0.9578313253012049,
+                1.0,
+                0.0,
+                0.994328922495274,
+                0.6666666666666666
+              ],
+              "confusion": [
+                [
+                  76,
+                  6,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  8,
+                  159,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  2,
+                  263,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 276,
+              "initial_steps": 220,
+              "macro_f1": 0.7188151402339642,
+              "recipe": "balanced",
+              "training_rows": 3560
+            }
+          ]
+        },
+        "history_ids": [
+          "A-round-01",
+          "A-round-02"
+        ],
+        "hypothesis": "根据历史记录和公开验证比较续训候选。",
+        "model_call_ids": [
+          "school-wire-call-3"
+        ],
+        "reason": "父模型 Macro-F1 0.721553，候选 0.721553。模型回执 school-wire-call-3。",
+        "seed": 42,
+        "selected_artifact_id": "candidate-1-1"
+      },
+      "metrics": {
+        "accuracy": 0.8921095008051529,
+        "class_f1": {
+          "Acetaldehyde": 0.0,
+          "Acetone": 0.9981167608286252,
+          "Ammonia": 1.0,
+          "Ethanol": 0.7004608294930875,
+          "Ethylene": 0.9640718562874252,
+          "Toluene": 0.6666666666666666
+        },
+        "confusion": [
+          [
+            76,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            161,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            50,
+            0,
+            0,
+            0
+          ],
+          [
+            53,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            265,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ]
+        ],
+        "macro_f1": 0.7215526855459675
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "candidate_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 3,
+      "selected_checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb"
+    },
+    {
+      "candidates": {
+        "candidate-4-1": {
+          "accuracy": 0.8921095008051529,
+          "class_f1": {
+            "Acetaldehyde": 0.0,
+            "Acetone": 0.9981167608286252,
+            "Ammonia": 1.0,
+            "Ethanol": 0.7004608294930875,
+            "Ethylene": 0.9640718562874252,
+            "Toluene": 0.6666666666666666
+          },
+          "confusion": [
+            [
+              76,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              6,
+              161,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              0,
+              0
+            ],
+            [
+              53,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              265,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ],
+          "macro_f1": 0.7215526855459675
+        }
+      },
+      "decision": {
+        "change_summary": "比较 polish, explore, balanced 配方，新训练 0 个，复用 3 个。保留父模型。",
+        "configuration": {
+          "execution": {
+            "cpu_seconds": 0.343485389,
+            "optimizer_steps": 0,
+            "reused_candidates": 3,
+            "reused_scores": 3,
+            "scored_candidates": 0,
+            "trained_candidates": 0,
+            "training_rows": 0
+          },
+          "parent_checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "parent_prediction_sha256": "3bdb48eb54d4e2a39b225a91d549094dc2b92cf21b13b6fb44e80fd00fcdd7f0",
+          "planner_fallback": false,
+          "recipe": "polish",
+          "trials": [
+            {
+              "accuracy": 0.8921095008051529,
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9",
+                "prediction_sha256": "3bdb48eb54d4e2a39b225a91d549094dc2b92cf21b13b6fb44e80fd00fcdd7f0",
+                "score_key": "fe9c59bdb5d85f5a0ff8eeba3c48900a6b141aa606641101d73cf1f1bccbdd58",
+                "score_reused_from_round": 2,
+                "training_key": "e095ff27954aebc5a34fb89fd319507e678574bddc13ae55cb3d112c78329f7a",
+                "training_reused_from_round": 2
+              },
+              "class_f1": [
+                0.7004608294930875,
+                0.9640718562874252,
+                1.0,
+                0.0,
+                0.9981167608286252,
+                0.6666666666666666
+              ],
+              "confusion": [
+                [
+                  76,
+                  6,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  6,
+                  161,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  265,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 388,
+              "initial_steps": 220,
+              "macro_f1": 0.7215526855459675,
+              "recipe": "polish",
+              "training_rows": 5340
+            },
+            {
+              "accuracy": 0.8824476650563607,
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084",
+                "prediction_sha256": "57ac71401364db093c5ba5dffc19c2ebab0afea27b9abbef6f7445588c6ab0e3",
+                "score_key": "21faf73d6ab6c5a876f07bf73e1b9814b5fc0f03a341c4b0a643f8348e2d4c72",
+                "score_reused_from_round": 2,
+                "training_key": "9476dec40f53b344b484d4c2016c101394045cd22d5ec5ef110e60ce4dcd5d9f",
+                "training_reused_from_round": 2
+              },
+              "class_f1": [
+                0.6816143497757847,
+                0.9515151515151515,
+                0.9795918367346939,
+                0.0,
+                0.9981167608286252,
+                0.6666666666666666
+              ],
+              "confusion": [
+                [
+                  76,
+                  6,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  10,
+                  157,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  2,
+                  0,
+                  48,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  265,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 360,
+              "initial_steps": 220,
+              "macro_f1": 0.7129174609201537,
+              "recipe": "explore",
+              "training_rows": 8900
+            },
+            {
+              "accuracy": 0.8856682769726248,
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de",
+                "prediction_sha256": "c404e692173f3e7041a958a2291386a2a4eda941c876b3a75dd51d1df6a447c4",
+                "score_key": "f38a899b11028e5f8e1de9daa77d3a98147a385ed0fe27c2f2db540bd10f4db6",
+                "score_reused_from_round": 2,
+                "training_key": "05e108300f8d82f7b64925754fce4323b1424b283fa97c5c600f94142d3e65fa",
+                "training_reused_from_round": 2
+              },
+              "class_f1": [
+                0.6940639269406392,
+                0.9578313253012049,
+                1.0,
+                0.0,
+                0.994328922495274,
+                0.6666666666666666
+              ],
+              "confusion": [
+                [
+                  76,
+                  6,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  8,
+                  159,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  2,
+                  263,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 276,
+              "initial_steps": 220,
+              "macro_f1": 0.7188151402339642,
+              "recipe": "balanced",
+              "training_rows": 3560
+            }
+          ]
+        },
+        "history_ids": [
+          "A-round-01",
+          "A-round-02",
+          "A-round-03"
+        ],
+        "hypothesis": "根据历史记录和公开验证比较续训候选。",
+        "model_call_ids": [
+          "school-wire-call-4"
+        ],
+        "reason": "父模型 Macro-F1 0.721553，候选 0.721553。模型回执 school-wire-call-4。",
+        "seed": 42,
+        "selected_artifact_id": "candidate-1-1"
+      },
+      "metrics": {
+        "accuracy": 0.8921095008051529,
+        "class_f1": {
+          "Acetaldehyde": 0.0,
+          "Acetone": 0.9981167608286252,
+          "Ammonia": 1.0,
+          "Ethanol": 0.7004608294930875,
+          "Ethylene": 0.9640718562874252,
+          "Toluene": 0.6666666666666666
+        },
+        "confusion": [
+          [
+            76,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            161,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            50,
+            0,
+            0,
+            0
+          ],
+          [
+            53,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            265,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ]
+        ],
+        "macro_f1": 0.7215526855459675
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "candidate_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 4,
+      "selected_checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb"
+    },
+    {
+      "candidates": {
+        "candidate-5-1": {
+          "accuracy": 0.8921095008051529,
+          "class_f1": {
+            "Acetaldehyde": 0.0,
+            "Acetone": 0.9981167608286252,
+            "Ammonia": 1.0,
+            "Ethanol": 0.7004608294930875,
+            "Ethylene": 0.9640718562874252,
+            "Toluene": 0.6666666666666666
+          },
+          "confusion": [
+            [
+              76,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              6,
+              161,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              0,
+              0
+            ],
+            [
+              53,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              265,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ],
+          "macro_f1": 0.7215526855459675
+        }
+      },
+      "decision": {
+        "change_summary": "比较 polish, balanced, augment 配方，新训练 1 个，复用 2 个。保留父模型。",
+        "configuration": {
+          "execution": {
+            "cpu_seconds": 0.34069245699999995,
+            "optimizer_steps": 112,
+            "reused_candidates": 2,
+            "reused_scores": 2,
+            "scored_candidates": 1,
+            "trained_candidates": 1,
+            "training_rows": 7120
+          },
+          "parent_checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "parent_prediction_sha256": "3bdb48eb54d4e2a39b225a91d549094dc2b92cf21b13b6fb44e80fd00fcdd7f0",
+          "planner_fallback": false,
+          "recipe": "polish",
+          "trials": [
+            {
+              "accuracy": 0.8921095008051529,
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9",
+                "prediction_sha256": "3bdb48eb54d4e2a39b225a91d549094dc2b92cf21b13b6fb44e80fd00fcdd7f0",
+                "score_key": "fe9c59bdb5d85f5a0ff8eeba3c48900a6b141aa606641101d73cf1f1bccbdd58",
+                "score_reused_from_round": 2,
+                "training_key": "e095ff27954aebc5a34fb89fd319507e678574bddc13ae55cb3d112c78329f7a",
+                "training_reused_from_round": 2
+              },
+              "class_f1": [
+                0.7004608294930875,
+                0.9640718562874252,
+                1.0,
+                0.0,
+                0.9981167608286252,
+                0.6666666666666666
+              ],
+              "confusion": [
+                [
+                  76,
+                  6,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  6,
+                  161,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  265,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 388,
+              "initial_steps": 220,
+              "macro_f1": 0.7215526855459675,
+              "recipe": "polish",
+              "training_rows": 5340
+            },
+            {
+              "accuracy": 0.8856682769726248,
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de",
+                "prediction_sha256": "c404e692173f3e7041a958a2291386a2a4eda941c876b3a75dd51d1df6a447c4",
+                "score_key": "f38a899b11028e5f8e1de9daa77d3a98147a385ed0fe27c2f2db540bd10f4db6",
+                "score_reused_from_round": 2,
+                "training_key": "05e108300f8d82f7b64925754fce4323b1424b283fa97c5c600f94142d3e65fa",
+                "training_reused_from_round": 2
+              },
+              "class_f1": [
+                0.6940639269406392,
+                0.9578313253012049,
+                1.0,
+                0.0,
+                0.994328922495274,
+                0.6666666666666666
+              ],
+              "confusion": [
+                [
+                  76,
+                  6,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  8,
+                  159,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  2,
+                  263,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 276,
+              "initial_steps": 220,
+              "macro_f1": 0.7188151402339642,
+              "recipe": "balanced",
+              "training_rows": 3560
+            },
+            {
+              "accuracy": 0.8921095008051529,
+              "actual_optimizer_steps": 112,
+              "actual_training_rows": 7120,
+              "cache": {
+                "checkpoint_sha256": "sha256:088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986",
+                "prediction_sha256": "468e8fddc6b436e6413a32298b26257755d01f58f22b84f21dee8e91343da861",
+                "score_key": "658bfc02a8737950c6edb97814d3a777ffdafecff980a2fbe3b74c903f29f18e",
+                "score_reused_from_round": null,
+                "training_key": "e519143ba7ed69323eaf556dba10dafdd8fb67ec077a38ab065d9ffe1efa2204",
+                "training_reused_from_round": null
+              },
+              "class_f1": [
+                0.6956521739130435,
+                0.9707602339181286,
+                1.0,
+                0.03508771929824561,
+                0.994328922495274,
+                0.5714285714285714
+              ],
+              "confusion": [
+                [
+                  72,
+                  9,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  166,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  52,
+                  0,
+                  0,
+                  1,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  2,
+                  263,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 332,
+              "initial_steps": 220,
+              "macro_f1": 0.7112096035088772,
+              "recipe": "augment",
+              "training_rows": 7120
+            }
+          ]
+        },
+        "history_ids": [
+          "A-round-01",
+          "A-round-02",
+          "A-round-03",
+          "A-round-04"
+        ],
+        "hypothesis": "根据历史记录和公开验证比较续训候选。",
+        "model_call_ids": [
+          "school-wire-call-5"
+        ],
+        "reason": "父模型 Macro-F1 0.721553，候选 0.721553。模型回执 school-wire-call-5。",
+        "seed": 42,
+        "selected_artifact_id": "candidate-1-1"
+      },
+      "metrics": {
+        "accuracy": 0.8921095008051529,
+        "class_f1": {
+          "Acetaldehyde": 0.0,
+          "Acetone": 0.9981167608286252,
+          "Ammonia": 1.0,
+          "Ethanol": 0.7004608294930875,
+          "Ethylene": 0.9640718562874252,
+          "Toluene": 0.6666666666666666
+        },
+        "confusion": [
+          [
+            76,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            161,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            50,
+            0,
+            0,
+            0
+          ],
+          [
+            53,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            265,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ]
+        ],
+        "macro_f1": 0.7215526855459675
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "candidate_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 5,
+      "selected_checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb"
+    },
+    {
+      "candidates": {
+        "candidate-6-1": {
+          "accuracy": 0.8921095008051529,
+          "class_f1": {
+            "Acetaldehyde": 0.0,
+            "Acetone": 0.9981167608286252,
+            "Ammonia": 1.0,
+            "Ethanol": 0.7004608294930875,
+            "Ethylene": 0.9640718562874252,
+            "Toluene": 0.6666666666666666
+          },
+          "confusion": [
+            [
+              76,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              6,
+              161,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              0,
+              0
+            ],
+            [
+              53,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              265,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ],
+          "macro_f1": 0.7215526855459675
+        }
+      },
+      "decision": {
+        "change_summary": "比较 polish, balanced, augment 配方，新训练 0 个，复用 3 个。保留父模型。",
+        "configuration": {
+          "execution": {
+            "cpu_seconds": 0.318058004,
+            "optimizer_steps": 0,
+            "reused_candidates": 3,
+            "reused_scores": 3,
+            "scored_candidates": 0,
+            "trained_candidates": 0,
+            "training_rows": 0
+          },
+          "parent_checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "parent_prediction_sha256": "3bdb48eb54d4e2a39b225a91d549094dc2b92cf21b13b6fb44e80fd00fcdd7f0",
+          "planner_fallback": false,
+          "recipe": "polish",
+          "trials": [
+            {
+              "accuracy": 0.8921095008051529,
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9",
+                "prediction_sha256": "3bdb48eb54d4e2a39b225a91d549094dc2b92cf21b13b6fb44e80fd00fcdd7f0",
+                "score_key": "fe9c59bdb5d85f5a0ff8eeba3c48900a6b141aa606641101d73cf1f1bccbdd58",
+                "score_reused_from_round": 2,
+                "training_key": "e095ff27954aebc5a34fb89fd319507e678574bddc13ae55cb3d112c78329f7a",
+                "training_reused_from_round": 2
+              },
+              "class_f1": [
+                0.7004608294930875,
+                0.9640718562874252,
+                1.0,
+                0.0,
+                0.9981167608286252,
+                0.6666666666666666
+              ],
+              "confusion": [
+                [
+                  76,
+                  6,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  6,
+                  161,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  265,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 388,
+              "initial_steps": 220,
+              "macro_f1": 0.7215526855459675,
+              "recipe": "polish",
+              "training_rows": 5340
+            },
+            {
+              "accuracy": 0.8856682769726248,
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de",
+                "prediction_sha256": "c404e692173f3e7041a958a2291386a2a4eda941c876b3a75dd51d1df6a447c4",
+                "score_key": "f38a899b11028e5f8e1de9daa77d3a98147a385ed0fe27c2f2db540bd10f4db6",
+                "score_reused_from_round": 2,
+                "training_key": "05e108300f8d82f7b64925754fce4323b1424b283fa97c5c600f94142d3e65fa",
+                "training_reused_from_round": 2
+              },
+              "class_f1": [
+                0.6940639269406392,
+                0.9578313253012049,
+                1.0,
+                0.0,
+                0.994328922495274,
+                0.6666666666666666
+              ],
+              "confusion": [
+                [
+                  76,
+                  6,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  8,
+                  159,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  2,
+                  263,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 276,
+              "initial_steps": 220,
+              "macro_f1": 0.7188151402339642,
+              "recipe": "balanced",
+              "training_rows": 3560
+            },
+            {
+              "accuracy": 0.8921095008051529,
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986",
+                "prediction_sha256": "468e8fddc6b436e6413a32298b26257755d01f58f22b84f21dee8e91343da861",
+                "score_key": "658bfc02a8737950c6edb97814d3a777ffdafecff980a2fbe3b74c903f29f18e",
+                "score_reused_from_round": 5,
+                "training_key": "e519143ba7ed69323eaf556dba10dafdd8fb67ec077a38ab065d9ffe1efa2204",
+                "training_reused_from_round": 5
+              },
+              "class_f1": [
+                0.6956521739130435,
+                0.9707602339181286,
+                1.0,
+                0.03508771929824561,
+                0.994328922495274,
+                0.5714285714285714
+              ],
+              "confusion": [
+                [
+                  72,
+                  9,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  166,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  52,
+                  0,
+                  0,
+                  1,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  2,
+                  263,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 332,
+              "initial_steps": 220,
+              "macro_f1": 0.7112096035088772,
+              "recipe": "augment",
+              "training_rows": 7120
+            }
+          ]
+        },
+        "history_ids": [
+          "A-round-01",
+          "A-round-02",
+          "A-round-03",
+          "A-round-04",
+          "A-round-05"
+        ],
+        "hypothesis": "根据历史记录和公开验证比较续训候选。",
+        "model_call_ids": [
+          "school-wire-call-6"
+        ],
+        "reason": "父模型 Macro-F1 0.721553，候选 0.721553。模型回执 school-wire-call-6。",
+        "seed": 42,
+        "selected_artifact_id": "candidate-1-1"
+      },
+      "metrics": {
+        "accuracy": 0.8921095008051529,
+        "class_f1": {
+          "Acetaldehyde": 0.0,
+          "Acetone": 0.9981167608286252,
+          "Ammonia": 1.0,
+          "Ethanol": 0.7004608294930875,
+          "Ethylene": 0.9640718562874252,
+          "Toluene": 0.6666666666666666
+        },
+        "confusion": [
+          [
+            76,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            161,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            50,
+            0,
+            0,
+            0
+          ],
+          [
+            53,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            265,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ]
+        ],
+        "macro_f1": 0.7215526855459675
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "candidate_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 6,
+      "selected_checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb"
+    },
+    {
+      "candidates": {
+        "candidate-7-1": {
+          "accuracy": 0.8921095008051529,
+          "class_f1": {
+            "Acetaldehyde": 0.0,
+            "Acetone": 0.9981167608286252,
+            "Ammonia": 1.0,
+            "Ethanol": 0.7004608294930875,
+            "Ethylene": 0.9640718562874252,
+            "Toluene": 0.6666666666666666
+          },
+          "confusion": [
+            [
+              76,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              6,
+              161,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              0,
+              0
+            ],
+            [
+              53,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              265,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ],
+          "macro_f1": 0.7215526855459675
+        }
+      },
+      "decision": {
+        "change_summary": "比较 balanced, polish, augment 配方，新训练 0 个，复用 3 个。保留父模型。",
+        "configuration": {
+          "execution": {
+            "cpu_seconds": 0.32340622300000005,
+            "optimizer_steps": 0,
+            "reused_candidates": 3,
+            "reused_scores": 3,
+            "scored_candidates": 0,
+            "trained_candidates": 0,
+            "training_rows": 0
+          },
+          "parent_checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "parent_prediction_sha256": "3bdb48eb54d4e2a39b225a91d549094dc2b92cf21b13b6fb44e80fd00fcdd7f0",
+          "planner_fallback": false,
+          "recipe": "polish",
+          "trials": [
+            {
+              "accuracy": 0.8856682769726248,
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de",
+                "prediction_sha256": "c404e692173f3e7041a958a2291386a2a4eda941c876b3a75dd51d1df6a447c4",
+                "score_key": "f38a899b11028e5f8e1de9daa77d3a98147a385ed0fe27c2f2db540bd10f4db6",
+                "score_reused_from_round": 2,
+                "training_key": "05e108300f8d82f7b64925754fce4323b1424b283fa97c5c600f94142d3e65fa",
+                "training_reused_from_round": 2
+              },
+              "class_f1": [
+                0.6940639269406392,
+                0.9578313253012049,
+                1.0,
+                0.0,
+                0.994328922495274,
+                0.6666666666666666
+              ],
+              "confusion": [
+                [
+                  76,
+                  6,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  8,
+                  159,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  2,
+                  263,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 276,
+              "initial_steps": 220,
+              "macro_f1": 0.7188151402339642,
+              "recipe": "balanced",
+              "training_rows": 3560
+            },
+            {
+              "accuracy": 0.8921095008051529,
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9",
+                "prediction_sha256": "3bdb48eb54d4e2a39b225a91d549094dc2b92cf21b13b6fb44e80fd00fcdd7f0",
+                "score_key": "fe9c59bdb5d85f5a0ff8eeba3c48900a6b141aa606641101d73cf1f1bccbdd58",
+                "score_reused_from_round": 2,
+                "training_key": "e095ff27954aebc5a34fb89fd319507e678574bddc13ae55cb3d112c78329f7a",
+                "training_reused_from_round": 2
+              },
+              "class_f1": [
+                0.7004608294930875,
+                0.9640718562874252,
+                1.0,
+                0.0,
+                0.9981167608286252,
+                0.6666666666666666
+              ],
+              "confusion": [
+                [
+                  76,
+                  6,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  6,
+                  161,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  265,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 388,
+              "initial_steps": 220,
+              "macro_f1": 0.7215526855459675,
+              "recipe": "polish",
+              "training_rows": 5340
+            },
+            {
+              "accuracy": 0.8921095008051529,
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986",
+                "prediction_sha256": "468e8fddc6b436e6413a32298b26257755d01f58f22b84f21dee8e91343da861",
+                "score_key": "658bfc02a8737950c6edb97814d3a777ffdafecff980a2fbe3b74c903f29f18e",
+                "score_reused_from_round": 5,
+                "training_key": "e519143ba7ed69323eaf556dba10dafdd8fb67ec077a38ab065d9ffe1efa2204",
+                "training_reused_from_round": 5
+              },
+              "class_f1": [
+                0.6956521739130435,
+                0.9707602339181286,
+                1.0,
+                0.03508771929824561,
+                0.994328922495274,
+                0.5714285714285714
+              ],
+              "confusion": [
+                [
+                  72,
+                  9,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  166,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  52,
+                  0,
+                  0,
+                  1,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  2,
+                  263,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 332,
+              "initial_steps": 220,
+              "macro_f1": 0.7112096035088772,
+              "recipe": "augment",
+              "training_rows": 7120
+            }
+          ]
+        },
+        "history_ids": [
+          "A-round-01",
+          "A-round-02",
+          "A-round-03",
+          "A-round-04",
+          "A-round-05",
+          "A-round-06"
+        ],
+        "hypothesis": "根据历史记录和公开验证比较续训候选。",
+        "model_call_ids": [
+          "school-wire-call-7"
+        ],
+        "reason": "父模型 Macro-F1 0.721553，候选 0.721553。模型回执 school-wire-call-7。",
+        "seed": 42,
+        "selected_artifact_id": "candidate-1-1"
+      },
+      "metrics": {
+        "accuracy": 0.8921095008051529,
+        "class_f1": {
+          "Acetaldehyde": 0.0,
+          "Acetone": 0.9981167608286252,
+          "Ammonia": 1.0,
+          "Ethanol": 0.7004608294930875,
+          "Ethylene": 0.9640718562874252,
+          "Toluene": 0.6666666666666666
+        },
+        "confusion": [
+          [
+            76,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            161,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            50,
+            0,
+            0,
+            0
+          ],
+          [
+            53,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            265,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ]
+        ],
+        "macro_f1": 0.7215526855459675
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "candidate_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 7,
+      "selected_checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb"
+    },
+    {
+      "candidates": {
+        "candidate-8-1": {
+          "accuracy": 0.8921095008051529,
+          "class_f1": {
+            "Acetaldehyde": 0.0,
+            "Acetone": 0.9981167608286252,
+            "Ammonia": 1.0,
+            "Ethanol": 0.7004608294930875,
+            "Ethylene": 0.9640718562874252,
+            "Toluene": 0.6666666666666666
+          },
+          "confusion": [
+            [
+              76,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              6,
+              161,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              0,
+              0
+            ],
+            [
+              53,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              265,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ],
+          "macro_f1": 0.7215526855459675
+        }
+      },
+      "decision": {
+        "change_summary": "比较 balanced, polish, augment 配方，新训练 0 个，复用 3 个。保留父模型。",
+        "configuration": {
+          "execution": {
+            "cpu_seconds": 0.29518097200000004,
+            "optimizer_steps": 0,
+            "reused_candidates": 3,
+            "reused_scores": 3,
+            "scored_candidates": 0,
+            "trained_candidates": 0,
+            "training_rows": 0
+          },
+          "parent_checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "parent_prediction_sha256": "3bdb48eb54d4e2a39b225a91d549094dc2b92cf21b13b6fb44e80fd00fcdd7f0",
+          "planner_fallback": false,
+          "recipe": "polish",
+          "trials": [
+            {
+              "accuracy": 0.8856682769726248,
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de",
+                "prediction_sha256": "c404e692173f3e7041a958a2291386a2a4eda941c876b3a75dd51d1df6a447c4",
+                "score_key": "f38a899b11028e5f8e1de9daa77d3a98147a385ed0fe27c2f2db540bd10f4db6",
+                "score_reused_from_round": 2,
+                "training_key": "05e108300f8d82f7b64925754fce4323b1424b283fa97c5c600f94142d3e65fa",
+                "training_reused_from_round": 2
+              },
+              "class_f1": [
+                0.6940639269406392,
+                0.9578313253012049,
+                1.0,
+                0.0,
+                0.994328922495274,
+                0.6666666666666666
+              ],
+              "confusion": [
+                [
+                  76,
+                  6,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  8,
+                  159,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  2,
+                  263,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 276,
+              "initial_steps": 220,
+              "macro_f1": 0.7188151402339642,
+              "recipe": "balanced",
+              "training_rows": 3560
+            },
+            {
+              "accuracy": 0.8921095008051529,
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9",
+                "prediction_sha256": "3bdb48eb54d4e2a39b225a91d549094dc2b92cf21b13b6fb44e80fd00fcdd7f0",
+                "score_key": "fe9c59bdb5d85f5a0ff8eeba3c48900a6b141aa606641101d73cf1f1bccbdd58",
+                "score_reused_from_round": 2,
+                "training_key": "e095ff27954aebc5a34fb89fd319507e678574bddc13ae55cb3d112c78329f7a",
+                "training_reused_from_round": 2
+              },
+              "class_f1": [
+                0.7004608294930875,
+                0.9640718562874252,
+                1.0,
+                0.0,
+                0.9981167608286252,
+                0.6666666666666666
+              ],
+              "confusion": [
+                [
+                  76,
+                  6,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  6,
+                  161,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  265,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 388,
+              "initial_steps": 220,
+              "macro_f1": 0.7215526855459675,
+              "recipe": "polish",
+              "training_rows": 5340
+            },
+            {
+              "accuracy": 0.8921095008051529,
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986",
+                "prediction_sha256": "468e8fddc6b436e6413a32298b26257755d01f58f22b84f21dee8e91343da861",
+                "score_key": "658bfc02a8737950c6edb97814d3a777ffdafecff980a2fbe3b74c903f29f18e",
+                "score_reused_from_round": 5,
+                "training_key": "e519143ba7ed69323eaf556dba10dafdd8fb67ec077a38ab065d9ffe1efa2204",
+                "training_reused_from_round": 5
+              },
+              "class_f1": [
+                0.6956521739130435,
+                0.9707602339181286,
+                1.0,
+                0.03508771929824561,
+                0.994328922495274,
+                0.5714285714285714
+              ],
+              "confusion": [
+                [
+                  72,
+                  9,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  166,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  52,
+                  0,
+                  0,
+                  1,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  2,
+                  263,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 332,
+              "initial_steps": 220,
+              "macro_f1": 0.7112096035088772,
+              "recipe": "augment",
+              "training_rows": 7120
+            }
+          ]
+        },
+        "history_ids": [
+          "A-round-01",
+          "A-round-02",
+          "A-round-03",
+          "A-round-04",
+          "A-round-05",
+          "A-round-06",
+          "A-round-07"
+        ],
+        "hypothesis": "根据历史记录和公开验证比较续训候选。",
+        "model_call_ids": [
+          "school-wire-call-8"
+        ],
+        "reason": "父模型 Macro-F1 0.721553，候选 0.721553。模型回执 school-wire-call-8。",
+        "seed": 42,
+        "selected_artifact_id": "candidate-1-1"
+      },
+      "metrics": {
+        "accuracy": 0.8921095008051529,
+        "class_f1": {
+          "Acetaldehyde": 0.0,
+          "Acetone": 0.9981167608286252,
+          "Ammonia": 1.0,
+          "Ethanol": 0.7004608294930875,
+          "Ethylene": 0.9640718562874252,
+          "Toluene": 0.6666666666666666
+        },
+        "confusion": [
+          [
+            76,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            161,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            50,
+            0,
+            0,
+            0
+          ],
+          [
+            53,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            265,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ]
+        ],
+        "macro_f1": 0.7215526855459675
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "candidate_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 8,
+      "selected_checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb"
+    },
+    {
+      "candidates": {
+        "candidate-9-1": {
+          "accuracy": 0.8921095008051529,
+          "class_f1": {
+            "Acetaldehyde": 0.0,
+            "Acetone": 0.9981167608286252,
+            "Ammonia": 1.0,
+            "Ethanol": 0.7004608294930875,
+            "Ethylene": 0.9640718562874252,
+            "Toluene": 0.6666666666666666
+          },
+          "confusion": [
+            [
+              76,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              6,
+              161,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              0,
+              0
+            ],
+            [
+              53,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              265,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ],
+          "macro_f1": 0.7215526855459675
+        }
+      },
+      "decision": {
+        "change_summary": "比较 balanced, polish, augment 配方，新训练 0 个，复用 3 个。保留父模型。",
+        "configuration": {
+          "execution": {
+            "cpu_seconds": 0.309447117,
+            "optimizer_steps": 0,
+            "reused_candidates": 3,
+            "reused_scores": 3,
+            "scored_candidates": 0,
+            "trained_candidates": 0,
+            "training_rows": 0
+          },
+          "parent_checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "parent_prediction_sha256": "3bdb48eb54d4e2a39b225a91d549094dc2b92cf21b13b6fb44e80fd00fcdd7f0",
+          "planner_fallback": false,
+          "recipe": "polish",
+          "trials": [
+            {
+              "accuracy": 0.8856682769726248,
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de",
+                "prediction_sha256": "c404e692173f3e7041a958a2291386a2a4eda941c876b3a75dd51d1df6a447c4",
+                "score_key": "f38a899b11028e5f8e1de9daa77d3a98147a385ed0fe27c2f2db540bd10f4db6",
+                "score_reused_from_round": 2,
+                "training_key": "05e108300f8d82f7b64925754fce4323b1424b283fa97c5c600f94142d3e65fa",
+                "training_reused_from_round": 2
+              },
+              "class_f1": [
+                0.6940639269406392,
+                0.9578313253012049,
+                1.0,
+                0.0,
+                0.994328922495274,
+                0.6666666666666666
+              ],
+              "confusion": [
+                [
+                  76,
+                  6,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  8,
+                  159,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  2,
+                  263,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 276,
+              "initial_steps": 220,
+              "macro_f1": 0.7188151402339642,
+              "recipe": "balanced",
+              "training_rows": 3560
+            },
+            {
+              "accuracy": 0.8921095008051529,
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9",
+                "prediction_sha256": "3bdb48eb54d4e2a39b225a91d549094dc2b92cf21b13b6fb44e80fd00fcdd7f0",
+                "score_key": "fe9c59bdb5d85f5a0ff8eeba3c48900a6b141aa606641101d73cf1f1bccbdd58",
+                "score_reused_from_round": 2,
+                "training_key": "e095ff27954aebc5a34fb89fd319507e678574bddc13ae55cb3d112c78329f7a",
+                "training_reused_from_round": 2
+              },
+              "class_f1": [
+                0.7004608294930875,
+                0.9640718562874252,
+                1.0,
+                0.0,
+                0.9981167608286252,
+                0.6666666666666666
+              ],
+              "confusion": [
+                [
+                  76,
+                  6,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  6,
+                  161,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  265,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 388,
+              "initial_steps": 220,
+              "macro_f1": 0.7215526855459675,
+              "recipe": "polish",
+              "training_rows": 5340
+            },
+            {
+              "accuracy": 0.8921095008051529,
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986",
+                "prediction_sha256": "468e8fddc6b436e6413a32298b26257755d01f58f22b84f21dee8e91343da861",
+                "score_key": "658bfc02a8737950c6edb97814d3a777ffdafecff980a2fbe3b74c903f29f18e",
+                "score_reused_from_round": 5,
+                "training_key": "e519143ba7ed69323eaf556dba10dafdd8fb67ec077a38ab065d9ffe1efa2204",
+                "training_reused_from_round": 5
+              },
+              "class_f1": [
+                0.6956521739130435,
+                0.9707602339181286,
+                1.0,
+                0.03508771929824561,
+                0.994328922495274,
+                0.5714285714285714
+              ],
+              "confusion": [
+                [
+                  72,
+                  9,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  166,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  52,
+                  0,
+                  0,
+                  1,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  2,
+                  263,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 332,
+              "initial_steps": 220,
+              "macro_f1": 0.7112096035088772,
+              "recipe": "augment",
+              "training_rows": 7120
+            }
+          ]
+        },
+        "history_ids": [
+          "A-round-01",
+          "A-round-02",
+          "A-round-03",
+          "A-round-04",
+          "A-round-05",
+          "A-round-06",
+          "A-round-07",
+          "A-round-08"
+        ],
+        "hypothesis": "根据历史记录和公开验证比较续训候选。",
+        "model_call_ids": [
+          "school-wire-call-9"
+        ],
+        "reason": "父模型 Macro-F1 0.721553，候选 0.721553。模型回执 school-wire-call-9。",
+        "seed": 42,
+        "selected_artifact_id": "candidate-1-1"
+      },
+      "metrics": {
+        "accuracy": 0.8921095008051529,
+        "class_f1": {
+          "Acetaldehyde": 0.0,
+          "Acetone": 0.9981167608286252,
+          "Ammonia": 1.0,
+          "Ethanol": 0.7004608294930875,
+          "Ethylene": 0.9640718562874252,
+          "Toluene": 0.6666666666666666
+        },
+        "confusion": [
+          [
+            76,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            161,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            50,
+            0,
+            0,
+            0
+          ],
+          [
+            53,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            265,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ]
+        ],
+        "macro_f1": 0.7215526855459675
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "candidate_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 9,
+      "selected_checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb"
+    },
+    {
+      "candidates": {
+        "candidate-10-1": {
+          "accuracy": 0.8921095008051529,
+          "class_f1": {
+            "Acetaldehyde": 0.0,
+            "Acetone": 0.9981167608286252,
+            "Ammonia": 1.0,
+            "Ethanol": 0.7004608294930875,
+            "Ethylene": 0.9640718562874252,
+            "Toluene": 0.6666666666666666
+          },
+          "confusion": [
+            [
+              76,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              6,
+              161,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              0,
+              0
+            ],
+            [
+              53,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              265,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ],
+          "macro_f1": 0.7215526855459675
+        }
+      },
+      "decision": {
+        "change_summary": "比较 polish, balanced, augment 配方，新训练 0 个，复用 3 个。保留父模型。",
+        "configuration": {
+          "execution": {
+            "cpu_seconds": 0.30896738300000004,
+            "optimizer_steps": 0,
+            "reused_candidates": 3,
+            "reused_scores": 3,
+            "scored_candidates": 0,
+            "trained_candidates": 0,
+            "training_rows": 0
+          },
+          "parent_checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "parent_prediction_sha256": "3bdb48eb54d4e2a39b225a91d549094dc2b92cf21b13b6fb44e80fd00fcdd7f0",
+          "planner_fallback": false,
+          "recipe": "polish",
+          "trials": [
+            {
+              "accuracy": 0.8921095008051529,
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9",
+                "prediction_sha256": "3bdb48eb54d4e2a39b225a91d549094dc2b92cf21b13b6fb44e80fd00fcdd7f0",
+                "score_key": "fe9c59bdb5d85f5a0ff8eeba3c48900a6b141aa606641101d73cf1f1bccbdd58",
+                "score_reused_from_round": 2,
+                "training_key": "e095ff27954aebc5a34fb89fd319507e678574bddc13ae55cb3d112c78329f7a",
+                "training_reused_from_round": 2
+              },
+              "class_f1": [
+                0.7004608294930875,
+                0.9640718562874252,
+                1.0,
+                0.0,
+                0.9981167608286252,
+                0.6666666666666666
+              ],
+              "confusion": [
+                [
+                  76,
+                  6,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  6,
+                  161,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  265,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 388,
+              "initial_steps": 220,
+              "macro_f1": 0.7215526855459675,
+              "recipe": "polish",
+              "training_rows": 5340
+            },
+            {
+              "accuracy": 0.8856682769726248,
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de",
+                "prediction_sha256": "c404e692173f3e7041a958a2291386a2a4eda941c876b3a75dd51d1df6a447c4",
+                "score_key": "f38a899b11028e5f8e1de9daa77d3a98147a385ed0fe27c2f2db540bd10f4db6",
+                "score_reused_from_round": 2,
+                "training_key": "05e108300f8d82f7b64925754fce4323b1424b283fa97c5c600f94142d3e65fa",
+                "training_reused_from_round": 2
+              },
+              "class_f1": [
+                0.6940639269406392,
+                0.9578313253012049,
+                1.0,
+                0.0,
+                0.994328922495274,
+                0.6666666666666666
+              ],
+              "confusion": [
+                [
+                  76,
+                  6,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  8,
+                  159,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  53,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  2,
+                  263,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 276,
+              "initial_steps": 220,
+              "macro_f1": 0.7188151402339642,
+              "recipe": "balanced",
+              "training_rows": 3560
+            },
+            {
+              "accuracy": 0.8921095008051529,
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986",
+                "prediction_sha256": "468e8fddc6b436e6413a32298b26257755d01f58f22b84f21dee8e91343da861",
+                "score_key": "658bfc02a8737950c6edb97814d3a777ffdafecff980a2fbe3b74c903f29f18e",
+                "score_reused_from_round": 5,
+                "training_key": "e519143ba7ed69323eaf556dba10dafdd8fb67ec077a38ab065d9ffe1efa2204",
+                "training_reused_from_round": 5
+              },
+              "class_f1": [
+                0.6956521739130435,
+                0.9707602339181286,
+                1.0,
+                0.03508771929824561,
+                0.994328922495274,
+                0.5714285714285714
+              ],
+              "confusion": [
+                [
+                  72,
+                  9,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  166,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  50,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  52,
+                  0,
+                  0,
+                  1,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  2,
+                  263,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "final_steps": 332,
+              "initial_steps": 220,
+              "macro_f1": 0.7112096035088772,
+              "recipe": "augment",
+              "training_rows": 7120
+            }
+          ]
+        },
+        "history_ids": [
+          "A-round-01",
+          "A-round-02",
+          "A-round-03",
+          "A-round-04",
+          "A-round-05",
+          "A-round-06",
+          "A-round-07",
+          "A-round-08",
+          "A-round-09"
+        ],
+        "hypothesis": "根据历史记录和公开验证比较续训候选。",
+        "model_call_ids": [
+          "school-wire-call-10"
+        ],
+        "reason": "父模型 Macro-F1 0.721553，候选 0.721553。模型回执 school-wire-call-10。",
+        "seed": 42,
+        "selected_artifact_id": "candidate-1-1"
+      },
+      "metrics": {
+        "accuracy": 0.8921095008051529,
+        "class_f1": {
+          "Acetaldehyde": 0.0,
+          "Acetone": 0.9981167608286252,
+          "Ammonia": 1.0,
+          "Ethanol": 0.7004608294930875,
+          "Ethylene": 0.9640718562874252,
+          "Toluene": 0.6666666666666666
+        },
+        "confusion": [
+          [
+            76,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            161,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            50,
+            0,
+            0,
+            0
+          ],
+          [
+            53,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            265,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ]
+        ],
+        "macro_f1": 0.7215526855459675
+      },
+      "requests": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "candidate_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "round": 10,
+      "selected_checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb"
+    }
+  ],
+  "selected": "outputs/goal/city-release/candidate-03/verify-a-dynamic/round-01/candidate-1-1"
+}

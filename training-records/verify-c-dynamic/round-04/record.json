@@ -1,0 +1,226 @@
+{
+  "candidate_metrics": {
+    "candidate-04": {
+      "mae": 35.18232098720985,
+      "nasa_score": 2387349619.5599055,
+      "rmse": 49.47187849004703
+    }
+  },
+  "decision": {
+    "change_summary": "C continuation actions ['official-5'].",
+    "configuration": {
+      "context": {
+        "available": {
+          "accelerated-5": "double the official learning rate",
+          "engine-balanced-5": "sample engines with equal probability at the official rate",
+          "official-5": "continue at the official learning rate"
+        },
+        "budget": {
+          "actions": 1,
+          "max_output_tokens": 128,
+          "wall_seconds": 60
+        },
+        "history": {
+          "current": [
+            {
+              "action": "conservative-5",
+              "first_round": 3,
+              "gain": -0.1631925989061358,
+              "rmse": 49.27839937731556
+            },
+            {
+              "action": "regime-kernel-5",
+              "first_round": 2,
+              "gain": -0.007296194387578225,
+              "rmse": 49.122502972797
+            }
+          ],
+          "prior": [
+            {
+              "outcomes": [
+                {
+                  "action": "regime-kernel-5",
+                  "first_round": 1,
+                  "gain": 3.753365787702087,
+                  "rmse": 49.11520677840942
+                }
+              ],
+              "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+            }
+          ]
+        },
+        "parent": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+        "parent_metrics": {
+          "mae": 35.19305791821807,
+          "nasa_score": 2104493920.3744612,
+          "rmse": 49.11520677840942
+        },
+        "preference": [
+          "official-5",
+          "engine-balanced-5",
+          "accelerated-5"
+        ],
+        "profile": "C",
+        "round": 4
+      },
+      "cpu_seconds": 1.9656849650000001,
+      "execution": {
+        "optimizer_steps": 2210,
+        "reused_candidates": 0,
+        "reused_scores": 0,
+        "scored_candidates": 1,
+        "trained_candidates": 1,
+        "training_rows": 565445
+      },
+      "host_candidate_rmse": 49.47187849004703,
+      "parent_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+      "parent_metrics": {
+        "mae": 35.19305791821807,
+        "nasa_score": 2104493920.3744612,
+        "rmse": 49.11520677840942
+      },
+      "plan": {
+        "actions": [
+          "official-5"
+        ],
+        "expected": "RMSE decreases or stabilizes below 49.2.",
+        "failure": "RMSE increases significantly above 50.",
+        "hypothesis": "Continuing at official rate minimizes RMSE growth."
+      },
+      "planner_fallback": false,
+      "profile": "C",
+      "selected_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+      "selected_rmse": 49.11520677840942,
+      "trials": [
+        {
+          "actual_optimizer_steps": 2210,
+          "actual_training_rows": 565445,
+          "cache": {
+            "checkpoint_sha256": "sha256:dd40b99bf42f13ce36904c1fd5bf1e75647acbf09bdc59edeb8b90e513bb4bc8",
+            "prediction_sha256": "4050eaecb20d827988c3bb5543093a52172056f32f1d37c287426f02f4d66c00",
+            "score_first_round": 4,
+            "score_key": "56869dd972abfc953e3ce2442de1d36fde4a6f163937ddb5bd886bce18cdbfda",
+            "score_reused_from_round": null,
+            "training_key": "8ff140ad41235efabe5e4865b98eef90e193fc089315db0d85132e1af6269bbd",
+            "training_reused_from_round": null
+          },
+          "final_steps": 11050,
+          "initial_steps": 8840,
+          "mae": 35.18232098720985,
+          "nasa_score": 2387349619.559905,
+          "recipe": "official-5",
+          "rmse": 49.47187849004703,
+          "training_rows": 565445
+        }
+      ]
+    },
+    "history_ids": [
+      "C-round-01",
+      "C-round-02",
+      "C-round-03"
+    ],
+    "hypothesis": "Continuing at official rate minimizes RMSE growth.",
+    "model_call_ids": [
+      "school-wire-call-4"
+    ],
+    "reason": "Parent RMSE 49.115207, selected RMSE 49.115207 cycles.",
+    "seed": 42,
+    "selected_artifact_id": "candidate-01"
+  },
+  "metrics": {
+    "mae": 35.19305791821807,
+    "nasa_score": 2104493920.3744614,
+    "rmse": 49.11520677840943
+  },
+  "requests": [
+    "history_request",
+    "model_request",
+    "upload_begin_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_finish_request",
+    "candidate_request",
+    "upload_begin_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_finish_request",
+    "state_request",
+    "round_complete"
+  ],
+  "round": 4
+}

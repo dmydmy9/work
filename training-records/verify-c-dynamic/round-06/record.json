@@ -1,0 +1,249 @@
+{
+  "candidate_metrics": {
+    "candidate-06": {
+      "mae": 34.677630800978854,
+      "nasa_score": 4177326929.975725,
+      "rmse": 50.23378489342703
+    }
+  },
+  "decision": {
+    "change_summary": "C continuation actions ['engine-balanced-5'].",
+    "configuration": {
+      "context": {
+        "available": {
+          "engine-balanced-5": "sample engines with equal probability at the official rate"
+        },
+        "budget": {
+          "actions": 1,
+          "max_output_tokens": 128,
+          "wall_seconds": 60
+        },
+        "history": {
+          "current": [
+            {
+              "action": "accelerated-5",
+              "first_round": 5,
+              "gain": -0.6292552752044998,
+              "rmse": 49.74446205361392
+            },
+            {
+              "action": "official-5",
+              "first_round": 4,
+              "gain": -0.3566717116376097,
+              "rmse": 49.47187849004703
+            },
+            {
+              "action": "conservative-5",
+              "first_round": 3,
+              "gain": -0.1631925989061358,
+              "rmse": 49.27839937731556
+            },
+            {
+              "action": "regime-kernel-5",
+              "first_round": 2,
+              "gain": -0.007296194387578225,
+              "rmse": 49.122502972797
+            }
+          ],
+          "prior": [
+            {
+              "outcomes": [
+                {
+                  "action": "regime-kernel-5",
+                  "first_round": 1,
+                  "gain": 3.753365787702087,
+                  "rmse": 49.11520677840942
+                }
+              ],
+              "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+            }
+          ]
+        },
+        "parent": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+        "parent_metrics": {
+          "mae": 35.19305791821807,
+          "nasa_score": 2104493920.3744612,
+          "rmse": 49.11520677840942
+        },
+        "preference": [
+          "engine-balanced-5"
+        ],
+        "profile": "C",
+        "round": 6
+      },
+      "cpu_seconds": 2.009165844,
+      "execution": {
+        "optimizer_steps": 2210,
+        "reused_candidates": 0,
+        "reused_scores": 0,
+        "scored_candidates": 1,
+        "trained_candidates": 1,
+        "training_rows": 565445
+      },
+      "host_candidate_rmse": 50.23378489342703,
+      "parent_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+      "parent_metrics": {
+        "mae": 35.19305791821807,
+        "nasa_score": 2104493920.3744612,
+        "rmse": 49.11520677840942
+      },
+      "plan": {
+        "actions": [
+          "engine-balanced-5"
+        ],
+        "expected": "RMSE decreases below 49.11.",
+        "failure": "RMSE increases or no significant gain.",
+        "hypothesis": "Balanced sampling reduces variance and lowers RMSE."
+      },
+      "planner_fallback": false,
+      "profile": "C",
+      "selected_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+      "selected_rmse": 49.11520677840942,
+      "trials": [
+        {
+          "actual_optimizer_steps": 2210,
+          "actual_training_rows": 565445,
+          "cache": {
+            "checkpoint_sha256": "sha256:9fa2603e58f476dd92d2e6eb89dcd569d13e00e1b91d190179c2d3838313a16a",
+            "prediction_sha256": "3f9d20c0334546aee5bfccbd581135118b7cd00ca7511e8f9635e2038a8d7a98",
+            "score_first_round": 6,
+            "score_key": "18e7d0bd49d0c68f41334759c17f8b2f254b5fe1cbebc9de1394290b833bf7c4",
+            "score_reused_from_round": null,
+            "training_key": "40789b5e0939f5a087130ce51b413a69641fed513dd6e7a9e00d61b9a315a161",
+            "training_reused_from_round": null
+          },
+          "final_steps": 11050,
+          "initial_steps": 8840,
+          "mae": 34.677630800978854,
+          "nasa_score": 4177326929.975721,
+          "recipe": "engine-balanced-5",
+          "rmse": 50.233784893427035,
+          "training_rows": 565445
+        }
+      ]
+    },
+    "history_ids": [
+      "C-round-01",
+      "C-round-02",
+      "C-round-03",
+      "C-round-04",
+      "C-round-05"
+    ],
+    "hypothesis": "Balanced sampling reduces variance and lowers RMSE.",
+    "model_call_ids": [
+      "school-wire-call-6"
+    ],
+    "reason": "Parent RMSE 49.115207, selected RMSE 49.115207 cycles.",
+    "seed": 42,
+    "selected_artifact_id": "candidate-01"
+  },
+  "metrics": {
+    "mae": 35.19305791821807,
+    "nasa_score": 2104493920.3744614,
+    "rmse": 49.11520677840943
+  },
+  "requests": [
+    "history_request",
+    "model_request",
+    "upload_begin_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_finish_request",
+    "candidate_request",
+    "upload_begin_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_finish_request",
+    "state_request",
+    "round_complete"
+  ],
+  "round": 6
+}

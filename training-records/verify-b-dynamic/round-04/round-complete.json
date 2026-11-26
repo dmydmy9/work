@@ -1,0 +1,190 @@
+{
+  "round": 4,
+  "parent_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+  "parent_state_sha256": "sha256:b2ee576ac5e40feb070382b9fbca02c2cc1cf3a42647fa811ebb619036682f8e",
+  "state_sha256": "sha256:bc4d9e6710b09c1e65c0f3702752e64399d00d316e1cfd0b79a2883c7ea51467",
+  "state_manifest": [
+    {
+      "path": "decision-evidence.json",
+      "size_bytes": 1567,
+      "sha256": "sha256:1304353e1d81941eb891127779963ac3f6c4bd94318f181d6cedfa0913727533"
+    },
+    {
+      "path": "exact-cache/3dfcff9508a160d8b9945bb79710bd2906e0fef2ced54728e3a982a5a3d9cce2.npz",
+      "size_bytes": 750792,
+      "sha256": "sha256:a270d54df826506aae2ed707fb485c8cbddbd568cff4c502e486029164a0733b"
+    },
+    {
+      "path": "exact-cache/8c593edbc1522744913b46b24c950bca837a8f5f6723af7869af4085adc6aa58.npz",
+      "size_bytes": 750372,
+      "sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4"
+    },
+    {
+      "path": "exact-cache/9ef982af9ff86756e645a58ec485814a96fdac63496da9239dc715e0e150dc54.npz",
+      "size_bytes": 749452,
+      "sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9"
+    },
+    {
+      "path": "exact-cache/index.json",
+      "size_bytes": 2494,
+      "sha256": "sha256:22bfcd9ce21d66962004b3fc6ea38318a224dacb91dae8c418e0609a9a697e6b"
+    },
+    {
+      "path": "profile.json",
+      "size_bytes": 99,
+      "sha256": "sha256:135f83c09aabe25a399dc8b3e42fdeab70330730708194d0eab1209734e88a20"
+    },
+    {
+      "path": "round-01.json",
+      "size_bytes": 4116,
+      "sha256": "sha256:6612fad0776bdec6f019cf6ff9a24a57b8e55cd3b2467c644370c095113c09aa"
+    },
+    {
+      "path": "round-02.json",
+      "size_bytes": 3625,
+      "sha256": "sha256:5b0b53467130d73d7bacbe059c8c45b71010a99f877503a2810bcdc8e1ad7c4d"
+    },
+    {
+      "path": "round-03.json",
+      "size_bytes": 3194,
+      "sha256": "sha256:1b3cc83286d702b687791b3fed2bc21cd8c47f0ed754efb766fd379751c21e66"
+    },
+    {
+      "path": "round-04.json",
+      "size_bytes": 2855,
+      "sha256": "sha256:9384eaefe4fbcb3f4f748f8a8fd0f2a11f7f83fc551dcfea080dcf0868b334d1"
+    }
+  ],
+  "accepted": false,
+  "candidate": null,
+  "candidate_score": null,
+  "selected_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+  "selected_score": {
+    "rows": 1062,
+    "unit": "minutes",
+    "metrics": {
+      "rmse": 230.3282940683852,
+      "mae": 173.26274212180496
+    },
+    "prediction_sha256": "sha256:090f39c26853974741993314d4ced73ffb932511592de03272faf723b1c4d01a",
+    "per_bearing": {
+      "Bearing1_3": {
+        "rows": 158,
+        "rmse": 375.7016847346583,
+        "mae": 333.76089364100795
+      },
+      "Bearing2_3": {
+        "rows": 533,
+        "rmse": 178.45322331693086,
+        "mae": 138.10817429446115
+      },
+      "Bearing3_3": {
+        "rows": 371,
+        "rmse": 214.4675318391207,
+        "mae": 155.4155095394335
+      }
+    }
+  },
+  "round_complete": {
+    "selected_artifact_id": "candidate-02",
+    "hypothesis": "No fresh action needed.",
+    "change_summary": "Actions reuse only, trained 0, reused 0. Kept the parent.",
+    "reason": "Parent RMSE 230.328294, candidate RMSE 230.328294 minutes, no_restorable_candidate. Expected Maintain current RMSE. Failure None required. Receipt school-wire-call-4.",
+    "configuration": {
+      "profile": "B",
+      "recipe": null,
+      "plan": {
+        "actions": [],
+        "hypothesis": "No fresh action needed.",
+        "expected": "Maintain current RMSE.",
+        "failure": "None required."
+      },
+      "trials": [],
+      "reuse_only": true,
+      "planner_fallback": false,
+      "planner_issue": null,
+      "raw_reply": "{\"actions\":[],\"hypothesis\":\"No fresh action needed.\",\"expected\":\"Maintain current RMSE.\",\"failure\":\"None required.\"}",
+      "parent_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+      "parent_prediction_sha256": "82585140b4b6afcb61cf97d53c78cd2964c9ac37601086f43b0483a63d81a262",
+      "execution": {
+        "trained_candidates": 0,
+        "reused_candidates": 0,
+        "scored_candidates": 0,
+        "reused_scores": 0,
+        "training_rows": 0,
+        "optimizer_steps": 0,
+        "cpu_seconds": 0.827681275
+      },
+      "screening": "whole-bearing and whole-condition training projections",
+      "adoption": {
+        "margin": 1e-06,
+        "gain": 0.0,
+        "accepted": false,
+        "reason": "no_restorable_candidate",
+        "selected_rmse": 230.3282940683852,
+        "measurement_source": "local"
+      }
+    },
+    "history_ids": [
+      "verified-01",
+      "verified-02",
+      "verified-03"
+    ],
+    "model_call_ids": [
+      "school-wire-call-4"
+    ],
+    "seed": 42
+  },
+  "request_types": [
+    "history_request",
+    "model_request",
+    "upload_begin_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_finish_request",
+    "state_request",
+    "round_complete"
+  ],
+  "seconds": 2.496363499958534
+}

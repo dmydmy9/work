@@ -1,0 +1,437 @@
+{
+  "candidates": {
+    "candidate-5-1": {
+      "accuracy": 0.8856682769726248,
+      "class_f1": {
+        "Acetaldehyde": 0.0,
+        "Acetone": 0.994328922495274,
+        "Ammonia": 1.0,
+        "Ethanol": 0.6940639269406392,
+        "Ethylene": 0.9578313253012049,
+        "Toluene": 0.6666666666666666
+      },
+      "confusion": [
+        [
+          76,
+          6,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          8,
+          159,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          50,
+          0,
+          0,
+          0
+        ],
+        [
+          53,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          263,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      ],
+      "macro_f1": 0.7188151402339642
+    }
+  },
+  "decision": {
+    "change_summary": "比较 balanced, augment, explore 配方，新训练 0 个，复用 3 个。保留父模型。",
+    "configuration": {
+      "execution": {
+        "cpu_seconds": 0.31100037699999994,
+        "optimizer_steps": 0,
+        "reused_candidates": 3,
+        "reused_scores": 3,
+        "scored_candidates": 0,
+        "trained_candidates": 0,
+        "training_rows": 0
+      },
+      "parent_checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+      "parent_prediction_sha256": "3bdb48eb54d4e2a39b225a91d549094dc2b92cf21b13b6fb44e80fd00fcdd7f0",
+      "planner_fallback": false,
+      "recipe": "balanced",
+      "trials": [
+        {
+          "accuracy": 0.8856682769726248,
+          "actual_optimizer_steps": 0,
+          "actual_training_rows": 0,
+          "cache": {
+            "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de",
+            "prediction_sha256": "c404e692173f3e7041a958a2291386a2a4eda941c876b3a75dd51d1df6a447c4",
+            "score_key": "f38a899b11028e5f8e1de9daa77d3a98147a385ed0fe27c2f2db540bd10f4db6",
+            "score_reused_from_round": 2,
+            "training_key": "05e108300f8d82f7b64925754fce4323b1424b283fa97c5c600f94142d3e65fa",
+            "training_reused_from_round": 2
+          },
+          "class_f1": [
+            0.6940639269406392,
+            0.9578313253012049,
+            1.0,
+            0.0,
+            0.994328922495274,
+            0.6666666666666666
+          ],
+          "confusion": [
+            [
+              76,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              8,
+              159,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              0,
+              0
+            ],
+            [
+              53,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              2,
+              263,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ],
+          "final_steps": 276,
+          "initial_steps": 220,
+          "macro_f1": 0.7188151402339642,
+          "recipe": "balanced",
+          "training_rows": 3560
+        },
+        {
+          "accuracy": 0.8921095008051529,
+          "actual_optimizer_steps": 0,
+          "actual_training_rows": 0,
+          "cache": {
+            "checkpoint_sha256": "sha256:088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986",
+            "prediction_sha256": "468e8fddc6b436e6413a32298b26257755d01f58f22b84f21dee8e91343da861",
+            "score_key": "658bfc02a8737950c6edb97814d3a777ffdafecff980a2fbe3b74c903f29f18e",
+            "score_reused_from_round": 2,
+            "training_key": "e519143ba7ed69323eaf556dba10dafdd8fb67ec077a38ab065d9ffe1efa2204",
+            "training_reused_from_round": 2
+          },
+          "class_f1": [
+            0.6956521739130435,
+            0.9707602339181286,
+            1.0,
+            0.03508771929824561,
+            0.994328922495274,
+            0.5714285714285714
+          ],
+          "confusion": [
+            [
+              72,
+              9,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              166,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              0,
+              0
+            ],
+            [
+              52,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              2,
+              263,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ],
+          "final_steps": 332,
+          "initial_steps": 220,
+          "macro_f1": 0.7112096035088772,
+          "recipe": "augment",
+          "training_rows": 7120
+        },
+        {
+          "accuracy": 0.8824476650563607,
+          "actual_optimizer_steps": 0,
+          "actual_training_rows": 0,
+          "cache": {
+            "checkpoint_sha256": "sha256:77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084",
+            "prediction_sha256": "57ac71401364db093c5ba5dffc19c2ebab0afea27b9abbef6f7445588c6ab0e3",
+            "score_key": "21faf73d6ab6c5a876f07bf73e1b9814b5fc0f03a341c4b0a643f8348e2d4c72",
+            "score_reused_from_round": 2,
+            "training_key": "9476dec40f53b344b484d4c2016c101394045cd22d5ec5ef110e60ce4dcd5d9f",
+            "training_reused_from_round": 2
+          },
+          "class_f1": [
+            0.6816143497757847,
+            0.9515151515151515,
+            0.9795918367346939,
+            0.0,
+            0.9981167608286252,
+            0.6666666666666666
+          ],
+          "confusion": [
+            [
+              76,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              10,
+              157,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              48,
+              0,
+              0,
+              0
+            ],
+            [
+              53,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              265,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ],
+          "final_steps": 360,
+          "initial_steps": 220,
+          "macro_f1": 0.7129174609201537,
+          "recipe": "explore",
+          "training_rows": 8900
+        }
+      ]
+    },
+    "history_ids": [
+      "A-round-01",
+      "A-round-02",
+      "A-round-03",
+      "A-round-04"
+    ],
+    "hypothesis": "根据历史记录和公开验证比较续训候选。",
+    "model_call_ids": [
+      "school-wire-call-5"
+    ],
+    "reason": "父模型 Macro-F1 0.721553，候选 0.718815。模型回执 school-wire-call-5。",
+    "seed": 42,
+    "selected_artifact_id": "candidate-1-1"
+  },
+  "metrics": {
+    "accuracy": 0.8921095008051529,
+    "class_f1": {
+      "Acetaldehyde": 0.0,
+      "Acetone": 0.9981167608286252,
+      "Ammonia": 1.0,
+      "Ethanol": 0.7004608294930875,
+      "Ethylene": 0.9640718562874252,
+      "Toluene": 0.6666666666666666
+    },
+    "confusion": [
+      [
+        76,
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        6,
+        161,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        50,
+        0,
+        0,
+        0
+      ],
+      [
+        53,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        265,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    ],
+    "macro_f1": 0.7215526855459675
+  },
+  "requests": [
+    "history_request",
+    "model_request",
+    "upload_begin_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_finish_request",
+    "candidate_request",
+    "upload_begin_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_finish_request",
+    "state_request",
+    "round_complete"
+  ],
+  "round": 5,
+  "selected_checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb"
+}

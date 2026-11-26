@@ -1,0 +1,4471 @@
+{
+  "image": "sha256:0ebd6a1a6db8b907a26c030eab731c8ed140a64d88e952b3bd6ea61b7a694bde",
+  "arms": {
+    "A-fixed": {
+      "profile": "A",
+      "projection_sha256": "dcca4dc58fb33eb58e8244e1c3614ca507581a1f12177e6df4a908833d5dc196",
+      "candidates": [
+        {
+          "round": 1,
+          "recipe": "balanced",
+          "parent_sha256": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+          "metrics": {
+            "macro_f1": 0.7017742510490294,
+            "accuracy": 0.8856682769726248,
+            "class_f1": {
+              "Ethanol": 0.6940639269406392,
+              "Ethylene": 0.9607250755287009,
+              "Ammonia": 0.9900990099009901,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.5714285714285714
+            },
+            "confusion": [
+              [
+                76,
+                5,
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                159,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                263,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-8ca0b1fd6ebfd4cea72faaccfbc4993861d47d914e046349d04adb1ef886ed82.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:ace8f7298cd02a89ca3160c3ed6129f44db36b8aaa9eb5d7083b1ae2dcb7af2a",
+          "checkpoint_sha256": "sha256:8ca0b1fd6ebfd4cea72faaccfbc4993861d47d914e046349d04adb1ef886ed82"
+        },
+        {
+          "round": 1,
+          "recipe": "augment",
+          "parent_sha256": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+          "metrics": {
+            "macro_f1": 0.670797931282857,
+            "accuracy": 0.8792270531400966,
+            "class_f1": {
+              "Ethanol": 0.6818181818181818,
+              "Ethylene": 0.9486404833836858,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.4
+            },
+            "confusion": [
+              [
+                75,
+                7,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                10,
+                157,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                0,
+                1
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-a49263031946f62fea03302b25f9434bf0e5e64561f42a3f6bb34b39b70681bc.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:497aefae91525f9d4b556838ecd940c2e3f365cadb72286e6f97ccfd8114ecc3",
+          "checkpoint_sha256": "sha256:a49263031946f62fea03302b25f9434bf0e5e64561f42a3f6bb34b39b70681bc"
+        },
+        {
+          "round": 1,
+          "recipe": "explore",
+          "parent_sha256": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+          "metrics": {
+            "macro_f1": 0.7215526855459675,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.7004608294930875,
+              "Ethylene": 0.9640718562874252,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.9981167608286252,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                6,
+                161,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                265,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:0140920b7ffb501122fa026ee401f4febf9fa52f5c391d49794b2eec19da0d34",
+          "checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb"
+        },
+        {
+          "round": 2,
+          "recipe": "balanced",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7188151402339642,
+            "accuracy": 0.8856682769726248,
+            "class_f1": {
+              "Ethanol": 0.6940639269406392,
+              "Ethylene": 0.9578313253012049,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                159,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:c1af7c307c9a21d101c9aeab20cb1dabf69edbdc0eb9d76963e2ae9aba171f04",
+          "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de"
+        },
+        {
+          "round": 2,
+          "recipe": "augment",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7112096035088772,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.6956521739130435,
+              "Ethylene": 0.9707602339181286,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.03508771929824561,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.5714285714285714
+            },
+            "confusion": [
+              [
+                72,
+                9,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                166,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                52,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:6e96cfb665143ee1d5e0bbf92f57942d8488343d6a63249aa6210889a2481f2d",
+          "checkpoint_sha256": "sha256:088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986"
+        },
+        {
+          "round": 2,
+          "recipe": "explore",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7129174609201537,
+            "accuracy": 0.8824476650563607,
+            "class_f1": {
+              "Ethanol": 0.6816143497757847,
+              "Ethylene": 0.9515151515151515,
+              "Ammonia": 0.9795918367346939,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.9981167608286252,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                10,
+                157,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                48,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                265,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:45d890a4d499255e6ce6bf903ff81bdc3bf5dfea72ab5896fe957d4cf7fde9a1",
+          "checkpoint_sha256": "sha256:77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084"
+        },
+        {
+          "round": 3,
+          "recipe": "balanced",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7188151402339642,
+            "accuracy": 0.8856682769726248,
+            "class_f1": {
+              "Ethanol": 0.6940639269406392,
+              "Ethylene": 0.9578313253012049,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                159,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:c1af7c307c9a21d101c9aeab20cb1dabf69edbdc0eb9d76963e2ae9aba171f04",
+          "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de"
+        },
+        {
+          "round": 3,
+          "recipe": "augment",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7112096035088772,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.6956521739130435,
+              "Ethylene": 0.9707602339181286,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.03508771929824561,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.5714285714285714
+            },
+            "confusion": [
+              [
+                72,
+                9,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                166,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                52,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:6e96cfb665143ee1d5e0bbf92f57942d8488343d6a63249aa6210889a2481f2d",
+          "checkpoint_sha256": "sha256:088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986"
+        },
+        {
+          "round": 3,
+          "recipe": "explore",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7129174609201537,
+            "accuracy": 0.8824476650563607,
+            "class_f1": {
+              "Ethanol": 0.6816143497757847,
+              "Ethylene": 0.9515151515151515,
+              "Ammonia": 0.9795918367346939,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.9981167608286252,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                10,
+                157,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                48,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                265,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:45d890a4d499255e6ce6bf903ff81bdc3bf5dfea72ab5896fe957d4cf7fde9a1",
+          "checkpoint_sha256": "sha256:77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084"
+        },
+        {
+          "round": 4,
+          "recipe": "balanced",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7188151402339642,
+            "accuracy": 0.8856682769726248,
+            "class_f1": {
+              "Ethanol": 0.6940639269406392,
+              "Ethylene": 0.9578313253012049,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                159,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:c1af7c307c9a21d101c9aeab20cb1dabf69edbdc0eb9d76963e2ae9aba171f04",
+          "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de"
+        },
+        {
+          "round": 4,
+          "recipe": "augment",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7112096035088772,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.6956521739130435,
+              "Ethylene": 0.9707602339181286,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.03508771929824561,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.5714285714285714
+            },
+            "confusion": [
+              [
+                72,
+                9,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                166,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                52,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:6e96cfb665143ee1d5e0bbf92f57942d8488343d6a63249aa6210889a2481f2d",
+          "checkpoint_sha256": "sha256:088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986"
+        },
+        {
+          "round": 4,
+          "recipe": "explore",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7129174609201537,
+            "accuracy": 0.8824476650563607,
+            "class_f1": {
+              "Ethanol": 0.6816143497757847,
+              "Ethylene": 0.9515151515151515,
+              "Ammonia": 0.9795918367346939,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.9981167608286252,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                10,
+                157,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                48,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                265,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:45d890a4d499255e6ce6bf903ff81bdc3bf5dfea72ab5896fe957d4cf7fde9a1",
+          "checkpoint_sha256": "sha256:77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084"
+        },
+        {
+          "round": 5,
+          "recipe": "balanced",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7188151402339642,
+            "accuracy": 0.8856682769726248,
+            "class_f1": {
+              "Ethanol": 0.6940639269406392,
+              "Ethylene": 0.9578313253012049,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                159,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:c1af7c307c9a21d101c9aeab20cb1dabf69edbdc0eb9d76963e2ae9aba171f04",
+          "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de"
+        },
+        {
+          "round": 5,
+          "recipe": "augment",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7112096035088772,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.6956521739130435,
+              "Ethylene": 0.9707602339181286,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.03508771929824561,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.5714285714285714
+            },
+            "confusion": [
+              [
+                72,
+                9,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                166,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                52,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:6e96cfb665143ee1d5e0bbf92f57942d8488343d6a63249aa6210889a2481f2d",
+          "checkpoint_sha256": "sha256:088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986"
+        },
+        {
+          "round": 5,
+          "recipe": "explore",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7129174609201537,
+            "accuracy": 0.8824476650563607,
+            "class_f1": {
+              "Ethanol": 0.6816143497757847,
+              "Ethylene": 0.9515151515151515,
+              "Ammonia": 0.9795918367346939,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.9981167608286252,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                10,
+                157,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                48,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                265,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:45d890a4d499255e6ce6bf903ff81bdc3bf5dfea72ab5896fe957d4cf7fde9a1",
+          "checkpoint_sha256": "sha256:77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084"
+        },
+        {
+          "round": 6,
+          "recipe": "balanced",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7188151402339642,
+            "accuracy": 0.8856682769726248,
+            "class_f1": {
+              "Ethanol": 0.6940639269406392,
+              "Ethylene": 0.9578313253012049,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                159,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:c1af7c307c9a21d101c9aeab20cb1dabf69edbdc0eb9d76963e2ae9aba171f04",
+          "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de"
+        },
+        {
+          "round": 6,
+          "recipe": "augment",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7112096035088772,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.6956521739130435,
+              "Ethylene": 0.9707602339181286,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.03508771929824561,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.5714285714285714
+            },
+            "confusion": [
+              [
+                72,
+                9,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                166,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                52,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:6e96cfb665143ee1d5e0bbf92f57942d8488343d6a63249aa6210889a2481f2d",
+          "checkpoint_sha256": "sha256:088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986"
+        },
+        {
+          "round": 6,
+          "recipe": "explore",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7129174609201537,
+            "accuracy": 0.8824476650563607,
+            "class_f1": {
+              "Ethanol": 0.6816143497757847,
+              "Ethylene": 0.9515151515151515,
+              "Ammonia": 0.9795918367346939,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.9981167608286252,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                10,
+                157,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                48,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                265,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:45d890a4d499255e6ce6bf903ff81bdc3bf5dfea72ab5896fe957d4cf7fde9a1",
+          "checkpoint_sha256": "sha256:77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084"
+        },
+        {
+          "round": 7,
+          "recipe": "balanced",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7188151402339642,
+            "accuracy": 0.8856682769726248,
+            "class_f1": {
+              "Ethanol": 0.6940639269406392,
+              "Ethylene": 0.9578313253012049,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                159,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:c1af7c307c9a21d101c9aeab20cb1dabf69edbdc0eb9d76963e2ae9aba171f04",
+          "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de"
+        },
+        {
+          "round": 7,
+          "recipe": "augment",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7112096035088772,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.6956521739130435,
+              "Ethylene": 0.9707602339181286,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.03508771929824561,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.5714285714285714
+            },
+            "confusion": [
+              [
+                72,
+                9,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                166,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                52,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:6e96cfb665143ee1d5e0bbf92f57942d8488343d6a63249aa6210889a2481f2d",
+          "checkpoint_sha256": "sha256:088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986"
+        },
+        {
+          "round": 7,
+          "recipe": "explore",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7129174609201537,
+            "accuracy": 0.8824476650563607,
+            "class_f1": {
+              "Ethanol": 0.6816143497757847,
+              "Ethylene": 0.9515151515151515,
+              "Ammonia": 0.9795918367346939,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.9981167608286252,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                10,
+                157,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                48,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                265,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:45d890a4d499255e6ce6bf903ff81bdc3bf5dfea72ab5896fe957d4cf7fde9a1",
+          "checkpoint_sha256": "sha256:77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084"
+        },
+        {
+          "round": 8,
+          "recipe": "balanced",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7188151402339642,
+            "accuracy": 0.8856682769726248,
+            "class_f1": {
+              "Ethanol": 0.6940639269406392,
+              "Ethylene": 0.9578313253012049,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                159,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:c1af7c307c9a21d101c9aeab20cb1dabf69edbdc0eb9d76963e2ae9aba171f04",
+          "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de"
+        },
+        {
+          "round": 8,
+          "recipe": "augment",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7112096035088772,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.6956521739130435,
+              "Ethylene": 0.9707602339181286,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.03508771929824561,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.5714285714285714
+            },
+            "confusion": [
+              [
+                72,
+                9,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                166,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                52,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:6e96cfb665143ee1d5e0bbf92f57942d8488343d6a63249aa6210889a2481f2d",
+          "checkpoint_sha256": "sha256:088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986"
+        },
+        {
+          "round": 8,
+          "recipe": "explore",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7129174609201537,
+            "accuracy": 0.8824476650563607,
+            "class_f1": {
+              "Ethanol": 0.6816143497757847,
+              "Ethylene": 0.9515151515151515,
+              "Ammonia": 0.9795918367346939,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.9981167608286252,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                10,
+                157,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                48,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                265,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:45d890a4d499255e6ce6bf903ff81bdc3bf5dfea72ab5896fe957d4cf7fde9a1",
+          "checkpoint_sha256": "sha256:77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084"
+        },
+        {
+          "round": 9,
+          "recipe": "balanced",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7188151402339642,
+            "accuracy": 0.8856682769726248,
+            "class_f1": {
+              "Ethanol": 0.6940639269406392,
+              "Ethylene": 0.9578313253012049,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                159,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:c1af7c307c9a21d101c9aeab20cb1dabf69edbdc0eb9d76963e2ae9aba171f04",
+          "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de"
+        },
+        {
+          "round": 9,
+          "recipe": "augment",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7112096035088772,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.6956521739130435,
+              "Ethylene": 0.9707602339181286,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.03508771929824561,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.5714285714285714
+            },
+            "confusion": [
+              [
+                72,
+                9,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                166,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                52,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:6e96cfb665143ee1d5e0bbf92f57942d8488343d6a63249aa6210889a2481f2d",
+          "checkpoint_sha256": "sha256:088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986"
+        },
+        {
+          "round": 9,
+          "recipe": "explore",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7129174609201537,
+            "accuracy": 0.8824476650563607,
+            "class_f1": {
+              "Ethanol": 0.6816143497757847,
+              "Ethylene": 0.9515151515151515,
+              "Ammonia": 0.9795918367346939,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.9981167608286252,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                10,
+                157,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                48,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                265,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:45d890a4d499255e6ce6bf903ff81bdc3bf5dfea72ab5896fe957d4cf7fde9a1",
+          "checkpoint_sha256": "sha256:77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084"
+        },
+        {
+          "round": 10,
+          "recipe": "balanced",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7188151402339642,
+            "accuracy": 0.8856682769726248,
+            "class_f1": {
+              "Ethanol": 0.6940639269406392,
+              "Ethylene": 0.9578313253012049,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                159,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:c1af7c307c9a21d101c9aeab20cb1dabf69edbdc0eb9d76963e2ae9aba171f04",
+          "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de"
+        },
+        {
+          "round": 10,
+          "recipe": "augment",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7112096035088772,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.6956521739130435,
+              "Ethylene": 0.9707602339181286,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.03508771929824561,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.5714285714285714
+            },
+            "confusion": [
+              [
+                72,
+                9,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                166,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                52,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:6e96cfb665143ee1d5e0bbf92f57942d8488343d6a63249aa6210889a2481f2d",
+          "checkpoint_sha256": "sha256:088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986"
+        },
+        {
+          "round": 10,
+          "recipe": "explore",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7129174609201537,
+            "accuracy": 0.8824476650563607,
+            "class_f1": {
+              "Ethanol": 0.6816143497757847,
+              "Ethylene": 0.9515151515151515,
+              "Ammonia": 0.9795918367346939,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.9981167608286252,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                10,
+                157,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                48,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                265,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:45d890a4d499255e6ce6bf903ff81bdc3bf5dfea72ab5896fe957d4cf7fde9a1",
+          "checkpoint_sha256": "sha256:77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084"
+        }
+      ]
+    },
+    "B-fixed": {
+      "profile": "B",
+      "projection_sha256": "dbfaf63c9889b8fabbb06c3efeb93b07eae6cdce0fa5e785e32fa34ca28358a8",
+      "candidates": [
+        {
+          "round": 1,
+          "recipe": "transfer-parent-coverage",
+          "parent_sha256": "sha256:c7d819fcee9d25459c583b5ffdb35593d4a47b524ed152d0226bf81a283314b4",
+          "metrics": {
+            "rmse": 232.70645154131455,
+            "mae": 158.03306257685034
+          },
+          "predictions": "B-dbfaf63c9889-3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9.jsonl",
+          "rows": 1062,
+          "predictions_sha256": "sha256:9ed7ecf21fe728713c7597c87badfd95ff2150b54bd9eef17eca0e0feec2e400",
+          "checkpoint_sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9"
+        },
+        {
+          "round": 2,
+          "recipe": "continue-centered-and-calibrate",
+          "parent_sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9",
+          "metrics": {
+            "rmse": 230.3282940683852,
+            "mae": 173.26274212180496
+          },
+          "predictions": "B-dbfaf63c9889-bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4.jsonl",
+          "rows": 1062,
+          "predictions_sha256": "sha256:db7d3088a6965df98265fe0cf773d9494109d5e36871950a0c6bee5439ef6a00",
+          "checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4"
+        }
+      ]
+    },
+    "C-fixed": {
+      "profile": "C",
+      "projection_sha256": "0cc747f9998c5d7ee1e4eac6aec0db9f5ed4d2de149a1b1cbe689cce6b6aaca7",
+      "candidates": [
+        {
+          "round": 1,
+          "recipe": "regime-kernel-5",
+          "parent_sha256": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e",
+          "metrics": {
+            "rmse": 49.11520677840942,
+            "mae": 35.19305791821807
+          },
+          "predictions": "C-0cc747f9998c-23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3.jsonl",
+          "rows": 23049,
+          "predictions_sha256": "sha256:68366fa3f0efedac32379f66e905b64e574b871b8a9b4681bf6cf0bcbd116396",
+          "checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3"
+        },
+        {
+          "round": 2,
+          "recipe": "regime-kernel-5",
+          "parent_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "metrics": {
+            "rmse": 49.122502972797,
+            "mae": 35.18978757133505
+          },
+          "predictions": "C-0cc747f9998c-0c9419e20aaedca46ad0be35ac84cb95172b147162e417124d233f1a6de3aa6f.jsonl",
+          "rows": 23049,
+          "predictions_sha256": "sha256:899eb6e392aa2aa646b22498ef4c0577bd5da0dda82ff12ecd9d50bf24939c8a",
+          "checkpoint_sha256": "sha256:0c9419e20aaedca46ad0be35ac84cb95172b147162e417124d233f1a6de3aa6f"
+        }
+      ]
+    },
+    "A-dynamic": {
+      "profile": "A",
+      "projection_sha256": "dcca4dc58fb33eb58e8244e1c3614ca507581a1f12177e6df4a908833d5dc196",
+      "candidates": [
+        {
+          "round": 1,
+          "recipe": "balanced",
+          "parent_sha256": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+          "metrics": {
+            "macro_f1": 0.7017742510490294,
+            "accuracy": 0.8856682769726248,
+            "class_f1": {
+              "Ethanol": 0.6940639269406392,
+              "Ethylene": 0.9607250755287009,
+              "Ammonia": 0.9900990099009901,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.5714285714285714
+            },
+            "confusion": [
+              [
+                76,
+                5,
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                159,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                1,
+                263,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-8ca0b1fd6ebfd4cea72faaccfbc4993861d47d914e046349d04adb1ef886ed82.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:ace8f7298cd02a89ca3160c3ed6129f44db36b8aaa9eb5d7083b1ae2dcb7af2a",
+          "checkpoint_sha256": "sha256:8ca0b1fd6ebfd4cea72faaccfbc4993861d47d914e046349d04adb1ef886ed82"
+        },
+        {
+          "round": 1,
+          "recipe": "polish",
+          "parent_sha256": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+          "metrics": {
+            "macro_f1": 0.706310844828026,
+            "accuracy": 0.893719806763285,
+            "class_f1": {
+              "Ethanol": 0.7069767441860465,
+              "Ethylene": 0.9731343283582089,
+              "Ammonia": 0.9900990099009901,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.9962264150943396,
+              "Toluene": 0.5714285714285714
+            },
+            "confusion": [
+              [
+                76,
+                5,
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                4,
+                163,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                264,
+                2
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-f24e23d1cba1d7405594874d3d8f2b94a62fbb560c233cb59e3e19d7c7f404aa.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:2608d4be8def1ce2eb7307856c32e9a28ff710313c7279ba3da4f964324bf60d",
+          "checkpoint_sha256": "sha256:f24e23d1cba1d7405594874d3d8f2b94a62fbb560c233cb59e3e19d7c7f404aa"
+        },
+        {
+          "round": 1,
+          "recipe": "explore",
+          "parent_sha256": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+          "metrics": {
+            "macro_f1": 0.7215526855459675,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.7004608294930875,
+              "Ethylene": 0.9640718562874252,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.9981167608286252,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                6,
+                161,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                265,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:0140920b7ffb501122fa026ee401f4febf9fa52f5c391d49794b2eec19da0d34",
+          "checkpoint_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb"
+        },
+        {
+          "round": 2,
+          "recipe": "explore",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7129174609201537,
+            "accuracy": 0.8824476650563607,
+            "class_f1": {
+              "Ethanol": 0.6816143497757847,
+              "Ethylene": 0.9515151515151515,
+              "Ammonia": 0.9795918367346939,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.9981167608286252,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                10,
+                157,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                48,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                265,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:45d890a4d499255e6ce6bf903ff81bdc3bf5dfea72ab5896fe957d4cf7fde9a1",
+          "checkpoint_sha256": "sha256:77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084"
+        },
+        {
+          "round": 2,
+          "recipe": "polish",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7215526855459675,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.7004608294930875,
+              "Ethylene": 0.9640718562874252,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.9981167608286252,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                6,
+                161,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                265,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:335c2431c872b709e8c727f757d6da409b479abc815a6d13d102bca3fac7ba79",
+          "checkpoint_sha256": "sha256:3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9"
+        },
+        {
+          "round": 2,
+          "recipe": "balanced",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7188151402339642,
+            "accuracy": 0.8856682769726248,
+            "class_f1": {
+              "Ethanol": 0.6940639269406392,
+              "Ethylene": 0.9578313253012049,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                159,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:c1af7c307c9a21d101c9aeab20cb1dabf69edbdc0eb9d76963e2ae9aba171f04",
+          "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de"
+        },
+        {
+          "round": 3,
+          "recipe": "explore",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7129174609201537,
+            "accuracy": 0.8824476650563607,
+            "class_f1": {
+              "Ethanol": 0.6816143497757847,
+              "Ethylene": 0.9515151515151515,
+              "Ammonia": 0.9795918367346939,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.9981167608286252,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                10,
+                157,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                48,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                265,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:45d890a4d499255e6ce6bf903ff81bdc3bf5dfea72ab5896fe957d4cf7fde9a1",
+          "checkpoint_sha256": "sha256:77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084"
+        },
+        {
+          "round": 3,
+          "recipe": "polish",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7215526855459675,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.7004608294930875,
+              "Ethylene": 0.9640718562874252,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.9981167608286252,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                6,
+                161,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                265,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:335c2431c872b709e8c727f757d6da409b479abc815a6d13d102bca3fac7ba79",
+          "checkpoint_sha256": "sha256:3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9"
+        },
+        {
+          "round": 3,
+          "recipe": "balanced",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7188151402339642,
+            "accuracy": 0.8856682769726248,
+            "class_f1": {
+              "Ethanol": 0.6940639269406392,
+              "Ethylene": 0.9578313253012049,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                159,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:c1af7c307c9a21d101c9aeab20cb1dabf69edbdc0eb9d76963e2ae9aba171f04",
+          "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de"
+        },
+        {
+          "round": 4,
+          "recipe": "polish",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7215526855459675,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.7004608294930875,
+              "Ethylene": 0.9640718562874252,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.9981167608286252,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                6,
+                161,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                265,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:335c2431c872b709e8c727f757d6da409b479abc815a6d13d102bca3fac7ba79",
+          "checkpoint_sha256": "sha256:3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9"
+        },
+        {
+          "round": 4,
+          "recipe": "explore",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7129174609201537,
+            "accuracy": 0.8824476650563607,
+            "class_f1": {
+              "Ethanol": 0.6816143497757847,
+              "Ethylene": 0.9515151515151515,
+              "Ammonia": 0.9795918367346939,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.9981167608286252,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                10,
+                157,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                48,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                265,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:45d890a4d499255e6ce6bf903ff81bdc3bf5dfea72ab5896fe957d4cf7fde9a1",
+          "checkpoint_sha256": "sha256:77963c70bb0a58cd87f5a2e20307285268f2081a4d0b42c81b5d705f6a139084"
+        },
+        {
+          "round": 4,
+          "recipe": "balanced",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7188151402339642,
+            "accuracy": 0.8856682769726248,
+            "class_f1": {
+              "Ethanol": 0.6940639269406392,
+              "Ethylene": 0.9578313253012049,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                159,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:c1af7c307c9a21d101c9aeab20cb1dabf69edbdc0eb9d76963e2ae9aba171f04",
+          "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de"
+        },
+        {
+          "round": 5,
+          "recipe": "polish",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7215526855459675,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.7004608294930875,
+              "Ethylene": 0.9640718562874252,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.9981167608286252,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                6,
+                161,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                265,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:335c2431c872b709e8c727f757d6da409b479abc815a6d13d102bca3fac7ba79",
+          "checkpoint_sha256": "sha256:3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9"
+        },
+        {
+          "round": 5,
+          "recipe": "balanced",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7188151402339642,
+            "accuracy": 0.8856682769726248,
+            "class_f1": {
+              "Ethanol": 0.6940639269406392,
+              "Ethylene": 0.9578313253012049,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                159,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:c1af7c307c9a21d101c9aeab20cb1dabf69edbdc0eb9d76963e2ae9aba171f04",
+          "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de"
+        },
+        {
+          "round": 5,
+          "recipe": "augment",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7112096035088772,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.6956521739130435,
+              "Ethylene": 0.9707602339181286,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.03508771929824561,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.5714285714285714
+            },
+            "confusion": [
+              [
+                72,
+                9,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                166,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                52,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:6e96cfb665143ee1d5e0bbf92f57942d8488343d6a63249aa6210889a2481f2d",
+          "checkpoint_sha256": "sha256:088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986"
+        },
+        {
+          "round": 6,
+          "recipe": "polish",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7215526855459675,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.7004608294930875,
+              "Ethylene": 0.9640718562874252,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.9981167608286252,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                6,
+                161,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                265,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:335c2431c872b709e8c727f757d6da409b479abc815a6d13d102bca3fac7ba79",
+          "checkpoint_sha256": "sha256:3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9"
+        },
+        {
+          "round": 6,
+          "recipe": "balanced",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7188151402339642,
+            "accuracy": 0.8856682769726248,
+            "class_f1": {
+              "Ethanol": 0.6940639269406392,
+              "Ethylene": 0.9578313253012049,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                159,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:c1af7c307c9a21d101c9aeab20cb1dabf69edbdc0eb9d76963e2ae9aba171f04",
+          "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de"
+        },
+        {
+          "round": 6,
+          "recipe": "augment",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7112096035088772,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.6956521739130435,
+              "Ethylene": 0.9707602339181286,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.03508771929824561,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.5714285714285714
+            },
+            "confusion": [
+              [
+                72,
+                9,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                166,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                52,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:6e96cfb665143ee1d5e0bbf92f57942d8488343d6a63249aa6210889a2481f2d",
+          "checkpoint_sha256": "sha256:088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986"
+        },
+        {
+          "round": 7,
+          "recipe": "balanced",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7188151402339642,
+            "accuracy": 0.8856682769726248,
+            "class_f1": {
+              "Ethanol": 0.6940639269406392,
+              "Ethylene": 0.9578313253012049,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                159,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:c1af7c307c9a21d101c9aeab20cb1dabf69edbdc0eb9d76963e2ae9aba171f04",
+          "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de"
+        },
+        {
+          "round": 7,
+          "recipe": "polish",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7215526855459675,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.7004608294930875,
+              "Ethylene": 0.9640718562874252,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.9981167608286252,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                6,
+                161,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                265,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:335c2431c872b709e8c727f757d6da409b479abc815a6d13d102bca3fac7ba79",
+          "checkpoint_sha256": "sha256:3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9"
+        },
+        {
+          "round": 7,
+          "recipe": "augment",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7112096035088772,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.6956521739130435,
+              "Ethylene": 0.9707602339181286,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.03508771929824561,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.5714285714285714
+            },
+            "confusion": [
+              [
+                72,
+                9,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                166,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                52,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:6e96cfb665143ee1d5e0bbf92f57942d8488343d6a63249aa6210889a2481f2d",
+          "checkpoint_sha256": "sha256:088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986"
+        },
+        {
+          "round": 8,
+          "recipe": "balanced",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7188151402339642,
+            "accuracy": 0.8856682769726248,
+            "class_f1": {
+              "Ethanol": 0.6940639269406392,
+              "Ethylene": 0.9578313253012049,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                159,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:c1af7c307c9a21d101c9aeab20cb1dabf69edbdc0eb9d76963e2ae9aba171f04",
+          "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de"
+        },
+        {
+          "round": 8,
+          "recipe": "polish",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7215526855459675,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.7004608294930875,
+              "Ethylene": 0.9640718562874252,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.9981167608286252,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                6,
+                161,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                265,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:335c2431c872b709e8c727f757d6da409b479abc815a6d13d102bca3fac7ba79",
+          "checkpoint_sha256": "sha256:3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9"
+        },
+        {
+          "round": 8,
+          "recipe": "augment",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7112096035088772,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.6956521739130435,
+              "Ethylene": 0.9707602339181286,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.03508771929824561,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.5714285714285714
+            },
+            "confusion": [
+              [
+                72,
+                9,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                166,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                52,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:6e96cfb665143ee1d5e0bbf92f57942d8488343d6a63249aa6210889a2481f2d",
+          "checkpoint_sha256": "sha256:088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986"
+        },
+        {
+          "round": 9,
+          "recipe": "balanced",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7188151402339642,
+            "accuracy": 0.8856682769726248,
+            "class_f1": {
+              "Ethanol": 0.6940639269406392,
+              "Ethylene": 0.9578313253012049,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                159,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:c1af7c307c9a21d101c9aeab20cb1dabf69edbdc0eb9d76963e2ae9aba171f04",
+          "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de"
+        },
+        {
+          "round": 9,
+          "recipe": "polish",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7215526855459675,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.7004608294930875,
+              "Ethylene": 0.9640718562874252,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.9981167608286252,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                6,
+                161,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                265,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:335c2431c872b709e8c727f757d6da409b479abc815a6d13d102bca3fac7ba79",
+          "checkpoint_sha256": "sha256:3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9"
+        },
+        {
+          "round": 9,
+          "recipe": "augment",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7112096035088772,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.6956521739130435,
+              "Ethylene": 0.9707602339181286,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.03508771929824561,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.5714285714285714
+            },
+            "confusion": [
+              [
+                72,
+                9,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                166,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                52,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:6e96cfb665143ee1d5e0bbf92f57942d8488343d6a63249aa6210889a2481f2d",
+          "checkpoint_sha256": "sha256:088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986"
+        },
+        {
+          "round": 10,
+          "recipe": "polish",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7215526855459675,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.7004608294930875,
+              "Ethylene": 0.9640718562874252,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.9981167608286252,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                6,
+                161,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                265,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:335c2431c872b709e8c727f757d6da409b479abc815a6d13d102bca3fac7ba79",
+          "checkpoint_sha256": "sha256:3cc6a26def158adf039ee8ffa018deb6597c271cf7c6ff60763f5e88dc3d70e9"
+        },
+        {
+          "round": 10,
+          "recipe": "balanced",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7188151402339642,
+            "accuracy": 0.8856682769726248,
+            "class_f1": {
+              "Ethanol": 0.6940639269406392,
+              "Ethylene": 0.9578313253012049,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.0,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.6666666666666666
+            },
+            "confusion": [
+              [
+                76,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                159,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                53,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:c1af7c307c9a21d101c9aeab20cb1dabf69edbdc0eb9d76963e2ae9aba171f04",
+          "checkpoint_sha256": "sha256:f1d61115fd488697181d823540b4184b01943879a0dd8f30c6b2431a776da0de"
+        },
+        {
+          "round": 10,
+          "recipe": "augment",
+          "parent_sha256": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+          "metrics": {
+            "macro_f1": 0.7112096035088772,
+            "accuracy": 0.8921095008051529,
+            "class_f1": {
+              "Ethanol": 0.6956521739130435,
+              "Ethylene": 0.9707602339181286,
+              "Ammonia": 1.0,
+              "Acetaldehyde": 0.03508771929824561,
+              "Acetone": 0.994328922495274,
+              "Toluene": 0.5714285714285714
+            },
+            "confusion": [
+              [
+                72,
+                9,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                166,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                50,
+                0,
+                0,
+                0
+              ],
+              [
+                52,
+                0,
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2,
+                263,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            ]
+          },
+          "predictions": "A-dcca4dc58fb3-088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986.jsonl",
+          "rows": 621,
+          "predictions_sha256": "sha256:6e96cfb665143ee1d5e0bbf92f57942d8488343d6a63249aa6210889a2481f2d",
+          "checkpoint_sha256": "sha256:088bb222565add9a0ef55b62ed31591a11d7df8601334ce422b281fc23700986"
+        }
+      ]
+    },
+    "B-dynamic": {
+      "profile": "B",
+      "projection_sha256": "dbfaf63c9889b8fabbb06c3efeb93b07eae6cdce0fa5e785e32fa34ca28358a8",
+      "candidates": [
+        {
+          "round": 1,
+          "recipe": "transfer-parent-coverage",
+          "parent_sha256": "sha256:c7d819fcee9d25459c583b5ffdb35593d4a47b524ed152d0226bf81a283314b4",
+          "metrics": {
+            "rmse": 232.70645154131455,
+            "mae": 158.03306257685034
+          },
+          "predictions": "B-dbfaf63c9889-3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9.jsonl",
+          "rows": 1062,
+          "predictions_sha256": "sha256:9ed7ecf21fe728713c7597c87badfd95ff2150b54bd9eef17eca0e0feec2e400",
+          "checkpoint_sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9"
+        },
+        {
+          "round": 1,
+          "recipe": "transfer-two-signal",
+          "parent_sha256": "sha256:c7d819fcee9d25459c583b5ffdb35593d4a47b524ed152d0226bf81a283314b4",
+          "metrics": {
+            "rmse": 237.62718467779428,
+            "mae": 158.17614511452524
+          },
+          "predictions": "B-dbfaf63c9889-a270d54df826506aae2ed707fb485c8cbddbd568cff4c502e486029164a0733b.jsonl",
+          "rows": 1062,
+          "predictions_sha256": "sha256:ca7b390cd2842aeb6bd37fd973edbe7de489faff768f9a4ec6ddc7c41e289c3d",
+          "checkpoint_sha256": "sha256:a270d54df826506aae2ed707fb485c8cbddbd568cff4c502e486029164a0733b"
+        },
+        {
+          "round": 2,
+          "recipe": "continue-centered-and-calibrate",
+          "parent_sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9",
+          "metrics": {
+            "rmse": 230.3282940683852,
+            "mae": 173.26274212180496
+          },
+          "predictions": "B-dbfaf63c9889-bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4.jsonl",
+          "rows": 1062,
+          "predictions_sha256": "sha256:db7d3088a6965df98265fe0cf773d9494109d5e36871950a0c6bee5439ef6a00",
+          "checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4"
+        }
+      ]
+    },
+    "C-dynamic": {
+      "profile": "C",
+      "projection_sha256": "0cc747f9998c5d7ee1e4eac6aec0db9f5ed4d2de149a1b1cbe689cce6b6aaca7",
+      "candidates": [
+        {
+          "round": 1,
+          "recipe": "regime-kernel-5",
+          "parent_sha256": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e",
+          "metrics": {
+            "rmse": 49.11520677840942,
+            "mae": 35.19305791821807
+          },
+          "predictions": "C-0cc747f9998c-23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3.jsonl",
+          "rows": 23049,
+          "predictions_sha256": "sha256:68366fa3f0efedac32379f66e905b64e574b871b8a9b4681bf6cf0bcbd116396",
+          "checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3"
+        },
+        {
+          "round": 2,
+          "recipe": "regime-kernel-5",
+          "parent_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "metrics": {
+            "rmse": 49.122502972797,
+            "mae": 35.18978757133505
+          },
+          "predictions": "C-0cc747f9998c-0c9419e20aaedca46ad0be35ac84cb95172b147162e417124d233f1a6de3aa6f.jsonl",
+          "rows": 23049,
+          "predictions_sha256": "sha256:899eb6e392aa2aa646b22498ef4c0577bd5da0dda82ff12ecd9d50bf24939c8a",
+          "checkpoint_sha256": "sha256:0c9419e20aaedca46ad0be35ac84cb95172b147162e417124d233f1a6de3aa6f"
+        },
+        {
+          "round": 3,
+          "recipe": "conservative-5",
+          "parent_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "metrics": {
+            "rmse": 49.27839937731556,
+            "mae": 35.255970723245774
+          },
+          "predictions": "C-0cc747f9998c-79a3fe265475a934b33ee8c93301a4818b925df5f4434c745ba45e09adbccd5f.jsonl",
+          "rows": 23049,
+          "predictions_sha256": "sha256:5924ae93753d9ed85b1a8c6ce7ec9a2312b4cb71fdad17b2fddeb28485db81af",
+          "checkpoint_sha256": "sha256:79a3fe265475a934b33ee8c93301a4818b925df5f4434c745ba45e09adbccd5f"
+        },
+        {
+          "round": 4,
+          "recipe": "official-5",
+          "parent_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "metrics": {
+            "rmse": 49.47187849004703,
+            "mae": 35.18232098720985
+          },
+          "predictions": "C-0cc747f9998c-dd40b99bf42f13ce36904c1fd5bf1e75647acbf09bdc59edeb8b90e513bb4bc8.jsonl",
+          "rows": 23049,
+          "predictions_sha256": "sha256:27084488983169a4c13f50a1ebcef1d28e37df6b603ad05677d4fbab8293bd79",
+          "checkpoint_sha256": "sha256:dd40b99bf42f13ce36904c1fd5bf1e75647acbf09bdc59edeb8b90e513bb4bc8"
+        },
+        {
+          "round": 5,
+          "recipe": "accelerated-5",
+          "parent_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "metrics": {
+            "rmse": 49.744462053613915,
+            "mae": 35.89218336018809
+          },
+          "predictions": "C-0cc747f9998c-1d0e92d6c3986619dd3f34fcdd1459a7f93f53511c8fb54be33d1cf1df9898d6.jsonl",
+          "rows": 23049,
+          "predictions_sha256": "sha256:5313250081bbfdae1e56d1c31aa30645483432cee4af95520908f048c79d50ef",
+          "checkpoint_sha256": "sha256:1d0e92d6c3986619dd3f34fcdd1459a7f93f53511c8fb54be33d1cf1df9898d6"
+        },
+        {
+          "round": 6,
+          "recipe": "engine-balanced-5",
+          "parent_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "metrics": {
+            "rmse": 50.233784893427035,
+            "mae": 34.677630800978854
+          },
+          "predictions": "C-0cc747f9998c-9fa2603e58f476dd92d2e6eb89dcd569d13e00e1b91d190179c2d3838313a16a.jsonl",
+          "rows": 23049,
+          "predictions_sha256": "sha256:ffce38ad485a6055ed031ce477d95278dbfa7049d8c04ac9c742a82f8cb33288",
+          "checkpoint_sha256": "sha256:9fa2603e58f476dd92d2e6eb89dcd569d13e00e1b91d190179c2d3838313a16a"
+        }
+      ]
+    }
+  },
+  "unique_prediction_files": 17
+}

@@ -1,0 +1,4 @@
+* text=auto eol=lf
+# Preserve the exact bytes covered by the two release manifests.
+source/** -text
+training-records/** -text

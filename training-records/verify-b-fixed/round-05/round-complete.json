@@ -1,0 +1,180 @@
+{
+  "round": 5,
+  "parent_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+  "parent_state_sha256": "sha256:0935bdd484ebaedd6bc1a859d32eaddf5ee661ca12d9616fa75b4a7d31c292c3",
+  "state_sha256": "sha256:7f0bcd4450582b1e0d3ce22acdc761a7ff025b09f36a8f1d4b4aa00d4df246cf",
+  "state_manifest": [
+    {
+      "path": "decision-evidence.json",
+      "size_bytes": 1724,
+      "sha256": "sha256:66fed5d9124e12535b5f52b607b62d2f661c909c992ce9df4e295b224ef2ba6a"
+    },
+    {
+      "path": "exact-cache/8c593edbc1522744913b46b24c950bca837a8f5f6723af7869af4085adc6aa58.npz",
+      "size_bytes": 750372,
+      "sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4"
+    },
+    {
+      "path": "exact-cache/9ef982af9ff86756e645a58ec485814a96fdac63496da9239dc715e0e150dc54.npz",
+      "size_bytes": 749452,
+      "sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9"
+    },
+    {
+      "path": "exact-cache/index.json",
+      "size_bytes": 1726,
+      "sha256": "sha256:f4b366b56ab2e91337df58e7be47677ff23dd8641d0365dd95ea27ab9a8423b8"
+    },
+    {
+      "path": "profile.json",
+      "size_bytes": 99,
+      "sha256": "sha256:135f83c09aabe25a399dc8b3e42fdeab70330730708194d0eab1209734e88a20"
+    },
+    {
+      "path": "round-01.json",
+      "size_bytes": 3565,
+      "sha256": "sha256:b2e42895fe8bba91a00112709bd1ef5ca041d8069e9af66e3d833032e270a0cd"
+    },
+    {
+      "path": "round-02.json",
+      "size_bytes": 3698,
+      "sha256": "sha256:a56b6583404e2bd8ed3bd9b1d3bebc392f6e3752040f74041551f97c411f0cfb"
+    },
+    {
+      "path": "round-03.json",
+      "size_bytes": 2990,
+      "sha256": "sha256:0b290fe976d97e2b53557bfa965569eab5b882d5561930cd487c16b0a8333438"
+    },
+    {
+      "path": "round-04.json",
+      "size_bytes": 2990,
+      "sha256": "sha256:5af950eef25eb52bfa00e9d328fd89a6ddf4d8d48135b7c447f2dcbbf6cdce07"
+    },
+    {
+      "path": "round-05.json",
+      "size_bytes": 2982,
+      "sha256": "sha256:853ce81ae46fedd5bbf6063bf43e889d965a22a244d3d68e57612e640f3c4a05"
+    }
+  ],
+  "accepted": false,
+  "candidate": null,
+  "candidate_score": null,
+  "selected_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+  "selected_score": {
+    "rows": 1062,
+    "unit": "minutes",
+    "metrics": {
+      "rmse": 230.3282940683852,
+      "mae": 173.26274212180496
+    },
+    "prediction_sha256": "sha256:090f39c26853974741993314d4ced73ffb932511592de03272faf723b1c4d01a",
+    "per_bearing": {
+      "Bearing1_3": {
+        "rows": 158,
+        "rmse": 375.7016847346583,
+        "mae": 333.76089364100795
+      },
+      "Bearing2_3": {
+        "rows": 533,
+        "rmse": 178.45322331693086,
+        "mae": 138.10817429446115
+      },
+      "Bearing3_3": {
+        "rows": 371,
+        "rmse": 214.4675318391207,
+        "mae": 155.4155095394335
+      }
+    }
+  },
+  "round_complete": {
+    "selected_artifact_id": "candidate-02",
+    "hypothesis": "Balanced output calibration may lower bearing transfer error.",
+    "change_summary": "Actions reuse only, trained 0, reused 0. Kept the parent.",
+    "reason": "Parent RMSE 230.328294, candidate RMSE 230.328294 minutes, no_restorable_candidate. Expected Reduce RMSE and preserve hidden features. Failure Candidate does not lower measured RMSE. Receipt school-wire-call-5.",
+    "configuration": {
+      "profile": "B",
+      "recipe": null,
+      "plan": {
+        "hypothesis": "Balanced output calibration may lower bearing transfer error.",
+        "actions": [],
+        "expected": "Reduce RMSE and preserve hidden features.",
+        "failure": "Candidate does not lower measured RMSE."
+      },
+      "trials": [],
+      "reuse_only": true,
+      "planner_fallback": false,
+      "planner_issue": null,
+      "raw_reply": "{\"hypothesis\": \"Balanced output calibration may lower bearing transfer error.\", \"actions\": [], \"expected\": \"Reduce RMSE and preserve hidden features.\", \"failure\": \"Candidate does not lower measured RMSE.\"}",
+      "parent_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+      "parent_prediction_sha256": "82585140b4b6afcb61cf97d53c78cd2964c9ac37601086f43b0483a63d81a262",
+      "execution": {
+        "trained_candidates": 0,
+        "reused_candidates": 0,
+        "scored_candidates": 0,
+        "reused_scores": 0,
+        "training_rows": 0,
+        "optimizer_steps": 0,
+        "cpu_seconds": 0.89262066
+      },
+      "screening": "whole-bearing and whole-condition training projections",
+      "adoption": {
+        "margin": 1e-06,
+        "gain": 0.0,
+        "accepted": false,
+        "reason": "no_restorable_candidate",
+        "selected_rmse": 230.3282940683852,
+        "measurement_source": "local"
+      }
+    },
+    "history_ids": [
+      "verified-01",
+      "verified-02",
+      "verified-03",
+      "verified-04"
+    ],
+    "model_call_ids": [
+      "school-wire-call-5"
+    ],
+    "seed": 42
+  },
+  "request_types": [
+    "history_request",
+    "model_request",
+    "upload_begin_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_finish_request",
+    "state_request",
+    "round_complete"
+  ],
+  "seconds": 2.116777299961541
+}

@@ -1,0 +1,2459 @@
+{
+  "spec": {
+    "image_id": "sha256:0ebd6a1a6db8b907a26c030eab731c8ed140a64d88e952b3bd6ea61b7a694bde",
+    "archive_sha256": "68db6a72c29bac11a4f86e97d9c1f524d35695464fd5f3f6d131f1431bc69d68",
+    "pack": "cpu-b-rul-20261110-v1",
+    "arm": "dynamic",
+    "seed": 42,
+    "rounds": 10,
+    "fit_path": "outputs/goal/school-b-discovery/baseline/projections/fit.jsonl",
+    "validation_path": "outputs/goal/school-b-discovery/baseline/projections/development.jsonl",
+    "fit_input_sha256": "sha256:0bdd0c74503c11cfc26a6c3696e92b4731e32305511b7638f06cfaa908b691d6",
+    "dev_input_sha256": "sha256:e22ab78ddd778b08efcd30812bcbaecead7e46bf37a7b721c24dc7e5a290f88b",
+    "projection_proof": "outputs/goal/school-b-discovery/baseline/split-protocol.json",
+    "projection_proof_sha256": "sha256:25920429196f16ba5a9bb2434e0a0b0864b678929623d29fdee649e784a66ab6",
+    "mounted_fit_sha256": "sha256:09423a46429f0fcda9887524ae3c76cb543c8e82b640c10cbb3b400a5afeb5f3",
+    "mounted_dev_sha256": "sha256:dbfaf63c9889b8fabbb06c3efeb93b07eae6cdce0fa5e785e32fa34ca28358a8",
+    "fit_bearings": {
+      "Bearing1_1": 123,
+      "Bearing1_2": 161,
+      "Bearing2_1": 491,
+      "Bearing2_2": 161,
+      "Bearing3_1": 2538,
+      "Bearing3_2": 2496
+    },
+    "dev_bearings": {
+      "Bearing1_3": 158,
+      "Bearing2_3": 533,
+      "Bearing3_3": 371
+    },
+    "initial_checkpoint_sha256": "sha256:c7d819fcee9d25459c583b5ffdb35593d4a47b524ed152d0226bf81a283314b4",
+    "max_output_tokens": 384,
+    "wall_seconds": 60,
+    "resource_limits": {
+      "artifact_upload_protocol": "chunked-v1",
+      "artifact_bytes": 1048576,
+      "state_bytes": 4194304,
+      "candidate_upload_bytes_per_round": 1048576,
+      "state_upload_bytes_per_round": 4194304,
+      "upload_chunk_bytes": 65536
+    },
+    "all_datasets": true
+  },
+  "baseline": {
+    "rows": 1062,
+    "unit": "minutes",
+    "metrics": {
+      "rmse": 245.14929367610208,
+      "mae": 155.7805127190063
+    },
+    "prediction_sha256": "sha256:62782300d971287bb3b13967a563dab8498e5c45039163966d7a641b29c63c05",
+    "per_bearing": {
+      "Bearing1_3": {
+        "rows": 158,
+        "rmse": 482.53385854579494,
+        "mae": 346.11820297656186
+      },
+      "Bearing2_3": {
+        "rows": 533,
+        "rmse": 127.82697658561024,
+        "mae": 97.62437294120534
+      },
+      "Bearing3_3": {
+        "rows": 371,
+        "rmse": 222.25646148001246,
+        "mae": 158.2707214545161
+      }
+    }
+  },
+  "final": {
+    "rows": 1062,
+    "unit": "minutes",
+    "metrics": {
+      "rmse": 230.3282940683852,
+      "mae": 173.26274212180496
+    },
+    "prediction_sha256": "sha256:090f39c26853974741993314d4ced73ffb932511592de03272faf723b1c4d01a",
+    "per_bearing": {
+      "Bearing1_3": {
+        "rows": 158,
+        "rmse": 375.7016847346583,
+        "mae": 333.76089364100795
+      },
+      "Bearing2_3": {
+        "rows": 533,
+        "rmse": 178.45322331693086,
+        "mae": 138.10817429446115
+      },
+      "Bearing3_3": {
+        "rows": 371,
+        "rmse": 214.4675318391207,
+        "mae": 155.4155095394335
+      }
+    }
+  },
+  "execution": {
+    "trained_candidates": 3,
+    "reused_candidates": 0,
+    "optimizer_steps": 42,
+    "training_rows": 17910
+  },
+  "final_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+  "rounds": [
+    {
+      "round": 1,
+      "parent_checkpoint_sha256": "sha256:c7d819fcee9d25459c583b5ffdb35593d4a47b524ed152d0226bf81a283314b4",
+      "parent_state_sha256": "",
+      "state_sha256": "sha256:36726ac9f79f89b6e5ada0331f5e20095afa32a60baf7294ea9c8f560aed7e94",
+      "state_manifest": [
+        {
+          "path": "decision-evidence.json",
+          "size_bytes": 557,
+          "sha256": "sha256:9afe933d1662f835d08f3f84e0b1b3da90a73614ed3c6a0395955f1266f1aa48"
+        },
+        {
+          "path": "exact-cache/3dfcff9508a160d8b9945bb79710bd2906e0fef2ced54728e3a982a5a3d9cce2.npz",
+          "size_bytes": 750792,
+          "sha256": "sha256:a270d54df826506aae2ed707fb485c8cbddbd568cff4c502e486029164a0733b"
+        },
+        {
+          "path": "exact-cache/9ef982af9ff86756e645a58ec485814a96fdac63496da9239dc715e0e150dc54.npz",
+          "size_bytes": 749452,
+          "sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9"
+        },
+        {
+          "path": "exact-cache/index.json",
+          "size_bytes": 1669,
+          "sha256": "sha256:8d7bb42b47c13aa6fb4bed44c10498309f5f6a8ed5f38e16b013a286ee4c7981"
+        },
+        {
+          "path": "profile.json",
+          "size_bytes": 99,
+          "sha256": "sha256:135f83c09aabe25a399dc8b3e42fdeab70330730708194d0eab1209734e88a20"
+        },
+        {
+          "path": "round-01.json",
+          "size_bytes": 4116,
+          "sha256": "sha256:6612fad0776bdec6f019cf6ff9a24a57b8e55cd3b2467c644370c095113c09aa"
+        }
+      ],
+      "accepted": true,
+      "candidate": {
+        "files": [
+          {
+            "path": "baselines/__init__.py",
+            "size_bytes": 78,
+            "sha256": "sha256:3363d6112a78e5b4de3508da13e543708fc6a9019c65f3c8bcecb5178a321d7a"
+          },
+          {
+            "path": "baselines/data.py",
+            "size_bytes": 3994,
+            "sha256": "sha256:6099e312829ac3aaf48209ec1f618532c4a8552fedf73f09cf31c8876261db65"
+          },
+          {
+            "path": "baselines/model.py",
+            "size_bytes": 11988,
+            "sha256": "sha256:325026d80747eb36f39c8df1be02b640ae21b3cd082827c66aacbdf273dd61c5"
+          },
+          {
+            "path": "baselines/predict.py",
+            "size_bytes": 1536,
+            "sha256": "sha256:80e6787cd862dfefd85cd6bfcd73b5577dd90e202dd3d5bb9f18a52761807452"
+          },
+          {
+            "path": "checkpoint.npz",
+            "size_bytes": 749452,
+            "sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9"
+          },
+          {
+            "path": "school_b_adaptation.py",
+            "size_bytes": 9367,
+            "sha256": "sha256:42a0504fc5df149592b5b203b29bb86e0d3c8d5383d8453e7f4c504ce0d383a8"
+          },
+          {
+            "path": "school_b_histograms.py",
+            "size_bytes": 4351,
+            "sha256": "sha256:43a2723f92c84c16ad5f83bd2828ae2a2232a0f89402b2e1472b4537d5206738"
+          },
+          {
+            "path": "school_b_submission.py",
+            "size_bytes": 25969,
+            "sha256": "sha256:275a8ed75efc9f983fdfcb0ca30163366502a3342faf9ed4a0c871c435a309a9"
+          },
+          {
+            "path": "school_b_transfer.py",
+            "size_bytes": 31146,
+            "sha256": "sha256:064e74657e6f669a3d8cf0a5083b0734b8299ec6b1355ebc4c7fa48d9e84239c"
+          },
+          {
+            "path": "school_cache.py",
+            "size_bytes": 5299,
+            "sha256": "sha256:2f82ead9b9e0fffa5dcb026ee3d431ab519fe3f3b9bb584c68f6b6a341f00889"
+          },
+          {
+            "path": "school_planner.py",
+            "size_bytes": 6158,
+            "sha256": "sha256:83d2dbdf7453e1e95ed2587848788e23608db3a4eea6bcbf5c03c0dff5dc1646"
+          },
+          {
+            "path": "school_profile.py",
+            "size_bytes": 2491,
+            "sha256": "sha256:fdaffaba60d939d6874b645e87fc4ee0e93f13f427e014d69680eae397a2d36b"
+          },
+          {
+            "path": "school_runtime.py",
+            "size_bytes": 4716,
+            "sha256": "sha256:20c8c0e101c829f40a831e4277ca096795c8f5910bbad6c77ce69b2fd9bdf4b4"
+          },
+          {
+            "path": "training.json",
+            "size_bytes": 1460,
+            "sha256": "sha256:e3c4e33b0c968670f58f8ab01547a28635e3313fab1860d74738194ae2e5f5c1"
+          }
+        ],
+        "artifact": {
+          "checkpoint_paths": [
+            "checkpoint.npz"
+          ],
+          "code_paths": [
+            "school_b_submission.py",
+            "school_b_adaptation.py",
+            "school_runtime.py",
+            "school_cache.py",
+            "school_planner.py",
+            "school_profile.py",
+            "school_b_transfer.py",
+            "school_b_histograms.py",
+            "baselines/model.py",
+            "baselines/data.py",
+            "baselines/predict.py",
+            "baselines/__init__.py"
+          ],
+          "predict_argv": [
+            "python3",
+            "/app/harness.py",
+            "predict"
+          ]
+        },
+        "artifact_id": "candidate-01",
+        "artifact_sha256": "sha256:2304fd1c2f10e1727f17e43e6e8a268c41d9ff9b565de767d3ec1a8246b8d410"
+      },
+      "candidate_score": {
+        "rows": 1062,
+        "unit": "minutes",
+        "metrics": {
+          "rmse": 232.70645154131455,
+          "mae": 158.03306257685037
+        },
+        "prediction_sha256": "sha256:80a8400ee4b88dc0337b9151d89d2b951b8adfd8e399fd2c083f3a0a63c006c4",
+        "per_bearing": {
+          "Bearing1_3": {
+            "rows": 158,
+            "rmse": 419.5715320637405,
+            "mae": 336.77181816054787
+          },
+          "Bearing2_3": {
+            "rows": 533,
+            "rmse": 150.70416058543702,
+            "mae": 117.744721060204
+          },
+          "Bearing3_3": {
+            "rows": 371,
+            "rmse": 217.74396068634493,
+            "mae": 139.79306970932555
+          }
+        }
+      },
+      "selected_checkpoint_sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9",
+      "selected_score": {
+        "rows": 1062,
+        "unit": "minutes",
+        "metrics": {
+          "rmse": 232.70645154131455,
+          "mae": 158.03306257685037
+        },
+        "prediction_sha256": "sha256:80a8400ee4b88dc0337b9151d89d2b951b8adfd8e399fd2c083f3a0a63c006c4",
+        "per_bearing": {
+          "Bearing1_3": {
+            "rows": 158,
+            "rmse": 419.5715320637405,
+            "mae": 336.77181816054787
+          },
+          "Bearing2_3": {
+            "rows": 533,
+            "rmse": 150.70416058543702,
+            "mae": 117.744721060204
+          },
+          "Bearing3_3": {
+            "rows": 371,
+            "rmse": 217.74396068634493,
+            "mae": 139.79306970932555
+          }
+        }
+      },
+      "round_complete": {
+        "selected_artifact_id": "candidate-01",
+        "hypothesis": "New transfer methods reduce RMSE.",
+        "change_summary": "Actions transfer-parent-coverage, transfer-two-signal, trained 2, reused 0. Adopted the candidate.",
+        "reason": "Parent RMSE 245.149294, candidate RMSE 232.706452 minutes, lower_rmse. Expected Both actions lower RMSE. Failure No action improves RMSE. Receipt school-wire-call-1.",
+        "configuration": {
+          "profile": "B",
+          "recipe": "transfer-parent-coverage",
+          "plan": {
+            "actions": [
+              "transfer-parent-coverage",
+              "transfer-two-signal"
+            ],
+            "hypothesis": "New transfer methods reduce RMSE.",
+            "expected": "Both actions lower RMSE.",
+            "failure": "No action improves RMSE."
+          },
+          "trials": [
+            {
+              "recipe": "transfer-parent-coverage",
+              "rmse": 232.70645154131455,
+              "mae": 158.03306257685037,
+              "training_rows": 5970,
+              "initial_steps": 825,
+              "final_steps": 826,
+              "actual_training_rows": 5970,
+              "actual_optimizer_steps": 1,
+              "cache": {
+                "training_key": "9ef982af9ff86756e645a58ec485814a96fdac63496da9239dc715e0e150dc54",
+                "score_key": "726c1ce5e92d76a8db37a2dbc7387535e94e57ecbfe8664faa5d5231964fca11",
+                "checkpoint_sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9",
+                "prediction_sha256": "07c4f269b25d696547e3b0847a506fa6886f1600ac5623e5ea3199a9013955c8",
+                "score_first_round": 1,
+                "training_reused_from_round": null,
+                "score_reused_from_round": null
+              }
+            },
+            {
+              "recipe": "transfer-two-signal",
+              "rmse": 237.6271846777943,
+              "mae": 158.17614511452524,
+              "training_rows": 5970,
+              "initial_steps": 825,
+              "final_steps": 826,
+              "actual_training_rows": 5970,
+              "actual_optimizer_steps": 1,
+              "cache": {
+                "training_key": "3dfcff9508a160d8b9945bb79710bd2906e0fef2ced54728e3a982a5a3d9cce2",
+                "score_key": "2d5bb45d859a5f9f4e5700a0e265b0ca46434ebb00ce81374b512c11bb04a5eb",
+                "checkpoint_sha256": "sha256:a270d54df826506aae2ed707fb485c8cbddbd568cff4c502e486029164a0733b",
+                "prediction_sha256": "7d428a2a8fe2881c9ecfc924747edc03ba627127805fb1ff852f28316c178798",
+                "score_first_round": 1,
+                "training_reused_from_round": null,
+                "score_reused_from_round": null
+              }
+            }
+          ],
+          "reuse_only": false,
+          "planner_fallback": false,
+          "planner_issue": null,
+          "raw_reply": "{\"actions\":[\"transfer-parent-coverage\",\"transfer-two-signal\"],\"hypothesis\":\"New transfer methods reduce RMSE.\",\"expected\":\"Both actions lower RMSE.\",\"failure\":\"No action improves RMSE.\"}",
+          "parent_checkpoint_sha256": "sha256:c7d819fcee9d25459c583b5ffdb35593d4a47b524ed152d0226bf81a283314b4",
+          "parent_prediction_sha256": "12bdf5ba5364765e35e372e63b0bb1d2cea7621413040d88189745ede2452e4f",
+          "execution": {
+            "trained_candidates": 2,
+            "reused_candidates": 0,
+            "scored_candidates": 2,
+            "reused_scores": 0,
+            "training_rows": 11940,
+            "optimizer_steps": 2,
+            "cpu_seconds": 4.032482988000001
+          },
+          "screening": "whole-bearing and whole-condition training projections",
+          "adoption": {
+            "margin": 1e-06,
+            "gain": 12.442842134787526,
+            "accepted": true,
+            "reason": "lower_rmse",
+            "selected_rmse": 232.70645154131455,
+            "measurement_source": "host"
+          }
+        },
+        "history_ids": [],
+        "model_call_ids": [
+          "school-wire-call-1"
+        ],
+        "seed": 42
+      },
+      "request_types": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "candidate_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "seconds": 11.037381100002676
+    },
+    {
+      "round": 2,
+      "parent_checkpoint_sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9",
+      "parent_state_sha256": "sha256:36726ac9f79f89b6e5ada0331f5e20095afa32a60baf7294ea9c8f560aed7e94",
+      "state_sha256": "sha256:7dccb32b20dc24daffc6fcd09d051c4d8a1df620f8b5070362ef959b02f97b90",
+      "state_manifest": [
+        {
+          "path": "decision-evidence.json",
+          "size_bytes": 989,
+          "sha256": "sha256:ebbc5235055c671592a904ca3894fd4e8b00352ec88002cc007d98345edc403f"
+        },
+        {
+          "path": "exact-cache/3dfcff9508a160d8b9945bb79710bd2906e0fef2ced54728e3a982a5a3d9cce2.npz",
+          "size_bytes": 750792,
+          "sha256": "sha256:a270d54df826506aae2ed707fb485c8cbddbd568cff4c502e486029164a0733b"
+        },
+        {
+          "path": "exact-cache/8c593edbc1522744913b46b24c950bca837a8f5f6723af7869af4085adc6aa58.npz",
+          "size_bytes": 750372,
+          "sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4"
+        },
+        {
+          "path": "exact-cache/9ef982af9ff86756e645a58ec485814a96fdac63496da9239dc715e0e150dc54.npz",
+          "size_bytes": 749452,
+          "sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9"
+        },
+        {
+          "path": "exact-cache/index.json",
+          "size_bytes": 2494,
+          "sha256": "sha256:22bfcd9ce21d66962004b3fc6ea38318a224dacb91dae8c418e0609a9a697e6b"
+        },
+        {
+          "path": "profile.json",
+          "size_bytes": 99,
+          "sha256": "sha256:135f83c09aabe25a399dc8b3e42fdeab70330730708194d0eab1209734e88a20"
+        },
+        {
+          "path": "round-01.json",
+          "size_bytes": 4116,
+          "sha256": "sha256:6612fad0776bdec6f019cf6ff9a24a57b8e55cd3b2467c644370c095113c09aa"
+        },
+        {
+          "path": "round-02.json",
+          "size_bytes": 3625,
+          "sha256": "sha256:5b0b53467130d73d7bacbe059c8c45b71010a99f877503a2810bcdc8e1ad7c4d"
+        }
+      ],
+      "accepted": true,
+      "candidate": {
+        "files": [
+          {
+            "path": "baselines/__init__.py",
+            "size_bytes": 78,
+            "sha256": "sha256:3363d6112a78e5b4de3508da13e543708fc6a9019c65f3c8bcecb5178a321d7a"
+          },
+          {
+            "path": "baselines/data.py",
+            "size_bytes": 3994,
+            "sha256": "sha256:6099e312829ac3aaf48209ec1f618532c4a8552fedf73f09cf31c8876261db65"
+          },
+          {
+            "path": "baselines/model.py",
+            "size_bytes": 11988,
+            "sha256": "sha256:325026d80747eb36f39c8df1be02b640ae21b3cd082827c66aacbdf273dd61c5"
+          },
+          {
+            "path": "baselines/predict.py",
+            "size_bytes": 1536,
+            "sha256": "sha256:80e6787cd862dfefd85cd6bfcd73b5577dd90e202dd3d5bb9f18a52761807452"
+          },
+          {
+            "path": "checkpoint.npz",
+            "size_bytes": 750372,
+            "sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4"
+          },
+          {
+            "path": "school_b_adaptation.py",
+            "size_bytes": 9367,
+            "sha256": "sha256:42a0504fc5df149592b5b203b29bb86e0d3c8d5383d8453e7f4c504ce0d383a8"
+          },
+          {
+            "path": "school_b_histograms.py",
+            "size_bytes": 4351,
+            "sha256": "sha256:43a2723f92c84c16ad5f83bd2828ae2a2232a0f89402b2e1472b4537d5206738"
+          },
+          {
+            "path": "school_b_submission.py",
+            "size_bytes": 25969,
+            "sha256": "sha256:275a8ed75efc9f983fdfcb0ca30163366502a3342faf9ed4a0c871c435a309a9"
+          },
+          {
+            "path": "school_b_transfer.py",
+            "size_bytes": 31146,
+            "sha256": "sha256:064e74657e6f669a3d8cf0a5083b0734b8299ec6b1355ebc4c7fa48d9e84239c"
+          },
+          {
+            "path": "school_cache.py",
+            "size_bytes": 5299,
+            "sha256": "sha256:2f82ead9b9e0fffa5dcb026ee3d431ab519fe3f3b9bb584c68f6b6a341f00889"
+          },
+          {
+            "path": "school_planner.py",
+            "size_bytes": 6158,
+            "sha256": "sha256:83d2dbdf7453e1e95ed2587848788e23608db3a4eea6bcbf5c03c0dff5dc1646"
+          },
+          {
+            "path": "school_profile.py",
+            "size_bytes": 2491,
+            "sha256": "sha256:fdaffaba60d939d6874b645e87fc4ee0e93f13f427e014d69680eae397a2d36b"
+          },
+          {
+            "path": "school_runtime.py",
+            "size_bytes": 4716,
+            "sha256": "sha256:20c8c0e101c829f40a831e4277ca096795c8f5910bbad6c77ce69b2fd9bdf4b4"
+          },
+          {
+            "path": "training.json",
+            "size_bytes": 1474,
+            "sha256": "sha256:4783a7accfed5e09e51b9152f0f599e63f8934755328c8a908204b36370f2a3d"
+          }
+        ],
+        "artifact": {
+          "checkpoint_paths": [
+            "checkpoint.npz"
+          ],
+          "code_paths": [
+            "school_b_submission.py",
+            "school_b_adaptation.py",
+            "school_runtime.py",
+            "school_cache.py",
+            "school_planner.py",
+            "school_profile.py",
+            "school_b_transfer.py",
+            "school_b_histograms.py",
+            "baselines/model.py",
+            "baselines/data.py",
+            "baselines/predict.py",
+            "baselines/__init__.py"
+          ],
+          "predict_argv": [
+            "python3",
+            "/app/harness.py",
+            "predict"
+          ]
+        },
+        "artifact_id": "candidate-02",
+        "artifact_sha256": "sha256:4d9ba0378a069730b47379e7b7c27340654a4ba2ee6fc9fe607a72b61b99367a"
+      },
+      "candidate_score": {
+        "rows": 1062,
+        "unit": "minutes",
+        "metrics": {
+          "rmse": 230.3282940683852,
+          "mae": 173.26274212180496
+        },
+        "prediction_sha256": "sha256:090f39c26853974741993314d4ced73ffb932511592de03272faf723b1c4d01a",
+        "per_bearing": {
+          "Bearing1_3": {
+            "rows": 158,
+            "rmse": 375.7016847346583,
+            "mae": 333.76089364100795
+          },
+          "Bearing2_3": {
+            "rows": 533,
+            "rmse": 178.45322331693086,
+            "mae": 138.10817429446115
+          },
+          "Bearing3_3": {
+            "rows": 371,
+            "rmse": 214.4675318391207,
+            "mae": 155.4155095394335
+          }
+        }
+      },
+      "selected_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+      "selected_score": {
+        "rows": 1062,
+        "unit": "minutes",
+        "metrics": {
+          "rmse": 230.3282940683852,
+          "mae": 173.26274212180496
+        },
+        "prediction_sha256": "sha256:090f39c26853974741993314d4ced73ffb932511592de03272faf723b1c4d01a",
+        "per_bearing": {
+          "Bearing1_3": {
+            "rows": 158,
+            "rmse": 375.7016847346583,
+            "mae": 333.76089364100795
+          },
+          "Bearing2_3": {
+            "rows": 533,
+            "rmse": 178.45322331693086,
+            "mae": 138.10817429446115
+          },
+          "Bearing3_3": {
+            "rows": 371,
+            "rmse": 214.4675318391207,
+            "mae": 155.4155095394335
+          }
+        }
+      },
+      "round_complete": {
+        "selected_artifact_id": "candidate-02",
+        "hypothesis": "Calibration reduces signed error.",
+        "change_summary": "Actions continue-centered-and-calibrate, trained 1, reused 0. Adopted the candidate.",
+        "reason": "Parent RMSE 232.706452, candidate RMSE 230.328294 minutes, lower_rmse. Expected RMSE drops below 230. Failure RMSE rises above 235. Receipt school-wire-call-2.",
+        "configuration": {
+          "profile": "B",
+          "recipe": "continue-centered-and-calibrate",
+          "plan": {
+            "actions": [
+              "continue-centered-and-calibrate"
+            ],
+            "hypothesis": "Calibration reduces signed error.",
+            "expected": "RMSE drops below 230.",
+            "failure": "RMSE rises above 235."
+          },
+          "trials": [
+            {
+              "recipe": "continue-centered-and-calibrate",
+              "rmse": 230.3282940683852,
+              "mae": 173.262742121805,
+              "training_rows": 5970,
+              "initial_steps": 826,
+              "final_steps": 866,
+              "actual_training_rows": 5970,
+              "actual_optimizer_steps": 40,
+              "cache": {
+                "training_key": "8c593edbc1522744913b46b24c950bca837a8f5f6723af7869af4085adc6aa58",
+                "score_key": "88ce22ba9e1e8e2dd688fc87c89a262a142b52c2f65763b8ba08dd707efd7b5a",
+                "checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+                "prediction_sha256": "82585140b4b6afcb61cf97d53c78cd2964c9ac37601086f43b0483a63d81a262",
+                "score_first_round": 2,
+                "training_reused_from_round": null,
+                "score_reused_from_round": null
+              }
+            }
+          ],
+          "reuse_only": false,
+          "planner_fallback": false,
+          "planner_issue": null,
+          "raw_reply": "{\"actions\":[\"continue-centered-and-calibrate\"],\"hypothesis\":\"Calibration reduces signed error.\",\"expected\":\"RMSE drops below 230.\",\"failure\":\"RMSE rises above 235.\"}",
+          "parent_checkpoint_sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9",
+          "parent_prediction_sha256": "07c4f269b25d696547e3b0847a506fa6886f1600ac5623e5ea3199a9013955c8",
+          "execution": {
+            "trained_candidates": 1,
+            "reused_candidates": 0,
+            "scored_candidates": 1,
+            "reused_scores": 0,
+            "training_rows": 5970,
+            "optimizer_steps": 40,
+            "cpu_seconds": 1.0541691690000001
+          },
+          "screening": "whole-bearing and whole-condition training projections",
+          "adoption": {
+            "margin": 1e-06,
+            "gain": 2.3781574729293595,
+            "accepted": true,
+            "reason": "lower_rmse",
+            "selected_rmse": 230.3282940683852,
+            "measurement_source": "host"
+          }
+        },
+        "history_ids": [
+          "verified-01"
+        ],
+        "model_call_ids": [
+          "school-wire-call-2"
+        ],
+        "seed": 42
+      },
+      "request_types": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "candidate_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "seconds": 6.403352499997709
+    },
+    {
+      "round": 3,
+      "parent_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+      "parent_state_sha256": "sha256:7dccb32b20dc24daffc6fcd09d051c4d8a1df620f8b5070362ef959b02f97b90",
+      "state_sha256": "sha256:b2ee576ac5e40feb070382b9fbca02c2cc1cf3a42647fa811ebb619036682f8e",
+      "state_manifest": [
+        {
+          "path": "decision-evidence.json",
+          "size_bytes": 1278,
+          "sha256": "sha256:76852e4a0d7ee88614d33015f0ecee0fd53576a5cc1c14b00ddb9c64eb805935"
+        },
+        {
+          "path": "exact-cache/3dfcff9508a160d8b9945bb79710bd2906e0fef2ced54728e3a982a5a3d9cce2.npz",
+          "size_bytes": 750792,
+          "sha256": "sha256:a270d54df826506aae2ed707fb485c8cbddbd568cff4c502e486029164a0733b"
+        },
+        {
+          "path": "exact-cache/8c593edbc1522744913b46b24c950bca837a8f5f6723af7869af4085adc6aa58.npz",
+          "size_bytes": 750372,
+          "sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4"
+        },
+        {
+          "path": "exact-cache/9ef982af9ff86756e645a58ec485814a96fdac63496da9239dc715e0e150dc54.npz",
+          "size_bytes": 749452,
+          "sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9"
+        },
+        {
+          "path": "exact-cache/index.json",
+          "size_bytes": 2494,
+          "sha256": "sha256:22bfcd9ce21d66962004b3fc6ea38318a224dacb91dae8c418e0609a9a697e6b"
+        },
+        {
+          "path": "profile.json",
+          "size_bytes": 99,
+          "sha256": "sha256:135f83c09aabe25a399dc8b3e42fdeab70330730708194d0eab1209734e88a20"
+        },
+        {
+          "path": "round-01.json",
+          "size_bytes": 4116,
+          "sha256": "sha256:6612fad0776bdec6f019cf6ff9a24a57b8e55cd3b2467c644370c095113c09aa"
+        },
+        {
+          "path": "round-02.json",
+          "size_bytes": 3625,
+          "sha256": "sha256:5b0b53467130d73d7bacbe059c8c45b71010a99f877503a2810bcdc8e1ad7c4d"
+        },
+        {
+          "path": "round-03.json",
+          "size_bytes": 3194,
+          "sha256": "sha256:1b3cc83286d702b687791b3fed2bc21cd8c47f0ed754efb766fd379751c21e66"
+        }
+      ],
+      "accepted": false,
+      "candidate": null,
+      "candidate_score": null,
+      "selected_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+      "selected_score": {
+        "rows": 1062,
+        "unit": "minutes",
+        "metrics": {
+          "rmse": 230.3282940683852,
+          "mae": 173.26274212180496
+        },
+        "prediction_sha256": "sha256:090f39c26853974741993314d4ced73ffb932511592de03272faf723b1c4d01a",
+        "per_bearing": {
+          "Bearing1_3": {
+            "rows": 158,
+            "rmse": 375.7016847346583,
+            "mae": 333.76089364100795
+          },
+          "Bearing2_3": {
+            "rows": 533,
+            "rmse": 178.45322331693086,
+            "mae": 138.10817429446115
+          },
+          "Bearing3_3": {
+            "rows": 371,
+            "rmse": 214.4675318391207,
+            "mae": 155.4155095394335
+          }
+        }
+      },
+      "round_complete": {
+        "selected_artifact_id": "candidate-02",
+        "hypothesis": "Compare remaining B continuations after measuring 0 on this parent.",
+        "change_summary": "Actions reuse only, trained 0, reused 0. Kept the parent.",
+        "reason": "Parent RMSE 230.328294, candidate RMSE 230.328294 minutes, no_restorable_candidate. Invalid planner text used the history fallback. Expected Lower public validation RMSE in minutes, or keep the measured parent when exhausted. Failure No candidate lowers RMSE relative to the parent. Receipt school-wire-call-3.",
+        "configuration": {
+          "profile": "B",
+          "recipe": null,
+          "plan": {
+            "hypothesis": "Compare remaining B continuations after measuring 0 on this parent.",
+            "actions": [],
+            "expected": "Lower public validation RMSE in minutes, or keep the measured parent when exhausted.",
+            "failure": "No candidate lowers RMSE relative to the parent."
+          },
+          "trials": [],
+          "reuse_only": true,
+          "planner_fallback": true,
+          "planner_issue": "parse_error",
+          "raw_reply": "{\"actions\":[\"continue-centered-and-calibrate\",\"transfer-parent-coverage\",\"transfer-two-signal\"],\"hypothesis\":\"New actions improve RMSE.\",\"expected\":\"Lower RMSE achieved.\",\"failure\":\"No RMSE reduction.\"}",
+          "parent_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+          "parent_prediction_sha256": "82585140b4b6afcb61cf97d53c78cd2964c9ac37601086f43b0483a63d81a262",
+          "execution": {
+            "trained_candidates": 0,
+            "reused_candidates": 0,
+            "scored_candidates": 0,
+            "reused_scores": 0,
+            "training_rows": 0,
+            "optimizer_steps": 0,
+            "cpu_seconds": 0.9611617729999999
+          },
+          "screening": "whole-bearing and whole-condition training projections",
+          "adoption": {
+            "margin": 1e-06,
+            "gain": 0.0,
+            "accepted": false,
+            "reason": "no_restorable_candidate",
+            "selected_rmse": 230.3282940683852,
+            "measurement_source": "local"
+          }
+        },
+        "history_ids": [
+          "verified-01",
+          "verified-02"
+        ],
+        "model_call_ids": [
+          "school-wire-call-3"
+        ],
+        "seed": 42
+      },
+      "request_types": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "seconds": 3.2767592999734916
+    },
+    {
+      "round": 4,
+      "parent_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+      "parent_state_sha256": "sha256:b2ee576ac5e40feb070382b9fbca02c2cc1cf3a42647fa811ebb619036682f8e",
+      "state_sha256": "sha256:bc4d9e6710b09c1e65c0f3702752e64399d00d316e1cfd0b79a2883c7ea51467",
+      "state_manifest": [
+        {
+          "path": "decision-evidence.json",
+          "size_bytes": 1567,
+          "sha256": "sha256:1304353e1d81941eb891127779963ac3f6c4bd94318f181d6cedfa0913727533"
+        },
+        {
+          "path": "exact-cache/3dfcff9508a160d8b9945bb79710bd2906e0fef2ced54728e3a982a5a3d9cce2.npz",
+          "size_bytes": 750792,
+          "sha256": "sha256:a270d54df826506aae2ed707fb485c8cbddbd568cff4c502e486029164a0733b"
+        },
+        {
+          "path": "exact-cache/8c593edbc1522744913b46b24c950bca837a8f5f6723af7869af4085adc6aa58.npz",
+          "size_bytes": 750372,
+          "sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4"
+        },
+        {
+          "path": "exact-cache/9ef982af9ff86756e645a58ec485814a96fdac63496da9239dc715e0e150dc54.npz",
+          "size_bytes": 749452,
+          "sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9"
+        },
+        {
+          "path": "exact-cache/index.json",
+          "size_bytes": 2494,
+          "sha256": "sha256:22bfcd9ce21d66962004b3fc6ea38318a224dacb91dae8c418e0609a9a697e6b"
+        },
+        {
+          "path": "profile.json",
+          "size_bytes": 99,
+          "sha256": "sha256:135f83c09aabe25a399dc8b3e42fdeab70330730708194d0eab1209734e88a20"
+        },
+        {
+          "path": "round-01.json",
+          "size_bytes": 4116,
+          "sha256": "sha256:6612fad0776bdec6f019cf6ff9a24a57b8e55cd3b2467c644370c095113c09aa"
+        },
+        {
+          "path": "round-02.json",
+          "size_bytes": 3625,
+          "sha256": "sha256:5b0b53467130d73d7bacbe059c8c45b71010a99f877503a2810bcdc8e1ad7c4d"
+        },
+        {
+          "path": "round-03.json",
+          "size_bytes": 3194,
+          "sha256": "sha256:1b3cc83286d702b687791b3fed2bc21cd8c47f0ed754efb766fd379751c21e66"
+        },
+        {
+          "path": "round-04.json",
+          "size_bytes": 2855,
+          "sha256": "sha256:9384eaefe4fbcb3f4f748f8a8fd0f2a11f7f83fc551dcfea080dcf0868b334d1"
+        }
+      ],
+      "accepted": false,
+      "candidate": null,
+      "candidate_score": null,
+      "selected_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+      "selected_score": {
+        "rows": 1062,
+        "unit": "minutes",
+        "metrics": {
+          "rmse": 230.3282940683852,
+          "mae": 173.26274212180496
+        },
+        "prediction_sha256": "sha256:090f39c26853974741993314d4ced73ffb932511592de03272faf723b1c4d01a",
+        "per_bearing": {
+          "Bearing1_3": {
+            "rows": 158,
+            "rmse": 375.7016847346583,
+            "mae": 333.76089364100795
+          },
+          "Bearing2_3": {
+            "rows": 533,
+            "rmse": 178.45322331693086,
+            "mae": 138.10817429446115
+          },
+          "Bearing3_3": {
+            "rows": 371,
+            "rmse": 214.4675318391207,
+            "mae": 155.4155095394335
+          }
+        }
+      },
+      "round_complete": {
+        "selected_artifact_id": "candidate-02",
+        "hypothesis": "No fresh action needed.",
+        "change_summary": "Actions reuse only, trained 0, reused 0. Kept the parent.",
+        "reason": "Parent RMSE 230.328294, candidate RMSE 230.328294 minutes, no_restorable_candidate. Expected Maintain current RMSE. Failure None required. Receipt school-wire-call-4.",
+        "configuration": {
+          "profile": "B",
+          "recipe": null,
+          "plan": {
+            "actions": [],
+            "hypothesis": "No fresh action needed.",
+            "expected": "Maintain current RMSE.",
+            "failure": "None required."
+          },
+          "trials": [],
+          "reuse_only": true,
+          "planner_fallback": false,
+          "planner_issue": null,
+          "raw_reply": "{\"actions\":[],\"hypothesis\":\"No fresh action needed.\",\"expected\":\"Maintain current RMSE.\",\"failure\":\"None required.\"}",
+          "parent_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+          "parent_prediction_sha256": "82585140b4b6afcb61cf97d53c78cd2964c9ac37601086f43b0483a63d81a262",
+          "execution": {
+            "trained_candidates": 0,
+            "reused_candidates": 0,
+            "scored_candidates": 0,
+            "reused_scores": 0,
+            "training_rows": 0,
+            "optimizer_steps": 0,
+            "cpu_seconds": 0.827681275
+          },
+          "screening": "whole-bearing and whole-condition training projections",
+          "adoption": {
+            "margin": 1e-06,
+            "gain": 0.0,
+            "accepted": false,
+            "reason": "no_restorable_candidate",
+            "selected_rmse": 230.3282940683852,
+            "measurement_source": "local"
+          }
+        },
+        "history_ids": [
+          "verified-01",
+          "verified-02",
+          "verified-03"
+        ],
+        "model_call_ids": [
+          "school-wire-call-4"
+        ],
+        "seed": 42
+      },
+      "request_types": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "seconds": 2.496363499958534
+    },
+    {
+      "round": 5,
+      "parent_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+      "parent_state_sha256": "sha256:bc4d9e6710b09c1e65c0f3702752e64399d00d316e1cfd0b79a2883c7ea51467",
+      "state_sha256": "sha256:56c7a812547548e4b162b6ed604496d8ed769ef6734b84837d7cebb4cb1f251b",
+      "state_manifest": [
+        {
+          "path": "decision-evidence.json",
+          "size_bytes": 1856,
+          "sha256": "sha256:8c019a633e81f0ea9e3c3cc201d2664e03683e96f09b3cce94dcc3b16742271e"
+        },
+        {
+          "path": "exact-cache/3dfcff9508a160d8b9945bb79710bd2906e0fef2ced54728e3a982a5a3d9cce2.npz",
+          "size_bytes": 750792,
+          "sha256": "sha256:a270d54df826506aae2ed707fb485c8cbddbd568cff4c502e486029164a0733b"
+        },
+        {
+          "path": "exact-cache/8c593edbc1522744913b46b24c950bca837a8f5f6723af7869af4085adc6aa58.npz",
+          "size_bytes": 750372,
+          "sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4"
+        },
+        {
+          "path": "exact-cache/9ef982af9ff86756e645a58ec485814a96fdac63496da9239dc715e0e150dc54.npz",
+          "size_bytes": 749452,
+          "sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9"
+        },
+        {
+          "path": "exact-cache/index.json",
+          "size_bytes": 2494,
+          "sha256": "sha256:22bfcd9ce21d66962004b3fc6ea38318a224dacb91dae8c418e0609a9a697e6b"
+        },
+        {
+          "path": "profile.json",
+          "size_bytes": 99,
+          "sha256": "sha256:135f83c09aabe25a399dc8b3e42fdeab70330730708194d0eab1209734e88a20"
+        },
+        {
+          "path": "round-01.json",
+          "size_bytes": 4116,
+          "sha256": "sha256:6612fad0776bdec6f019cf6ff9a24a57b8e55cd3b2467c644370c095113c09aa"
+        },
+        {
+          "path": "round-02.json",
+          "size_bytes": 3625,
+          "sha256": "sha256:5b0b53467130d73d7bacbe059c8c45b71010a99f877503a2810bcdc8e1ad7c4d"
+        },
+        {
+          "path": "round-03.json",
+          "size_bytes": 3194,
+          "sha256": "sha256:1b3cc83286d702b687791b3fed2bc21cd8c47f0ed754efb766fd379751c21e66"
+        },
+        {
+          "path": "round-04.json",
+          "size_bytes": 2855,
+          "sha256": "sha256:9384eaefe4fbcb3f4f748f8a8fd0f2a11f7f83fc551dcfea080dcf0868b334d1"
+        },
+        {
+          "path": "round-05.json",
+          "size_bytes": 2862,
+          "sha256": "sha256:426b0611014acdcce68fc087a810a1e36cb98ee1da90b545150e6ca36db51bf9"
+        }
+      ],
+      "accepted": false,
+      "candidate": null,
+      "candidate_score": null,
+      "selected_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+      "selected_score": {
+        "rows": 1062,
+        "unit": "minutes",
+        "metrics": {
+          "rmse": 230.3282940683852,
+          "mae": 173.26274212180496
+        },
+        "prediction_sha256": "sha256:090f39c26853974741993314d4ced73ffb932511592de03272faf723b1c4d01a",
+        "per_bearing": {
+          "Bearing1_3": {
+            "rows": 158,
+            "rmse": 375.7016847346583,
+            "mae": 333.76089364100795
+          },
+          "Bearing2_3": {
+            "rows": 533,
+            "rmse": 178.45322331693086,
+            "mae": 138.10817429446115
+          },
+          "Bearing3_3": {
+            "rows": 371,
+            "rmse": 214.4675318391207,
+            "mae": 155.4155095394335
+          }
+        }
+      },
+      "round_complete": {
+        "selected_artifact_id": "candidate-02",
+        "hypothesis": "No fresh action needed.",
+        "change_summary": "Actions reuse only, trained 0, reused 0. Kept the parent.",
+        "reason": "Parent RMSE 230.328294, candidate RMSE 230.328294 minutes, no_restorable_candidate. Expected Maintain current RMSE. Failure None required. Receipt school-wire-call-5.",
+        "configuration": {
+          "profile": "B",
+          "recipe": null,
+          "plan": {
+            "actions": [],
+            "hypothesis": "No fresh action needed.",
+            "expected": "Maintain current RMSE.",
+            "failure": "None required."
+          },
+          "trials": [],
+          "reuse_only": true,
+          "planner_fallback": false,
+          "planner_issue": null,
+          "raw_reply": "{\"actions\":[],\"hypothesis\":\"No fresh action needed.\",\"expected\":\"Maintain current RMSE.\",\"failure\":\"None required.\"}",
+          "parent_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+          "parent_prediction_sha256": "82585140b4b6afcb61cf97d53c78cd2964c9ac37601086f43b0483a63d81a262",
+          "execution": {
+            "trained_candidates": 0,
+            "reused_candidates": 0,
+            "scored_candidates": 0,
+            "reused_scores": 0,
+            "training_rows": 0,
+            "optimizer_steps": 0,
+            "cpu_seconds": 0.8879621189999999
+          },
+          "screening": "whole-bearing and whole-condition training projections",
+          "adoption": {
+            "margin": 1e-06,
+            "gain": 0.0,
+            "accepted": false,
+            "reason": "no_restorable_candidate",
+            "selected_rmse": 230.3282940683852,
+            "measurement_source": "local"
+          }
+        },
+        "history_ids": [
+          "verified-01",
+          "verified-02",
+          "verified-03",
+          "verified-04"
+        ],
+        "model_call_ids": [
+          "school-wire-call-5"
+        ],
+        "seed": 42
+      },
+      "request_types": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "seconds": 2.975022899976466
+    },
+    {
+      "round": 6,
+      "parent_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+      "parent_state_sha256": "sha256:56c7a812547548e4b162b6ed604496d8ed769ef6734b84837d7cebb4cb1f251b",
+      "state_sha256": "sha256:454750a1008f3a1446ca579f89db52263f2dc12cadd99ad3b2a02343d10b32d2",
+      "state_manifest": [
+        {
+          "path": "decision-evidence.json",
+          "size_bytes": 2145,
+          "sha256": "sha256:2b419a7478e95ccc9121a29cdd817c95b7589bb25d484e67a11d93aa044972a2"
+        },
+        {
+          "path": "exact-cache/3dfcff9508a160d8b9945bb79710bd2906e0fef2ced54728e3a982a5a3d9cce2.npz",
+          "size_bytes": 750792,
+          "sha256": "sha256:a270d54df826506aae2ed707fb485c8cbddbd568cff4c502e486029164a0733b"
+        },
+        {
+          "path": "exact-cache/8c593edbc1522744913b46b24c950bca837a8f5f6723af7869af4085adc6aa58.npz",
+          "size_bytes": 750372,
+          "sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4"
+        },
+        {
+          "path": "exact-cache/9ef982af9ff86756e645a58ec485814a96fdac63496da9239dc715e0e150dc54.npz",
+          "size_bytes": 749452,
+          "sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9"
+        },
+        {
+          "path": "exact-cache/index.json",
+          "size_bytes": 2494,
+          "sha256": "sha256:22bfcd9ce21d66962004b3fc6ea38318a224dacb91dae8c418e0609a9a697e6b"
+        },
+        {
+          "path": "profile.json",
+          "size_bytes": 99,
+          "sha256": "sha256:135f83c09aabe25a399dc8b3e42fdeab70330730708194d0eab1209734e88a20"
+        },
+        {
+          "path": "round-01.json",
+          "size_bytes": 4116,
+          "sha256": "sha256:6612fad0776bdec6f019cf6ff9a24a57b8e55cd3b2467c644370c095113c09aa"
+        },
+        {
+          "path": "round-02.json",
+          "size_bytes": 3625,
+          "sha256": "sha256:5b0b53467130d73d7bacbe059c8c45b71010a99f877503a2810bcdc8e1ad7c4d"
+        },
+        {
+          "path": "round-03.json",
+          "size_bytes": 3194,
+          "sha256": "sha256:1b3cc83286d702b687791b3fed2bc21cd8c47f0ed754efb766fd379751c21e66"
+        },
+        {
+          "path": "round-04.json",
+          "size_bytes": 2855,
+          "sha256": "sha256:9384eaefe4fbcb3f4f748f8a8fd0f2a11f7f83fc551dcfea080dcf0868b334d1"
+        },
+        {
+          "path": "round-05.json",
+          "size_bytes": 2862,
+          "sha256": "sha256:426b0611014acdcce68fc087a810a1e36cb98ee1da90b545150e6ca36db51bf9"
+        },
+        {
+          "path": "round-06.json",
+          "size_bytes": 2862,
+          "sha256": "sha256:04c8f54503b5c1102cfeb5ac5bf617fd3f26af155ea1b514f97d3fdde95f86f5"
+        }
+      ],
+      "accepted": false,
+      "candidate": null,
+      "candidate_score": null,
+      "selected_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+      "selected_score": {
+        "rows": 1062,
+        "unit": "minutes",
+        "metrics": {
+          "rmse": 230.3282940683852,
+          "mae": 173.26274212180496
+        },
+        "prediction_sha256": "sha256:090f39c26853974741993314d4ced73ffb932511592de03272faf723b1c4d01a",
+        "per_bearing": {
+          "Bearing1_3": {
+            "rows": 158,
+            "rmse": 375.7016847346583,
+            "mae": 333.76089364100795
+          },
+          "Bearing2_3": {
+            "rows": 533,
+            "rmse": 178.45322331693086,
+            "mae": 138.10817429446115
+          },
+          "Bearing3_3": {
+            "rows": 371,
+            "rmse": 214.4675318391207,
+            "mae": 155.4155095394335
+          }
+        }
+      },
+      "round_complete": {
+        "selected_artifact_id": "candidate-02",
+        "hypothesis": "No fresh action needed.",
+        "change_summary": "Actions reuse only, trained 0, reused 0. Kept the parent.",
+        "reason": "Parent RMSE 230.328294, candidate RMSE 230.328294 minutes, no_restorable_candidate. Expected Maintain current RMSE. Failure None required. Receipt school-wire-call-6.",
+        "configuration": {
+          "profile": "B",
+          "recipe": null,
+          "plan": {
+            "actions": [],
+            "hypothesis": "No fresh action needed.",
+            "expected": "Maintain current RMSE.",
+            "failure": "None required."
+          },
+          "trials": [],
+          "reuse_only": true,
+          "planner_fallback": false,
+          "planner_issue": null,
+          "raw_reply": "{\"actions\":[],\"hypothesis\":\"No fresh action needed.\",\"expected\":\"Maintain current RMSE.\",\"failure\":\"None required.\"}",
+          "parent_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+          "parent_prediction_sha256": "82585140b4b6afcb61cf97d53c78cd2964c9ac37601086f43b0483a63d81a262",
+          "execution": {
+            "trained_candidates": 0,
+            "reused_candidates": 0,
+            "scored_candidates": 0,
+            "reused_scores": 0,
+            "training_rows": 0,
+            "optimizer_steps": 0,
+            "cpu_seconds": 1.0373716119999998
+          },
+          "screening": "whole-bearing and whole-condition training projections",
+          "adoption": {
+            "margin": 1e-06,
+            "gain": 0.0,
+            "accepted": false,
+            "reason": "no_restorable_candidate",
+            "selected_rmse": 230.3282940683852,
+            "measurement_source": "local"
+          }
+        },
+        "history_ids": [
+          "verified-01",
+          "verified-02",
+          "verified-03",
+          "verified-04",
+          "verified-05"
+        ],
+        "model_call_ids": [
+          "school-wire-call-6"
+        ],
+        "seed": 42
+      },
+      "request_types": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "seconds": 3.0301969000138342
+    },
+    {
+      "round": 7,
+      "parent_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+      "parent_state_sha256": "sha256:454750a1008f3a1446ca579f89db52263f2dc12cadd99ad3b2a02343d10b32d2",
+      "state_sha256": "sha256:44c225c3918085de0334e569aa0924c2e642df315476aa02089b27661dd714dd",
+      "state_manifest": [
+        {
+          "path": "decision-evidence.json",
+          "size_bytes": 2434,
+          "sha256": "sha256:d6dde01045dcad13fd311b4836dd6b60fe3b65868d0c8d5338bd06751110aa56"
+        },
+        {
+          "path": "exact-cache/3dfcff9508a160d8b9945bb79710bd2906e0fef2ced54728e3a982a5a3d9cce2.npz",
+          "size_bytes": 750792,
+          "sha256": "sha256:a270d54df826506aae2ed707fb485c8cbddbd568cff4c502e486029164a0733b"
+        },
+        {
+          "path": "exact-cache/8c593edbc1522744913b46b24c950bca837a8f5f6723af7869af4085adc6aa58.npz",
+          "size_bytes": 750372,
+          "sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4"
+        },
+        {
+          "path": "exact-cache/9ef982af9ff86756e645a58ec485814a96fdac63496da9239dc715e0e150dc54.npz",
+          "size_bytes": 749452,
+          "sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9"
+        },
+        {
+          "path": "exact-cache/index.json",
+          "size_bytes": 2494,
+          "sha256": "sha256:22bfcd9ce21d66962004b3fc6ea38318a224dacb91dae8c418e0609a9a697e6b"
+        },
+        {
+          "path": "profile.json",
+          "size_bytes": 99,
+          "sha256": "sha256:135f83c09aabe25a399dc8b3e42fdeab70330730708194d0eab1209734e88a20"
+        },
+        {
+          "path": "round-01.json",
+          "size_bytes": 4116,
+          "sha256": "sha256:6612fad0776bdec6f019cf6ff9a24a57b8e55cd3b2467c644370c095113c09aa"
+        },
+        {
+          "path": "round-02.json",
+          "size_bytes": 3625,
+          "sha256": "sha256:5b0b53467130d73d7bacbe059c8c45b71010a99f877503a2810bcdc8e1ad7c4d"
+        },
+        {
+          "path": "round-03.json",
+          "size_bytes": 3194,
+          "sha256": "sha256:1b3cc83286d702b687791b3fed2bc21cd8c47f0ed754efb766fd379751c21e66"
+        },
+        {
+          "path": "round-04.json",
+          "size_bytes": 2855,
+          "sha256": "sha256:9384eaefe4fbcb3f4f748f8a8fd0f2a11f7f83fc551dcfea080dcf0868b334d1"
+        },
+        {
+          "path": "round-05.json",
+          "size_bytes": 2862,
+          "sha256": "sha256:426b0611014acdcce68fc087a810a1e36cb98ee1da90b545150e6ca36db51bf9"
+        },
+        {
+          "path": "round-06.json",
+          "size_bytes": 2862,
+          "sha256": "sha256:04c8f54503b5c1102cfeb5ac5bf617fd3f26af155ea1b514f97d3fdde95f86f5"
+        },
+        {
+          "path": "round-07.json",
+          "size_bytes": 2864,
+          "sha256": "sha256:5dc75ff28fe3f474f276b36382e17812663fbc491f9e587e31825b1776650e5e"
+        }
+      ],
+      "accepted": false,
+      "candidate": null,
+      "candidate_score": null,
+      "selected_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+      "selected_score": {
+        "rows": 1062,
+        "unit": "minutes",
+        "metrics": {
+          "rmse": 230.3282940683852,
+          "mae": 173.26274212180496
+        },
+        "prediction_sha256": "sha256:090f39c26853974741993314d4ced73ffb932511592de03272faf723b1c4d01a",
+        "per_bearing": {
+          "Bearing1_3": {
+            "rows": 158,
+            "rmse": 375.7016847346583,
+            "mae": 333.76089364100795
+          },
+          "Bearing2_3": {
+            "rows": 533,
+            "rmse": 178.45322331693086,
+            "mae": 138.10817429446115
+          },
+          "Bearing3_3": {
+            "rows": 371,
+            "rmse": 214.4675318391207,
+            "mae": 155.4155095394335
+          }
+        }
+      },
+      "round_complete": {
+        "selected_artifact_id": "candidate-02",
+        "hypothesis": "No fresh action justified.",
+        "change_summary": "Actions reuse only, trained 0, reused 0. Kept the parent.",
+        "reason": "Parent RMSE 230.328294, candidate RMSE 230.328294 minutes, no_restorable_candidate. Expected Maintain current RMSE. Failure None required. Receipt school-wire-call-7.",
+        "configuration": {
+          "profile": "B",
+          "recipe": null,
+          "plan": {
+            "actions": [],
+            "hypothesis": "No fresh action justified.",
+            "expected": "Maintain current RMSE.",
+            "failure": "None required."
+          },
+          "trials": [],
+          "reuse_only": true,
+          "planner_fallback": false,
+          "planner_issue": null,
+          "raw_reply": "{\"actions\":[],\"hypothesis\":\"No fresh action justified.\",\"expected\":\"Maintain current RMSE.\",\"failure\":\"None required.\"}",
+          "parent_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+          "parent_prediction_sha256": "82585140b4b6afcb61cf97d53c78cd2964c9ac37601086f43b0483a63d81a262",
+          "execution": {
+            "trained_candidates": 0,
+            "reused_candidates": 0,
+            "scored_candidates": 0,
+            "reused_scores": 0,
+            "training_rows": 0,
+            "optimizer_steps": 0,
+            "cpu_seconds": 0.847408116
+          },
+          "screening": "whole-bearing and whole-condition training projections",
+          "adoption": {
+            "margin": 1e-06,
+            "gain": 0.0,
+            "accepted": false,
+            "reason": "no_restorable_candidate",
+            "selected_rmse": 230.3282940683852,
+            "measurement_source": "local"
+          }
+        },
+        "history_ids": [
+          "verified-01",
+          "verified-02",
+          "verified-03",
+          "verified-04",
+          "verified-05",
+          "verified-06"
+        ],
+        "model_call_ids": [
+          "school-wire-call-7"
+        ],
+        "seed": 42
+      },
+      "request_types": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "seconds": 2.6447357999859378
+    },
+    {
+      "round": 8,
+      "parent_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+      "parent_state_sha256": "sha256:44c225c3918085de0334e569aa0924c2e642df315476aa02089b27661dd714dd",
+      "state_sha256": "sha256:67c399d0cceac8bea117091902c05bdc8c218ef75a016ced7e9e5c6d27367e52",
+      "state_manifest": [
+        {
+          "path": "decision-evidence.json",
+          "size_bytes": 2723,
+          "sha256": "sha256:597ea3c04ecfcda081f9d5c107a22a3b4c4a00e7232c076cc36793ad35e03b25"
+        },
+        {
+          "path": "exact-cache/3dfcff9508a160d8b9945bb79710bd2906e0fef2ced54728e3a982a5a3d9cce2.npz",
+          "size_bytes": 750792,
+          "sha256": "sha256:a270d54df826506aae2ed707fb485c8cbddbd568cff4c502e486029164a0733b"
+        },
+        {
+          "path": "exact-cache/8c593edbc1522744913b46b24c950bca837a8f5f6723af7869af4085adc6aa58.npz",
+          "size_bytes": 750372,
+          "sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4"
+        },
+        {
+          "path": "exact-cache/9ef982af9ff86756e645a58ec485814a96fdac63496da9239dc715e0e150dc54.npz",
+          "size_bytes": 749452,
+          "sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9"
+        },
+        {
+          "path": "exact-cache/index.json",
+          "size_bytes": 2494,
+          "sha256": "sha256:22bfcd9ce21d66962004b3fc6ea38318a224dacb91dae8c418e0609a9a697e6b"
+        },
+        {
+          "path": "profile.json",
+          "size_bytes": 99,
+          "sha256": "sha256:135f83c09aabe25a399dc8b3e42fdeab70330730708194d0eab1209734e88a20"
+        },
+        {
+          "path": "round-01.json",
+          "size_bytes": 4116,
+          "sha256": "sha256:6612fad0776bdec6f019cf6ff9a24a57b8e55cd3b2467c644370c095113c09aa"
+        },
+        {
+          "path": "round-02.json",
+          "size_bytes": 3625,
+          "sha256": "sha256:5b0b53467130d73d7bacbe059c8c45b71010a99f877503a2810bcdc8e1ad7c4d"
+        },
+        {
+          "path": "round-03.json",
+          "size_bytes": 3194,
+          "sha256": "sha256:1b3cc83286d702b687791b3fed2bc21cd8c47f0ed754efb766fd379751c21e66"
+        },
+        {
+          "path": "round-04.json",
+          "size_bytes": 2855,
+          "sha256": "sha256:9384eaefe4fbcb3f4f748f8a8fd0f2a11f7f83fc551dcfea080dcf0868b334d1"
+        },
+        {
+          "path": "round-05.json",
+          "size_bytes": 2862,
+          "sha256": "sha256:426b0611014acdcce68fc087a810a1e36cb98ee1da90b545150e6ca36db51bf9"
+        },
+        {
+          "path": "round-06.json",
+          "size_bytes": 2862,
+          "sha256": "sha256:04c8f54503b5c1102cfeb5ac5bf617fd3f26af155ea1b514f97d3fdde95f86f5"
+        },
+        {
+          "path": "round-07.json",
+          "size_bytes": 2864,
+          "sha256": "sha256:5dc75ff28fe3f474f276b36382e17812663fbc491f9e587e31825b1776650e5e"
+        },
+        {
+          "path": "round-08.json",
+          "size_bytes": 2855,
+          "sha256": "sha256:aaf2b946b598cdc7f4ac9515fe7f06928e50c72db7f9c0febc1584ebaf9acbd3"
+        }
+      ],
+      "accepted": false,
+      "candidate": null,
+      "candidate_score": null,
+      "selected_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+      "selected_score": {
+        "rows": 1062,
+        "unit": "minutes",
+        "metrics": {
+          "rmse": 230.3282940683852,
+          "mae": 173.26274212180496
+        },
+        "prediction_sha256": "sha256:090f39c26853974741993314d4ced73ffb932511592de03272faf723b1c4d01a",
+        "per_bearing": {
+          "Bearing1_3": {
+            "rows": 158,
+            "rmse": 375.7016847346583,
+            "mae": 333.76089364100795
+          },
+          "Bearing2_3": {
+            "rows": 533,
+            "rmse": 178.45322331693086,
+            "mae": 138.10817429446115
+          },
+          "Bearing3_3": {
+            "rows": 371,
+            "rmse": 214.4675318391207,
+            "mae": 155.4155095394335
+          }
+        }
+      },
+      "round_complete": {
+        "selected_artifact_id": "candidate-02",
+        "hypothesis": "No fresh action needed.",
+        "change_summary": "Actions reuse only, trained 0, reused 0. Kept the parent.",
+        "reason": "Parent RMSE 230.328294, candidate RMSE 230.328294 minutes, no_restorable_candidate. Expected Maintain current RMSE. Failure None required. Receipt school-wire-call-8.",
+        "configuration": {
+          "profile": "B",
+          "recipe": null,
+          "plan": {
+            "actions": [],
+            "hypothesis": "No fresh action needed.",
+            "expected": "Maintain current RMSE.",
+            "failure": "None required."
+          },
+          "trials": [],
+          "reuse_only": true,
+          "planner_fallback": false,
+          "planner_issue": null,
+          "raw_reply": "{\"actions\":[],\"hypothesis\":\"No fresh action needed.\",\"expected\":\"Maintain current RMSE.\",\"failure\":\"None required.\"}",
+          "parent_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+          "parent_prediction_sha256": "82585140b4b6afcb61cf97d53c78cd2964c9ac37601086f43b0483a63d81a262",
+          "execution": {
+            "trained_candidates": 0,
+            "reused_candidates": 0,
+            "scored_candidates": 0,
+            "reused_scores": 0,
+            "training_rows": 0,
+            "optimizer_steps": 0,
+            "cpu_seconds": 0.953051323
+          },
+          "screening": "whole-bearing and whole-condition training projections",
+          "adoption": {
+            "margin": 1e-06,
+            "gain": 0.0,
+            "accepted": false,
+            "reason": "no_restorable_candidate",
+            "selected_rmse": 230.3282940683852,
+            "measurement_source": "local"
+          }
+        },
+        "history_ids": [
+          "verified-01",
+          "verified-02",
+          "verified-03",
+          "verified-04",
+          "verified-05",
+          "verified-06",
+          "verified-07"
+        ],
+        "model_call_ids": [
+          "school-wire-call-8"
+        ],
+        "seed": 42
+      },
+      "request_types": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "seconds": 2.7572106000152417
+    },
+    {
+      "round": 9,
+      "parent_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+      "parent_state_sha256": "sha256:67c399d0cceac8bea117091902c05bdc8c218ef75a016ced7e9e5c6d27367e52",
+      "state_sha256": "sha256:aded51a08cef71a7bd0787a9a05bb7eefb43e86cb498ecca87a1493c4d3c9ad2",
+      "state_manifest": [
+        {
+          "path": "decision-evidence.json",
+          "size_bytes": 3012,
+          "sha256": "sha256:dacdcd37cf2505f68a1a97f61025caa0361465b09ff70371353ee4fcf85ddee2"
+        },
+        {
+          "path": "exact-cache/3dfcff9508a160d8b9945bb79710bd2906e0fef2ced54728e3a982a5a3d9cce2.npz",
+          "size_bytes": 750792,
+          "sha256": "sha256:a270d54df826506aae2ed707fb485c8cbddbd568cff4c502e486029164a0733b"
+        },
+        {
+          "path": "exact-cache/8c593edbc1522744913b46b24c950bca837a8f5f6723af7869af4085adc6aa58.npz",
+          "size_bytes": 750372,
+          "sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4"
+        },
+        {
+          "path": "exact-cache/9ef982af9ff86756e645a58ec485814a96fdac63496da9239dc715e0e150dc54.npz",
+          "size_bytes": 749452,
+          "sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9"
+        },
+        {
+          "path": "exact-cache/index.json",
+          "size_bytes": 2494,
+          "sha256": "sha256:22bfcd9ce21d66962004b3fc6ea38318a224dacb91dae8c418e0609a9a697e6b"
+        },
+        {
+          "path": "profile.json",
+          "size_bytes": 99,
+          "sha256": "sha256:135f83c09aabe25a399dc8b3e42fdeab70330730708194d0eab1209734e88a20"
+        },
+        {
+          "path": "round-01.json",
+          "size_bytes": 4116,
+          "sha256": "sha256:6612fad0776bdec6f019cf6ff9a24a57b8e55cd3b2467c644370c095113c09aa"
+        },
+        {
+          "path": "round-02.json",
+          "size_bytes": 3625,
+          "sha256": "sha256:5b0b53467130d73d7bacbe059c8c45b71010a99f877503a2810bcdc8e1ad7c4d"
+        },
+        {
+          "path": "round-03.json",
+          "size_bytes": 3194,
+          "sha256": "sha256:1b3cc83286d702b687791b3fed2bc21cd8c47f0ed754efb766fd379751c21e66"
+        },
+        {
+          "path": "round-04.json",
+          "size_bytes": 2855,
+          "sha256": "sha256:9384eaefe4fbcb3f4f748f8a8fd0f2a11f7f83fc551dcfea080dcf0868b334d1"
+        },
+        {
+          "path": "round-05.json",
+          "size_bytes": 2862,
+          "sha256": "sha256:426b0611014acdcce68fc087a810a1e36cb98ee1da90b545150e6ca36db51bf9"
+        },
+        {
+          "path": "round-06.json",
+          "size_bytes": 2862,
+          "sha256": "sha256:04c8f54503b5c1102cfeb5ac5bf617fd3f26af155ea1b514f97d3fdde95f86f5"
+        },
+        {
+          "path": "round-07.json",
+          "size_bytes": 2864,
+          "sha256": "sha256:5dc75ff28fe3f474f276b36382e17812663fbc491f9e587e31825b1776650e5e"
+        },
+        {
+          "path": "round-08.json",
+          "size_bytes": 2855,
+          "sha256": "sha256:aaf2b946b598cdc7f4ac9515fe7f06928e50c72db7f9c0febc1584ebaf9acbd3"
+        },
+        {
+          "path": "round-09.json",
+          "size_bytes": 2864,
+          "sha256": "sha256:207495fed3b6225a3380905287ea86e9af9a59ca80d9da499d1aa9d530f78150"
+        }
+      ],
+      "accepted": false,
+      "candidate": null,
+      "candidate_score": null,
+      "selected_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+      "selected_score": {
+        "rows": 1062,
+        "unit": "minutes",
+        "metrics": {
+          "rmse": 230.3282940683852,
+          "mae": 173.26274212180496
+        },
+        "prediction_sha256": "sha256:090f39c26853974741993314d4ced73ffb932511592de03272faf723b1c4d01a",
+        "per_bearing": {
+          "Bearing1_3": {
+            "rows": 158,
+            "rmse": 375.7016847346583,
+            "mae": 333.76089364100795
+          },
+          "Bearing2_3": {
+            "rows": 533,
+            "rmse": 178.45322331693086,
+            "mae": 138.10817429446115
+          },
+          "Bearing3_3": {
+            "rows": 371,
+            "rmse": 214.4675318391207,
+            "mae": 155.4155095394335
+          }
+        }
+      },
+      "round_complete": {
+        "selected_artifact_id": "candidate-02",
+        "hypothesis": "No fresh action justified.",
+        "change_summary": "Actions reuse only, trained 0, reused 0. Kept the parent.",
+        "reason": "Parent RMSE 230.328294, candidate RMSE 230.328294 minutes, no_restorable_candidate. Expected Maintain current RMSE. Failure None required. Receipt school-wire-call-9.",
+        "configuration": {
+          "profile": "B",
+          "recipe": null,
+          "plan": {
+            "actions": [],
+            "hypothesis": "No fresh action justified.",
+            "expected": "Maintain current RMSE.",
+            "failure": "None required."
+          },
+          "trials": [],
+          "reuse_only": true,
+          "planner_fallback": false,
+          "planner_issue": null,
+          "raw_reply": "{\"actions\":[],\"hypothesis\":\"No fresh action justified.\",\"expected\":\"Maintain current RMSE.\",\"failure\":\"None required.\"}",
+          "parent_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+          "parent_prediction_sha256": "82585140b4b6afcb61cf97d53c78cd2964c9ac37601086f43b0483a63d81a262",
+          "execution": {
+            "trained_candidates": 0,
+            "reused_candidates": 0,
+            "scored_candidates": 0,
+            "reused_scores": 0,
+            "training_rows": 0,
+            "optimizer_steps": 0,
+            "cpu_seconds": 0.970696218
+          },
+          "screening": "whole-bearing and whole-condition training projections",
+          "adoption": {
+            "margin": 1e-06,
+            "gain": 0.0,
+            "accepted": false,
+            "reason": "no_restorable_candidate",
+            "selected_rmse": 230.3282940683852,
+            "measurement_source": "local"
+          }
+        },
+        "history_ids": [
+          "verified-01",
+          "verified-02",
+          "verified-03",
+          "verified-04",
+          "verified-05",
+          "verified-06",
+          "verified-07",
+          "verified-08"
+        ],
+        "model_call_ids": [
+          "school-wire-call-9"
+        ],
+        "seed": 42
+      },
+      "request_types": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "seconds": 3.59118580003269
+    },
+    {
+      "round": 10,
+      "parent_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+      "parent_state_sha256": "sha256:aded51a08cef71a7bd0787a9a05bb7eefb43e86cb498ecca87a1493c4d3c9ad2",
+      "state_sha256": "sha256:e41e9af21c5a3581fdcf020aad26f5c31b5eb4e3c28ed65b005e41824a452440",
+      "state_manifest": [
+        {
+          "path": "decision-evidence.json",
+          "size_bytes": 3302,
+          "sha256": "sha256:907c591726480e195c2be681f82b0c9955d55e85c355504ebfcf6ca1504fcfba"
+        },
+        {
+          "path": "exact-cache/3dfcff9508a160d8b9945bb79710bd2906e0fef2ced54728e3a982a5a3d9cce2.npz",
+          "size_bytes": 750792,
+          "sha256": "sha256:a270d54df826506aae2ed707fb485c8cbddbd568cff4c502e486029164a0733b"
+        },
+        {
+          "path": "exact-cache/8c593edbc1522744913b46b24c950bca837a8f5f6723af7869af4085adc6aa58.npz",
+          "size_bytes": 750372,
+          "sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4"
+        },
+        {
+          "path": "exact-cache/9ef982af9ff86756e645a58ec485814a96fdac63496da9239dc715e0e150dc54.npz",
+          "size_bytes": 749452,
+          "sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9"
+        },
+        {
+          "path": "exact-cache/index.json",
+          "size_bytes": 2494,
+          "sha256": "sha256:22bfcd9ce21d66962004b3fc6ea38318a224dacb91dae8c418e0609a9a697e6b"
+        },
+        {
+          "path": "profile.json",
+          "size_bytes": 99,
+          "sha256": "sha256:135f83c09aabe25a399dc8b3e42fdeab70330730708194d0eab1209734e88a20"
+        },
+        {
+          "path": "round-01.json",
+          "size_bytes": 4116,
+          "sha256": "sha256:6612fad0776bdec6f019cf6ff9a24a57b8e55cd3b2467c644370c095113c09aa"
+        },
+        {
+          "path": "round-02.json",
+          "size_bytes": 3625,
+          "sha256": "sha256:5b0b53467130d73d7bacbe059c8c45b71010a99f877503a2810bcdc8e1ad7c4d"
+        },
+        {
+          "path": "round-03.json",
+          "size_bytes": 3194,
+          "sha256": "sha256:1b3cc83286d702b687791b3fed2bc21cd8c47f0ed754efb766fd379751c21e66"
+        },
+        {
+          "path": "round-04.json",
+          "size_bytes": 2855,
+          "sha256": "sha256:9384eaefe4fbcb3f4f748f8a8fd0f2a11f7f83fc551dcfea080dcf0868b334d1"
+        },
+        {
+          "path": "round-05.json",
+          "size_bytes": 2862,
+          "sha256": "sha256:426b0611014acdcce68fc087a810a1e36cb98ee1da90b545150e6ca36db51bf9"
+        },
+        {
+          "path": "round-06.json",
+          "size_bytes": 2862,
+          "sha256": "sha256:04c8f54503b5c1102cfeb5ac5bf617fd3f26af155ea1b514f97d3fdde95f86f5"
+        },
+        {
+          "path": "round-07.json",
+          "size_bytes": 2864,
+          "sha256": "sha256:5dc75ff28fe3f474f276b36382e17812663fbc491f9e587e31825b1776650e5e"
+        },
+        {
+          "path": "round-08.json",
+          "size_bytes": 2855,
+          "sha256": "sha256:aaf2b946b598cdc7f4ac9515fe7f06928e50c72db7f9c0febc1584ebaf9acbd3"
+        },
+        {
+          "path": "round-09.json",
+          "size_bytes": 2864,
+          "sha256": "sha256:207495fed3b6225a3380905287ea86e9af9a59ca80d9da499d1aa9d530f78150"
+        },
+        {
+          "path": "round-10.json",
+          "size_bytes": 2856,
+          "sha256": "sha256:ea2a4604b205aac91fb4454ebfed5f9957dbb923c42d9b85f5f67cacc18ada76"
+        }
+      ],
+      "accepted": false,
+      "candidate": null,
+      "candidate_score": null,
+      "selected_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+      "selected_score": {
+        "rows": 1062,
+        "unit": "minutes",
+        "metrics": {
+          "rmse": 230.3282940683852,
+          "mae": 173.26274212180496
+        },
+        "prediction_sha256": "sha256:090f39c26853974741993314d4ced73ffb932511592de03272faf723b1c4d01a",
+        "per_bearing": {
+          "Bearing1_3": {
+            "rows": 158,
+            "rmse": 375.7016847346583,
+            "mae": 333.76089364100795
+          },
+          "Bearing2_3": {
+            "rows": 533,
+            "rmse": 178.45322331693086,
+            "mae": 138.10817429446115
+          },
+          "Bearing3_3": {
+            "rows": 371,
+            "rmse": 214.4675318391207,
+            "mae": 155.4155095394335
+          }
+        }
+      },
+      "round_complete": {
+        "selected_artifact_id": "candidate-02",
+        "hypothesis": "No fresh action needed.",
+        "change_summary": "Actions reuse only, trained 0, reused 0. Kept the parent.",
+        "reason": "Parent RMSE 230.328294, candidate RMSE 230.328294 minutes, no_restorable_candidate. Expected Maintain current RMSE. Failure None required. Receipt school-wire-call-10.",
+        "configuration": {
+          "profile": "B",
+          "recipe": null,
+          "plan": {
+            "actions": [],
+            "hypothesis": "No fresh action needed.",
+            "expected": "Maintain current RMSE.",
+            "failure": "None required."
+          },
+          "trials": [],
+          "reuse_only": true,
+          "planner_fallback": false,
+          "planner_issue": null,
+          "raw_reply": "{\"actions\":[],\"hypothesis\":\"No fresh action needed.\",\"expected\":\"Maintain current RMSE.\",\"failure\":\"None required.\"}",
+          "parent_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+          "parent_prediction_sha256": "82585140b4b6afcb61cf97d53c78cd2964c9ac37601086f43b0483a63d81a262",
+          "execution": {
+            "trained_candidates": 0,
+            "reused_candidates": 0,
+            "scored_candidates": 0,
+            "reused_scores": 0,
+            "training_rows": 0,
+            "optimizer_steps": 0,
+            "cpu_seconds": 0.865483513
+          },
+          "screening": "whole-bearing and whole-condition training projections",
+          "adoption": {
+            "margin": 1e-06,
+            "gain": 0.0,
+            "accepted": false,
+            "reason": "no_restorable_candidate",
+            "selected_rmse": 230.3282940683852,
+            "measurement_source": "local"
+          }
+        },
+        "history_ids": [
+          "verified-01",
+          "verified-02",
+          "verified-03",
+          "verified-04",
+          "verified-05",
+          "verified-06",
+          "verified-07",
+          "verified-08",
+          "verified-09"
+        ],
+        "model_call_ids": [
+          "school-wire-call-10"
+        ],
+        "seed": 42
+      },
+      "request_types": [
+        "history_request",
+        "model_request",
+        "upload_begin_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_chunk_request",
+        "upload_finish_request",
+        "state_request",
+        "round_complete"
+      ],
+      "seconds": 2.5933870999724604
+    }
+  ]
+}

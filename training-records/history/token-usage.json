@@ -1,0 +1,23 @@
+{
+  "sampling": {
+    "complete": {
+      "requests": 268,
+      "upper_fen": 536,
+      "input_tokens": 137305,
+      "output_tokens": 18818
+    },
+    "unconfirmed": {
+      "requests": 6,
+      "upper_fen": 12,
+      "input_tokens": null,
+      "output_tokens": null
+    }
+  },
+  "external_upper_fen": [
+    292,
+    96
+  ],
+  "exact_native_receipts_reused": 2,
+  "combined_upper_fen": 936,
+  "cap_fen": 4000
+}

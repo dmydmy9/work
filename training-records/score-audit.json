@@ -1,0 +1,57 @@
+{
+  "verified_files": 234,
+  "arms": {
+    "A-fixed": {
+      "rows": 621,
+      "official": 0.6999906827810987,
+      "ten_round_mean": 0.7215526855459674,
+      "final": 0.7215526855459674
+    },
+    "A-dynamic": {
+      "rows": 621,
+      "official": 0.6999906827810987,
+      "ten_round_mean": 0.7215526855459674,
+      "final": 0.7215526855459674
+    },
+    "B-fixed": {
+      "rows": 1062,
+      "official": 245.14929367610208,
+      "ten_round_mean": 230.56610981567812,
+      "final": 230.3282940683852
+    },
+    "B-dynamic": {
+      "rows": 1062,
+      "official": 245.14929367610208,
+      "ten_round_mean": 230.56610981567812,
+      "final": 230.3282940683852
+    },
+    "C-fixed": {
+      "rows": 23049,
+      "official": 52.86857256611151,
+      "ten_round_mean": 49.11520677840942,
+      "final": 49.11520677840942
+    },
+    "C-dynamic": {
+      "rows": 23049,
+      "official": 52.86857256611151,
+      "ten_round_mean": 49.11520677840942,
+      "final": 49.11520677840942
+    }
+  },
+  "A_review": {
+    "rows": 623,
+    "macro_f1": {
+      "official": 0.7260352533154537,
+      "fixed": 0.72916409750483,
+      "dynamic": 0.72916409750483
+    }
+  },
+  "B_public": {
+    "rows": 1679,
+    "official_rmse": 681.1598326043113,
+    "final_rmse": 588.9499823820236,
+    "relative_gain": 0.13537182583085872
+  },
+  "pre_gate_trials": 73,
+  "pre_gate_unique_prediction_files": 17
+}

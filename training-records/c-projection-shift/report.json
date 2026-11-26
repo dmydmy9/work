@@ -1,0 +1,549 @@
+{
+  "image": "sha256:0ebd6a1a6db8b907a26c030eab731c8ed140a64d88e952b3bd6ea61b7a694bde",
+  "old_validation": {
+    "parent_rmse": 49.11520677840942,
+    "rejected_rmse": 50.233784893427035,
+    "rejected_round": 6,
+    "rows": 23049
+  },
+  "recipe": "engine-balanced-5",
+  "scope": "controlled replay on four whole C-MAPSS subsets",
+  "subsets": {
+    "fd001": {
+      "candidate": {
+        "mae": 29.762825459857527,
+        "nasa_score": 4254386.893979529,
+        "rmse": 40.68661033130228
+      },
+      "parent": {
+        "mae": 30.32186687622949,
+        "nasa_score": 1816230.5330721284,
+        "rmse": 39.431995961269784
+      },
+      "record": {
+        "change_summary": "C continuation actions ['engine-balanced-5'].",
+        "configuration": {
+          "context": {
+            "available": {
+              "accelerated-5": "double the official learning rate",
+              "conservative-5": "lower the official learning rate by four",
+              "engine-balanced-5": "sample engines with equal probability at the official rate",
+              "official-5": "continue at the official learning rate",
+              "regime-kernel-5": "continue with lower learning rate and refit nonlinear sensor residuals by regime"
+            },
+            "budget": {
+              "actions": 1,
+              "max_output_tokens": 128,
+              "wall_seconds": 60
+            },
+            "history": {
+              "current": [],
+              "prior": [
+                {
+                  "outcomes": [
+                    {
+                      "action": "regime-kernel-5",
+                      "first_round": 1,
+                      "gain": 3.753365787702087,
+                      "rmse": 49.11520677840942
+                    }
+                  ],
+                  "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+                }
+              ]
+            },
+            "parent": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+            "parent_metrics": {
+              "mae": 30.32186687622949,
+              "nasa_score": 1816230.533072129,
+              "rmse": 39.431995961269784
+            },
+            "preference": [
+              "regime-kernel-5",
+              "conservative-5",
+              "official-5",
+              "engine-balanced-5",
+              "accelerated-5"
+            ],
+            "profile": "C",
+            "round": 7
+          },
+          "cpu_seconds": 1.165997477,
+          "execution": {
+            "optimizer_steps": 0,
+            "reused_candidates": 1,
+            "reused_scores": 0,
+            "scored_candidates": 1,
+            "trained_candidates": 0,
+            "training_rows": 0
+          },
+          "host_candidate_rmse": 40.68661033130228,
+          "parent_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "parent_metrics": {
+            "mae": 30.32186687622949,
+            "nasa_score": 1816230.533072129,
+            "rmse": 39.431995961269784
+          },
+          "plan": {
+            "actions": [
+              "engine-balanced-5"
+            ],
+            "expected": "Use the current subset to measure RMSE.",
+            "failure": "Retain the parent unless the current projection improves.",
+            "hypothesis": "Re-evaluate the measured candidate on the changed engine subset."
+          },
+          "planner_fallback": false,
+          "profile": "C",
+          "selected_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "selected_rmse": 39.431995961269784,
+          "trials": [
+            {
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:9fa2603e58f476dd92d2e6eb89dcd569d13e00e1b91d190179c2d3838313a16a",
+                "prediction_sha256": "4def30967ac492da0bc3c182f0fe62c3c938106241d0871ab3ae2c2330947990",
+                "score_first_round": 7,
+                "score_key": "330d794e88cb9c601e219b9abe7881729cb8ac2120d4f47f852612062dc5f63d",
+                "score_reused_from_round": null,
+                "training_key": "40789b5e0939f5a087130ce51b413a69641fed513dd6e7a9e00d61b9a315a161",
+                "training_reused_from_round": 6
+              },
+              "final_steps": 11050,
+              "initial_steps": 8840,
+              "mae": 29.762825459857527,
+              "nasa_score": 4254386.893979528,
+              "recipe": "engine-balanced-5",
+              "rmse": 40.68661033130228,
+              "training_rows": 565445
+            }
+          ]
+        },
+        "history_ids": [
+          "C-round-01",
+          "C-round-02",
+          "C-round-03",
+          "C-round-04",
+          "C-round-05",
+          "C-round-06"
+        ],
+        "hypothesis": "Re-evaluate the measured candidate on the changed engine subset.",
+        "model_call_ids": [
+          "school-wire-call-7"
+        ],
+        "reason": "Parent RMSE 39.431996, selected RMSE 39.431996 cycles.",
+        "seed": 42,
+        "selected_artifact_id": "candidate-01"
+      },
+      "rows": 3210,
+      "selected": {
+        "mae": 30.32186687622949,
+        "nasa_score": 1816230.5330721284,
+        "rmse": 39.431995961269784
+      },
+      "validation_sha256": "sha256:5429f813cad5d4dcf0de9db8582e961b8722e4a12339d92d317e2b386be32be8"
+    },
+    "fd002": {
+      "candidate": {
+        "mae": 29.12497033627959,
+        "nasa_score": 6973573.645276131,
+        "rmse": 39.42093419618661
+      },
+      "parent": {
+        "mae": 30.124022058830008,
+        "nasa_score": 8334503.532266313,
+        "rmse": 39.811333185159675
+      },
+      "record": {
+        "change_summary": "C continuation actions ['engine-balanced-5'].",
+        "configuration": {
+          "context": {
+            "available": {
+              "accelerated-5": "double the official learning rate",
+              "conservative-5": "lower the official learning rate by four",
+              "engine-balanced-5": "sample engines with equal probability at the official rate",
+              "official-5": "continue at the official learning rate",
+              "regime-kernel-5": "continue with lower learning rate and refit nonlinear sensor residuals by regime"
+            },
+            "budget": {
+              "actions": 1,
+              "max_output_tokens": 128,
+              "wall_seconds": 60
+            },
+            "history": {
+              "current": [],
+              "prior": [
+                {
+                  "outcomes": [
+                    {
+                      "action": "regime-kernel-5",
+                      "first_round": 1,
+                      "gain": 3.753365787702087,
+                      "rmse": 49.11520677840942
+                    }
+                  ],
+                  "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+                }
+              ]
+            },
+            "parent": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+            "parent_metrics": {
+              "mae": 30.124022058830008,
+              "nasa_score": 8334503.532266311,
+              "rmse": 39.811333185159675
+            },
+            "preference": [
+              "regime-kernel-5",
+              "conservative-5",
+              "official-5",
+              "engine-balanced-5",
+              "accelerated-5"
+            ],
+            "profile": "C",
+            "round": 7
+          },
+          "cpu_seconds": 1.208528299,
+          "execution": {
+            "optimizer_steps": 0,
+            "reused_candidates": 1,
+            "reused_scores": 0,
+            "scored_candidates": 1,
+            "trained_candidates": 0,
+            "training_rows": 0
+          },
+          "host_candidate_rmse": 39.42093419618661,
+          "parent_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "parent_metrics": {
+            "mae": 30.124022058830008,
+            "nasa_score": 8334503.532266311,
+            "rmse": 39.811333185159675
+          },
+          "plan": {
+            "actions": [
+              "engine-balanced-5"
+            ],
+            "expected": "Use the current subset to measure RMSE.",
+            "failure": "Retain the parent unless the current projection improves.",
+            "hypothesis": "Re-evaluate the measured candidate on the changed engine subset."
+          },
+          "planner_fallback": false,
+          "profile": "C",
+          "selected_checkpoint_sha256": "sha256:9fa2603e58f476dd92d2e6eb89dcd569d13e00e1b91d190179c2d3838313a16a",
+          "selected_rmse": 39.42093419618661,
+          "trials": [
+            {
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:9fa2603e58f476dd92d2e6eb89dcd569d13e00e1b91d190179c2d3838313a16a",
+                "prediction_sha256": "df87c505e7e1105010310b21797c13f2526fc839ada2da07ff71f309adbdd95b",
+                "score_first_round": 7,
+                "score_key": "bdf55a4d5ba8b22b91d2a56167a32d7f60865ff490ee1f920c9fdef46869d2b8",
+                "score_reused_from_round": null,
+                "training_key": "40789b5e0939f5a087130ce51b413a69641fed513dd6e7a9e00d61b9a315a161",
+                "training_reused_from_round": 6
+              },
+              "final_steps": 11050,
+              "initial_steps": 8840,
+              "mae": 29.12497033627959,
+              "nasa_score": 6973573.645276132,
+              "recipe": "engine-balanced-5",
+              "rmse": 39.42093419618661,
+              "training_rows": 565445
+            }
+          ]
+        },
+        "history_ids": [
+          "C-round-01",
+          "C-round-02",
+          "C-round-03",
+          "C-round-04",
+          "C-round-05",
+          "C-round-06"
+        ],
+        "hypothesis": "Re-evaluate the measured candidate on the changed engine subset.",
+        "model_call_ids": [
+          "school-wire-call-7"
+        ],
+        "reason": "Parent RMSE 39.811333, selected RMSE 39.420934 cycles.",
+        "seed": 42,
+        "selected_artifact_id": "candidate-07"
+      },
+      "rows": 7581,
+      "selected": {
+        "mae": 29.12497033627959,
+        "nasa_score": 6973573.645276131,
+        "rmse": 39.42093419618661
+      },
+      "validation_sha256": "sha256:9d3e429d6f1b956e440aa4a12018b9c1369f2797749bbfa036936e3cd785d544"
+    },
+    "fd003": {
+      "candidate": {
+        "mae": 31.739977956560125,
+        "nasa_score": 64848747.86975638,
+        "rmse": 44.79554637164163
+      },
+      "parent": {
+        "mae": 33.90781794633164,
+        "nasa_score": 553584113.9899938,
+        "rmse": 46.24323442300867
+      },
+      "record": {
+        "change_summary": "C continuation actions ['engine-balanced-5'].",
+        "configuration": {
+          "context": {
+            "available": {
+              "accelerated-5": "double the official learning rate",
+              "conservative-5": "lower the official learning rate by four",
+              "engine-balanced-5": "sample engines with equal probability at the official rate",
+              "official-5": "continue at the official learning rate",
+              "regime-kernel-5": "continue with lower learning rate and refit nonlinear sensor residuals by regime"
+            },
+            "budget": {
+              "actions": 1,
+              "max_output_tokens": 128,
+              "wall_seconds": 60
+            },
+            "history": {
+              "current": [],
+              "prior": [
+                {
+                  "outcomes": [
+                    {
+                      "action": "regime-kernel-5",
+                      "first_round": 1,
+                      "gain": 3.753365787702087,
+                      "rmse": 49.11520677840942
+                    }
+                  ],
+                  "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+                }
+              ]
+            },
+            "parent": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+            "parent_metrics": {
+              "mae": 33.90781794633164,
+              "nasa_score": 553584113.9899938,
+              "rmse": 46.24323442300868
+            },
+            "preference": [
+              "regime-kernel-5",
+              "conservative-5",
+              "official-5",
+              "engine-balanced-5",
+              "accelerated-5"
+            ],
+            "profile": "C",
+            "round": 7
+          },
+          "cpu_seconds": 1.175632331,
+          "execution": {
+            "optimizer_steps": 0,
+            "reused_candidates": 1,
+            "reused_scores": 0,
+            "scored_candidates": 1,
+            "trained_candidates": 0,
+            "training_rows": 0
+          },
+          "host_candidate_rmse": 44.79554637164163,
+          "parent_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "parent_metrics": {
+            "mae": 33.90781794633164,
+            "nasa_score": 553584113.9899938,
+            "rmse": 46.24323442300868
+          },
+          "plan": {
+            "actions": [
+              "engine-balanced-5"
+            ],
+            "expected": "Use the current subset to measure RMSE.",
+            "failure": "Retain the parent unless the current projection improves.",
+            "hypothesis": "Re-evaluate the measured candidate on the changed engine subset."
+          },
+          "planner_fallback": false,
+          "profile": "C",
+          "selected_checkpoint_sha256": "sha256:9fa2603e58f476dd92d2e6eb89dcd569d13e00e1b91d190179c2d3838313a16a",
+          "selected_rmse": 44.79554637164163,
+          "trials": [
+            {
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:9fa2603e58f476dd92d2e6eb89dcd569d13e00e1b91d190179c2d3838313a16a",
+                "prediction_sha256": "26906b7fd2d2424f15359fe146a84df32741a2da77b54249947a44ceecc390a9",
+                "score_first_round": 7,
+                "score_key": "559029767a6041d5ff91bd6be6b80ca954f83edb4f04bee810bc89e77bf35470",
+                "score_reused_from_round": null,
+                "training_key": "40789b5e0939f5a087130ce51b413a69641fed513dd6e7a9e00d61b9a315a161",
+                "training_reused_from_round": 6
+              },
+              "final_steps": 11050,
+              "initial_steps": 8840,
+              "mae": 31.739977956560118,
+              "nasa_score": 64848747.86975638,
+              "recipe": "engine-balanced-5",
+              "rmse": 44.79554637164162,
+              "training_rows": 565445
+            }
+          ]
+        },
+        "history_ids": [
+          "C-round-01",
+          "C-round-02",
+          "C-round-03",
+          "C-round-04",
+          "C-round-05",
+          "C-round-06"
+        ],
+        "hypothesis": "Re-evaluate the measured candidate on the changed engine subset.",
+        "model_call_ids": [
+          "school-wire-call-7"
+        ],
+        "reason": "Parent RMSE 46.243234, selected RMSE 44.795546 cycles.",
+        "seed": 42,
+        "selected_artifact_id": "candidate-07"
+      },
+      "rows": 3555,
+      "selected": {
+        "mae": 31.739977956560125,
+        "nasa_score": 64848747.86975638,
+        "rmse": 44.79554637164163
+      },
+      "validation_sha256": "sha256:7edfdcb82f0b8885a5c2c9ffb5e00b508571c99d8fadde5b1c21fc8d5a7160c0"
+    },
+    "fd004": {
+      "candidate": {
+        "mae": 42.52717693332325,
+        "nasa_score": 4101250221.566713,
+        "rmse": 62.44309540115809
+      },
+      "parent": {
+        "mae": 41.930264880743685,
+        "nasa_score": 1540759072.3191292,
+        "rmse": 59.675115523560486
+      },
+      "record": {
+        "change_summary": "C continuation actions ['engine-balanced-5'].",
+        "configuration": {
+          "context": {
+            "available": {
+              "accelerated-5": "double the official learning rate",
+              "conservative-5": "lower the official learning rate by four",
+              "engine-balanced-5": "sample engines with equal probability at the official rate",
+              "official-5": "continue at the official learning rate",
+              "regime-kernel-5": "continue with lower learning rate and refit nonlinear sensor residuals by regime"
+            },
+            "budget": {
+              "actions": 1,
+              "max_output_tokens": 128,
+              "wall_seconds": 60
+            },
+            "history": {
+              "current": [],
+              "prior": [
+                {
+                  "outcomes": [
+                    {
+                      "action": "regime-kernel-5",
+                      "first_round": 1,
+                      "gain": 3.753365787702087,
+                      "rmse": 49.11520677840942
+                    }
+                  ],
+                  "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+                }
+              ]
+            },
+            "parent": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+            "parent_metrics": {
+              "mae": 41.93026488074368,
+              "nasa_score": 1540759072.319129,
+              "rmse": 59.675115523560486
+            },
+            "preference": [
+              "regime-kernel-5",
+              "conservative-5",
+              "official-5",
+              "engine-balanced-5",
+              "accelerated-5"
+            ],
+            "profile": "C",
+            "round": 7
+          },
+          "cpu_seconds": 1.2112634020000002,
+          "execution": {
+            "optimizer_steps": 0,
+            "reused_candidates": 1,
+            "reused_scores": 0,
+            "scored_candidates": 1,
+            "trained_candidates": 0,
+            "training_rows": 0
+          },
+          "host_candidate_rmse": 62.44309540115809,
+          "parent_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "parent_metrics": {
+            "mae": 41.93026488074368,
+            "nasa_score": 1540759072.319129,
+            "rmse": 59.675115523560486
+          },
+          "plan": {
+            "actions": [
+              "engine-balanced-5"
+            ],
+            "expected": "Use the current subset to measure RMSE.",
+            "failure": "Retain the parent unless the current projection improves.",
+            "hypothesis": "Re-evaluate the measured candidate on the changed engine subset."
+          },
+          "planner_fallback": false,
+          "profile": "C",
+          "selected_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+          "selected_rmse": 59.675115523560486,
+          "trials": [
+            {
+              "actual_optimizer_steps": 0,
+              "actual_training_rows": 0,
+              "cache": {
+                "checkpoint_sha256": "sha256:9fa2603e58f476dd92d2e6eb89dcd569d13e00e1b91d190179c2d3838313a16a",
+                "prediction_sha256": "21c6547d5a7005baa1148e0ce6c8facd2bad3c8bb83560b46fa70c4456e8dcf7",
+                "score_first_round": 7,
+                "score_key": "f8e3ef1a12bca14a10b44623d255d153a36fc69117927c9bbf804ced118026da",
+                "score_reused_from_round": null,
+                "training_key": "40789b5e0939f5a087130ce51b413a69641fed513dd6e7a9e00d61b9a315a161",
+                "training_reused_from_round": 6
+              },
+              "final_steps": 11050,
+              "initial_steps": 8840,
+              "mae": 42.52717693332325,
+              "nasa_score": 4101250221.566708,
+              "recipe": "engine-balanced-5",
+              "rmse": 62.44309540115808,
+              "training_rows": 565445
+            }
+          ]
+        },
+        "history_ids": [
+          "C-round-01",
+          "C-round-02",
+          "C-round-03",
+          "C-round-04",
+          "C-round-05",
+          "C-round-06"
+        ],
+        "hypothesis": "Re-evaluate the measured candidate on the changed engine subset.",
+        "model_call_ids": [
+          "school-wire-call-7"
+        ],
+        "reason": "Parent RMSE 59.675116, selected RMSE 59.675116 cycles.",
+        "seed": 42,
+        "selected_artifact_id": "candidate-01"
+      },
+      "rows": 8703,
+      "selected": {
+        "mae": 41.930264880743685,
+        "nasa_score": 1540759072.3191292,
+        "rmse": 59.675115523560486
+      },
+      "validation_sha256": "sha256:0f230656daeb4dd6a16c686111a5ce6b3ff8cfe2a2db2ca22796874a0f9a1a30"
+    }
+  }
+}

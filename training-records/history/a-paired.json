@@ -1,0 +1,1360 @@
+{
+  "status": "complete",
+  "phase": "d2-development",
+  "entrypoint": "sha256:534b4cd9235f06de9770e47c775aa3bfb53eec58b1d2ee841a073a2776000b07",
+  "seeds": [
+    42,
+    7,
+    2026
+  ],
+  "fixed_and_online_spec_matches": [
+    "entrypoint_sha256",
+    "fit",
+    "selection",
+    "final",
+    "seed",
+    "run_seed",
+    "rounds",
+    "official_checkpoint",
+    "allow_tuning",
+    "record_trajectory",
+    "reuse_candidates",
+    "starting_checkpoint"
+  ],
+  "per_seed": {
+    "fixed": [
+      {
+        "seed": 42,
+        "report": "outputs/goal/01-paired/d2-development-42-cache/report.json",
+        "report_sha256": "4a7166ab541c9fc3f2a1b11a8bc4021d4f526c3ed0c0b50dd98e5e84682c7939",
+        "valid_responses": 10,
+        "fallback_rounds": [],
+        "starting_checkpoint": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+        "selected_checkpoint": "sha256:ac05a8f042caa6bb091441c106ca8eebbad2ffdaf4b080d221daf4685c19ee8d",
+        "round_macro_f1": [
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675
+        ],
+        "round_macro_f1_mean": 0.7215526855459675,
+        "worst_round": 0.7215526855459675,
+        "score_recovery_rounds": [],
+        "score_recovery_pending_rounds": 0,
+        "final": {
+          "macro_f1": 0.7215526855459675,
+          "accuracy": 0.8921095008051529,
+          "class_f1": {
+            "Ethanol": 0.7004608294930875,
+            "Ethylene": 0.9640718562874252,
+            "Ammonia": 1.0,
+            "Acetaldehyde": 0.0,
+            "Acetone": 0.9981167608286252,
+            "Toluene": 0.6666666666666666
+          },
+          "confusion": [
+            [
+              76,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              6,
+              161,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              0,
+              0
+            ],
+            [
+              53,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              265,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        "selected_changes": 1,
+        "trained_candidates": 8,
+        "reused_candidates": 22,
+        "optimizer_steps": 812,
+        "training_rows_seen": 46280,
+        "planner_calls": 10,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cpu_seconds": 10.234375,
+        "training_cpu_seconds": 4.171875,
+        "wall_seconds": 13.105070899997372,
+        "sampling_cost_upper_fen": 0
+      },
+      {
+        "seed": 7,
+        "report": "outputs/goal/01-paired/d2-development-7-cache/report.json",
+        "report_sha256": "83f3b3f6c56dd483d9d8528b6de6486bb9c6adb0416b5ee78ee0dff73962d8b1",
+        "valid_responses": 10,
+        "fallback_rounds": [],
+        "starting_checkpoint": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+        "selected_checkpoint": "sha256:4242fd128453ca5d3ddba899054f3f3f0d9262b838f74fb7c5664681620c889e",
+        "round_macro_f1": [
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7226058570763415,
+          0.7226058570763415,
+          0.7226058570763415,
+          0.7226058570763415,
+          0.7226058570763415,
+          0.7226058570763415,
+          0.7226058570763415,
+          0.7226058570763415
+        ],
+        "round_macro_f1_mean": 0.7223952227702666,
+        "worst_round": 0.7215526855459675,
+        "score_recovery_rounds": [],
+        "score_recovery_pending_rounds": 0,
+        "final": {
+          "macro_f1": 0.7226058570763415,
+          "accuracy": 0.8921095008051529,
+          "class_f1": {
+            "Ethanol": 0.704225352112676,
+            "Ethylene": 0.9704142011834319,
+            "Ammonia": 1.0,
+            "Acetaldehyde": 0.0,
+            "Acetone": 0.994328922495274,
+            "Toluene": 0.6666666666666666
+          },
+          "confusion": [
+            [
+              75,
+              7,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              164,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              0,
+              0
+            ],
+            [
+              53,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              2,
+              263,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        "selected_changes": 2,
+        "trained_candidates": 12,
+        "reused_candidates": 18,
+        "optimizer_steps": 1288,
+        "training_rows_seen": 71200,
+        "planner_calls": 10,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cpu_seconds": 8.65625,
+        "training_cpu_seconds": 3.53125,
+        "wall_seconds": 11.678128200001083,
+        "sampling_cost_upper_fen": 0
+      },
+      {
+        "seed": 2026,
+        "report": "outputs/goal/01-paired/d2-development-2026-cache/report.json",
+        "report_sha256": "d6cb40026980e86695d7eef4a5f7474ae1f723dba878bf7378eb81cf154d4457",
+        "valid_responses": 10,
+        "fallback_rounds": [],
+        "starting_checkpoint": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+        "selected_checkpoint": "sha256:88d6c755e054ce3efa208ebd3840301e598a88b76ea32e66d58f67baca2e140d",
+        "round_macro_f1": [
+          0.717346897406718,
+          0.7232371634652334,
+          0.7232371634652334,
+          0.7232371634652334,
+          0.7232371634652334,
+          0.7232371634652334,
+          0.7232371634652334,
+          0.7232371634652334,
+          0.7232371634652334,
+          0.7232371634652334
+        ],
+        "round_macro_f1_mean": 0.7226481368593818,
+        "worst_round": 0.717346897406718,
+        "score_recovery_rounds": [],
+        "score_recovery_pending_rounds": 0,
+        "final": {
+          "macro_f1": 0.7232371634652334,
+          "accuracy": 0.895330112721417,
+          "class_f1": {
+            "Ethanol": 0.704225352112676,
+            "Ethylene": 0.9704142011834319,
+            "Ammonia": 1.0,
+            "Acetaldehyde": 0.0,
+            "Acetone": 0.9981167608286252,
+            "Toluene": 0.6666666666666666
+          },
+          "confusion": [
+            [
+              75,
+              7,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              164,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              0,
+              0
+            ],
+            [
+              53,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              265,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        "selected_changes": 2,
+        "trained_candidates": 11,
+        "reused_candidates": 19,
+        "optimizer_steps": 1120,
+        "training_rows_seen": 65860,
+        "planner_calls": 10,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cpu_seconds": 8.359375,
+        "training_cpu_seconds": 3.375,
+        "wall_seconds": 11.28544409997994,
+        "sampling_cost_upper_fen": 0
+      }
+    ],
+    "base": [
+      {
+        "seed": 42,
+        "report": "outputs/goal/p01/old-base-42/report.json",
+        "report_sha256": "1336c2a64717bcd6d375af6b295f887331f028990b8af88a0b05e25657942675",
+        "valid_responses": 10,
+        "fallback_rounds": [],
+        "starting_checkpoint": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+        "selected_checkpoint": "sha256:ac05a8f042caa6bb091441c106ca8eebbad2ffdaf4b080d221daf4685c19ee8d",
+        "round_macro_f1": [
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675
+        ],
+        "round_macro_f1_mean": 0.7215526855459675,
+        "worst_round": 0.7215526855459675,
+        "score_recovery_rounds": [],
+        "score_recovery_pending_rounds": 0,
+        "final": {
+          "macro_f1": 0.7215526855459675,
+          "accuracy": 0.8921095008051529,
+          "class_f1": {
+            "Ethanol": 0.7004608294930875,
+            "Ethylene": 0.9640718562874252,
+            "Ammonia": 1.0,
+            "Acetaldehyde": 0.0,
+            "Acetone": 0.9981167608286252,
+            "Toluene": 0.6666666666666666
+          },
+          "confusion": [
+            [
+              76,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              6,
+              161,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              0,
+              0
+            ],
+            [
+              53,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              265,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        "selected_changes": 1,
+        "trained_candidates": 7,
+        "reused_candidates": 23,
+        "optimizer_steps": 840,
+        "training_rows_seen": 42720,
+        "planner_calls": 10,
+        "input_tokens": 2982,
+        "output_tokens": 114,
+        "cpu_seconds": 10.65625,
+        "training_cpu_seconds": 5.546875,
+        "wall_seconds": 119.30571400001645,
+        "sampling_cost_upper_fen": 20
+      },
+      {
+        "seed": 7,
+        "report": "outputs/goal/p01/old-base-7/report.json",
+        "report_sha256": "7b46dbd6d048f2f8508c5ee855d7bbb6c487ccdd30e3b0773d10d87038c98148",
+        "valid_responses": 10,
+        "fallback_rounds": [],
+        "starting_checkpoint": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+        "selected_checkpoint": "sha256:4d1df3b00b5692c3d711cffb4f420ad82e574e0df5cb278b3e0c957341b66086",
+        "round_macro_f1": [
+          0.71932219946201,
+          0.7209213791570757,
+          0.7209213791570757,
+          0.7209213791570757,
+          0.7209213791570757,
+          0.7209213791570757,
+          0.7209213791570757,
+          0.7209213791570757,
+          0.7209213791570757,
+          0.7209213791570757
+        ],
+        "round_macro_f1_mean": 0.7207614611875691,
+        "worst_round": 0.71932219946201,
+        "score_recovery_rounds": [],
+        "score_recovery_pending_rounds": 0,
+        "final": {
+          "macro_f1": 0.7209213791570757,
+          "accuracy": 0.8888888888888888,
+          "class_f1": {
+            "Ethanol": 0.7004608294930875,
+            "Ethylene": 0.9640718562874252,
+            "Ammonia": 1.0,
+            "Acetaldehyde": 0.0,
+            "Acetone": 0.994328922495274,
+            "Toluene": 0.6666666666666666
+          },
+          "confusion": [
+            [
+              76,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              6,
+              161,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              0,
+              0
+            ],
+            [
+              53,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              2,
+              263,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        "selected_changes": 2,
+        "trained_candidates": 9,
+        "reused_candidates": 21,
+        "optimizer_steps": 1092,
+        "training_rows_seen": 53400,
+        "planner_calls": 10,
+        "input_tokens": 3004,
+        "output_tokens": 120,
+        "cpu_seconds": 10.453125,
+        "training_cpu_seconds": 5.171875,
+        "wall_seconds": 795.3714328999631,
+        "sampling_cost_upper_fen": 20
+      },
+      {
+        "seed": 2026,
+        "report": "outputs/goal/p01/old-base-2026/report.json",
+        "report_sha256": "1d67a5c48d440fe3b95eab6aa374251175518b92f5199e0c6efe24187f1b57e3",
+        "valid_responses": 10,
+        "fallback_rounds": [],
+        "starting_checkpoint": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+        "selected_checkpoint": "sha256:3727f279671473f1a94d66168244dc5595a30188ea1ab2cfb3c57ebbe5b06f98",
+        "round_macro_f1": [
+          0.7196583939370171,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675
+        ],
+        "round_macro_f1_mean": 0.7213632563850725,
+        "worst_round": 0.7196583939370171,
+        "score_recovery_rounds": [],
+        "score_recovery_pending_rounds": 0,
+        "final": {
+          "macro_f1": 0.7215526855459675,
+          "accuracy": 0.8921095008051529,
+          "class_f1": {
+            "Ethanol": 0.7004608294930875,
+            "Ethylene": 0.9640718562874252,
+            "Ammonia": 1.0,
+            "Acetaldehyde": 0.0,
+            "Acetone": 0.9981167608286252,
+            "Toluene": 0.6666666666666666
+          },
+          "confusion": [
+            [
+              76,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              6,
+              161,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              0,
+              0
+            ],
+            [
+              53,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              265,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        "selected_changes": 2,
+        "trained_candidates": 9,
+        "reused_candidates": 21,
+        "optimizer_steps": 1092,
+        "training_rows_seen": 53400,
+        "planner_calls": 10,
+        "input_tokens": 3055,
+        "output_tokens": 120,
+        "cpu_seconds": 9.8125,
+        "training_cpu_seconds": 4.53125,
+        "wall_seconds": 15.00812600000063,
+        "sampling_cost_upper_fen": 20
+      }
+    ],
+    "adapter": [
+      {
+        "seed": 42,
+        "report": "outputs/goal/p01/old-adapter-42/report.json",
+        "report_sha256": "d5e0bf5483654be934987f261576579320426210eef1cfd710cd1b3ef2e470de",
+        "valid_responses": 10,
+        "fallback_rounds": [],
+        "starting_checkpoint": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+        "selected_checkpoint": "sha256:ac05a8f042caa6bb091441c106ca8eebbad2ffdaf4b080d221daf4685c19ee8d",
+        "round_macro_f1": [
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675
+        ],
+        "round_macro_f1_mean": 0.7215526855459675,
+        "worst_round": 0.7215526855459675,
+        "score_recovery_rounds": [],
+        "score_recovery_pending_rounds": 0,
+        "final": {
+          "macro_f1": 0.7215526855459675,
+          "accuracy": 0.8921095008051529,
+          "class_f1": {
+            "Ethanol": 0.7004608294930875,
+            "Ethylene": 0.9640718562874252,
+            "Ammonia": 1.0,
+            "Acetaldehyde": 0.0,
+            "Acetone": 0.9981167608286252,
+            "Toluene": 0.6666666666666666
+          },
+          "confusion": [
+            [
+              76,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              6,
+              161,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              0,
+              0
+            ],
+            [
+              53,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              265,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        "selected_changes": 1,
+        "trained_candidates": 7,
+        "reused_candidates": 23,
+        "optimizer_steps": 644,
+        "training_rows_seen": 35600,
+        "planner_calls": 10,
+        "input_tokens": 2992,
+        "output_tokens": 106,
+        "cpu_seconds": 11.8125,
+        "training_cpu_seconds": 6.34375,
+        "wall_seconds": 917.1805653000483,
+        "sampling_cost_upper_fen": 20
+      },
+      {
+        "seed": 7,
+        "report": "outputs/goal/p01/old-adapter-7/report.json",
+        "report_sha256": "c9554353bfcfdd3e4a65b02e2b3904d2b6068e47898b409c6f9f9a5323bf6c81",
+        "valid_responses": 9,
+        "fallback_rounds": [
+          1
+        ],
+        "starting_checkpoint": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+        "selected_checkpoint": "sha256:4242fd128453ca5d3ddba899054f3f3f0d9262b838f74fb7c5664681620c889e",
+        "round_macro_f1": [
+          0.7215526855459675,
+          0.7226058570763415,
+          0.7226058570763415,
+          0.7226058570763415,
+          0.7226058570763415,
+          0.7226058570763415,
+          0.7226058570763415,
+          0.7226058570763415,
+          0.7226058570763415,
+          0.7226058570763415
+        ],
+        "round_macro_f1_mean": 0.7225005399233041,
+        "worst_round": 0.7215526855459675,
+        "score_recovery_rounds": [],
+        "score_recovery_pending_rounds": 0,
+        "final": {
+          "macro_f1": 0.7226058570763415,
+          "accuracy": 0.8921095008051529,
+          "class_f1": {
+            "Ethanol": 0.704225352112676,
+            "Ethylene": 0.9704142011834319,
+            "Ammonia": 1.0,
+            "Acetaldehyde": 0.0,
+            "Acetone": 0.994328922495274,
+            "Toluene": 0.6666666666666666
+          },
+          "confusion": [
+            [
+              75,
+              7,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              164,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              0,
+              0
+            ],
+            [
+              53,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              2,
+              263,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        "selected_changes": 2,
+        "trained_candidates": 10,
+        "reused_candidates": 20,
+        "optimizer_steps": 1008,
+        "training_rows_seen": 53400,
+        "planner_calls": 10,
+        "input_tokens": 3025,
+        "output_tokens": 112,
+        "cpu_seconds": 9.84375,
+        "training_cpu_seconds": 4.765625,
+        "wall_seconds": 15.948742000036873,
+        "sampling_cost_upper_fen": 20
+      },
+      {
+        "seed": 2026,
+        "report": "outputs/goal/p01/old-adapter-2026/report.json",
+        "report_sha256": "295281436cb909000985369addd5d946db37be6cb461ed71eff393a526e81217",
+        "valid_responses": 10,
+        "fallback_rounds": [],
+        "starting_checkpoint": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+        "selected_checkpoint": "sha256:88d6c755e054ce3efa208ebd3840301e598a88b76ea32e66d58f67baca2e140d",
+        "round_macro_f1": [
+          0.717346897406718,
+          0.7232371634652334,
+          0.7232371634652334,
+          0.7232371634652334,
+          0.7232371634652334,
+          0.7232371634652334,
+          0.7232371634652334,
+          0.7232371634652334,
+          0.7232371634652334,
+          0.7232371634652334
+        ],
+        "round_macro_f1_mean": 0.7226481368593818,
+        "worst_round": 0.717346897406718,
+        "score_recovery_rounds": [],
+        "score_recovery_pending_rounds": 0,
+        "final": {
+          "macro_f1": 0.7232371634652334,
+          "accuracy": 0.895330112721417,
+          "class_f1": {
+            "Ethanol": 0.704225352112676,
+            "Ethylene": 0.9704142011834319,
+            "Ammonia": 1.0,
+            "Acetaldehyde": 0.0,
+            "Acetone": 0.9981167608286252,
+            "Toluene": 0.6666666666666666
+          },
+          "confusion": [
+            [
+              75,
+              7,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              164,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              0,
+              0
+            ],
+            [
+              53,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              265,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        "selected_changes": 2,
+        "trained_candidates": 10,
+        "reused_candidates": 20,
+        "optimizer_steps": 980,
+        "training_rows_seen": 51620,
+        "planner_calls": 10,
+        "input_tokens": 3040,
+        "output_tokens": 109,
+        "cpu_seconds": 10.765625,
+        "training_cpu_seconds": 5.25,
+        "wall_seconds": 714.3713198000332,
+        "sampling_cost_upper_fen": 20
+      }
+    ],
+    "adapter-nohistory": [
+      {
+        "seed": 42,
+        "report": "outputs/goal/p01/old-adapter-nohistory-42/report.json",
+        "report_sha256": "ca7b7a7dbd4888241ddf55d4650182027e1577ac51c721dbd9f95c4b551de529",
+        "valid_responses": 9,
+        "fallback_rounds": [
+          1
+        ],
+        "starting_checkpoint": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+        "selected_checkpoint": "sha256:ac05a8f042caa6bb091441c106ca8eebbad2ffdaf4b080d221daf4685c19ee8d",
+        "round_macro_f1": [
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675
+        ],
+        "round_macro_f1_mean": 0.7215526855459675,
+        "worst_round": 0.7215526855459675,
+        "score_recovery_rounds": [],
+        "score_recovery_pending_rounds": 0,
+        "final": {
+          "macro_f1": 0.7215526855459675,
+          "accuracy": 0.8921095008051529,
+          "class_f1": {
+            "Ethanol": 0.7004608294930875,
+            "Ethylene": 0.9640718562874252,
+            "Ammonia": 1.0,
+            "Acetaldehyde": 0.0,
+            "Acetone": 0.9981167608286252,
+            "Toluene": 0.6666666666666666
+          },
+          "confusion": [
+            [
+              76,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              6,
+              161,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              0,
+              0
+            ],
+            [
+              53,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              265,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        "selected_changes": 1,
+        "trained_candidates": 6,
+        "reused_candidates": 24,
+        "optimizer_steps": 588,
+        "training_rows_seen": 37380,
+        "planner_calls": 10,
+        "input_tokens": 2113,
+        "output_tokens": 115,
+        "cpu_seconds": 10.53125,
+        "training_cpu_seconds": 4.84375,
+        "wall_seconds": 18.082486899977084,
+        "sampling_cost_upper_fen": 20
+      },
+      {
+        "seed": 7,
+        "report": "outputs/goal/p01/old-adapter-nohistory-7/report.json",
+        "report_sha256": "e6eaa52bdfbc2f689388fdb6d2925628cfaa312db25215bca9f414aa37c1b52e",
+        "valid_responses": 10,
+        "fallback_rounds": [],
+        "starting_checkpoint": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+        "selected_checkpoint": "sha256:19931c00b289553323a942ae405e73e8861060c0541ac6615a5ae959fa91fb39",
+        "round_macro_f1": [
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675
+        ],
+        "round_macro_f1_mean": 0.7215526855459675,
+        "worst_round": 0.7215526855459675,
+        "score_recovery_rounds": [],
+        "score_recovery_pending_rounds": 0,
+        "final": {
+          "macro_f1": 0.7215526855459675,
+          "accuracy": 0.8921095008051529,
+          "class_f1": {
+            "Ethanol": 0.7004608294930875,
+            "Ethylene": 0.9640718562874252,
+            "Ammonia": 1.0,
+            "Acetaldehyde": 0.0,
+            "Acetone": 0.9981167608286252,
+            "Toluene": 0.6666666666666666
+          },
+          "confusion": [
+            [
+              76,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              6,
+              161,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              0,
+              0
+            ],
+            [
+              53,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              265,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        "selected_changes": 1,
+        "trained_candidates": 6,
+        "reused_candidates": 24,
+        "optimizer_steps": 560,
+        "training_rows_seen": 35600,
+        "planner_calls": 10,
+        "input_tokens": 2113,
+        "output_tokens": 110,
+        "cpu_seconds": 9.65625,
+        "training_cpu_seconds": 4.53125,
+        "wall_seconds": 15.989221900003031,
+        "sampling_cost_upper_fen": 20
+      },
+      {
+        "seed": 2026,
+        "report": "outputs/goal/p01/old-adapter-nohistory-2026/report.json",
+        "report_sha256": "3d79d6199a1fbb6facd24a7a55746da7d2caaa96eaf985d99318886876f52cc9",
+        "valid_responses": 10,
+        "fallback_rounds": [],
+        "starting_checkpoint": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+        "selected_checkpoint": "sha256:e82528b042a107831e12775e225a94e6ea9fb1fe034b9cb6fa5530d0f8248fcc",
+        "round_macro_f1": [
+          0.717346897406718,
+          0.720808869108562,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675,
+          0.7215526855459675
+        ],
+        "round_macro_f1_mean": 0.721057725088302,
+        "worst_round": 0.717346897406718,
+        "score_recovery_rounds": [],
+        "score_recovery_pending_rounds": 0,
+        "final": {
+          "macro_f1": 0.7215526855459675,
+          "accuracy": 0.8921095008051529,
+          "class_f1": {
+            "Ethanol": 0.7004608294930875,
+            "Ethylene": 0.9640718562874252,
+            "Ammonia": 1.0,
+            "Acetaldehyde": 0.0,
+            "Acetone": 0.9981167608286252,
+            "Toluene": 0.6666666666666666
+          },
+          "confusion": [
+            [
+              76,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              6,
+              161,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              50,
+              0,
+              0,
+              0
+            ],
+            [
+              53,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              265,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        "selected_changes": 3,
+        "trained_candidates": 12,
+        "reused_candidates": 18,
+        "optimizer_steps": 1120,
+        "training_rows_seen": 71200,
+        "planner_calls": 10,
+        "input_tokens": 2113,
+        "output_tokens": 110,
+        "cpu_seconds": 9.96875,
+        "training_cpu_seconds": 4.609375,
+        "wall_seconds": 16.94047909998335,
+        "sampling_cost_upper_fen": 20
+      }
+    ]
+  },
+  "summary": {
+    "fixed": {
+      "mean_macro_f1": 0.7224652353625142,
+      "worst_seed_macro_f1": 0.7215526855459675,
+      "worst_round_macro_f1": 0.717346897406718,
+      "trained_candidates_mean": 10.333333333333334,
+      "optimizer_steps_mean": 1073.3333333333333,
+      "valid_responses": 30,
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    "base": {
+      "mean_macro_f1": 0.7213422500830036,
+      "worst_seed_macro_f1": 0.7209213791570757,
+      "worst_round_macro_f1": 0.71932219946201,
+      "trained_candidates_mean": 8.333333333333334,
+      "optimizer_steps_mean": 1008,
+      "valid_responses": 30,
+      "input_tokens": 9041,
+      "output_tokens": 354
+    },
+    "adapter": {
+      "mean_macro_f1": 0.7224652353625142,
+      "worst_seed_macro_f1": 0.7215526855459675,
+      "worst_round_macro_f1": 0.717346897406718,
+      "trained_candidates_mean": 9,
+      "optimizer_steps_mean": 877.3333333333334,
+      "valid_responses": 29,
+      "input_tokens": 9057,
+      "output_tokens": 327
+    },
+    "adapter-nohistory": {
+      "mean_macro_f1": 0.7215526855459675,
+      "worst_seed_macro_f1": 0.7215526855459675,
+      "worst_round_macro_f1": 0.717346897406718,
+      "trained_candidates_mean": 8,
+      "optimizer_steps_mean": 756,
+      "valid_responses": 29,
+      "input_tokens": 6339,
+      "output_tokens": 335
+    }
+  },
+  "paired": {
+    "base_minus_fixed": [
+      {
+        "seed": 42,
+        "final_macro_f1_delta": 0.0,
+        "optimizer_steps_delta": 28,
+        "trained_candidates_delta": -1
+      },
+      {
+        "seed": 7,
+        "final_macro_f1_delta": -0.0016844779192658477,
+        "optimizer_steps_delta": -196,
+        "trained_candidates_delta": -3
+      },
+      {
+        "seed": 2026,
+        "final_macro_f1_delta": -0.0016844779192658477,
+        "optimizer_steps_delta": -28,
+        "trained_candidates_delta": -2
+      }
+    ],
+    "adapter_minus_fixed": [
+      {
+        "seed": 42,
+        "final_macro_f1_delta": 0.0,
+        "optimizer_steps_delta": -168,
+        "trained_candidates_delta": -1
+      },
+      {
+        "seed": 7,
+        "final_macro_f1_delta": 0.0,
+        "optimizer_steps_delta": -280,
+        "trained_candidates_delta": -2
+      },
+      {
+        "seed": 2026,
+        "final_macro_f1_delta": 0.0,
+        "optimizer_steps_delta": -140,
+        "trained_candidates_delta": -1
+      }
+    ],
+    "adapter_minus_base": [
+      {
+        "seed": 42,
+        "final_macro_f1_delta": 0.0,
+        "optimizer_steps_delta": -196,
+        "trained_candidates_delta": 0
+      },
+      {
+        "seed": 7,
+        "final_macro_f1_delta": 0.0016844779192658477,
+        "optimizer_steps_delta": -84,
+        "trained_candidates_delta": 1
+      },
+      {
+        "seed": 2026,
+        "final_macro_f1_delta": 0.0016844779192658477,
+        "optimizer_steps_delta": -112,
+        "trained_candidates_delta": 1
+      }
+    ],
+    "adapter_minus_adapter-nohistory": [
+      {
+        "seed": 42,
+        "final_macro_f1_delta": 0.0,
+        "optimizer_steps_delta": 56,
+        "trained_candidates_delta": 1
+      },
+      {
+        "seed": 7,
+        "final_macro_f1_delta": 0.0010531715303739864,
+        "optimizer_steps_delta": 448,
+        "trained_candidates_delta": 4
+      },
+      {
+        "seed": 2026,
+        "final_macro_f1_delta": 0.0016844779192658477,
+        "optimizer_steps_delta": -140,
+        "trained_candidates_delta": -2
+      }
+    ]
+  },
+  "history_one_step": "outputs/goal/p01/old-probe/comparison.json",
+  "paid_usage_through_p01": [
+    {
+      "status": "complete",
+      "attempts": 104,
+      "charged_or_reserved_upper_fen": 208,
+      "input_tokens": 28115,
+      "output_tokens": 1173
+    }
+  ]
+}

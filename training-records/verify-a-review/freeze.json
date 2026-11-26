@@ -1,0 +1,12 @@
+{
+  "image": "sha256:0ebd6a1a6db8b907a26c030eab731c8ed140a64d88e952b3bd6ea61b7a694bde",
+  "projection": "f91b4d89e1a0cf876c3df30e45e2dff7b72cab1476cd59ece818c07e3f6a22c8",
+  "rows": 623,
+  "protocol_sha256": "b847dfad5703681caaff35b809f39cef90c727148bb6149700927c0f39f1eff3",
+  "checkpoint_sha256": {
+    "official": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+    "fixed": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb",
+    "dynamic": "sha256:291416cb9d2fcf93aea3f56f6f7d0d8dae7d310e5c450e683933ca5098e2e8eb"
+  },
+  "scope": "preregistered D2 review; historical full batch was scored before"
+}

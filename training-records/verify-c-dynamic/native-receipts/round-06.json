@@ -1,0 +1,83 @@
+{
+  "round": 6,
+  "source": "native_pytrio",
+  "history_masked": false,
+  "context": {
+    "available": {
+      "engine-balanced-5": "sample engines with equal probability at the official rate"
+    },
+    "budget": {
+      "actions": 1,
+      "max_output_tokens": 128,
+      "wall_seconds": 60
+    },
+    "history": {
+      "current": [
+        {
+          "action": "accelerated-5",
+          "first_round": 5,
+          "gain": -0.6292552752044998,
+          "rmse": 49.74446205361392
+        },
+        {
+          "action": "official-5",
+          "first_round": 4,
+          "gain": -0.3566717116376097,
+          "rmse": 49.47187849004703
+        },
+        {
+          "action": "conservative-5",
+          "first_round": 3,
+          "gain": -0.1631925989061358,
+          "rmse": 49.27839937731556
+        },
+        {
+          "action": "regime-kernel-5",
+          "first_round": 2,
+          "gain": -0.007296194387578225,
+          "rmse": 49.122502972797
+        }
+      ],
+      "prior": [
+        {
+          "outcomes": [
+            {
+              "action": "regime-kernel-5",
+              "first_round": 1,
+              "gain": 3.753365787702087,
+              "rmse": 49.11520677840942
+            }
+          ],
+          "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+        }
+      ]
+    },
+    "parent": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+    "parent_metrics": {
+      "mae": 35.19305791821807,
+      "nasa_score": 2104493920.3744612,
+      "rmse": 49.11520677840942
+    },
+    "preference": [
+      "engine-balanced-5"
+    ],
+    "profile": "C",
+    "round": 6
+  },
+  "transmitted": [
+    {
+      "role": "system",
+      "content": "Plan one C-MAPSS continuation experiment from the supplied checkpoint. Minimize RMSE in cycles. Positive historical gain means lower RMSE. Prior parent results inform choices. Return JSON only with actions, hypothesis, expected and failure. Choose at most one offered ID. Use an empty actions array only when existing trials exhaust the useful candidates. Keep each statement under 12 words."
+    },
+    {
+      "role": "user",
+      "content": "{\"available\":{\"engine-balanced-5\":\"sample engines with equal probability at the official rate\"},\"budget\":{\"actions\":1,\"max_output_tokens\":128,\"wall_seconds\":60},\"history\":{\"current\":[{\"action\":\"accelerated-5\",\"first_round\":5,\"gain\":-0.6292552752044998,\"rmse\":49.74446205361392},{\"action\":\"official-5\",\"first_round\":4,\"gain\":-0.3566717116376097,\"rmse\":49.47187849004703},{\"action\":\"conservative-5\",\"first_round\":3,\"gain\":-0.1631925989061358,\"rmse\":49.27839937731556},{\"action\":\"regime-kernel-5\",\"first_round\":2,\"gain\":-0.007296194387578225,\"rmse\":49.122502972797}],\"prior\":[{\"outcomes\":[{\"action\":\"regime-kernel-5\",\"first_round\":1,\"gain\":3.753365787702087,\"rmse\":49.11520677840942}],\"parent\":\"sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e\"}]},\"parent\":\"sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3\",\"parent_metrics\":{\"mae\":35.19305791821807,\"nasa_score\":2104493920.3744612,\"rmse\":49.11520677840942},\"preference\":[\"engine-balanced-5\"],\"profile\":\"C\",\"round\":6}"
+    }
+  ],
+  "options": {
+    "max_tokens": 128,
+    "temperature": 0,
+    "enable_thinking": false
+  },
+  "reply": "{\n  \"actions\": [\n    \"engine-balanced-5\"\n  ],\n  \"hypothesis\": \"Balanced sampling reduces variance and lowers RMSE.\",\n  \"expected\": \"RMSE decreases below 49.11.\",\n  \"failure\": \"RMSE increases or no significant gain.\"\n}"
+}

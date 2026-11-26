@@ -1,0 +1,452 @@
+{
+  "round": 6,
+  "parent_checkpoint_sha256": "sha256:ac05a8f042caa6bb091441c106ca8eebbad2ffdaf4b080d221daf4685c19ee8d",
+  "context": {
+    "available": [
+      "stable",
+      "balanced",
+      "explore",
+      "polish",
+      "augment"
+    ],
+    "class_f1": [
+      0.70046,
+      0.96407,
+      1.0,
+      0.0,
+      0.99812,
+      0.66667
+    ],
+    "history": [
+      {
+        "gain": 0.0,
+        "recipe": "polish"
+      },
+      {
+        "gain": -0.00316,
+        "recipe": "stable"
+      },
+      {
+        "gain": -0.00864,
+        "recipe": "explore"
+      },
+      {
+        "gain": 0.0,
+        "recipe": "polish"
+      },
+      {
+        "gain": -0.00274,
+        "recipe": "balanced"
+      },
+      {
+        "gain": -0.01034,
+        "recipe": "augment"
+      },
+      {
+        "gain": 0.0,
+        "recipe": "polish"
+      },
+      {
+        "gain": -0.00316,
+        "recipe": "stable"
+      }
+    ],
+    "parent_macro_f1": 0.72155,
+    "parent_steps": 220,
+    "profile": "A",
+    "round": 6,
+    "train_counts": [
+      90,
+      98,
+      83,
+      30,
+      70,
+      74
+    ]
+  },
+  "actions": {
+    "stable": {
+      "macro_f1": 0.7183958829767628,
+      "accuracy": 0.8872785829307569,
+      "class_f1": [
+        0.6909090909090909,
+        0.9546827794561934,
+        1.0,
+        0.0,
+        0.9981167608286252,
+        0.6666666666666666
+      ],
+      "confusion": [
+        [
+          76,
+          6,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          9,
+          158,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          50,
+          0,
+          0,
+          0
+        ],
+        [
+          53,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          265,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      ],
+      "recipe": "stable",
+      "training_rows": 1780,
+      "training_steps": 28
+    },
+    "balanced": {
+      "macro_f1": 0.7188151402339642,
+      "accuracy": 0.8856682769726248,
+      "class_f1": [
+        0.6940639269406392,
+        0.9578313253012049,
+        1.0,
+        0.0,
+        0.994328922495274,
+        0.6666666666666666
+      ],
+      "confusion": [
+        [
+          76,
+          6,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          8,
+          159,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          50,
+          0,
+          0,
+          0
+        ],
+        [
+          53,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          263,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      ],
+      "recipe": "balanced",
+      "training_rows": 3560,
+      "training_steps": 56
+    },
+    "explore": {
+      "macro_f1": 0.7129174609201537,
+      "accuracy": 0.8824476650563607,
+      "class_f1": [
+        0.6816143497757847,
+        0.9515151515151515,
+        0.9795918367346939,
+        0.0,
+        0.9981167608286252,
+        0.6666666666666666
+      ],
+      "confusion": [
+        [
+          76,
+          6,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          10,
+          157,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          48,
+          0,
+          0,
+          0
+        ],
+        [
+          53,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          265,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      ],
+      "recipe": "explore",
+      "training_rows": 8900,
+      "training_steps": 140
+    },
+    "polish": {
+      "macro_f1": 0.7215526855459675,
+      "accuracy": 0.8921095008051529,
+      "class_f1": [
+        0.7004608294930875,
+        0.9640718562874252,
+        1.0,
+        0.0,
+        0.9981167608286252,
+        0.6666666666666666
+      ],
+      "confusion": [
+        [
+          76,
+          6,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          161,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          50,
+          0,
+          0,
+          0
+        ],
+        [
+          53,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          265,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      ],
+      "recipe": "polish",
+      "training_rows": 5340,
+      "training_steps": 168
+    },
+    "augment": {
+      "macro_f1": 0.7112096035088772,
+      "accuracy": 0.8921095008051529,
+      "class_f1": [
+        0.6956521739130435,
+        0.9707602339181286,
+        1.0,
+        0.03508771929824561,
+        0.994328922495274,
+        0.5714285714285714
+      ],
+      "confusion": [
+        [
+          72,
+          9,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          166,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          50,
+          0,
+          0,
+          0
+        ],
+        [
+          52,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          263,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      ],
+      "recipe": "augment",
+      "training_rows": 7120,
+      "training_steps": 112
+    }
+  },
+  "parents_macro_f1": 0.7215526855459675,
+  "conditions": {
+    "fixed": {
+      "order": [
+        "polish",
+        "balanced",
+        "stable"
+      ],
+      "valid_response": true,
+      "response": "{\"order\": [\"polish\", \"balanced\", \"stable\"]}",
+      "first_gain": 0.0,
+      "best_gain": 0.0,
+      "selected_recipe": null,
+      "training_steps_without_cache": 252
+    },
+    "base": {
+      "order": [
+        "polish",
+        "balanced",
+        "stable"
+      ],
+      "valid_response": true,
+      "response": "{\"order\":[\"polish\",\"balanced\",\"stable\"]}<|im_end|>",
+      "first_gain": 0.0,
+      "best_gain": 0.0,
+      "selected_recipe": null,
+      "training_steps_without_cache": 252,
+      "visible_history_length": 8
+    },
+    "adapter": {
+      "order": [
+        "balanced",
+        "augment",
+        "stable"
+      ],
+      "valid_response": true,
+      "response": "{\"order\":[\"balanced\",\"augment\",\"stable\"]}<|im_end|>",
+      "first_gain": -0.00273754531200332,
+      "best_gain": -0.00273754531200332,
+      "selected_recipe": null,
+      "training_steps_without_cache": 196,
+      "visible_history_length": 8
+    },
+    "adapter_without_history": {
+      "order": [
+        "explore",
+        "augment",
+        "stable"
+      ],
+      "valid_response": true,
+      "response": "{\"order\":[\"explore\",\"augment\",\"stable\"]}<|im_end|>",
+      "first_gain": -0.008635224625813787,
+      "best_gain": -0.0031568025692046975,
+      "selected_recipe": null,
+      "training_steps_without_cache": 280,
+      "visible_history_length": 0
+    }
+  }
+}

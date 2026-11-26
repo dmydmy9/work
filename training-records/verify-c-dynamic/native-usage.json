@@ -1,0 +1,147 @@
+{
+  "experiment": "C-full",
+  "image": "sha256:0ebd6a1a6db8b907a26c030eab731c8ed140a64d88e952b3bd6ea61b7a694bde",
+  "model": "Qwen/Qwen3.5-4B",
+  "profile": "C",
+  "history_masked": false,
+  "wall_seconds": 75.04635899997083,
+  "usage": {
+    "attempts": [
+      {
+        "round_index": 1,
+        "attempt": 1,
+        "started_at": "2026-11-25T15:27:04+00:00",
+        "status": "complete",
+        "price_version": "2026-11-25",
+        "reserved_fen": 2,
+        "accounted_fen": 2,
+        "input_tokens": 373,
+        "output_tokens": 71,
+        "error_type": null
+      },
+      {
+        "round_index": 2,
+        "attempt": 1,
+        "started_at": "2026-11-25T15:27:14+00:00",
+        "status": "complete",
+        "price_version": "2026-11-25",
+        "reserved_fen": 2,
+        "accounted_fen": 2,
+        "input_tokens": 491,
+        "output_tokens": 71,
+        "error_type": null
+      },
+      {
+        "round_index": 3,
+        "attempt": 1,
+        "started_at": "2026-11-25T15:27:24+00:00",
+        "status": "complete",
+        "price_version": "2026-11-25",
+        "reserved_fen": 2,
+        "accounted_fen": 2,
+        "input_tokens": 519,
+        "output_tokens": 70,
+        "error_type": null
+      },
+      {
+        "round_index": 4,
+        "attempt": 1,
+        "started_at": "2026-11-25T15:27:33+00:00",
+        "status": "complete",
+        "price_version": "2026-11-25",
+        "reserved_fen": 2,
+        "accounted_fen": 2,
+        "input_tokens": 555,
+        "output_tokens": 67,
+        "error_type": null
+      },
+      {
+        "round_index": 5,
+        "attempt": 1,
+        "started_at": "2026-11-25T15:27:41+00:00",
+        "status": "complete",
+        "price_version": "2026-11-25",
+        "reserved_fen": 2,
+        "accounted_fen": 2,
+        "input_tokens": 593,
+        "output_tokens": 67,
+        "error_type": null
+      },
+      {
+        "round_index": 6,
+        "attempt": 1,
+        "started_at": "2026-11-25T15:27:50+00:00",
+        "status": "complete",
+        "price_version": "2026-11-25",
+        "reserved_fen": 2,
+        "accounted_fen": 2,
+        "input_tokens": 630,
+        "output_tokens": 71,
+        "error_type": null
+      },
+      {
+        "round_index": 7,
+        "attempt": 1,
+        "started_at": "2026-11-25T15:27:59+00:00",
+        "status": "complete",
+        "price_version": "2026-11-25",
+        "reserved_fen": 2,
+        "accounted_fen": 2,
+        "input_tokens": 667,
+        "output_tokens": 54,
+        "error_type": null
+      },
+      {
+        "round_index": 8,
+        "attempt": 1,
+        "started_at": "2026-11-25T15:28:03+00:00",
+        "status": "complete",
+        "price_version": "2026-11-25",
+        "reserved_fen": 2,
+        "accounted_fen": 2,
+        "input_tokens": 667,
+        "output_tokens": 54,
+        "error_type": null
+      },
+      {
+        "round_index": 9,
+        "attempt": 1,
+        "started_at": "2026-11-25T15:28:07+00:00",
+        "status": "complete",
+        "price_version": "2026-11-25",
+        "reserved_fen": 2,
+        "accounted_fen": 2,
+        "input_tokens": 667,
+        "output_tokens": 46,
+        "error_type": null
+      },
+      {
+        "round_index": 10,
+        "attempt": 1,
+        "started_at": "2026-11-25T15:28:11+00:00",
+        "status": "complete",
+        "price_version": "2026-11-25",
+        "reserved_fen": 2,
+        "accounted_fen": 2,
+        "input_tokens": 668,
+        "output_tokens": 54,
+        "error_type": null
+      }
+    ],
+    "input_tokens": 5830,
+    "output_tokens": 625,
+    "external_reservations": [],
+    "goal_external_reserved_fen": 388,
+    "exact_native_reuses": [],
+    "run_cost_upper_bound_fen": 20,
+    "goal_cost_upper_bound_fen": 1132,
+    "goal_limit_fen": 4000,
+    "rates_source": "https://pytrio.com/api/model-prices"
+  },
+  "status": "completed",
+  "final": {
+    "mae": 35.19305791821807,
+    "nasa_score": 2104493920.3744614,
+    "rmse": 49.11520677840943
+  }
+}

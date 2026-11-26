@@ -1,0 +1,24 @@
+{
+  "workbench": "https://rsi-index.115.zone/#submissions",
+  "image_label": "镜像 4",
+  "image_status": "镜像可用",
+  "uploaded_at": "2026-11-25T23:33:54+08:00",
+  "archive": "harness-city-rc03.tar",
+  "model_type": "基础模型（可正式参赛）",
+  "model": "Qwen/Qwen3.5-4B",
+  "report_selected_in_form": "technical-report-rc03.pdf",
+  "submission_version_saved": false,
+  "training_record_url_in_form": "https://swanlab.cn/@dmydmy9/zhixun-engine-rc03/v1/iowsz6/overview",
+  "pending_required_links": [
+    "源码仓库链接"
+  ],
+  "pytrio_key_present_in_form": false,
+  "trial": {
+    "used": 0,
+    "available": 10
+  },
+  "official_evaluation": {
+    "used": 0,
+    "available": 3
+  }
+}

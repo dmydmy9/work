@@ -1,0 +1,168 @@
+{
+  "experiment": "B-full",
+  "image": "sha256:0ebd6a1a6db8b907a26c030eab731c8ed140a64d88e952b3bd6ea61b7a694bde",
+  "model": "Qwen/Qwen3.5-4B",
+  "profile": "B",
+  "history_masked": false,
+  "wall_seconds": 46.200471099989954,
+  "usage": {
+    "attempts": [
+      {
+        "round_index": 1,
+        "attempt": 1,
+        "started_at": "2026-11-25T15:27:04+00:00",
+        "status": "complete",
+        "price_version": "2026-11-25",
+        "reserved_fen": 2,
+        "accounted_fen": 2,
+        "input_tokens": 572,
+        "output_tokens": 42,
+        "error_type": null
+      },
+      {
+        "round_index": 2,
+        "attempt": 1,
+        "started_at": "2026-11-25T15:27:14+00:00",
+        "status": "complete",
+        "price_version": "2026-11-25",
+        "reserved_fen": 2,
+        "accounted_fen": 2,
+        "input_tokens": 727,
+        "output_tokens": 43,
+        "error_type": null
+      },
+      {
+        "round_index": 3,
+        "attempt": 1,
+        "started_at": "2026-11-25T15:27:20+00:00",
+        "status": "complete",
+        "price_version": "2026-11-25",
+        "reserved_fen": 2,
+        "accounted_fen": 2,
+        "input_tokens": 833,
+        "output_tokens": 45,
+        "error_type": null
+      },
+      {
+        "round_index": 4,
+        "attempt": 1,
+        "started_at": "2026-11-25T15:27:24+00:00",
+        "status": "complete",
+        "price_version": "2026-11-25",
+        "reserved_fen": 2,
+        "accounted_fen": 2,
+        "input_tokens": 833,
+        "output_tokens": 28,
+        "error_type": null
+      },
+      {
+        "round_index": 5,
+        "attempt": 1,
+        "started_at": "2026-11-25T15:27:26+00:00",
+        "status": "complete",
+        "price_version": "2026-11-25",
+        "reserved_fen": 2,
+        "accounted_fen": 2,
+        "input_tokens": 833,
+        "output_tokens": 28,
+        "error_type": null
+      },
+      {
+        "round_index": 6,
+        "attempt": 1,
+        "started_at": "2026-11-25T15:27:30+00:00",
+        "status": "complete",
+        "price_version": "2026-11-25",
+        "reserved_fen": 2,
+        "accounted_fen": 2,
+        "input_tokens": 833,
+        "output_tokens": 28,
+        "error_type": null
+      },
+      {
+        "round_index": 7,
+        "attempt": 1,
+        "started_at": "2026-11-25T15:27:32+00:00",
+        "status": "complete",
+        "price_version": "2026-11-25",
+        "reserved_fen": 2,
+        "accounted_fen": 2,
+        "input_tokens": 833,
+        "output_tokens": 28,
+        "error_type": null
+      },
+      {
+        "round_index": 8,
+        "attempt": 1,
+        "started_at": "2026-11-25T15:27:35+00:00",
+        "status": "complete",
+        "price_version": "2026-11-25",
+        "reserved_fen": 2,
+        "accounted_fen": 2,
+        "input_tokens": 833,
+        "output_tokens": 28,
+        "error_type": null
+      },
+      {
+        "round_index": 9,
+        "attempt": 1,
+        "started_at": "2026-11-25T15:27:38+00:00",
+        "status": "complete",
+        "price_version": "2026-11-25",
+        "reserved_fen": 2,
+        "accounted_fen": 2,
+        "input_tokens": 833,
+        "output_tokens": 28,
+        "error_type": null
+      },
+      {
+        "round_index": 10,
+        "attempt": 1,
+        "started_at": "2026-11-25T15:27:42+00:00",
+        "status": "complete",
+        "price_version": "2026-11-25",
+        "reserved_fen": 2,
+        "accounted_fen": 2,
+        "input_tokens": 834,
+        "output_tokens": 28,
+        "error_type": null
+      }
+    ],
+    "input_tokens": 7964,
+    "output_tokens": 326,
+    "external_reservations": [],
+    "goal_external_reserved_fen": 388,
+    "exact_native_reuses": [],
+    "run_cost_upper_bound_fen": 20,
+    "goal_cost_upper_bound_fen": 1122,
+    "goal_limit_fen": 4000,
+    "rates_source": "https://pytrio.com/api/model-prices"
+  },
+  "status": "completed",
+  "final": {
+    "rows": 1062,
+    "unit": "minutes",
+    "metrics": {
+      "rmse": 230.3282940683852,
+      "mae": 173.26274212180496
+    },
+    "prediction_sha256": "sha256:090f39c26853974741993314d4ced73ffb932511592de03272faf723b1c4d01a",
+    "per_bearing": {
+      "Bearing1_3": {
+        "rows": 158,
+        "rmse": 375.7016847346583,
+        "mae": 333.76089364100795
+      },
+      "Bearing2_3": {
+        "rows": 533,
+        "rmse": 178.45322331693086,
+        "mae": 138.10817429446115
+      },
+      "Bearing3_3": {
+        "rows": 371,
+        "rmse": 214.4675318391207,
+        "mae": 155.4155095394335
+      }
+    }
+  }
+}

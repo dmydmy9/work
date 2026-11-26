@@ -1,0 +1,1966 @@
+{
+  "official_review_used": false,
+  "seed": 2026,
+  "scores": {
+    "protected": {
+      "rmse": 844.8632874307207,
+      "per_bearing": {
+        "Bearing1_1": 188.5573853741626,
+        "Bearing1_2": 403.94142526076195,
+        "Bearing1_3": 540.2971892942339,
+        "Bearing2_1": 230.7176539803206,
+        "Bearing2_2": 569.6950073942079,
+        "Bearing2_3": 230.02450990858645,
+        "Bearing3_1": 1114.327480945793,
+        "Bearing3_2": 804.4665650654405,
+        "Bearing3_3": 431.92711704869504
+      },
+      "per_bearing_delta": {
+        "Bearing1_1": 57.516707610922595,
+        "Bearing1_2": 137.94040795277715,
+        "Bearing1_3": -618.7309238284708,
+        "Bearing2_1": -45.88543241479627,
+        "Bearing2_2": -219.9662732759798,
+        "Bearing2_3": -23.116728447110773,
+        "Bearing3_1": -186.6719678634381,
+        "Bearing3_2": -627.6724315776847,
+        "Bearing3_3": -380.4394432755883
+      },
+      "macro_bearing_rmse": 501.5504815858003
+    },
+    "version14": {
+      "rmse": 844.9499729738108,
+      "per_bearing": {
+        "Bearing1_1": 171.6548115391632,
+        "Bearing1_2": 450.668512256902,
+        "Bearing1_3": 682.1035979881578,
+        "Bearing2_1": 262.4063497575483,
+        "Bearing2_2": 609.215470880782,
+        "Bearing2_3": 221.1890833617853,
+        "Bearing3_1": 1051.942465670692,
+        "Bearing3_2": 860.6825039943054,
+        "Bearing3_3": 599.8058444532479
+      },
+      "per_bearing_delta": {
+        "Bearing1_1": 40.61413377592319,
+        "Bearing1_2": 184.66749494891718,
+        "Bearing1_3": -476.92451513454694,
+        "Bearing2_1": -14.196736637568563,
+        "Bearing2_2": -180.44580978940564,
+        "Bearing2_3": -31.952154993911932,
+        "Bearing3_1": -249.05698313853918,
+        "Bearing3_2": -571.4564926488198,
+        "Bearing3_3": -212.56071587103543
+      },
+      "macro_bearing_rmse": 545.5187377669539
+    },
+    "terminal-only": {
+      "rmse": 856.4238312636802,
+      "per_bearing": {
+        "Bearing1_1": 87.19273560962554,
+        "Bearing1_2": 427.4240756061952,
+        "Bearing1_3": 676.3721296553626,
+        "Bearing2_1": 257.81909005260025,
+        "Bearing2_2": 575.584132799919,
+        "Bearing2_3": 194.4893178177614,
+        "Bearing3_1": 1082.2791094234988,
+        "Bearing3_2": 859.2781704732131,
+        "Bearing3_3": 599.1035395482359
+      },
+      "per_bearing_delta": {
+        "Bearing1_1": -43.84794215361447,
+        "Bearing1_2": 161.42305829821038,
+        "Bearing1_3": -482.65598346734214,
+        "Bearing2_1": -18.783996342516616,
+        "Bearing2_2": -214.07714787026873,
+        "Bearing2_3": -58.65192053793584,
+        "Bearing3_1": -218.72033938573236,
+        "Bearing3_2": -572.8608261699121,
+        "Bearing3_3": -213.26302077604748
+      },
+      "macro_bearing_rmse": 528.8380334429346
+    },
+    "combined": {
+      "rmse": 857.0773421451036,
+      "per_bearing": {
+        "Bearing1_1": 104.00517179214133,
+        "Bearing1_2": 378.3080505143018,
+        "Bearing1_3": 535.8699859996872,
+        "Bearing2_1": 227.28888916414937,
+        "Bearing2_2": 531.3009670127639,
+        "Bearing2_3": 202.09967977006548,
+        "Bearing3_1": 1144.9504748573775,
+        "Bearing3_2": 802.4394865516731,
+        "Bearing3_3": 431.13759905713505
+      },
+      "per_bearing_delta": {
+        "Bearing1_1": -27.035505971098686,
+        "Bearing1_2": 112.30703320631699,
+        "Bearing1_3": -623.1581271230176,
+        "Bearing2_1": -49.314197230967494,
+        "Bearing2_2": -258.36031365742383,
+        "Bearing2_3": -51.04155858563175,
+        "Bearing3_1": -156.04897395185367,
+        "Bearing3_2": -629.6995100914521,
+        "Bearing3_3": -381.2289612671483
+      },
+      "macro_bearing_rmse": 484.155589413255
+    },
+    "support-aware": {
+      "rmse": 857.0773421451036,
+      "per_bearing": {
+        "Bearing1_1": 104.00517179214133,
+        "Bearing1_2": 378.3080505143018,
+        "Bearing1_3": 535.8699859996872,
+        "Bearing2_1": 227.28888916414937,
+        "Bearing2_2": 531.3009670127639,
+        "Bearing2_3": 202.09967977006548,
+        "Bearing3_1": 1144.9504748573775,
+        "Bearing3_2": 802.4394865516731,
+        "Bearing3_3": 431.13759905713505
+      },
+      "per_bearing_delta": {
+        "Bearing1_1": -27.035505971098686,
+        "Bearing1_2": 112.30703320631699,
+        "Bearing1_3": -623.1581271230176,
+        "Bearing2_1": -49.314197230967494,
+        "Bearing2_2": -258.36031365742383,
+        "Bearing2_3": -51.04155858563175,
+        "Bearing3_1": -156.04897395185367,
+        "Bearing3_2": -629.6995100914521,
+        "Bearing3_3": -381.2289612671483
+      },
+      "macro_bearing_rmse": 484.155589413255
+    },
+    "version09": {
+      "rmse": 895.480348791144,
+      "per_bearing": {
+        "Bearing1_1": 161.42443286832892,
+        "Bearing1_2": 467.2110680922096,
+        "Bearing1_3": 702.9615580137859,
+        "Bearing2_1": 275.08132474539053,
+        "Bearing2_2": 607.8154684231599,
+        "Bearing2_3": 219.04370202085883,
+        "Bearing3_1": 1160.9064591102597,
+        "Bearing3_2": 860.5300937993031,
+        "Bearing3_3": 595.202463634726
+      },
+      "per_bearing_delta": {
+        "Bearing1_1": 30.38375510508891,
+        "Bearing1_2": 201.2100507842248,
+        "Bearing1_3": -456.0665551089189,
+        "Bearing2_1": -1.5217616497263293,
+        "Bearing2_2": -181.84581224702777,
+        "Bearing2_3": -34.097536334838395,
+        "Bearing3_1": -140.09298969897145,
+        "Bearing3_2": -571.6089028438221,
+        "Bearing3_3": -217.16409668955737
+      },
+      "macro_bearing_rmse": 561.1307300786691
+    },
+    "parent": {
+      "rmse": 1195.951760756402,
+      "per_bearing": {
+        "Bearing1_1": 131.04067776324,
+        "Bearing1_2": 266.0010173079848,
+        "Bearing1_3": 1159.0281131227048,
+        "Bearing2_1": 276.60308639511686,
+        "Bearing2_2": 789.6612806701877,
+        "Bearing2_3": 253.14123835569723,
+        "Bearing3_1": 1300.9994488092311,
+        "Bearing3_2": 1432.1389966431252,
+        "Bearing3_3": 812.3665603242833
+      },
+      "per_bearing_delta": {
+        "Bearing1_1": 0.0,
+        "Bearing1_2": 0.0,
+        "Bearing1_3": 0.0,
+        "Bearing2_1": 0.0,
+        "Bearing2_2": 0.0,
+        "Bearing2_3": 0.0,
+        "Bearing3_1": 0.0,
+        "Bearing3_2": 0.0,
+        "Bearing3_3": 0.0
+      },
+      "macro_bearing_rmse": 713.4422688212857
+    }
+  },
+  "phase": {
+    "parent": {
+      "by_band": {
+        "0": {
+          "rows": 1803,
+          "rmse": 545.36901371454,
+          "signed_error": 251.01327562697412,
+          "underestimated_rows": 823,
+          "sse": 536261532.09930617
+        },
+        "240": {
+          "rows": 1695,
+          "rmse": 411.09573816750134,
+          "signed_error": -165.5096129592938,
+          "underestimated_rows": 1249,
+          "sse": 286454501.5674233
+        },
+        "750": {
+          "rows": 1500,
+          "rmse": 1030.025398925622,
+          "signed_error": -988.5975292739406,
+          "underestimated_rows": 1500,
+          "sse": 1591428483.6478305
+        },
+        "1500": {
+          "rows": 2034,
+          "rmse": 1938.5507618852555,
+          "signed_error": -1912.9692282236592,
+          "underestimated_rows": 2034,
+          "sse": 7643729400.72961
+        }
+      },
+      "long_bearings": {
+        "Bearing3_1": {
+          "overall": {
+            "rows": 2538,
+            "rmse": 1300.9994488092311,
+            "signed_error": -1022.2529941711028,
+            "underestimated_rows": 2244,
+            "sse": 4295817698.005282
+          },
+          "early_1500_plus": {
+            "rows": 1038,
+            "rmse": 1876.1027619638528,
+            "signed_error": -1849.018613888563,
+            "underestimated_rows": 1038,
+            "sse": 3653512513.239437
+          },
+          "predicted_minutes_per_target_minute": -0.08500818514453055
+        },
+        "Bearing3_2": {
+          "overall": {
+            "rows": 2496,
+            "rmse": 1432.1389966431252,
+            "signed_error": -1228.4283723305787,
+            "underestimated_rows": 2433,
+            "sse": 5119351175.842119
+          },
+          "early_1500_plus": {
+            "rows": 996,
+            "rmse": 2001.5598554402045,
+            "signed_error": -1979.61655521144,
+            "underestimated_rows": 996,
+            "sse": 3990216887.4901733
+          },
+          "predicted_minutes_per_target_minute": -0.014125272557093282
+        }
+      },
+      "long_tail": {
+        "360": {
+          "rows": 722,
+          "rmse": 211.00129141717957,
+          "signed_error": -8.81953309122637,
+          "underestimated_rows": 438,
+          "sse": 32144555.475356065
+        },
+        "720": {
+          "rows": 1442,
+          "rmse": 333.0394595134871,
+          "signed_error": -176.51735934386255,
+          "underestimated_rows": 1085,
+          "sse": 159939836.05715734
+        }
+      },
+      "long_tail_by_bearing": {
+        "Bearing3_1": {
+          "360": {
+            "rows": 361,
+            "rmse": 176.67800283382235,
+            "signed_error": 79.83774364173051,
+            "underestimated_rows": 140,
+            "sse": 11268657.12341068
+          },
+          "720": {
+            "rows": 721,
+            "rmse": 204.00116159554787,
+            "signed_error": -34.35354206285667,
+            "underestimated_rows": 427,
+            "sse": 30005477.705211975
+          }
+        },
+        "Bearing3_2": {
+          "360": {
+            "rows": 361,
+            "rmse": 240.47447530681285,
+            "signed_error": -97.47680982418325,
+            "underestimated_rows": 298,
+            "sse": 20875898.351945385
+          },
+          "720": {
+            "rows": 721,
+            "rmse": 424.5163003392666,
+            "signed_error": -318.68117662486844,
+            "underestimated_rows": 658,
+            "sse": 129934358.35194539
+          }
+        }
+      },
+      "early_range": {
+        "prediction_mean": 95.24758593563291,
+        "prediction_max": 584.7582491655593,
+        "prediction_ge_1500": 0,
+        "rows": 2034
+      },
+      "paired_changes": {
+        "Bearing3_1": {
+          "early": {
+            "rows": 1038,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 1038,
+            "mean_change": -337.6145336799556
+          },
+          "late": {
+            "rows": 361,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 351,
+            "mean_change": -279.1422140266623
+          }
+        },
+        "Bearing3_2": {
+          "early": {
+            "rows": 996,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 996,
+            "mean_change": -748.8847339295418
+          },
+          "late": {
+            "rows": 361,
+            "raised_ge_300": 9,
+            "lowered_ge_100": 327,
+            "mean_change": -578.1029538638364
+          }
+        }
+      }
+    },
+    "version09": {
+      "by_band": {
+        "0": {
+          "rows": 1803,
+          "rmse": 485.16374492340714,
+          "signed_error": 404.5814466119785,
+          "underestimated_rows": 93,
+          "sse": 424397098.47675323
+        },
+        "240": {
+          "rows": 1695,
+          "rmse": 252.64946926995873,
+          "signed_error": 127.14956068524528,
+          "underestimated_rows": 513,
+          "sse": 108194823.57645416
+        },
+        "750": {
+          "rows": 1500,
+          "rmse": 595.2652512466007,
+          "signed_error": -516.4776019155648,
+          "underestimated_rows": 1482,
+          "sse": 531511079.0125181
+        },
+        "1500": {
+          "rows": 2034,
+          "rmse": 1499.7136249401178,
+          "signed_error": -1452.5089650775715,
+          "underestimated_rows": 2034,
+          "sse": 4574752706.194312
+        }
+      },
+      "long_bearings": {
+        "Bearing3_1": {
+          "overall": {
+            "rows": 2538,
+            "rmse": 1160.9064591102597,
+            "signed_error": -835.2398444097878,
+            "underestimated_rows": 1987,
+            "sse": 3420472261.6683526
+          },
+          "early_1500_plus": {
+            "rows": 1038,
+            "rmse": 1693.0225579267512,
+            "signed_error": -1662.9453053838108,
+            "underestimated_rows": 1038,
+            "sse": 2975245746.1514964
+          },
+          "predicted_minutes_per_target_minute": -0.09136429205324144
+        },
+        "Bearing3_2": {
+          "overall": {
+            "rows": 2496,
+            "rmse": 860.5300937993031,
+            "signed_error": -504.74935026773994,
+            "underestimated_rows": 1749,
+            "sse": 1848318057.6662564
+          },
+          "early_1500_plus": {
+            "rows": 996,
+            "rmse": 1267.2532038917525,
+            "signed_error": -1233.198803192153,
+            "underestimated_rows": 996,
+            "sse": 1599506960.0428162
+          },
+          "predicted_minutes_per_target_minute": 0.040371844354319494
+        }
+      },
+      "long_tail": {
+        "360": {
+          "rows": 722,
+          "rmse": 428.6502600849973,
+          "signed_error": 375.5978063153399,
+          "underestimated_rows": 22,
+          "sse": 132661034.83001566
+        },
+        "720": {
+          "rows": 1442,
+          "rmse": 334.27693001302293,
+          "signed_error": 245.5838728345935,
+          "underestimated_rows": 191,
+          "sse": 161130617.0839391
+        }
+      },
+      "long_tail_by_bearing": {
+        "Bearing3_1": {
+          "360": {
+            "rows": 361,
+            "rmse": 332.65759856414144,
+            "signed_error": 297.4701521051296,
+            "underestimated_rows": 6,
+            "sse": 39948649.11556859
+          },
+          "720": {
+            "rows": 721,
+            "rmse": 256.82031100101614,
+            "signed_error": 155.96041606161938,
+            "underestimated_rows": 170,
+            "sse": 47554760.614856884
+          }
+        },
+        "Bearing3_2": {
+          "360": {
+            "rows": 361,
+            "rmse": 506.775110931279,
+            "signed_error": 453.72546052555026,
+            "underestimated_rows": 16,
+            "sse": 92712385.71444708
+          },
+          "720": {
+            "rows": 721,
+            "rmse": 396.89477161485036,
+            "signed_error": 335.20732960756766,
+            "underestimated_rows": 21,
+            "sse": 113575856.46908224
+          }
+        }
+      },
+      "early_range": {
+        "prediction_mean": 555.7078490817206,
+        "prediction_max": 779.0454405209733,
+        "prediction_ge_1500": 0,
+        "rows": 2034
+      },
+      "paired_changes": {
+        "Bearing3_1": {
+          "early": {
+            "rows": 1038,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 1006,
+            "mean_change": -151.54122517520355
+          },
+          "late": {
+            "rows": 361,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 49,
+            "mean_change": -61.50980556326317
+          }
+        },
+        "Bearing3_2": {
+          "early": {
+            "rows": 996,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 0,
+            "mean_change": -2.466981910254934
+          },
+          "late": {
+            "rows": 361,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 29,
+            "mean_change": -26.900683514102926
+          }
+        }
+      }
+    },
+    "version14": {
+      "by_band": {
+        "0": {
+          "rows": 1803,
+          "rmse": 489.67017765569443,
+          "signed_error": 414.3837226053995,
+          "underestimated_rows": 73,
+          "sse": 432317719.84230286
+        },
+        "240": {
+          "rows": 1695,
+          "rmse": 260.4580081885003,
+          "signed_error": 152.41152778785377,
+          "underestimated_rows": 448,
+          "sse": 114986043.98003791
+        },
+        "750": {
+          "rows": 1500,
+          "rmse": 517.1645720668013,
+          "signed_error": -450.9412144977709,
+          "underestimated_rows": 1480,
+          "sse": 401188791.90155685
+        },
+        "1500": {
+          "rows": 2034,
+          "rmse": 1414.8976872673418,
+          "signed_error": -1373.965746928862,
+          "underestimated_rows": 2034,
+          "sse": 4071936736.6937175
+        }
+      },
+      "long_bearings": {
+        "Bearing3_1": {
+          "overall": {
+            "rows": 2538,
+            "rmse": 1051.942465670692,
+            "signed_error": -711.2226781133935,
+            "underestimated_rows": 1898,
+            "sse": 2808507529.844428
+          },
+          "early_1500_plus": {
+            "rows": 1038,
+            "rmse": 1545.3254914791946,
+            "signed_error": -1511.4040802086076,
+            "underestimated_rows": 1038,
+            "sse": 2478776047.850801
+          },
+          "predicted_minutes_per_target_minute": -0.0502263963757924
+        },
+        "Bearing3_2": {
+          "overall": {
+            "rows": 2496,
+            "rmse": 860.6825039943054,
+            "signed_error": -498.8434627334208,
+            "underestimated_rows": 1743,
+            "sse": 1848972834.2140408
+          },
+          "early_1500_plus": {
+            "rows": 996,
+            "rmse": 1264.736701666035,
+            "signed_error": -1230.7318212818982,
+            "underestimated_rows": 996,
+            "sse": 1593160688.8429167
+          },
+          "predicted_minutes_per_target_minute": 0.03235370866830188
+        }
+      },
+      "long_tail": {
+        "360": {
+          "rows": 722,
+          "rmse": 459.73866205836805,
+          "signed_error": 419.80305085402307,
+          "underestimated_rows": 14,
+          "sse": 152601658.19645965
+        },
+        "720": {
+          "rows": 1442,
+          "rmse": 357.16539479805556,
+          "signed_error": 293.0943275067192,
+          "underestimated_rows": 98,
+          "sse": 183951785.9458838
+        }
+      },
+      "long_tail_by_bearing": {
+        "Bearing3_1": {
+          "360": {
+            "rows": 361,
+            "rmse": 384.68791882330123,
+            "signed_error": 358.97995766839284,
+            "underestimated_rows": 0,
+            "sse": 53422510.95478561
+          },
+          "720": {
+            "rows": 721,
+            "rmse": 295.87549443869494,
+            "signed_error": 234.5382192714515,
+            "underestimated_rows": 81,
+            "sse": 63118004.218935736
+          }
+        },
+        "Bearing3_2": {
+          "360": {
+            "rows": 361,
+            "rmse": 524.1511994585474,
+            "signed_error": 480.6261440396533,
+            "underestimated_rows": 14,
+            "sse": 99179147.24167407
+          },
+          "720": {
+            "rows": 721,
+            "rmse": 409.37993389168406,
+            "signed_error": 351.6504357419868,
+            "underestimated_rows": 17,
+            "sse": 120833781.7269481
+          }
+        }
+      },
+      "early_range": {
+        "prediction_mean": 634.2510672304301,
+        "prediction_max": 781.4410035101964,
+        "prediction_ge_1500": 0,
+        "rows": 2034
+      },
+      "paired_changes": {
+        "Bearing3_1": {
+          "early": {
+            "rows": 1038,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 0,
+            "mean_change": 0.0
+          },
+          "late": {
+            "rows": 361,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 0,
+            "mean_change": 0.0
+          }
+        },
+        "Bearing3_2": {
+          "early": {
+            "rows": 996,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 0,
+            "mean_change": 0.0
+          },
+          "late": {
+            "rows": 361,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 0,
+            "mean_change": 0.0
+          }
+        }
+      }
+    },
+    "protected": {
+      "by_band": {
+        "0": {
+          "rows": 1803,
+          "rmse": 439.1428294729902,
+          "signed_error": 366.3471085974928,
+          "underestimated_rows": 89,
+          "sse": 347702103.6936114
+        },
+        "240": {
+          "rows": 1695,
+          "rmse": 269.2258347989969,
+          "signed_error": 151.97851021550696,
+          "underestimated_rows": 465,
+          "sse": 122857922.45885243
+        },
+        "750": {
+          "rows": 1500,
+          "rmse": 524.0257980843273,
+          "signed_error": -424.57791874639986,
+          "underestimated_rows": 1371,
+          "sse": 411904555.5868743
+        },
+        "1500": {
+          "rows": 2034,
+          "rmse": 1426.1455652714835,
+          "signed_error": -1370.642046730218,
+          "underestimated_rows": 2034,
+          "sse": 4136934646.580719
+        }
+      },
+      "long_bearings": {
+        "Bearing3_1": {
+          "overall": {
+            "rows": 2538,
+            "rmse": 1114.327480945793,
+            "signed_error": -758.4619545989061,
+            "underestimated_rows": 1905,
+            "sse": 3151499914.8995504
+          },
+          "early_1500_plus": {
+            "rows": 1038,
+            "rmse": 1630.7026472600471,
+            "signed_error": -1597.4003369461998,
+            "underestimated_rows": 1038,
+            "sse": 2760240386.484601
+          },
+          "predicted_minutes_per_target_minute": -0.10050309031631371
+        },
+        "Bearing3_2": {
+          "overall": {
+            "rows": 2496,
+            "rmse": 804.4665650654405,
+            "signed_error": -420.0474112666006,
+            "underestimated_rows": 1652,
+            "sse": 1615327469.953238
+          },
+          "early_1500_plus": {
+            "rows": 996,
+            "rmse": 1175.6798682919364,
+            "signed_error": -1134.3216599388634,
+            "underestimated_rows": 996,
+            "sse": 1376694260.0961168
+          },
+          "predicted_minutes_per_target_minute": 0.06439285443367337
+        }
+      },
+      "long_tail": {
+        "360": {
+          "rows": 722,
+          "rmse": 476.23894821885784,
+          "signed_error": 412.5853928812035,
+          "underestimated_rows": 40,
+          "sse": 163752152.84803605
+        },
+        "720": {
+          "rows": 1442,
+          "rmse": 387.62941377473095,
+          "signed_error": 311.9536363991157,
+          "underestimated_rows": 127,
+          "sse": 216669963.01445854
+        }
+      },
+      "long_tail_by_bearing": {
+        "Bearing3_1": {
+          "360": {
+            "rows": 361,
+            "rmse": 400.39909342077476,
+            "signed_error": 356.4242932019658,
+            "underestimated_rows": 12,
+            "sse": 57875315.67839638
+          },
+          "720": {
+            "rows": 721,
+            "rmse": 316.1834320662238,
+            "signed_error": 238.4042934721746,
+            "underestimated_rows": 92,
+            "sse": 72079785.11620016
+          }
+        },
+        "Bearing3_2": {
+          "360": {
+            "rows": 361,
+            "rmse": 541.5603729862715,
+            "signed_error": 468.7464925604412,
+            "underestimated_rows": 28,
+            "sse": 105876837.16963966
+          },
+          "720": {
+            "rows": 721,
+            "rmse": 447.81822443208665,
+            "signed_error": 385.50297932605673,
+            "underestimated_rows": 35,
+            "sse": 144590177.89825833
+          }
+        }
+      },
+      "early_range": {
+        "prediction_mean": 637.5747674290741,
+        "prediction_max": 938.8929065900754,
+        "prediction_ge_1500": 0,
+        "rows": 2034
+      },
+      "paired_changes": {
+        "Bearing3_1": {
+          "early": {
+            "rows": 1038,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 316,
+            "mean_change": -85.9962567375922
+          },
+          "late": {
+            "rows": 361,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 20,
+            "mean_change": -2.555664466427034
+          }
+        },
+        "Bearing3_2": {
+          "early": {
+            "rows": 996,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 2,
+            "mean_change": 96.41016134303455
+          },
+          "late": {
+            "rows": 361,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 69,
+            "mean_change": -11.879651479211997
+          }
+        }
+      }
+    },
+    "terminal-only": {
+      "by_band": {
+        "0": {
+          "rows": 1803,
+          "rmse": 459.50625312295733,
+          "signed_error": 368.96280223911356,
+          "underestimated_rows": 154,
+          "sse": 380696231.9763561
+        },
+        "240": {
+          "rows": 1695,
+          "rmse": 240.08436296133024,
+          "signed_error": 107.98795176443602,
+          "underestimated_rows": 564,
+          "sse": 97700649.76883847
+        },
+        "750": {
+          "rows": 1500,
+          "rmse": 591.7200549776662,
+          "signed_error": -526.6315431692137,
+          "underestimated_rows": 1488,
+          "sse": 525198935.1941585
+        },
+        "1500": {
+          "rows": 2034,
+          "rmse": 1429.1025250749858,
+          "signed_error": -1388.4135321675608,
+          "underestimated_rows": 2034,
+          "sse": 4154107411.275376
+        }
+      },
+      "long_bearings": {
+        "Bearing3_1": {
+          "overall": {
+            "rows": 2538,
+            "rmse": 1082.2791094234988,
+            "signed_error": -791.6823936111608,
+            "underestimated_rows": 2011,
+            "sse": 2972830643.422695
+          },
+          "early_1500_plus": {
+            "rows": 1038,
+            "rmse": 1569.2908351218541,
+            "signed_error": -1538.1223592612223,
+            "underestimated_rows": 1038,
+            "sse": 2556255326.7549486
+          },
+          "predicted_minutes_per_target_minute": -6.744720571429868e-05
+        },
+        "Bearing3_2": {
+          "overall": {
+            "rows": 2496,
+            "rmse": 859.2781704732131,
+            "signed_error": -520.0940221977213,
+            "underestimated_rows": 1764,
+            "sse": 1842943999.7324734
+          },
+          "early_1500_plus": {
+            "rows": 996,
+            "rmse": 1266.5974740086474,
+            "signed_error": -1232.3916822446483,
+            "underestimated_rows": 996,
+            "sse": 1597852084.5204253
+          },
+          "predicted_minutes_per_target_minute": 0.06053511617740547
+        }
+      },
+      "long_tail": {
+        "360": {
+          "rows": 722,
+          "rmse": 387.4898267670419,
+          "signed_error": 332.69486040952484,
+          "underestimated_rows": 27,
+          "sse": 108407120.14222145
+        },
+        "720": {
+          "rows": 1442,
+          "rmse": 305.8013110026517,
+          "signed_error": 216.45059681041354,
+          "underestimated_rows": 222,
+          "sse": 134847825.0913762
+        }
+      },
+      "long_tail_by_bearing": {
+        "Bearing3_1": {
+          "360": {
+            "rows": 361,
+            "rmse": 294.7924106933221,
+            "signed_error": 266.6779430763019,
+            "underestimated_rows": 5,
+            "sse": 31371826.110259276
+          },
+          "720": {
+            "rows": 721,
+            "rmse": 228.10147198895478,
+            "signed_error": 127.16521292382652,
+            "underestimated_rows": 194,
+            "sse": 37513832.97846363
+          }
+        },
+        "Bearing3_2": {
+          "360": {
+            "rows": 361,
+            "rmse": 461.94606426889715,
+            "signed_error": 398.71177774274776,
+            "underestimated_rows": 22,
+            "sse": 77035294.03196219
+          },
+          "720": {
+            "rows": 721,
+            "rmse": 367.4215591093602,
+            "signed_error": 305.73598069700057,
+            "underestimated_rows": 28,
+            "sse": 97333992.11291255
+          }
+        }
+      },
+      "early_range": {
+        "prediction_mean": 619.8032819917313,
+        "prediction_max": 781.4410035101964,
+        "prediction_ge_1500": 0,
+        "rows": 2034
+      },
+      "paired_changes": {
+        "Bearing3_1": {
+          "early": {
+            "rows": 1038,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 62,
+            "mean_change": -26.71827905261474
+          },
+          "late": {
+            "rows": 361,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 178,
+            "mean_change": -92.30201459209088
+          }
+        },
+        "Bearing3_2": {
+          "early": {
+            "rows": 996,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 4,
+            "mean_change": -1.6598609627503154
+          },
+          "late": {
+            "rows": 361,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 127,
+            "mean_change": -81.91436629690546
+          }
+        }
+      }
+    },
+    "combined": {
+      "by_band": {
+        "0": {
+          "rows": 1803,
+          "rmse": 406.02011867465495,
+          "signed_error": 321.0895583638234,
+          "underestimated_rows": 184,
+          "sse": 297228763.19375145
+        },
+        "240": {
+          "rows": 1695,
+          "rmse": 247.3997637277511,
+          "signed_error": 107.83849668180956,
+          "underestimated_rows": 575,
+          "sse": 103745260.04186727
+        },
+        "750": {
+          "rows": 1500,
+          "rmse": 600.5571640438786,
+          "signed_error": -500.2682474178428,
+          "underestimated_rows": 1400,
+          "sse": 541003360.926639
+        },
+        "1500": {
+          "rows": 2034,
+          "rmse": 1441.0064594018058,
+          "signed_error": -1385.088783080969,
+          "underestimated_rows": 2034,
+          "sse": 4223600219.0207386
+        }
+      },
+      "long_bearings": {
+        "Bearing3_1": {
+          "overall": {
+            "rows": 2538,
+            "rmse": 1144.9504748573775,
+            "signed_error": -838.9216700966736,
+            "underestimated_rows": 2022,
+            "sse": 3327093615.1056275
+          },
+          "early_1500_plus": {
+            "rows": 1038,
+            "rmse": 1654.8095873579655,
+            "signed_error": -1624.1186159988142,
+            "underestimated_rows": 1038,
+            "sse": 2842453771.687488
+          },
+          "predicted_minutes_per_target_minute": -0.05034414114623566
+        },
+        "Bearing3_2": {
+          "overall": {
+            "rows": 2496,
+            "rmse": 802.4394865516731,
+            "signed_error": -440.9281942393216,
+            "underestimated_rows": 1699,
+            "sse": 1607197187.4249725
+          },
+          "early_1500_plus": {
+            "rows": 996,
+            "rmse": 1177.579390195882,
+            "signed_error": -1135.979378895504,
+            "underestimated_rows": 996,
+            "sse": 1381146447.3332493
+          },
+          "predicted_minutes_per_target_minute": 0.09185011159460983
+        }
+      },
+      "long_tail": {
+        "360": {
+          "rows": 722,
+          "rmse": 408.50627092404835,
+          "signed_error": 326.7525884268674,
+          "underestimated_rows": 74,
+          "sse": 120485463.58344437
+        },
+        "720": {
+          "rows": 1442,
+          "rmse": 340.4774420803626,
+          "signed_error": 235.94848315419503,
+          "underestimated_rows": 258,
+          "sse": 167163689.311576
+        }
+      },
+      "long_tail_by_bearing": {
+        "Bearing3_1": {
+          "360": {
+            "rows": 361,
+            "rmse": 310.94210091790114,
+            "signed_error": 264.1222786098749,
+            "underestimated_rows": 29,
+            "sse": 34903281.434489
+          },
+          "720": {
+            "rows": 721,
+            "rmse": 249.00357266246854,
+            "signed_error": 131.03128712454966,
+            "underestimated_rows": 205,
+            "sse": 44704003.802243404
+          }
+        },
+        "Bearing3_2": {
+          "360": {
+            "rows": 361,
+            "rmse": 486.89809677724736,
+            "signed_error": 389.38289824386004,
+            "underestimated_rows": 45,
+            "sse": 85582182.14895536
+          },
+          "720": {
+            "rows": 721,
+            "rmse": 412.1249785350314,
+            "signed_error": 340.86567918384037,
+            "underestimated_rows": 53,
+            "sse": 122459685.50933257
+          }
+        }
+      },
+      "early_range": {
+        "prediction_mean": 623.1280310783228,
+        "prediction_max": 938.8929065900754,
+        "prediction_ge_1500": 0,
+        "rows": 2034
+      },
+      "paired_changes": {
+        "Bearing3_1": {
+          "early": {
+            "rows": 1038,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 659,
+            "mean_change": -112.71453579020695
+          },
+          "late": {
+            "rows": 361,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 184,
+            "mean_change": -94.85767905851793
+          }
+        },
+        "Bearing3_2": {
+          "early": {
+            "rows": 996,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 4,
+            "mean_change": 94.75244238639402
+          },
+          "late": {
+            "rows": 361,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 147,
+            "mean_change": -91.24324579579313
+          }
+        }
+      }
+    },
+    "support-aware": {
+      "by_band": {
+        "0": {
+          "rows": 1803,
+          "rmse": 406.02011867465495,
+          "signed_error": 321.0895583638234,
+          "underestimated_rows": 184,
+          "sse": 297228763.19375145
+        },
+        "240": {
+          "rows": 1695,
+          "rmse": 247.3997637277511,
+          "signed_error": 107.83849668180956,
+          "underestimated_rows": 575,
+          "sse": 103745260.04186727
+        },
+        "750": {
+          "rows": 1500,
+          "rmse": 600.5571640438786,
+          "signed_error": -500.2682474178428,
+          "underestimated_rows": 1400,
+          "sse": 541003360.926639
+        },
+        "1500": {
+          "rows": 2034,
+          "rmse": 1441.0064594018058,
+          "signed_error": -1385.088783080969,
+          "underestimated_rows": 2034,
+          "sse": 4223600219.0207386
+        }
+      },
+      "long_bearings": {
+        "Bearing3_1": {
+          "overall": {
+            "rows": 2538,
+            "rmse": 1144.9504748573775,
+            "signed_error": -838.9216700966736,
+            "underestimated_rows": 2022,
+            "sse": 3327093615.1056275
+          },
+          "early_1500_plus": {
+            "rows": 1038,
+            "rmse": 1654.8095873579655,
+            "signed_error": -1624.1186159988142,
+            "underestimated_rows": 1038,
+            "sse": 2842453771.687488
+          },
+          "predicted_minutes_per_target_minute": -0.05034414114623566
+        },
+        "Bearing3_2": {
+          "overall": {
+            "rows": 2496,
+            "rmse": 802.4394865516731,
+            "signed_error": -440.9281942393216,
+            "underestimated_rows": 1699,
+            "sse": 1607197187.4249725
+          },
+          "early_1500_plus": {
+            "rows": 996,
+            "rmse": 1177.579390195882,
+            "signed_error": -1135.979378895504,
+            "underestimated_rows": 996,
+            "sse": 1381146447.3332493
+          },
+          "predicted_minutes_per_target_minute": 0.09185011159460983
+        }
+      },
+      "long_tail": {
+        "360": {
+          "rows": 722,
+          "rmse": 408.50627092404835,
+          "signed_error": 326.7525884268674,
+          "underestimated_rows": 74,
+          "sse": 120485463.58344437
+        },
+        "720": {
+          "rows": 1442,
+          "rmse": 340.4774420803626,
+          "signed_error": 235.94848315419503,
+          "underestimated_rows": 258,
+          "sse": 167163689.311576
+        }
+      },
+      "long_tail_by_bearing": {
+        "Bearing3_1": {
+          "360": {
+            "rows": 361,
+            "rmse": 310.94210091790114,
+            "signed_error": 264.1222786098749,
+            "underestimated_rows": 29,
+            "sse": 34903281.434489
+          },
+          "720": {
+            "rows": 721,
+            "rmse": 249.00357266246854,
+            "signed_error": 131.03128712454966,
+            "underestimated_rows": 205,
+            "sse": 44704003.802243404
+          }
+        },
+        "Bearing3_2": {
+          "360": {
+            "rows": 361,
+            "rmse": 486.89809677724736,
+            "signed_error": 389.38289824386004,
+            "underestimated_rows": 45,
+            "sse": 85582182.14895536
+          },
+          "720": {
+            "rows": 721,
+            "rmse": 412.1249785350314,
+            "signed_error": 340.86567918384037,
+            "underestimated_rows": 53,
+            "sse": 122459685.50933257
+          }
+        }
+      },
+      "early_range": {
+        "prediction_mean": 623.1280310783228,
+        "prediction_max": 938.8929065900754,
+        "prediction_ge_1500": 0,
+        "rows": 2034
+      },
+      "paired_changes": {
+        "Bearing3_1": {
+          "early": {
+            "rows": 1038,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 659,
+            "mean_change": -112.71453579020695
+          },
+          "late": {
+            "rows": 361,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 184,
+            "mean_change": -94.85767905851793
+          }
+        },
+        "Bearing3_2": {
+          "early": {
+            "rows": 996,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 4,
+            "mean_change": 94.75244238639402
+          },
+          "late": {
+            "rows": 361,
+            "raised_ge_300": 0,
+            "lowered_ge_100": 147,
+            "mean_change": -91.24324579579313
+          }
+        }
+      }
+    }
+  },
+  "cells": [
+    {
+      "held": [
+        "Bearing1_1"
+      ],
+      "scores": {
+        "terminal-only": {
+          "rmse": 87.19273560962554,
+          "per_bearing": {
+            "Bearing1_1": 87.19273560962554
+          },
+          "per_bearing_delta": {
+            "Bearing1_1": -43.84794215361447
+          },
+          "macro_bearing_rmse": 87.19273560962554
+        },
+        "combined": {
+          "rmse": 104.00517179214133,
+          "per_bearing": {
+            "Bearing1_1": 104.00517179214133
+          },
+          "per_bearing_delta": {
+            "Bearing1_1": -27.035505971098686
+          },
+          "macro_bearing_rmse": 104.00517179214133
+        },
+        "support-aware": {
+          "rmse": 104.00517179214133,
+          "per_bearing": {
+            "Bearing1_1": 104.00517179214133
+          },
+          "per_bearing_delta": {
+            "Bearing1_1": -27.035505971098686
+          },
+          "macro_bearing_rmse": 104.00517179214133
+        },
+        "parent": {
+          "rmse": 131.04067776324,
+          "per_bearing": {
+            "Bearing1_1": 131.04067776324
+          },
+          "per_bearing_delta": {
+            "Bearing1_1": 0.0
+          },
+          "macro_bearing_rmse": 131.04067776324
+        },
+        "version09": {
+          "rmse": 161.42443286832892,
+          "per_bearing": {
+            "Bearing1_1": 161.42443286832892
+          },
+          "per_bearing_delta": {
+            "Bearing1_1": 30.38375510508891
+          },
+          "macro_bearing_rmse": 161.42443286832892
+        },
+        "version14": {
+          "rmse": 171.6548115391632,
+          "per_bearing": {
+            "Bearing1_1": 171.6548115391632
+          },
+          "per_bearing_delta": {
+            "Bearing1_1": 40.61413377592319
+          },
+          "macro_bearing_rmse": 171.6548115391632
+        },
+        "protected": {
+          "rmse": 188.5573853741626,
+          "per_bearing": {
+            "Bearing1_1": 188.5573853741626
+          },
+          "per_bearing_delta": {
+            "Bearing1_1": 57.516707610922595
+          },
+          "macro_bearing_rmse": 188.5573853741626
+        }
+      }
+    },
+    {
+      "held": [
+        "Bearing1_2"
+      ],
+      "scores": {
+        "parent": {
+          "rmse": 266.0010173079848,
+          "per_bearing": {
+            "Bearing1_2": 266.0010173079848
+          },
+          "per_bearing_delta": {
+            "Bearing1_2": 0.0
+          },
+          "macro_bearing_rmse": 266.0010173079848
+        },
+        "combined": {
+          "rmse": 378.3080505143018,
+          "per_bearing": {
+            "Bearing1_2": 378.3080505143018
+          },
+          "per_bearing_delta": {
+            "Bearing1_2": 112.30703320631699
+          },
+          "macro_bearing_rmse": 378.3080505143018
+        },
+        "support-aware": {
+          "rmse": 378.3080505143018,
+          "per_bearing": {
+            "Bearing1_2": 378.3080505143018
+          },
+          "per_bearing_delta": {
+            "Bearing1_2": 112.30703320631699
+          },
+          "macro_bearing_rmse": 378.3080505143018
+        },
+        "protected": {
+          "rmse": 403.94142526076195,
+          "per_bearing": {
+            "Bearing1_2": 403.94142526076195
+          },
+          "per_bearing_delta": {
+            "Bearing1_2": 137.94040795277715
+          },
+          "macro_bearing_rmse": 403.94142526076195
+        },
+        "terminal-only": {
+          "rmse": 427.4240756061952,
+          "per_bearing": {
+            "Bearing1_2": 427.4240756061952
+          },
+          "per_bearing_delta": {
+            "Bearing1_2": 161.42305829821038
+          },
+          "macro_bearing_rmse": 427.4240756061952
+        },
+        "version14": {
+          "rmse": 450.668512256902,
+          "per_bearing": {
+            "Bearing1_2": 450.668512256902
+          },
+          "per_bearing_delta": {
+            "Bearing1_2": 184.66749494891718
+          },
+          "macro_bearing_rmse": 450.668512256902
+        },
+        "version09": {
+          "rmse": 467.2110680922096,
+          "per_bearing": {
+            "Bearing1_2": 467.2110680922096
+          },
+          "per_bearing_delta": {
+            "Bearing1_2": 201.2100507842248
+          },
+          "macro_bearing_rmse": 467.2110680922096
+        }
+      }
+    },
+    {
+      "held": [
+        "Bearing1_3"
+      ],
+      "scores": {
+        "combined": {
+          "rmse": 535.8699859996872,
+          "per_bearing": {
+            "Bearing1_3": 535.8699859996872
+          },
+          "per_bearing_delta": {
+            "Bearing1_3": -623.1581271230176
+          },
+          "macro_bearing_rmse": 535.8699859996872
+        },
+        "support-aware": {
+          "rmse": 535.8699859996872,
+          "per_bearing": {
+            "Bearing1_3": 535.8699859996872
+          },
+          "per_bearing_delta": {
+            "Bearing1_3": -623.1581271230176
+          },
+          "macro_bearing_rmse": 535.8699859996872
+        },
+        "protected": {
+          "rmse": 540.2971892942339,
+          "per_bearing": {
+            "Bearing1_3": 540.2971892942339
+          },
+          "per_bearing_delta": {
+            "Bearing1_3": -618.7309238284708
+          },
+          "macro_bearing_rmse": 540.2971892942339
+        },
+        "terminal-only": {
+          "rmse": 676.3721296553626,
+          "per_bearing": {
+            "Bearing1_3": 676.3721296553626
+          },
+          "per_bearing_delta": {
+            "Bearing1_3": -482.65598346734214
+          },
+          "macro_bearing_rmse": 676.3721296553626
+        },
+        "version14": {
+          "rmse": 682.1035979881578,
+          "per_bearing": {
+            "Bearing1_3": 682.1035979881578
+          },
+          "per_bearing_delta": {
+            "Bearing1_3": -476.92451513454694
+          },
+          "macro_bearing_rmse": 682.1035979881578
+        },
+        "version09": {
+          "rmse": 702.9615580137859,
+          "per_bearing": {
+            "Bearing1_3": 702.9615580137859
+          },
+          "per_bearing_delta": {
+            "Bearing1_3": -456.0665551089189
+          },
+          "macro_bearing_rmse": 702.9615580137859
+        },
+        "parent": {
+          "rmse": 1159.0281131227048,
+          "per_bearing": {
+            "Bearing1_3": 1159.0281131227048
+          },
+          "per_bearing_delta": {
+            "Bearing1_3": 0.0
+          },
+          "macro_bearing_rmse": 1159.0281131227048
+        }
+      }
+    },
+    {
+      "held": [
+        "Bearing2_1"
+      ],
+      "scores": {
+        "combined": {
+          "rmse": 227.28888916414937,
+          "per_bearing": {
+            "Bearing2_1": 227.28888916414937
+          },
+          "per_bearing_delta": {
+            "Bearing2_1": -49.314197230967494
+          },
+          "macro_bearing_rmse": 227.28888916414937
+        },
+        "support-aware": {
+          "rmse": 227.28888916414937,
+          "per_bearing": {
+            "Bearing2_1": 227.28888916414937
+          },
+          "per_bearing_delta": {
+            "Bearing2_1": -49.314197230967494
+          },
+          "macro_bearing_rmse": 227.28888916414937
+        },
+        "protected": {
+          "rmse": 230.7176539803206,
+          "per_bearing": {
+            "Bearing2_1": 230.7176539803206
+          },
+          "per_bearing_delta": {
+            "Bearing2_1": -45.88543241479627
+          },
+          "macro_bearing_rmse": 230.7176539803206
+        },
+        "terminal-only": {
+          "rmse": 257.81909005260025,
+          "per_bearing": {
+            "Bearing2_1": 257.81909005260025
+          },
+          "per_bearing_delta": {
+            "Bearing2_1": -18.783996342516616
+          },
+          "macro_bearing_rmse": 257.81909005260025
+        },
+        "version14": {
+          "rmse": 262.4063497575483,
+          "per_bearing": {
+            "Bearing2_1": 262.4063497575483
+          },
+          "per_bearing_delta": {
+            "Bearing2_1": -14.196736637568563
+          },
+          "macro_bearing_rmse": 262.4063497575483
+        },
+        "version09": {
+          "rmse": 275.08132474539053,
+          "per_bearing": {
+            "Bearing2_1": 275.08132474539053
+          },
+          "per_bearing_delta": {
+            "Bearing2_1": -1.5217616497263293
+          },
+          "macro_bearing_rmse": 275.08132474539053
+        },
+        "parent": {
+          "rmse": 276.60308639511686,
+          "per_bearing": {
+            "Bearing2_1": 276.60308639511686
+          },
+          "per_bearing_delta": {
+            "Bearing2_1": 0.0
+          },
+          "macro_bearing_rmse": 276.60308639511686
+        }
+      }
+    },
+    {
+      "held": [
+        "Bearing2_2"
+      ],
+      "scores": {
+        "combined": {
+          "rmse": 531.3009670127639,
+          "per_bearing": {
+            "Bearing2_2": 531.3009670127639
+          },
+          "per_bearing_delta": {
+            "Bearing2_2": -258.36031365742383
+          },
+          "macro_bearing_rmse": 531.3009670127639
+        },
+        "support-aware": {
+          "rmse": 531.3009670127639,
+          "per_bearing": {
+            "Bearing2_2": 531.3009670127639
+          },
+          "per_bearing_delta": {
+            "Bearing2_2": -258.36031365742383
+          },
+          "macro_bearing_rmse": 531.3009670127639
+        },
+        "protected": {
+          "rmse": 569.6950073942079,
+          "per_bearing": {
+            "Bearing2_2": 569.6950073942079
+          },
+          "per_bearing_delta": {
+            "Bearing2_2": -219.9662732759798
+          },
+          "macro_bearing_rmse": 569.6950073942079
+        },
+        "terminal-only": {
+          "rmse": 575.584132799919,
+          "per_bearing": {
+            "Bearing2_2": 575.584132799919
+          },
+          "per_bearing_delta": {
+            "Bearing2_2": -214.07714787026873
+          },
+          "macro_bearing_rmse": 575.584132799919
+        },
+        "version09": {
+          "rmse": 607.8154684231599,
+          "per_bearing": {
+            "Bearing2_2": 607.8154684231599
+          },
+          "per_bearing_delta": {
+            "Bearing2_2": -181.84581224702777
+          },
+          "macro_bearing_rmse": 607.8154684231599
+        },
+        "version14": {
+          "rmse": 609.215470880782,
+          "per_bearing": {
+            "Bearing2_2": 609.215470880782
+          },
+          "per_bearing_delta": {
+            "Bearing2_2": -180.44580978940564
+          },
+          "macro_bearing_rmse": 609.215470880782
+        },
+        "parent": {
+          "rmse": 789.6612806701877,
+          "per_bearing": {
+            "Bearing2_2": 789.6612806701877
+          },
+          "per_bearing_delta": {
+            "Bearing2_2": 0.0
+          },
+          "macro_bearing_rmse": 789.6612806701877
+        }
+      }
+    },
+    {
+      "held": [
+        "Bearing2_3"
+      ],
+      "scores": {
+        "terminal-only": {
+          "rmse": 194.4893178177614,
+          "per_bearing": {
+            "Bearing2_3": 194.4893178177614
+          },
+          "per_bearing_delta": {
+            "Bearing2_3": -58.65192053793584
+          },
+          "macro_bearing_rmse": 194.4893178177614
+        },
+        "combined": {
+          "rmse": 202.09967977006548,
+          "per_bearing": {
+            "Bearing2_3": 202.09967977006548
+          },
+          "per_bearing_delta": {
+            "Bearing2_3": -51.04155858563175
+          },
+          "macro_bearing_rmse": 202.09967977006548
+        },
+        "support-aware": {
+          "rmse": 202.09967977006548,
+          "per_bearing": {
+            "Bearing2_3": 202.09967977006548
+          },
+          "per_bearing_delta": {
+            "Bearing2_3": -51.04155858563175
+          },
+          "macro_bearing_rmse": 202.09967977006548
+        },
+        "version09": {
+          "rmse": 219.04370202085883,
+          "per_bearing": {
+            "Bearing2_3": 219.04370202085883
+          },
+          "per_bearing_delta": {
+            "Bearing2_3": -34.097536334838395
+          },
+          "macro_bearing_rmse": 219.04370202085883
+        },
+        "version14": {
+          "rmse": 221.1890833617853,
+          "per_bearing": {
+            "Bearing2_3": 221.1890833617853
+          },
+          "per_bearing_delta": {
+            "Bearing2_3": -31.952154993911932
+          },
+          "macro_bearing_rmse": 221.1890833617853
+        },
+        "protected": {
+          "rmse": 230.02450990858645,
+          "per_bearing": {
+            "Bearing2_3": 230.02450990858645
+          },
+          "per_bearing_delta": {
+            "Bearing2_3": -23.116728447110773
+          },
+          "macro_bearing_rmse": 230.02450990858645
+        },
+        "parent": {
+          "rmse": 253.14123835569723,
+          "per_bearing": {
+            "Bearing2_3": 253.14123835569723
+          },
+          "per_bearing_delta": {
+            "Bearing2_3": 0.0
+          },
+          "macro_bearing_rmse": 253.14123835569723
+        }
+      }
+    },
+    {
+      "held": [
+        "Bearing3_1"
+      ],
+      "scores": {
+        "version14": {
+          "rmse": 1051.942465670692,
+          "per_bearing": {
+            "Bearing3_1": 1051.942465670692
+          },
+          "per_bearing_delta": {
+            "Bearing3_1": -249.05698313853918
+          },
+          "macro_bearing_rmse": 1051.942465670692
+        },
+        "terminal-only": {
+          "rmse": 1082.2791094234988,
+          "per_bearing": {
+            "Bearing3_1": 1082.2791094234988
+          },
+          "per_bearing_delta": {
+            "Bearing3_1": -218.72033938573236
+          },
+          "macro_bearing_rmse": 1082.2791094234988
+        },
+        "protected": {
+          "rmse": 1114.327480945793,
+          "per_bearing": {
+            "Bearing3_1": 1114.327480945793
+          },
+          "per_bearing_delta": {
+            "Bearing3_1": -186.6719678634381
+          },
+          "macro_bearing_rmse": 1114.327480945793
+        },
+        "combined": {
+          "rmse": 1144.9504748573775,
+          "per_bearing": {
+            "Bearing3_1": 1144.9504748573775
+          },
+          "per_bearing_delta": {
+            "Bearing3_1": -156.04897395185367
+          },
+          "macro_bearing_rmse": 1144.9504748573775
+        },
+        "support-aware": {
+          "rmse": 1144.9504748573775,
+          "per_bearing": {
+            "Bearing3_1": 1144.9504748573775
+          },
+          "per_bearing_delta": {
+            "Bearing3_1": -156.04897395185367
+          },
+          "macro_bearing_rmse": 1144.9504748573775
+        },
+        "version09": {
+          "rmse": 1160.9064591102597,
+          "per_bearing": {
+            "Bearing3_1": 1160.9064591102597
+          },
+          "per_bearing_delta": {
+            "Bearing3_1": -140.09298969897145
+          },
+          "macro_bearing_rmse": 1160.9064591102597
+        },
+        "parent": {
+          "rmse": 1300.9994488092311,
+          "per_bearing": {
+            "Bearing3_1": 1300.9994488092311
+          },
+          "per_bearing_delta": {
+            "Bearing3_1": 0.0
+          },
+          "macro_bearing_rmse": 1300.9994488092311
+        }
+      }
+    },
+    {
+      "held": [
+        "Bearing3_2"
+      ],
+      "scores": {
+        "combined": {
+          "rmse": 802.4394865516731,
+          "per_bearing": {
+            "Bearing3_2": 802.4394865516731
+          },
+          "per_bearing_delta": {
+            "Bearing3_2": -629.6995100914521
+          },
+          "macro_bearing_rmse": 802.4394865516731
+        },
+        "support-aware": {
+          "rmse": 802.4394865516731,
+          "per_bearing": {
+            "Bearing3_2": 802.4394865516731
+          },
+          "per_bearing_delta": {
+            "Bearing3_2": -629.6995100914521
+          },
+          "macro_bearing_rmse": 802.4394865516731
+        },
+        "protected": {
+          "rmse": 804.4665650654405,
+          "per_bearing": {
+            "Bearing3_2": 804.4665650654405
+          },
+          "per_bearing_delta": {
+            "Bearing3_2": -627.6724315776847
+          },
+          "macro_bearing_rmse": 804.4665650654405
+        },
+        "terminal-only": {
+          "rmse": 859.2781704732131,
+          "per_bearing": {
+            "Bearing3_2": 859.2781704732131
+          },
+          "per_bearing_delta": {
+            "Bearing3_2": -572.8608261699121
+          },
+          "macro_bearing_rmse": 859.2781704732131
+        },
+        "version09": {
+          "rmse": 860.5300937993031,
+          "per_bearing": {
+            "Bearing3_2": 860.5300937993031
+          },
+          "per_bearing_delta": {
+            "Bearing3_2": -571.6089028438221
+          },
+          "macro_bearing_rmse": 860.5300937993031
+        },
+        "version14": {
+          "rmse": 860.6825039943054,
+          "per_bearing": {
+            "Bearing3_2": 860.6825039943054
+          },
+          "per_bearing_delta": {
+            "Bearing3_2": -571.4564926488198
+          },
+          "macro_bearing_rmse": 860.6825039943054
+        },
+        "parent": {
+          "rmse": 1432.1389966431252,
+          "per_bearing": {
+            "Bearing3_2": 1432.1389966431252
+          },
+          "per_bearing_delta": {
+            "Bearing3_2": 0.0
+          },
+          "macro_bearing_rmse": 1432.1389966431252
+        }
+      }
+    },
+    {
+      "held": [
+        "Bearing3_3"
+      ],
+      "scores": {
+        "combined": {
+          "rmse": 431.13759905713505,
+          "per_bearing": {
+            "Bearing3_3": 431.13759905713505
+          },
+          "per_bearing_delta": {
+            "Bearing3_3": -381.2289612671483
+          },
+          "macro_bearing_rmse": 431.13759905713505
+        },
+        "support-aware": {
+          "rmse": 431.13759905713505,
+          "per_bearing": {
+            "Bearing3_3": 431.13759905713505
+          },
+          "per_bearing_delta": {
+            "Bearing3_3": -381.2289612671483
+          },
+          "macro_bearing_rmse": 431.13759905713505
+        },
+        "protected": {
+          "rmse": 431.92711704869504,
+          "per_bearing": {
+            "Bearing3_3": 431.92711704869504
+          },
+          "per_bearing_delta": {
+            "Bearing3_3": -380.4394432755883
+          },
+          "macro_bearing_rmse": 431.92711704869504
+        },
+        "version09": {
+          "rmse": 595.202463634726,
+          "per_bearing": {
+            "Bearing3_3": 595.202463634726
+          },
+          "per_bearing_delta": {
+            "Bearing3_3": -217.16409668955737
+          },
+          "macro_bearing_rmse": 595.202463634726
+        },
+        "terminal-only": {
+          "rmse": 599.1035395482359,
+          "per_bearing": {
+            "Bearing3_3": 599.1035395482359
+          },
+          "per_bearing_delta": {
+            "Bearing3_3": -213.26302077604748
+          },
+          "macro_bearing_rmse": 599.1035395482359
+        },
+        "version14": {
+          "rmse": 599.8058444532479,
+          "per_bearing": {
+            "Bearing3_3": 599.8058444532479
+          },
+          "per_bearing_delta": {
+            "Bearing3_3": -212.56071587103543
+          },
+          "macro_bearing_rmse": 599.8058444532479
+        },
+        "parent": {
+          "rmse": 812.3665603242833,
+          "per_bearing": {
+            "Bearing3_3": 812.3665603242833
+          },
+          "per_bearing_delta": {
+            "Bearing3_3": 0.0
+          },
+          "macro_bearing_rmse": 812.3665603242833
+        }
+      }
+    }
+  ],
+  "wins": 8,
+  "passes": false,
+  "cpu_seconds": 201.328125
+}

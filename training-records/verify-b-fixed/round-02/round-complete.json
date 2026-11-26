@@ -1,0 +1,333 @@
+{
+  "round": 2,
+  "parent_checkpoint_sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9",
+  "parent_state_sha256": "sha256:a2182b5812ad929313d309ddc81d11245e9e728b6b6a2da9924b87b0a6fd0339",
+  "state_sha256": "sha256:a6b483976f3d78d735540ee15b4006085ba9377bebcd7d2dc0bbd6c955396ea5",
+  "state_manifest": [
+    {
+      "path": "decision-evidence.json",
+      "size_bytes": 857,
+      "sha256": "sha256:62837d975fe9dc833f5b3fb68ae1d8228b5ff13dca913ec670ba856311b4c389"
+    },
+    {
+      "path": "exact-cache/8c593edbc1522744913b46b24c950bca837a8f5f6723af7869af4085adc6aa58.npz",
+      "size_bytes": 750372,
+      "sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4"
+    },
+    {
+      "path": "exact-cache/9ef982af9ff86756e645a58ec485814a96fdac63496da9239dc715e0e150dc54.npz",
+      "size_bytes": 749452,
+      "sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9"
+    },
+    {
+      "path": "exact-cache/index.json",
+      "size_bytes": 1726,
+      "sha256": "sha256:f4b366b56ab2e91337df58e7be47677ff23dd8641d0365dd95ea27ab9a8423b8"
+    },
+    {
+      "path": "profile.json",
+      "size_bytes": 99,
+      "sha256": "sha256:135f83c09aabe25a399dc8b3e42fdeab70330730708194d0eab1209734e88a20"
+    },
+    {
+      "path": "round-01.json",
+      "size_bytes": 3565,
+      "sha256": "sha256:b2e42895fe8bba91a00112709bd1ef5ca041d8069e9af66e3d833032e270a0cd"
+    },
+    {
+      "path": "round-02.json",
+      "size_bytes": 3698,
+      "sha256": "sha256:a56b6583404e2bd8ed3bd9b1d3bebc392f6e3752040f74041551f97c411f0cfb"
+    }
+  ],
+  "accepted": true,
+  "candidate": {
+    "files": [
+      {
+        "path": "baselines/__init__.py",
+        "size_bytes": 78,
+        "sha256": "sha256:3363d6112a78e5b4de3508da13e543708fc6a9019c65f3c8bcecb5178a321d7a"
+      },
+      {
+        "path": "baselines/data.py",
+        "size_bytes": 3994,
+        "sha256": "sha256:6099e312829ac3aaf48209ec1f618532c4a8552fedf73f09cf31c8876261db65"
+      },
+      {
+        "path": "baselines/model.py",
+        "size_bytes": 11988,
+        "sha256": "sha256:325026d80747eb36f39c8df1be02b640ae21b3cd082827c66aacbdf273dd61c5"
+      },
+      {
+        "path": "baselines/predict.py",
+        "size_bytes": 1536,
+        "sha256": "sha256:80e6787cd862dfefd85cd6bfcd73b5577dd90e202dd3d5bb9f18a52761807452"
+      },
+      {
+        "path": "checkpoint.npz",
+        "size_bytes": 750372,
+        "sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4"
+      },
+      {
+        "path": "school_b_adaptation.py",
+        "size_bytes": 9367,
+        "sha256": "sha256:42a0504fc5df149592b5b203b29bb86e0d3c8d5383d8453e7f4c504ce0d383a8"
+      },
+      {
+        "path": "school_b_histograms.py",
+        "size_bytes": 4351,
+        "sha256": "sha256:43a2723f92c84c16ad5f83bd2828ae2a2232a0f89402b2e1472b4537d5206738"
+      },
+      {
+        "path": "school_b_submission.py",
+        "size_bytes": 25969,
+        "sha256": "sha256:275a8ed75efc9f983fdfcb0ca30163366502a3342faf9ed4a0c871c435a309a9"
+      },
+      {
+        "path": "school_b_transfer.py",
+        "size_bytes": 31146,
+        "sha256": "sha256:064e74657e6f669a3d8cf0a5083b0734b8299ec6b1355ebc4c7fa48d9e84239c"
+      },
+      {
+        "path": "school_cache.py",
+        "size_bytes": 5299,
+        "sha256": "sha256:2f82ead9b9e0fffa5dcb026ee3d431ab519fe3f3b9bb584c68f6b6a341f00889"
+      },
+      {
+        "path": "school_planner.py",
+        "size_bytes": 6158,
+        "sha256": "sha256:83d2dbdf7453e1e95ed2587848788e23608db3a4eea6bcbf5c03c0dff5dc1646"
+      },
+      {
+        "path": "school_profile.py",
+        "size_bytes": 2491,
+        "sha256": "sha256:fdaffaba60d939d6874b645e87fc4ee0e93f13f427e014d69680eae397a2d36b"
+      },
+      {
+        "path": "school_runtime.py",
+        "size_bytes": 4716,
+        "sha256": "sha256:20c8c0e101c829f40a831e4277ca096795c8f5910bbad6c77ce69b2fd9bdf4b4"
+      },
+      {
+        "path": "training.json",
+        "size_bytes": 1540,
+        "sha256": "sha256:8ff12cdb3e78ed2cf755c32f634a5e5adca0708eee3a0abb7cae39f99d38afaa"
+      }
+    ],
+    "artifact": {
+      "checkpoint_paths": [
+        "checkpoint.npz"
+      ],
+      "code_paths": [
+        "school_b_submission.py",
+        "school_b_adaptation.py",
+        "school_runtime.py",
+        "school_cache.py",
+        "school_planner.py",
+        "school_profile.py",
+        "school_b_transfer.py",
+        "school_b_histograms.py",
+        "baselines/model.py",
+        "baselines/data.py",
+        "baselines/predict.py",
+        "baselines/__init__.py"
+      ],
+      "predict_argv": [
+        "python3",
+        "/app/harness.py",
+        "predict"
+      ]
+    },
+    "artifact_id": "candidate-02",
+    "artifact_sha256": "sha256:fa9138a4f2529bbea7b256a981c63c4ff4b4d288e915cc032b557f19b0554951"
+  },
+  "candidate_score": {
+    "rows": 1062,
+    "unit": "minutes",
+    "metrics": {
+      "rmse": 230.3282940683852,
+      "mae": 173.26274212180496
+    },
+    "prediction_sha256": "sha256:090f39c26853974741993314d4ced73ffb932511592de03272faf723b1c4d01a",
+    "per_bearing": {
+      "Bearing1_3": {
+        "rows": 158,
+        "rmse": 375.7016847346583,
+        "mae": 333.76089364100795
+      },
+      "Bearing2_3": {
+        "rows": 533,
+        "rmse": 178.45322331693086,
+        "mae": 138.10817429446115
+      },
+      "Bearing3_3": {
+        "rows": 371,
+        "rmse": 214.4675318391207,
+        "mae": 155.4155095394335
+      }
+    }
+  },
+  "selected_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+  "selected_score": {
+    "rows": 1062,
+    "unit": "minutes",
+    "metrics": {
+      "rmse": 230.3282940683852,
+      "mae": 173.26274212180496
+    },
+    "prediction_sha256": "sha256:090f39c26853974741993314d4ced73ffb932511592de03272faf723b1c4d01a",
+    "per_bearing": {
+      "Bearing1_3": {
+        "rows": 158,
+        "rmse": 375.7016847346583,
+        "mae": 333.76089364100795
+      },
+      "Bearing2_3": {
+        "rows": 533,
+        "rmse": 178.45322331693086,
+        "mae": 138.10817429446115
+      },
+      "Bearing3_3": {
+        "rows": 371,
+        "rmse": 214.4675318391207,
+        "mae": 155.4155095394335
+      }
+    }
+  },
+  "round_complete": {
+    "selected_artifact_id": "candidate-02",
+    "hypothesis": "Balanced output calibration may lower bearing transfer error.",
+    "change_summary": "Actions continue-centered-and-calibrate, trained 1, reused 0. Adopted the candidate.",
+    "reason": "Parent RMSE 232.706452, candidate RMSE 230.328294 minutes, lower_rmse. Expected Reduce RMSE and preserve hidden features. Failure Candidate does not lower measured RMSE. Receipt school-wire-call-2.",
+    "configuration": {
+      "profile": "B",
+      "recipe": "continue-centered-and-calibrate",
+      "plan": {
+        "hypothesis": "Balanced output calibration may lower bearing transfer error.",
+        "actions": [
+          "continue-centered-and-calibrate"
+        ],
+        "expected": "Reduce RMSE and preserve hidden features.",
+        "failure": "Candidate does not lower measured RMSE."
+      },
+      "trials": [
+        {
+          "recipe": "continue-centered-and-calibrate",
+          "rmse": 230.3282940683852,
+          "mae": 173.262742121805,
+          "training_rows": 5970,
+          "initial_steps": 826,
+          "final_steps": 866,
+          "actual_training_rows": 5970,
+          "actual_optimizer_steps": 40,
+          "cache": {
+            "training_key": "8c593edbc1522744913b46b24c950bca837a8f5f6723af7869af4085adc6aa58",
+            "score_key": "88ce22ba9e1e8e2dd688fc87c89a262a142b52c2f65763b8ba08dd707efd7b5a",
+            "checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4",
+            "prediction_sha256": "82585140b4b6afcb61cf97d53c78cd2964c9ac37601086f43b0483a63d81a262",
+            "score_first_round": 2,
+            "training_reused_from_round": null,
+            "score_reused_from_round": null
+          }
+        }
+      ],
+      "reuse_only": false,
+      "planner_fallback": false,
+      "planner_issue": null,
+      "raw_reply": "{\"hypothesis\": \"Balanced output calibration may lower bearing transfer error.\", \"actions\": [\"continue-centered-and-calibrate\"], \"expected\": \"Reduce RMSE and preserve hidden features.\", \"failure\": \"Candidate does not lower measured RMSE.\"}",
+      "parent_checkpoint_sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9",
+      "parent_prediction_sha256": "07c4f269b25d696547e3b0847a506fa6886f1600ac5623e5ea3199a9013955c8",
+      "execution": {
+        "trained_candidates": 1,
+        "reused_candidates": 0,
+        "scored_candidates": 1,
+        "reused_scores": 0,
+        "training_rows": 5970,
+        "optimizer_steps": 40,
+        "cpu_seconds": 1.254422065
+      },
+      "screening": "whole-bearing and whole-condition training projections",
+      "adoption": {
+        "margin": 1e-06,
+        "gain": 2.3781574729293595,
+        "accepted": true,
+        "reason": "lower_rmse",
+        "selected_rmse": 230.3282940683852,
+        "measurement_source": "host"
+      }
+    },
+    "history_ids": [
+      "verified-01"
+    ],
+    "model_call_ids": [
+      "school-wire-call-2"
+    ],
+    "seed": 42
+  },
+  "request_types": [
+    "history_request",
+    "model_request",
+    "upload_begin_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_finish_request",
+    "candidate_request",
+    "upload_begin_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_chunk_request",
+    "upload_finish_request",
+    "state_request",
+    "round_complete"
+  ],
+  "seconds": 5.085722199990414
+}

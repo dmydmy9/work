@@ -1,0 +1,7 @@
+{
+  "archive": "harness-city-rc03.tar",
+  "image_before": "sha256:0ebd6a1a6db8b907a26c030eab731c8ed140a64d88e952b3bd6ea61b7a694bde",
+  "image_after": "sha256:0ebd6a1a6db8b907a26c030eab731c8ed140a64d88e952b3bd6ea61b7a694bde",
+  "bytes": 69280768,
+  "sha256": "f17be9fb484da09d6cfdb36ef6e3c06a57d18db9650067964a1f64d71dcc8dde"
+}

@@ -1,0 +1,79 @@
+{
+  "round": 1,
+  "source": "native_pytrio",
+  "history_masked": false,
+  "context": {
+    "available": {
+      "transfer-parent-coverage": "fit a bearing residual and gate on inherited feature coverage plus sensor disagreement",
+      "transfer-two-signal": "fit a physical residual and use training novelty plus sensor disagreement for transfer"
+    },
+    "budget": {
+      "actions": 3,
+      "max_output_tokens": 384,
+      "rounds_remaining": 10,
+      "wall_seconds": 60
+    },
+    "error_by_rul_band": [
+      {
+        "count": 180,
+        "mae": 130.2923,
+        "mean_signed_error": 109.0414,
+        "minutes": "0-59",
+        "rmse": 244.4285
+      },
+      {
+        "count": 458,
+        "mae": 192.5464,
+        "mean_signed_error": 106.5098,
+        "minutes": "60-239",
+        "rmse": 305.0357
+      },
+      {
+        "count": 424,
+        "mae": 126.8869,
+        "mean_signed_error": -24.2471,
+        "minutes": "240+",
+        "rmse": 157.0264
+      }
+    ],
+    "history": {
+      "current": [],
+      "prior": []
+    },
+    "metric": {
+      "direction": "lower",
+      "primary": "rmse",
+      "secondary": "mae",
+      "unit": "minutes"
+    },
+    "parent": "sha256:c7d819fcee9d25459c583b5ffdb35593d4a47b524ed152d0226bf81a283314b4",
+    "parent_metrics": {
+      "mae": 155.780513,
+      "rmse": 245.149294
+    },
+    "parent_steps": 825,
+    "preference": [
+      "transfer-parent-coverage",
+      "transfer-two-signal"
+    ],
+    "profile": "B",
+    "round": 1,
+    "task": "regression"
+  },
+  "transmitted": [
+    {
+      "role": "system",
+      "content": "Plan one continuation round for school B rolling-bearing remaining useful life regression. RMSE in minutes is primary, lower is better, and MAE is secondary. Signed error is prediction minus target: positive means overestimation. Historical gain is parent RMSE minus candidate RMSE: positive is improvement. Use the current parent history to avoid repeating measured failures. Prior-parent results guide choices but do not measure this parent. Return one compact JSON object with actions (0 to 3 distinct available IDs), hypothesis, expected, and failure. Limit each text field to 12 English words. Do not repeat numbers or explain your reasoning. Use an empty actions array when no fresh experiment is justified. Example format: {\"actions\":[],\"hypothesis\":\"Tested actions degraded validation.\",\"expected\":\"Keep parent RMSE.\",\"failure\":\"A fresh action lowers RMSE.\"}"
+    },
+    {
+      "role": "user",
+      "content": "{\"available\":{\"transfer-parent-coverage\":\"fit a bearing residual and gate on inherited feature coverage plus sensor disagreement\",\"transfer-two-signal\":\"fit a physical residual and use training novelty plus sensor disagreement for transfer\"},\"budget\":{\"actions\":3,\"max_output_tokens\":384,\"rounds_remaining\":10,\"wall_seconds\":60},\"error_by_rul_band\":[{\"count\":180,\"mae\":130.2923,\"mean_signed_error\":109.0414,\"minutes\":\"0-59\",\"rmse\":244.4285},{\"count\":458,\"mae\":192.5464,\"mean_signed_error\":106.5098,\"minutes\":\"60-239\",\"rmse\":305.0357},{\"count\":424,\"mae\":126.8869,\"mean_signed_error\":-24.2471,\"minutes\":\"240+\",\"rmse\":157.0264}],\"history\":{\"current\":[],\"prior\":[]},\"metric\":{\"direction\":\"lower\",\"primary\":\"rmse\",\"secondary\":\"mae\",\"unit\":\"minutes\"},\"parent\":\"sha256:c7d819fcee9d25459c583b5ffdb35593d4a47b524ed152d0226bf81a283314b4\",\"parent_metrics\":{\"mae\":155.780513,\"rmse\":245.149294},\"parent_steps\":825,\"preference\":[\"transfer-parent-coverage\",\"transfer-two-signal\"],\"profile\":\"B\",\"round\":1,\"task\":\"regression\"}"
+    }
+  ],
+  "options": {
+    "max_tokens": 384,
+    "temperature": 0,
+    "enable_thinking": false
+  },
+  "reply": "{\"actions\":[\"transfer-parent-coverage\",\"transfer-two-signal\"],\"hypothesis\":\"New transfer methods reduce RMSE.\",\"expected\":\"Both actions lower RMSE.\",\"failure\":\"No action improves RMSE.\"}"
+}

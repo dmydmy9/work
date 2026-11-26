@@ -1,0 +1,49 @@
+{
+  "context": {
+    "available": {
+      "accelerated-5": "double the official learning rate",
+      "conservative-5": "lower the official learning rate by four",
+      "engine-balanced-5": "sample engines with equal probability at the official rate",
+      "official-5": "continue at the official learning rate",
+      "regime-kernel-5": "continue with lower learning rate and refit nonlinear sensor residuals by regime"
+    },
+    "budget": {
+      "actions": 1,
+      "max_output_tokens": 128,
+      "wall_seconds": 60
+    },
+    "history": {
+      "current": [],
+      "prior": [
+        {
+          "outcomes": [
+            {
+              "action": "regime-kernel-5",
+              "first_round": 1,
+              "gain": 3.753365787702087,
+              "rmse": 49.11520677840942
+            }
+          ],
+          "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e"
+        }
+      ]
+    },
+    "parent": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3",
+    "parent_metrics": {
+      "mae": 35.19305791821807,
+      "nasa_score": 2104493920.3744612,
+      "rmse": 49.11520677840942
+    },
+    "preference": [
+      "regime-kernel-5",
+      "conservative-5",
+      "official-5",
+      "engine-balanced-5",
+      "accelerated-5"
+    ],
+    "profile": "C",
+    "round": 2
+  },
+  "response": "{\n  \"actions\": [\"regime-kernel-5\"],\n  \"hypothesis\": \"Continue regime-kernel-5 to maintain low RMSE.\",\n  \"expected\": \"Lower RMSE than prior 49.12.\",\n  \"failure\": \"RMSE exceeds 50.00.\"\n}",
+  "source": "native_pytrio"
+}

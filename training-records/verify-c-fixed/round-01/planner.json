@@ -1,0 +1,44 @@
+{
+  "context": {
+    "available": {
+      "accelerated-5": "double the official learning rate",
+      "conservative-5": "lower the official learning rate by four",
+      "engine-balanced-5": "sample engines with equal probability at the official rate",
+      "official-5": "continue at the official learning rate",
+      "regime-kernel-5": "continue with lower learning rate and refit nonlinear sensor residuals by regime"
+    },
+    "budget": {
+      "actions": 1,
+      "max_output_tokens": 128,
+      "wall_seconds": 60
+    },
+    "history": {
+      "current": [],
+      "prior": []
+    },
+    "parent": "sha256:98ec6e30e38aee56ca15b7d624a8f412226d46fe97b170667a567601c700bc4e",
+    "parent_metrics": {
+      "mae": 38.899829826663556,
+      "nasa_score": 5823439325.3424635,
+      "rmse": 52.86857256611151
+    },
+    "preference": [
+      "regime-kernel-5",
+      "conservative-5",
+      "official-5",
+      "engine-balanced-5",
+      "accelerated-5"
+    ],
+    "profile": "C",
+    "round": 1
+  },
+  "plan": {
+    "actions": [
+      "regime-kernel-5"
+    ],
+    "expected": "Reduce validation RMSE.",
+    "failure": "Retain the parent without an improvement.",
+    "hypothesis": "Compare an allowed continuation with the current parent."
+  },
+  "source": "local_deterministic"
+}

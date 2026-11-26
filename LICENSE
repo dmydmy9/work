@@ -1,0 +1,7 @@
+智训引擎 RC03 发布材料使用说明
+
+参赛队原创源码及材料的著作权由相应权利人持有。评审可查阅本仓库并按赛事规则复现。其他使用方式以相应权利人的授权为准。
+
+赛事 SDK 和基线按组委会发布条款使用。第三方数据和依赖继续适用各自条款。数据来源详见 training-records/DATA_SOURCES.md。
+
+Python 解释器及标准库的条款见 https://docs.python.org/3/license.html 。NumPy 的条款见 https://numpy.org/doc/1.26/license.html 。
