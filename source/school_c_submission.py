@@ -108,8 +108,11 @@ def train(rnd):
     seed = parent.meta["seed"]
     x, y, ids, fit_key = read_projection(rnd.data.training_rows(), parent)
     vx, vy, validation_ids, validation_key = read_projection(rnd.data.validation_rows(), parent)
-    groups, validation_groups = group_ids(ids), group_ids(validation_ids)
-    if set(groups) & set(validation_groups):
+    if set(ids).intersection(validation_ids):
+        raise ValueError("C training and validation IDs overlap")
+    groups = group_ids(ids, allow_opaque=True)
+    validation_groups = group_ids(validation_ids, allow_opaque=True)
+    if groups is not None and validation_groups is not None and set(groups).intersection(validation_groups):
         raise ValueError("C training and validation share an engine")
     parent_metrics, _ = scorer(parent, vx, vy)
     baseline = Path(baseline_model.__file__).resolve().parent
@@ -128,7 +131,8 @@ def train(rnd):
         evidence = history_evidence(events, parent_hash=parent_hash, train_key=fit_key,
                                     evaluation_key=evaluation_key, seed=seed)
         tested = {item["action"] for item in evidence["current"]}
-        available = [action for action in PREFERENCES if action not in tested]
+        available = [action for action in PREFERENCES if action not in tested
+                     and (groups is not None or not RECIPES[action][2])]
         max_tokens = min(256, rnd.max_output_tokens)
         context = {"profile": "C", "round": rnd.round_index, "parent": parent_hash,
                    "parent_metrics": parent_metrics, "history": evidence, "preference": available,
@@ -148,7 +152,7 @@ def train(rnd):
         candidate = trials[0] if trials else None
         config = {"profile": "C", "parent_checkpoint_sha256": parent_hash, "parent_metrics": parent_metrics,
                   "plan": plan, "context": context, "planner_fallback": used_fallback, "trials": trials,
-                  "execution": execution}
+                  "execution": execution, "fitting_engine_groups_verified": groups is not None}
         selected, selected_hash, candidate_bytes = rnd.parent.artifact_id, parent_hash, 0
         measured = None
         if candidate:

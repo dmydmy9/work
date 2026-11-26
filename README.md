@@ -1,4 +1,12 @@
-# 智训引擎 RC03
+# 智训引擎 RC04
+
+RC04 是平台 v2 的候选版本。新版修复两条 B 路径与一条 C 路径上的 `ValueError`。A、B、C 均已从新归档重载后完成本地十轮续训。
+
+[RC04 技术报告](training-records/rc04/technical-report-rc04.md) · [逐轮验收](training-records/rc04/verified.json) · [镜像归档回执](training-records/rc04/archive-load.json)
+
+## RC03 基础方案与实验记录
+
+以下归档标识和实验记录对应 RC03。当前分支的源码登记对应 RC04。
 
 单一 Linux/amd64 镜像通过赛事 SDK 1.0.4 运行 A 气体分类、B 轴承寿命和 C 发动机寿命。平台绑定模型为 `Qwen/Qwen3.5-4B`。
 

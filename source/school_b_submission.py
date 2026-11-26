@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from collections import Counter
 from copy import deepcopy
 from functools import lru_cache, partial
 from inspect import getsource
@@ -18,7 +19,7 @@ from baselines.model import Model
 import numpy as np
 
 from school_b_adaptation import refine_readout, training_bearings, training_bearing_weights
-from school_b_transfer import check_transfer, fit_conditional_shrink, predict_model, update_group_shape, update_prediction
+from school_b_transfer import MIN_TRANSFER_SNAPSHOTS, check_transfer, fit_conditional_shrink, predict_model, update_group_shape, update_prediction
 from school_cache import RoundCache, array_digest, check_candidate_upload, file_digest, fingerprint, projection_digest
 from school_planner import history_evidence, planner_messages as structured_messages, rank_untried_actions
 from school_runtime import metric_gain, request_plan, run_trials, write_candidate
@@ -227,8 +228,10 @@ def fallback_plan(context):
 
 
 def received_rmse(submission):
-    value = submission.get("summary", {}).get("metrics", {}).get(METRIC)
-    if type(value) not in (float, int) or not math.isfinite(value) or value < 0:
+    summary = submission.get("summary")
+    metrics = summary.get("metrics") if isinstance(summary, dict) else None
+    value = metrics.get(METRIC) if isinstance(metrics, dict) else None
+    if type(value) not in (float, int) or value < 0 or value > np.finfo(np.float64).max or not math.isfinite(value):
         raise ValueError("host did not provide finite nonnegative B RMSE")
     return float(value)
 
@@ -299,6 +302,9 @@ def train(rnd, *, city_screen=False):
     x, y, train_ids, train_projection = arrays(train_rows, parent)
     fit_weights = training_bearing_weights(train_rows)
     fit_groups = training_bearings(train_rows)
+    if city_screen and fit_groups is not None and min(Counter(fit_groups).values()) < MIN_TRANSFER_SNAPSHOTS:
+        # A newly released projection can have too few snapshots in a bearing for the transfer feature book.
+        fit_weights = fit_groups = None
     available_recipes = supported_recipes(parent, fit_weights, train_projection)
     screened = city_screen and fit_weights is not None
     if screened:
@@ -392,12 +398,18 @@ def train(rnd, *, city_screen=False):
             submission = rnd.submit_candidate(candidate_dir, hypothesis=plan["hypothesis"], change_summary=change,
                                               configuration=config, seed=seed, checkpoint_paths=["checkpoint.npz"],
                                               code_paths=[*CODE_FILES, *BASELINE_FILES], predict_argv=PREDICT_ARGV)
-            measured = received_rmse(submission)
-            evaluation["host_rmse"] = measured
-            measurement_source = "host"
-        gain = metric_gain(parent_score[METRIC], measured, DIRECTION)
-        accepted = submission is not None and gain > METRIC_EPSILON
-        why = adoption_reason(best, parent_hash=parent_prediction_hash, gain=gain, accepted=accepted)
+            try:
+                measured = received_rmse(submission)
+            except ValueError:
+                measured = None
+                measurement_source = "host_unavailable"
+            else:
+                evaluation["host_rmse"] = measured
+                measurement_source = "host"
+        gain = metric_gain(parent_score[METRIC], measured, DIRECTION) if measured is not None else None
+        accepted = submission is not None and gain is not None and gain > METRIC_EPSILON
+        why = ("host_metric_unavailable" if gain is None else
+               adoption_reason(best, parent_hash=parent_prediction_hash, gain=gain, accepted=accepted))
         selected_artifact = submission["artifact_id"] if accepted else rnd.parent.artifact_id
         selected_hash = best["cache"]["checkpoint_sha256"] if accepted else parent_hash
         config["adoption"] = {"margin": METRIC_EPSILON, "gain": gain, "accepted": accepted, "reason": why,
@@ -417,11 +429,12 @@ def train(rnd, *, city_screen=False):
         decision_path.write_text(json.dumps(previous[-10:], allow_nan=False), encoding="utf-8")
         cache.persist(rnd.limits, candidate_bytes)
         rnd.save_state(state)
+        candidate_description = f"{measured:.6f} minutes" if measured is not None else "unavailable from host"
         rnd.finish(selected_artifact_id=selected_artifact, hypothesis=plan["hypothesis"], configuration=config, seed=seed,
                    change_summary=(f"Actions {', '.join(requested) or 'reuse only'}, "
                                    f"trained {execution['trained_candidates']}, reused {execution['reused_candidates']}. "
                                    + ("Adopted the candidate." if accepted else "Kept the parent.")),
-                   reason=(f"Parent RMSE {parent_score[METRIC]:.6f}, candidate RMSE {measured:.6f} minutes, {why}. "
+                   reason=(f"Parent RMSE {parent_score[METRIC]:.6f}, candidate RMSE {candidate_description}, {why}. "
                            f"{'Invalid planner text used the history fallback. ' if fallback else ''}"
                            f"Expected {plan['expected']} Failure {plan['failure']} Receipt {receipt.call_id}."),
                    history_ids=[entry["id"] for entry in history], model_call_ids=list(rnd.call_ids))

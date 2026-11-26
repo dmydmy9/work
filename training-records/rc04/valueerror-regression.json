@@ -1,0 +1,28 @@
+{
+  "original_image": "sha256:0ebd6a1a6db8b907a26c030eab731c8ed140a64d88e952b3bd6ea61b7a694bde",
+  "fixed_image": "sha256:ff0df3ccabe1cc93e3684ea06760361d3e2fa46c1c937fe639968d588941eebd",
+  "platform_v1_first_failure_identified": false,
+  "cases": {
+    "b-no-host-metric": {
+      "original_host_failure": "PARTICIPANT_EXCEPTION",
+      "original_error": "ValueError: host did not provide finite nonnegative B RMSE",
+      "fixed_exit_code": 0,
+      "fixed_decision_received": true,
+      "fixed_selected_artifact": "official-B-baseline"
+    },
+    "b-sparse-bearing": {
+      "original_host_failure": "PARTICIPANT_EXCEPTION",
+      "original_error": "ValueError: need at least two fitting bearings with six snapshots",
+      "fixed_exit_code": 0,
+      "fixed_decision_received": true,
+      "fixed_selected_artifact": "official-B-baseline"
+    },
+    "c-opaque-ids": {
+      "original_host_failure": "PARTICIPANT_EXCEPTION",
+      "original_error": "ValueError: invalid C training identity 'opaque-fit-000000'",
+      "fixed_exit_code": 0,
+      "fixed_decision_received": true,
+      "fixed_selected_artifact": "official-C-baseline"
+    }
+  }
+}

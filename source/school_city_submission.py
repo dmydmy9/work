@@ -1,5 +1,7 @@
 """Route the common contest SDK entry to each official dataset."""
 
+import sys
+
 from a_frozen import contest_submission as pack_a
 import school_b_submission as pack_b
 import school_c_submission as pack_c
@@ -11,10 +13,15 @@ INPUT_FIELDS = {frozenset({"features"}): "B", frozenset({"settings", "sensors"})
 
 
 def train(rnd):
-    if rnd.dataset_key == "B":
-        pack_b.train(rnd, city_screen=True)
-    else:
-        HANDLERS[rnd.dataset_key].train(rnd)
+    try:
+        if rnd.dataset_key == "B":
+            pack_b.train(rnd, city_screen=True)
+        else:
+            HANDLERS[rnd.dataset_key].train(rnd)
+    except Exception as error:
+        print(f"Training failure in pack {rnd.dataset_key}, round {rnd.round_index}: {type(error).__name__}",
+              file=sys.stderr)
+        raise
 
 
 def predict(sample, model_dir):

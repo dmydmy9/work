@@ -15,6 +15,7 @@ from school_b_histograms import fit_histogram_boost, predict_histogram_boost
 AMPLITUDE = {"mean_abs", "peak", "peak_to_peak", "rms"}
 GAIN_PAIRS = ((.5,.5),(.75,.75),(1.33,1.33),(2.,2.),(.5,2.),(2.,.5),(.75,1.33),(1.33,.75))
 SCHEMA = "vibration-transfer-v1"
+MIN_TRANSFER_SNAPSHOTS = 6
 BAND_ENERGIES = ("band1_energy_0_2k", "band2_energy_2k_6k", "band3_energy_6k_12k")
 
 
@@ -118,7 +119,7 @@ def standardize(x, knee, center, spread):
 def book_distance(x, books, codes=None, book_codes=None):
     output = np.full(len(x), np.inf)
     for i, book in enumerate(books):
-        if len(book) < 6:
+        if len(book) < MIN_TRANSFER_SNAPSHOTS:
             raise ValueError("bearing feature book is too small")
         norm = np.einsum("ij,ij->i",book,book)
         for start in range(0,len(x),256):
@@ -173,7 +174,7 @@ def rank_gate(vibration, observed, response, quantile, temperature):
 def fit_transfer(candidate, x, y, groups, *, two_signal=False, parent_normalized=False):
     groups = np.asarray(groups)
     names, group_indices, counts = np.unique(groups,return_counts=True,return_inverse=True)
-    if len(names) < 2 or int(counts.min()) < 6:
+    if len(names) < 2 or int(counts.min()) < MIN_TRANSFER_SNAPSHOTS:
         raise ValueError("need at least two fitting bearings with six snapshots")
     centered = y - np.array([y[group_indices==i].mean() for i in range(len(names))])[group_indices]
     book_length = min(96, int(counts.min()))

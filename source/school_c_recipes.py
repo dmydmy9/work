@@ -19,18 +19,22 @@ RECIPES = {
 ENGINE_ID = re.compile(r"(fd00[1-4])_train_(u\d+)_c\d+", re.ASCII)
 
 
-def group_ids(ids):
+def group_ids(ids, *, allow_opaque=False):
     engines = []
     for identity in ids:
         match = ENGINE_ID.fullmatch(identity)
         if match is None:
+            if allow_opaque:
+                return None
             raise ValueError(f"invalid C training identity {identity!r}")
         engines.append("_".join(match.groups()))
     return np.asarray(engines)
 
 
-def continue_parent(parent, features, targets, groups, recipe):
-    epochs, rate, balance = RECIPES[recipe]
+def continue_parent(parent, features, targets, groups, recipe, *, epochs=None):
+    default_epochs, rate, balance = RECIPES[recipe]
+    if epochs is None:
+        epochs = default_epochs
     model = deepcopy(parent)
     model.meta.update(learning_rate=rate, batch_size=256)
     if not balance:
