@@ -1,8 +1,10 @@
 # 智训引擎 RC04
 
-RC04 是平台 v2 的候选版本。新版修复两条 B 路径与一条 C 路径上的 `ValueError`。A、B、C 均已从新归档重载后完成本地十轮续训。
+RC04 对应平台 v2、镜像 5，已通过试运行。新版修复两条 B 路径与一条 C 路径上的 `ValueError`。A、B、C 均已从新归档重载后完成本地十轮续训。
 
 [RC04 技术报告](training-records/rc04/technical-report-rc04.md) · [逐轮验收](training-records/rc04/verified.json) · [镜像归档回执](training-records/rc04/archive-load.json)
+
+[RC04 SwanLab 公开训练记录](https://swanlab.cn/@dmydmy9/zhixun-engine-rc04/v1/m8tg7m/overview)
 
 ## RC03 基础方案与实验记录
 

@@ -1,0 +1,16 @@
+{
+  "release": "RC04",
+  "workspace": "dmydmy9",
+  "project": "zhixun-engine-rc04",
+  "project_url": "https://swanlab.cn/@dmydmy9/zhixun-engine-rc04/v1/m8tg7m/overview",
+  "visibility": "public",
+  "three_completed_runs_verified_in_dashboard": true,
+  "observed_at": "2026-11-26T21:18:33+08:00",
+  "local_sdk_version": "0.7.11",
+  "cloud_sdk_version": "0.10.6",
+  "experiment_urls": {
+    "A": "https://swanlab.cn/@dmydmy9/zhixun-engine-rc04/runs/jcbwcgu10v1ojvp6pz9k8",
+    "B": "https://swanlab.cn/@dmydmy9/zhixun-engine-rc04/runs/jtxe1vcptn0xdqpvtq8b4",
+    "C": "https://swanlab.cn/@dmydmy9/zhixun-engine-rc04/runs/m3kiv2rqzeebungvjhw6c"
+  }
+}

@@ -1,4 +1,4 @@
-# 智训引擎 Harness RC04（v2 试运行候选）
+# 智训引擎 Harness RC04（平台 v2）
 
 ## v1 故障与修复
 
@@ -24,6 +24,14 @@ v1 平台试运行 `fddf03d2…` 在训练优化阶段显示 `ValueError`。页�
 
 A 的 Macro-F1 越高越好，B、C 的 RMSE 越低越好。B 另用 1,679 条官方公开验证行运行独立预测，RMSE 为 588.949982 分钟，与 v1 同一公开验证投影的逐行预测一致。表中的 B 数值来自 1,062 行的开发验证投影。本页表格为本地评分，平台隐藏集结果由评测平台发布。
 
-[RC04 逐轮回执](https://github.com/dmydmy9/work/blob/rc04/training-records/rc04/verified.json) · [三项故障回归](https://github.com/dmydmy9/work/blob/rc04/training-records/rc04/valueerror-regression.json) · [基础方案与评测说明](https://github.com/dmydmy9/work/blob/rc04/training-records/technical-report-rc03.pdf) · [原版 SwanLab 公开复训](https://swanlab.cn/@dmydmy9/zhixun-engine-rc03/v1/iowsz6/overview)
+[RC04 逐轮回执](https://github.com/dmydmy9/work/blob/rc04/training-records/rc04/verified.json) · [三项故障回归](https://github.com/dmydmy9/work/blob/rc04/training-records/rc04/valueerror-regression.json) · [RC04 源码与构建](https://github.com/dmydmy9/work/tree/rc04/source) · [RC04 SwanLab 三包训练记录](https://swanlab.cn/@dmydmy9/zhixun-engine-rc04/v1/m8tg7m/overview)
 
 归档 SHA-256 为 `4deee27e6b54f47cdb79e97dbf85bcf76b90bc94af212f82890bacf3221fe655`。
+
+## v2 平台试运行与训练记录
+
+平台于 2026 年 11 月 26 日 13:06:22 发起 v2 试运行。A、B、C 均完成 10 轮，平台报告均标为记录完整。本次运行合计 27,676 Token。 [评测运行](https://rsi-index.115.zone/#runs)
+
+RC04 已从官方初始检查点重新本地续训，记录每轮验证指标、训练样本量、优化步与 CPU 用时。规划回复采用原始 PyTRiO 回执重放。三组选定检查点均与该镜像的本地验收一致。
+
+[A 续训](https://swanlab.cn/@dmydmy9/zhixun-engine-rc04/runs/jcbwcgu10v1ojvp6pz9k8) · [B 续训](https://swanlab.cn/@dmydmy9/zhixun-engine-rc04/runs/jtxe1vcptn0xdqpvtq8b4) · [C 续训](https://swanlab.cn/@dmydmy9/zhixun-engine-rc04/runs/m3kiv2rqzeebungvjhw6c)
