@@ -10,6 +10,7 @@ import json
 import math
 import os
 from pathlib import Path
+import re
 from tempfile import TemporaryDirectory
 from time import process_time
 
@@ -19,10 +20,12 @@ from baselines.model import Model
 import numpy as np
 
 from school_b_adaptation import refine_readout, training_bearings, training_bearing_weights
-from school_b_transfer import MIN_TRANSFER_SNAPSHOTS, check_transfer, fit_conditional_shrink, predict_model, update_group_shape, update_prediction
+from school_b_transfer import (B_SHORT_PROTECTION_KEY, B_TRANSFER_DOSE_KEY, MIN_TRANSFER_SNAPSHOTS, check_transfer, fit_conditional_shrink,
+                               fit_short_protection, predict_model, store_transfer_anchor, update_group_shape,
+                               update_prediction)
 from school_cache import RoundCache, array_digest, check_candidate_upload, file_digest, fingerprint, projection_digest
 from school_planner import history_evidence, planner_messages as structured_messages, rank_untried_actions
-from school_runtime import metric_gain, request_plan, run_trials, write_candidate
+from school_runtime import metric_gain, request_plan, run_trials, scope_regressions, scope_rmse, write_candidate
 
 PROFILE = "B"
 TASK = "regression"
@@ -46,6 +49,9 @@ PHASE_RECIPE = "continue-balanced-phase"
 PHASE_SETTINGS = (64, .001, 1.4, .96, 1, 1.)
 SHRINK_RECIPE = "continue-phase-and-calibrate"
 SHRINK_SETTINGS = (.25, .5, .15)
+CALIBRATED_UPDATE = "calibrated-update-1"
+GUARDED_TRANSFER = "transfer-coverage-quarter"
+GUARDED_CENTER = "centered-calibration-quarter"
 TRANSFER_RECIPES = {
     "transfer-parent-coverage": ("physical-average", 110, "parent-normalized-max-fitted-rank", 0.70, .025),
     "transfer-two-signal": ("physical-average", 110, "max-fitted-rank", 0.80, .02),
@@ -65,6 +71,9 @@ RECIPES = {
     "long-12": (12, 0.003, 128),
     "fine-8": (8, 0.0008, 128),
 }
+CITY_RECIPES = {**RECIPES, CALIBRATED_UPDATE: (1, .0004, 128),
+                GUARDED_TRANSFER: (*RECIPES["transfer-parent-coverage"], .25),
+                GUARDED_CENTER: (*RECIPES[CENTERED_SHRINK_RECIPE], .25)}
 DESCRIPTIONS = {
     "transfer-parent-coverage": "fit a bearing residual and gate on inherited feature coverage plus sensor disagreement",
     CENTERED_RECIPE: "continue the accepted coverage model using 40 Adam steps on within-bearing RUL error",
@@ -81,6 +90,9 @@ DESCRIPTIONS = {
     "quick-2": "short official update, 2 epochs at 0.003 with batch 128",
     "long-12": "extended official update, 12 epochs at 0.003 with batch 128",
     "fine-8": "lower-rate update, 8 epochs at 0.0008 with batch 128",
+    CALIBRATED_UPDATE: "one low-rate epoch preserving the fitted coverage calibration",
+    GUARDED_TRANSFER: "fit the same coverage route with quarter-strength transfer from the anchor",
+    GUARDED_CENTER: "center and calibrate with quarter-strength transfer from the anchor",
 }
 SYSTEM = (
     "Plan one continuation round for school B rolling-bearing remaining useful life regression. "
@@ -96,6 +108,19 @@ SYSTEM = (
     '{"actions":[],"hypothesis":"Tested actions degraded validation.","expected":"Keep parent RMSE.",'
     '"failure":"A fresh action lowers RMSE."}'
 )
+CITY_SYSTEM = ("Plan B bearing RUL continuation. Lower RMSE and protect RUL bands and cohorts. "
+               "Positive gain is better. Avoid repeating rejected trials on the same parent. "
+               "Return compact JSON with actions, hypothesis, expected, failure. "
+               "Use at most two offered IDs and short text. Use [] when exhausted. "
+               "Band rows are range, count, mean prediction minus truth, and RMSE.")
+CITY_DESCRIPTIONS = {
+    "transfer-parent-coverage": "fit coverage residual", "transfer-two-signal": "fit dual-signal residual",
+    CENTERED_SHRINK_RECIPE: "center and calibrate", GUARDED_TRANSFER: "quarter-strength coverage",
+    GUARDED_CENTER: "quarter-strength calibration", CALIBRATED_UPDATE: "one epoch, preserve calibration",
+    "official-5": "official five epochs", "quick-2": "official two epochs", "long-12": "official twelve epochs",
+    "fine-8": "low-rate eight epochs", "readout-balanced": "balance bearing output error",
+    "readout-conservative": "tightly anchor output update",
+}
 
 
 def check_task(dataset, contract):
@@ -146,6 +171,18 @@ def score_projection(model, x, y):
     return regression_metrics(y, predicted), predicted
 
 
+def score_city_projection(model, x, y, *, groups):
+    score, predicted = score_projection(model, x, y)
+    return {**score, "scope_rmse": scope_rmse(y, predicted, (360, 720), groups)}, predicted
+
+
+def validation_bearings(rows):
+    matches = [re.fullmatch(r"xjtu_(Bearing[1-3]_[1-5])_s[0-9]{6}", row["id"], re.ASCII) for row in rows]
+    if all(matches):
+        return np.asarray([match[1] for match in matches])
+    return None
+
+
 def error_by_rul_band(y, predicted):
     bands = (("0-59", y < 60), ("60-239", (y >= 60) & (y < 240)), ("240+", y >= 240))
     return [{"minutes": label, "count": int(np.count_nonzero(mask)),
@@ -154,7 +191,14 @@ def error_by_rul_band(y, predicted):
             for label, mask in bands if mask.any()]
 
 
-def trainer(parent, x, y, recipe, seed, *, fit_weights=None, fit_groups=None, fit_projection=None):
+def trainer(parent, x, y, recipe, seed, *, fit_weights=None, fit_groups=None, fit_projection=None, city_policy=False):
+    if recipe in (GUARDED_TRANSFER, GUARDED_CENTER):
+        source = "transfer-parent-coverage" if recipe == GUARDED_TRANSFER else CENTERED_SHRINK_RECIPE
+        candidate, history = trainer(parent, x, y, source, seed, fit_weights=fit_weights, fit_groups=fit_groups,
+                                     fit_projection=fit_projection, city_policy=True)
+        candidate.meta[B_TRANSFER_DOSE_KEY] = CITY_RECIPES[recipe][-1]
+        history[0]["transfer_dose"] = CITY_RECIPES[recipe][-1]
+        return candidate, history
     if recipe in (CENTERED_RECIPE, CENTERED_SHRINK_RECIPE, GAIN_RECIPE, PHASE_RECIPE, SHRINK_RECIPE):
         if fit_groups is None or fit_projection is None or parent.meta.get("school_b_readout_projection") != fit_projection:
             raise ValueError("B group-centered continuation requires its original fitting projection")
@@ -178,11 +222,19 @@ def trainer(parent, x, y, recipe, seed, *, fit_weights=None, fit_groups=None, fi
         candidate, history = update_group_shape(parent, x, y, fit_groups, steps=steps, rate=rate,
                                                 relative_gain=relative_gain, **weighting)
         candidate.meta.pop("school_b_conditional_shrink", None)
+        candidate.meta.pop(B_SHORT_PROTECTION_KEY, None)
+        candidate.meta.pop(B_TRANSFER_DOSE_KEY, None)
         if recipe in (CENTERED_SHRINK_RECIPE, SHRINK_RECIPE):
             quantile, width, retain = SHRINK_SETTINGS
             calibration = fit_conditional_shrink(y, fit_groups, quantile=quantile, width=width, retain=retain)
             candidate.meta["school_b_conditional_shrink"] = calibration
             history[0]["conditional_shrink"] = calibration
+            if city_policy:
+                protection = fit_short_protection(y, np.asarray(fit_groups))
+                if protection is not None:
+                    store_transfer_anchor(candidate, parent)
+                    candidate.meta[B_SHORT_PROTECTION_KEY] = protection
+                    history[0]["short_life_anchor_boundary_minutes"] = protection
             check_checkpoint(candidate)
         candidate.meta[marker] = fit_projection
         return candidate, history
@@ -190,6 +242,10 @@ def trainer(parent, x, y, recipe, seed, *, fit_weights=None, fit_groups=None, fi
         if fit_groups is None or fit_weights is None or fit_projection is None:
             raise ValueError("vibration transfer requires verified B fitting groups")
         candidate, history = update_prediction(parent, x, y, fit_groups, fit_weights, recipe)
+        candidate.meta.pop(B_SHORT_PROTECTION_KEY, None)
+        candidate.meta.pop(B_TRANSFER_DOSE_KEY, None)
+        if city_policy:
+            store_transfer_anchor(candidate, parent)
         candidate.meta["school_b_readout_projection"] = fit_projection
         candidate.meta.pop("school_b_centered_projection", None)
         candidate.meta.pop("school_b_gain_projection", None)
@@ -199,13 +255,18 @@ def trainer(parent, x, y, recipe, seed, *, fit_weights=None, fit_groups=None, fi
             raise ValueError("readout requires verified B bearing groups")
         candidate, history = refine_readout(parent, x, y, fit_weights, READOUT_RECIPES[recipe])
         candidate.meta.pop("school_b_conditional_shrink", None)
+        candidate.meta.pop(B_SHORT_PROTECTION_KEY, None)
+        candidate.meta.pop(B_TRANSFER_DOSE_KEY, None)
         candidate.meta["school_b_readout_projection"] = fit_projection
         return candidate, history
-    epochs, learning_rate, batch_size = RECIPES[recipe]
+    epochs, learning_rate, batch_size = CITY_RECIPES[recipe]
     model = deepcopy(parent)
     model.meta.update(learning_rate=learning_rate, batch_size=batch_size, seed=seed)
-    model.meta.pop("school_b_readout_projection", None)
-    model.meta.pop("school_b_conditional_shrink", None)
+    if recipe != CALIBRATED_UPDATE:
+        model.meta.pop("school_b_readout_projection", None)
+        model.meta.pop("school_b_conditional_shrink", None)
+        model.meta.pop(B_SHORT_PROTECTION_KEY, None)
+        model.meta.pop(B_TRANSFER_DOSE_KEY, None)
     steps_per_epoch = (len(x) + batch_size - 1) // batch_size
     losses = model.fit(x, y, epochs)
     history = [{"epoch": parent.meta["epochs"] + i, "step": parent.meta["steps"] + i * steps_per_epoch,
@@ -288,6 +349,31 @@ def city_grouped_recipes(supported):
     return {name: supported[name] for name in names if name in supported}
 
 
+def city_trials(supported, parent, *, grouped):
+    options = city_grouped_recipes(supported) if grouped else supported
+    if CENTERED_SHRINK_RECIPE in options:
+        options = {GUARDED_CENTER: CITY_RECIPES[GUARDED_CENTER], **options}
+    if "transfer-parent-coverage" in options:
+        options = {GUARDED_TRANSFER: CITY_RECIPES[GUARDED_TRANSFER], **options}
+    # After the calibrated round there is still a conservative continuation,
+    # including when refreshed inputs no longer reveal reliable bearing IDs.
+    if "school_b_conditional_shrink" in parent.meta:
+        options = {CALIBRATED_UPDATE: CITY_RECIPES[CALIBRATED_UPDATE], **options}
+    return options
+
+
+def city_risk(parent, candidate):
+    return scope_regressions(parent["scope_rmse"], candidate["scope_rmse"], ratio=1.05, absolute=5.)
+
+
+def missing_historical_bands(previous, parent_hash, train_projection, current_scopes):
+    """Protect previously validated life stages when only evaluation coverage contracts."""
+    past_bands = {scope for record in previous
+                  if record["training"] == train_projection and record.get("selected") == parent_hash
+                  for scope in record.get("validation_bands", ())}
+    return sorted(past_bands.difference(current_scopes))
+
+
 def train(rnd, *, city_screen=False):
     started = process_time()
     check_task(rnd.dataset_key, rnd.task)
@@ -307,13 +393,17 @@ def train(rnd, *, city_screen=False):
         fit_weights = fit_groups = None
     available_recipes = supported_recipes(parent, fit_weights, train_projection)
     screened = city_screen and fit_weights is not None
-    if screened:
-        available_recipes = city_grouped_recipes(available_recipes)
-    fit_candidate = partial(trainer, fit_weights=fit_weights, fit_groups=fit_groups, fit_projection=train_projection)
-    vx, vy, validation_ids, validation_projection = arrays(rnd.data.validation_rows(), parent)
+    if city_screen:
+        available_recipes = city_trials(available_recipes, parent, grouped=screened)
+    fit_candidate = partial(trainer, fit_weights=fit_weights, fit_groups=fit_groups, fit_projection=train_projection,
+                            city_policy=city_screen)
+    validation_rows = list(rnd.data.validation_rows())
+    vx, vy, validation_ids, validation_projection = arrays(validation_rows, parent)
     if train_ids & validation_ids:
         raise ValueError("training and validation IDs overlap")
-    parent_score, parent_prediction = score_projection(parent, vx, vy)
+    validation_groups = validation_bearings(validation_rows) if city_screen else None
+    evaluate = partial(score_city_projection, groups=validation_groups) if city_screen else score_projection
+    parent_score, parent_prediction = evaluate(parent, vx, vy)
     parent_prediction_hash = array_digest(parent_prediction, "<f8")
     seed = getattr(rnd, "run_seed", None)
     if seed is None:
@@ -324,7 +414,10 @@ def train(rnd, *, city_screen=False):
                 ("school_b_adaptation.py", "school_b_transfer.py", "school_b_histograms.py")}
     trainer_id = fingerprint({"reference": reference, "source": getsource(trainer), "adapters": adapters})
     scorer_id = fingerprint({"reference": reference, "source": getsource(score_projection),
-                             "metrics": getsource(regression_metrics), "adapters": adapters})
+                             "metrics": getsource(regression_metrics), "adapters": adapters,
+                             "scopes": ([getsource(score_city_projection), getsource(scope_rmse),
+                                          validation_groups.tolist() if validation_groups is not None else None]
+                                        if city_screen else None)})
     pack_id = fingerprint({"dataset": PROFILE, "task": TASK, "unit": TARGET_UNIT,
                            "label_origin": "remaining_time_from_lifecycle", "features": parent.meta["paths"]})
     projection_key = fingerprint({"validation": validation_projection, "scorer": scorer_id})
@@ -335,32 +428,43 @@ def train(rnd, *, city_screen=False):
         cache = RoundCache(state, rnd.round_index)
         decision_path = state / "decision-evidence.json"
         previous = json.loads(decision_path.read_bytes()) if decision_path.is_file() else []
+        current_scopes = parent_score.get("scope_rmse", {})
+        missing_bands = (missing_historical_bands(previous, parent_hash, train_projection, current_scopes)
+                         if city_screen else [])
+        if missing_bands:
+            available_recipes = {}
         evidence = history_evidence(previous, parent_hash=parent_hash, train_key=train_projection,
-                                    evaluation_key=projection_key, seed=seed)
+                                    evaluation_key=projection_key, seed=seed, compact=city_screen)
         tested = {row["action"] for row in evidence["current"]}
         next_actions = [name for name in available_recipes if name not in tested]
-        max_tokens = min(384, rnd.max_output_tokens)
+        max_tokens = min(168 if city_screen else 384, rnd.max_output_tokens)
+        planner_parent = {key: round(parent_score[key], 6) for key in (METRIC, "mae")}
+        bands = error_by_rul_band(vy, parent_prediction)
         context = {
-            "profile": PROFILE, "round": rnd.round_index, "parent": parent_hash,
+            "profile": PROFILE, "round": rnd.round_index, "parent": parent_hash[7:19] if city_screen else parent_hash,
             "parent_steps": parent.meta["steps"], "task": TASK,
             "metric": {"primary": METRIC, "direction": DIRECTION, "unit": TARGET_UNIT, "secondary": "mae"},
-            "parent_metrics": {key: round(value, 6) for key, value in parent_score.items()},
-            "error_by_rul_band": error_by_rul_band(vy, parent_prediction),
-            "history": evidence, "available": {name: DESCRIPTIONS[name] for name in next_actions},
+            "parent_metrics": planner_parent,
+            "error_by_rul_band": ([[row["minutes"], row["count"], round(row["mean_signed_error"], 1), round(row["rmse"], 1)]
+                                   for row in bands] if city_screen else bands),
+            "history": evidence, "available": {name: CITY_DESCRIPTIONS.get(name, DESCRIPTIONS[name]) if city_screen
+                                               else DESCRIPTIONS[name] for name in next_actions},
             "preference": next_actions,
-            "budget": {"actions": 3, "rounds_remaining": max(0, rnd.frame.get("rounds_per_dataset", 10) - rnd.round_index + 1),
+            "budget": {"actions": 2 if city_screen else 3, "rounds_remaining": max(0, rnd.frame.get("rounds_per_dataset", 10) - rnd.round_index + 1),
                        "wall_seconds": rnd.wall_seconds, "max_output_tokens": max_tokens},
         }
-        receipt, plan, fallback = request_plan(rnd, context, planner_messages, fallback_plan, max_tokens)
+        build_messages = partial(structured_messages, system=CITY_SYSTEM) if city_screen else planner_messages
+        receipt, plan, fallback = request_plan(rnd, context, build_messages, fallback_plan, max_tokens)
         requested = plan["actions"]
         reuse_only = not requested
         trials, artifacts, execution = run_trials(
             rnd, root, cache, requested or list(available_recipes), available_recipes, reuse_only=reuse_only, pack_id=pack_id,
             parent_hash=parent_hash, parent=parent, seed=seed, train_projection=train_projection,
-            projection_key=projection_key, trainer_id=trainer_id, trainer=fit_candidate, score_projection=score_projection,
+            projection_key=projection_key, trainer_id=trainer_id, trainer=fit_candidate, score_projection=evaluate,
             x=x, y=y, vx=vx, vy=vy, load_checkpoint=Model.load, prediction_dtype="<f8",
         )
-        best = select_best(trials)
+        rejected = {trial["recipe"]: city_risk(parent_score, trial) for trial in trials} if city_screen else {}
+        best = select_best([trial for trial in trials if not rejected.get(trial["recipe"])])
         recipe = best["recipe"] if best else None
         raw_reply = receipt.text if isinstance(receipt.text, str) else ""
         config = {
@@ -372,6 +476,11 @@ def train(rnd, *, city_screen=False):
         }
         if screened:
             config["screening"] = "whole-bearing and whole-condition training projections"
+        if city_screen:
+            config.update(fitting_projection_sha256=train_projection, validation_projection_sha256=validation_projection,
+                          validation_bearings_verified=validation_groups is not None,
+                          historical_bands_missing=missing_bands,
+                          stage_rejections={recipe: failures for recipe, failures in rejected.items() if failures})
         measured = best[METRIC] if best else parent_score[METRIC]
         evaluation = (cache.entries[best["cache"]["training_key"]]["scores"][projection_key] if best else {})
         prior_host_rmse = evaluation.get("host_rmse")
@@ -408,7 +517,8 @@ def train(rnd, *, city_screen=False):
                 measurement_source = "host"
         gain = metric_gain(parent_score[METRIC], measured, DIRECTION) if measured is not None else None
         accepted = submission is not None and gain is not None and gain > METRIC_EPSILON
-        why = ("host_metric_unavailable" if gain is None else
+        why = ("historical_scope_unobserved" if missing_bands else "host_metric_unavailable" if gain is None else
+               "stage_guard" if best is None and trials else
                adoption_reason(best, parent_hash=parent_prediction_hash, gain=gain, accepted=accepted))
         selected_artifact = submission["artifact_id"] if accepted else rnd.parent.artifact_id
         selected_hash = best["cache"]["checkpoint_sha256"] if accepted else parent_hash
@@ -421,9 +531,13 @@ def train(rnd, *, city_screen=False):
         (state / f"round-{rnd.round_index:02d}.json").write_text(json.dumps(trace, allow_nan=False), encoding="utf-8")
         previous.append({"parent": parent_hash, "training": train_projection, "validation": projection_key,
                          "seed": seed, "round": rnd.round_index,
+                         **({"selected": selected_hash,
+                             "validation_bands": sorted(key for key in current_scopes if key.startswith("rul:"))}
+                            if city_screen else {}),
                          "outcomes": [{"action": trial["recipe"], "rmse": round(trial[METRIC], 6),
                                        "mae": round(trial["mae"], 6),
                                        "gain": round(metric_gain(parent_score[METRIC], trial[METRIC], DIRECTION), 6),
+                                       **({"stage_safe": not bool(rejected[trial["recipe"]])} if city_screen else {}),
                                        "optimizer_steps": trial["final_steps"] - trial["initial_steps"],
                                        "first_round": trial["cache"]["score_first_round"]} for trial in trials]})
         decision_path.write_text(json.dumps(previous[-10:], allow_nan=False), encoding="utf-8")

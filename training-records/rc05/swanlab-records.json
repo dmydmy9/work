@@ -1,0 +1,35 @@
+{
+  "A": {
+    "release": "RC05",
+    "pack": "A",
+    "rounds": 10,
+    "model": "Qwen/Qwen3.5-4B",
+    "image": "sha256:7ef41202a9ec62e30dc5a63c810cf81345e16a26b7a54a076ceae51c1b62e64d",
+    "source": "byte-exact replay of real PyTRiO replies",
+    "metric": "macro_f1",
+    "directory": "run-20261127_104456-3d59wq58r2tr2caeepyof",
+    "backup_sha256": "8c3d2a882fa5258924626b8db64eada4c6e1bbf45974bd49c2cf0bf91f8a73a6"
+  },
+  "B": {
+    "release": "RC05",
+    "pack": "B",
+    "rounds": 10,
+    "model": "Qwen/Qwen3.5-4B",
+    "image": "sha256:7ef41202a9ec62e30dc5a63c810cf81345e16a26b7a54a076ceae51c1b62e64d",
+    "source": "byte-exact replay of real PyTRiO replies",
+    "metric": "rmse",
+    "directory": "run-20261127_104456-mqypq5ff7zmeitj0wtrs7",
+    "backup_sha256": "e6e7eda01891c3e37dde700a8f6ff817a4a872b044b3ee3e2dbb9ee6edd0005c"
+  },
+  "C": {
+    "release": "RC05",
+    "pack": "C",
+    "rounds": 10,
+    "model": "Qwen/Qwen3.5-4B",
+    "image": "sha256:7ef41202a9ec62e30dc5a63c810cf81345e16a26b7a54a076ceae51c1b62e64d",
+    "source": "byte-exact replay of real PyTRiO replies",
+    "metric": "rmse",
+    "directory": "run-20261127_104456-6uivugnk67iiptrx0jz33",
+    "backup_sha256": "e31b124c0122766a53275e88ab13d21e4f62716392994b63217ae73e7df27a6b"
+  }
+}

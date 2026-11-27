@@ -1,0 +1,578 @@
+{
+  "B": {
+    "rc04": {
+      "mean_relative_rmse_gain": -0.09416853670364773,
+      "worst_phase_mean_gain": -0.3711185401237558,
+      "first_nonnegative_phase_round": {
+        "initial": 1,
+        "recovery": null,
+        "shifted": 1
+      },
+      "minimum_history_retention": 1.0,
+      "total_wall_seconds": 61.0711006000638,
+      "protocol_sha256": "a521beaaf2ac93c511ff844202e357f177dc58d272b8cb044b5f00ebf0b77852",
+      "rounds": [
+        {
+          "round": 1,
+          "phase": "initial",
+          "gain": 0.0,
+          "official_rmse": 245.14929367610208,
+          "selected_rmse": 245.14929367610208,
+          "selected_worst_group_rmse": 482.53385854579494,
+          "historical_phase_rmse": {
+            "initial": 245.14929367610208
+          },
+          "selected_checkpoint_sha256": "sha256:c7d819fcee9d25459c583b5ffdb35593d4a47b524ed152d0226bf81a283314b4"
+        },
+        {
+          "round": 2,
+          "phase": "initial",
+          "gain": 0.0,
+          "official_rmse": 245.14929367610208,
+          "selected_rmse": 245.14929367610208,
+          "selected_worst_group_rmse": 482.53385854579494,
+          "historical_phase_rmse": {
+            "initial": 245.14929367610208
+          },
+          "selected_checkpoint_sha256": "sha256:c7d819fcee9d25459c583b5ffdb35593d4a47b524ed152d0226bf81a283314b4"
+        },
+        {
+          "round": 3,
+          "phase": "initial",
+          "gain": 0.0,
+          "official_rmse": 245.14929367610208,
+          "selected_rmse": 245.14929367610208,
+          "selected_worst_group_rmse": 482.53385854579494,
+          "historical_phase_rmse": {
+            "initial": 245.14929367610208
+          },
+          "selected_checkpoint_sha256": "sha256:c7d819fcee9d25459c583b5ffdb35593d4a47b524ed152d0226bf81a283314b4"
+        },
+        {
+          "round": 4,
+          "phase": "initial",
+          "gain": 0.0,
+          "official_rmse": 245.14929367610208,
+          "selected_rmse": 245.14929367610208,
+          "selected_worst_group_rmse": 482.53385854579494,
+          "historical_phase_rmse": {
+            "initial": 245.14929367610208
+          },
+          "selected_checkpoint_sha256": "sha256:c7d819fcee9d25459c583b5ffdb35593d4a47b524ed152d0226bf81a283314b4"
+        },
+        {
+          "round": 5,
+          "phase": "shifted",
+          "gain": 0.05075618186861819,
+          "official_rmse": 245.14929367610208,
+          "selected_rmse": 232.70645154131455,
+          "selected_worst_group_rmse": 419.57153206374045,
+          "historical_phase_rmse": {
+            "initial": 232.70645154131455,
+            "shifted": 232.70645154131455
+          },
+          "selected_checkpoint_sha256": "sha256:3be3d221278cec8333e5a148ce939b6dc008ba1da7877022da03f7ada599e4b9"
+        },
+        {
+          "round": 6,
+          "phase": "shifted",
+          "gain": 0.06045703573308592,
+          "official_rmse": 245.14929367610208,
+          "selected_rmse": 230.3282940683852,
+          "selected_worst_group_rmse": 375.70168473465833,
+          "historical_phase_rmse": {
+            "initial": 230.3282940683852,
+            "shifted": 230.3282940683852
+          },
+          "selected_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4"
+        },
+        {
+          "round": 7,
+          "phase": "shifted",
+          "gain": 0.06045703573308592,
+          "official_rmse": 245.14929367610208,
+          "selected_rmse": 230.3282940683852,
+          "selected_worst_group_rmse": 375.70168473465833,
+          "historical_phase_rmse": {
+            "initial": 230.3282940683852,
+            "shifted": 230.3282940683852
+          },
+          "selected_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4"
+        },
+        {
+          "round": 8,
+          "phase": "recovery",
+          "gain": -0.3711185401237558,
+          "official_rmse": 185.88929572290604,
+          "selected_rmse": 254.87625977622403,
+          "selected_worst_group_rmse": 291.71650936292787,
+          "historical_phase_rmse": {
+            "initial": 230.3282940683852,
+            "recovery": 254.87625977622403,
+            "shifted": 230.3282940683852
+          },
+          "selected_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4"
+        },
+        {
+          "round": 9,
+          "phase": "recovery",
+          "gain": -0.3711185401237558,
+          "official_rmse": 185.88929572290604,
+          "selected_rmse": 254.87625977622403,
+          "selected_worst_group_rmse": 291.71650936292787,
+          "historical_phase_rmse": {
+            "initial": 230.3282940683852,
+            "recovery": 254.87625977622403,
+            "shifted": 230.3282940683852
+          },
+          "selected_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4"
+        },
+        {
+          "round": 10,
+          "phase": "recovery",
+          "gain": -0.3711185401237558,
+          "official_rmse": 185.88929572290604,
+          "selected_rmse": 254.87625977622403,
+          "selected_worst_group_rmse": 291.71650936292787,
+          "historical_phase_rmse": {
+            "initial": 230.3282940683852,
+            "recovery": 254.87625977622403,
+            "shifted": 230.3282940683852
+          },
+          "selected_checkpoint_sha256": "sha256:bf709f397a245553c9556bca2b9456750e5d0216b173d1dbc2a999b287ba37b4"
+        }
+      ]
+    },
+    "rc05": {
+      "mean_relative_rmse_gain": 0.009435527301914026,
+      "worst_phase_mean_gain": -0.018920507261251718,
+      "first_nonnegative_phase_round": {
+        "initial": 1,
+        "recovery": null,
+        "shifted": 1
+      },
+      "minimum_history_retention": 1.0,
+      "total_wall_seconds": 48.156435600016266,
+      "protocol_sha256": "a521beaaf2ac93c511ff844202e357f177dc58d272b8cb044b5f00ebf0b77852",
+      "rounds": [
+        {
+          "round": 1,
+          "phase": "initial",
+          "gain": 0.0,
+          "official_rmse": 245.14929367610208,
+          "selected_rmse": 245.14929367610208,
+          "selected_worst_group_rmse": 482.53385854579494,
+          "historical_phase_rmse": {
+            "initial": 245.14929367610208
+          },
+          "selected_checkpoint_sha256": "sha256:c7d819fcee9d25459c583b5ffdb35593d4a47b524ed152d0226bf81a283314b4"
+        },
+        {
+          "round": 2,
+          "phase": "initial",
+          "gain": 0.0,
+          "official_rmse": 245.14929367610208,
+          "selected_rmse": 245.14929367610208,
+          "selected_worst_group_rmse": 482.53385854579494,
+          "historical_phase_rmse": {
+            "initial": 245.14929367610208
+          },
+          "selected_checkpoint_sha256": "sha256:c7d819fcee9d25459c583b5ffdb35593d4a47b524ed152d0226bf81a283314b4"
+        },
+        {
+          "round": 3,
+          "phase": "initial",
+          "gain": 0.0,
+          "official_rmse": 245.14929367610208,
+          "selected_rmse": 245.14929367610208,
+          "selected_worst_group_rmse": 482.53385854579494,
+          "historical_phase_rmse": {
+            "initial": 245.14929367610208
+          },
+          "selected_checkpoint_sha256": "sha256:c7d819fcee9d25459c583b5ffdb35593d4a47b524ed152d0226bf81a283314b4"
+        },
+        {
+          "round": 4,
+          "phase": "initial",
+          "gain": 0.0,
+          "official_rmse": 245.14929367610208,
+          "selected_rmse": 245.14929367610208,
+          "selected_worst_group_rmse": 482.53385854579494,
+          "historical_phase_rmse": {
+            "initial": 245.14929367610208
+          },
+          "selected_checkpoint_sha256": "sha256:c7d819fcee9d25459c583b5ffdb35593d4a47b524ed152d0226bf81a283314b4"
+        },
+        {
+          "round": 5,
+          "phase": "shifted",
+          "gain": 0.03191212673934529,
+          "official_rmse": 245.14929367610208,
+          "selected_rmse": 237.32605834624934,
+          "selected_worst_group_rmse": 463.7370210371322,
+          "historical_phase_rmse": {
+            "initial": 237.32605834624934,
+            "shifted": 237.32605834624934
+          },
+          "selected_checkpoint_sha256": "sha256:3bed78459f60a87ca56a638d035f0c9dda0202f03b3e74b4dd576b53ba0a932d"
+        },
+        {
+          "round": 6,
+          "phase": "shifted",
+          "gain": 0.05960233403177506,
+          "official_rmse": 245.14929367610208,
+          "selected_rmse": 230.5378235867653,
+          "selected_worst_group_rmse": 447.9439432288353,
+          "historical_phase_rmse": {
+            "initial": 230.5378235867653,
+            "shifted": 230.5378235867653
+          },
+          "selected_checkpoint_sha256": "sha256:f035374b1ef0f103209928fdc3e57ef0398f98c7ca669993d26f8bea0f7aef72"
+        },
+        {
+          "round": 7,
+          "phase": "shifted",
+          "gain": 0.05960233403177506,
+          "official_rmse": 245.14929367610208,
+          "selected_rmse": 230.5378235867653,
+          "selected_worst_group_rmse": 447.9439432288353,
+          "historical_phase_rmse": {
+            "initial": 230.5378235867653,
+            "shifted": 230.5378235867653
+          },
+          "selected_checkpoint_sha256": "sha256:f035374b1ef0f103209928fdc3e57ef0398f98c7ca669993d26f8bea0f7aef72"
+        },
+        {
+          "round": 8,
+          "phase": "recovery",
+          "gain": -0.018920507261251718,
+          "official_rmse": 185.88929572290604,
+          "selected_rmse": 189.40641549242025,
+          "selected_worst_group_rmse": 277.36768381699056,
+          "historical_phase_rmse": {
+            "initial": 230.5378235867653,
+            "recovery": 189.40641549242025,
+            "shifted": 230.5378235867653
+          },
+          "selected_checkpoint_sha256": "sha256:f035374b1ef0f103209928fdc3e57ef0398f98c7ca669993d26f8bea0f7aef72"
+        },
+        {
+          "round": 9,
+          "phase": "recovery",
+          "gain": -0.018920507261251718,
+          "official_rmse": 185.88929572290604,
+          "selected_rmse": 189.40641549242025,
+          "selected_worst_group_rmse": 277.36768381699056,
+          "historical_phase_rmse": {
+            "initial": 230.5378235867653,
+            "recovery": 189.40641549242025,
+            "shifted": 230.5378235867653
+          },
+          "selected_checkpoint_sha256": "sha256:f035374b1ef0f103209928fdc3e57ef0398f98c7ca669993d26f8bea0f7aef72"
+        },
+        {
+          "round": 10,
+          "phase": "recovery",
+          "gain": -0.018920507261251718,
+          "official_rmse": 185.88929572290604,
+          "selected_rmse": 189.40641549242025,
+          "selected_worst_group_rmse": 277.36768381699056,
+          "historical_phase_rmse": {
+            "initial": 230.5378235867653,
+            "recovery": 189.40641549242025,
+            "shifted": 230.5378235867653
+          },
+          "selected_checkpoint_sha256": "sha256:f035374b1ef0f103209928fdc3e57ef0398f98c7ca669993d26f8bea0f7aef72"
+        }
+      ]
+    }
+  },
+  "C": {
+    "rc04": {
+      "mean_relative_rmse_gain": 0.09112275853543719,
+      "worst_phase_mean_gain": 0.05037102901097512,
+      "first_nonnegative_phase_round": {
+        "initial": 1,
+        "recovery": 1,
+        "shifted": 1
+      },
+      "minimum_history_retention": 0.9881357859271026,
+      "total_wall_seconds": 115.76727609999944,
+      "protocol_sha256": "53d8dcdb0a4916af86ff20af07fbed9bf2fe9c5ff65314e33b0551bfbb7679a0",
+      "rounds": [
+        {
+          "round": 1,
+          "phase": "initial",
+          "gain": 0.13377152309516294,
+          "official_rmse": 49.80852397993646,
+          "selected_rmse": 43.14556186401841,
+          "selected_worst_group_rmse": 105.63199058724753,
+          "historical_phase_rmse": {
+            "initial": 43.14556186401841
+          },
+          "selected_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3"
+        },
+        {
+          "round": 2,
+          "phase": "initial",
+          "gain": 0.13377152309516294,
+          "official_rmse": 49.80852397993646,
+          "selected_rmse": 43.14556186401841,
+          "selected_worst_group_rmse": 105.63199058724753,
+          "historical_phase_rmse": {
+            "initial": 43.14556186401841
+          },
+          "selected_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3"
+        },
+        {
+          "round": 3,
+          "phase": "initial",
+          "gain": 0.13377152309516294,
+          "official_rmse": 49.80852397993646,
+          "selected_rmse": 43.14556186401841,
+          "selected_worst_group_rmse": 105.63199058724753,
+          "historical_phase_rmse": {
+            "initial": 43.14556186401841
+          },
+          "selected_checkpoint_sha256": "sha256:23d8fa25324ecc74ff0335da14e34e01e59f4f29604ab8edbac1929ce076cba3"
+        },
+        {
+          "round": 4,
+          "phase": "initial",
+          "gain": 0.14411500875402727,
+          "official_rmse": 49.80852397993646,
+          "selected_rmse": 42.63036811054274,
+          "selected_worst_group_rmse": 104.32818251422094,
+          "historical_phase_rmse": {
+            "initial": 42.63036811054274
+          },
+          "selected_checkpoint_sha256": "sha256:dd40b99bf42f13ce36904c1fd5bf1e75647acbf09bdc59edeb8b90e513bb4bc8"
+        },
+        {
+          "round": 5,
+          "phase": "shifted",
+          "gain": 0.050277000924860316,
+          "official_rmse": 54.08895862767475,
+          "selected_rmse": 51.36952800472641,
+          "selected_worst_group_rmse": 126.43713185620972,
+          "historical_phase_rmse": {
+            "initial": 43.142216603910846,
+            "shifted": 51.36952800472641
+          },
+          "selected_checkpoint_sha256": "sha256:1c03d6e16f2a5f7814aeadaf7784d5af1cb167103a9384608e66ac1e5fcb1a75"
+        },
+        {
+          "round": 6,
+          "phase": "shifted",
+          "gain": 0.050418043054032524,
+          "official_rmse": 54.08895862767475,
+          "selected_rmse": 51.36189918283686,
+          "selected_worst_group_rmse": 126.40384996204389,
+          "historical_phase_rmse": {
+            "initial": 43.12817848035661,
+            "shifted": 51.36189918283686
+          },
+          "selected_checkpoint_sha256": "sha256:cf5099217c934092248170dffa03fce210a20766833ac671f1853e2c765f6388"
+        },
+        {
+          "round": 7,
+          "phase": "shifted",
+          "gain": 0.050418043054032524,
+          "official_rmse": 54.08895862767475,
+          "selected_rmse": 51.36189918283686,
+          "selected_worst_group_rmse": 126.40384996204389,
+          "historical_phase_rmse": {
+            "initial": 43.12817848035661,
+            "shifted": 51.36189918283686
+          },
+          "selected_checkpoint_sha256": "sha256:cf5099217c934092248170dffa03fce210a20766833ac671f1853e2c765f6388"
+        },
+        {
+          "round": 8,
+          "phase": "recovery",
+          "gain": 0.07156164009397681,
+          "official_rmse": 52.86857256611151,
+          "selected_rmse": 49.085210803853144,
+          "selected_worst_group_rmse": 126.4510971512486,
+          "historical_phase_rmse": {
+            "initial": 43.1114748544782,
+            "recovery": 49.085210803853144,
+            "shifted": 51.3630631029077
+          },
+          "selected_checkpoint_sha256": "sha256:cdd14d64e578b17ec54f58dc8286ff93aed8c4d5f6fb01afe834c95d44fb79b4"
+        },
+        {
+          "round": 9,
+          "phase": "recovery",
+          "gain": 0.07156164009397681,
+          "official_rmse": 52.86857256611151,
+          "selected_rmse": 49.085210803853144,
+          "selected_worst_group_rmse": 126.4510971512486,
+          "historical_phase_rmse": {
+            "initial": 43.1114748544782,
+            "recovery": 49.085210803853144,
+            "shifted": 51.3630631029077
+          },
+          "selected_checkpoint_sha256": "sha256:cdd14d64e578b17ec54f58dc8286ff93aed8c4d5f6fb01afe834c95d44fb79b4"
+        },
+        {
+          "round": 10,
+          "phase": "recovery",
+          "gain": 0.07156164009397681,
+          "official_rmse": 52.86857256611151,
+          "selected_rmse": 49.085210803853144,
+          "selected_worst_group_rmse": 126.4510971512486,
+          "historical_phase_rmse": {
+            "initial": 43.1114748544782,
+            "recovery": 49.085210803853144,
+            "shifted": 51.3630631029077
+          },
+          "selected_checkpoint_sha256": "sha256:cdd14d64e578b17ec54f58dc8286ff93aed8c4d5f6fb01afe834c95d44fb79b4"
+        }
+      ]
+    },
+    "rc05": {
+      "mean_relative_rmse_gain": 0.09273786145583068,
+      "worst_phase_mean_gain": 0.05009025113967769,
+      "first_nonnegative_phase_round": {
+        "initial": 1,
+        "recovery": 1,
+        "shifted": 1
+      },
+      "minimum_history_retention": 0.9899046921590421,
+      "total_wall_seconds": 77.50146509998012,
+      "protocol_sha256": "53d8dcdb0a4916af86ff20af07fbed9bf2fe9c5ff65314e33b0551bfbb7679a0",
+      "rounds": [
+        {
+          "round": 1,
+          "phase": "initial",
+          "gain": 0.1370981378102566,
+          "official_rmse": 49.80852397993646,
+          "selected_rmse": 42.97986809520966,
+          "selected_worst_group_rmse": 100.92194060004272,
+          "historical_phase_rmse": {
+            "initial": 42.97986809520966
+          },
+          "selected_checkpoint_sha256": "sha256:cfc9ce0dae0b351f7ffbbe71957a8aa678d1ebb2a729833fe238693ad4ebe895"
+        },
+        {
+          "round": 2,
+          "phase": "initial",
+          "gain": 0.1370981378102566,
+          "official_rmse": 49.80852397993646,
+          "selected_rmse": 42.97986809520966,
+          "selected_worst_group_rmse": 100.92194060004272,
+          "historical_phase_rmse": {
+            "initial": 42.97986809520966
+          },
+          "selected_checkpoint_sha256": "sha256:cfc9ce0dae0b351f7ffbbe71957a8aa678d1ebb2a729833fe238693ad4ebe895"
+        },
+        {
+          "round": 3,
+          "phase": "initial",
+          "gain": 0.1370981378102566,
+          "official_rmse": 49.80852397993646,
+          "selected_rmse": 42.97986809520966,
+          "selected_worst_group_rmse": 100.92194060004272,
+          "historical_phase_rmse": {
+            "initial": 42.97986809520966
+          },
+          "selected_checkpoint_sha256": "sha256:cfc9ce0dae0b351f7ffbbe71957a8aa678d1ebb2a729833fe238693ad4ebe895"
+        },
+        {
+          "round": 4,
+          "phase": "initial",
+          "gain": 0.14783947472601022,
+          "official_rmse": 49.80852397993646,
+          "selected_rmse": 42.44485795786477,
+          "selected_worst_group_rmse": 99.16096372343897,
+          "historical_phase_rmse": {
+            "initial": 42.44485795786477
+          },
+          "selected_checkpoint_sha256": "sha256:c6279874f0b927399a4f7d3ea34735b4bf453a2d7f489c60e025ce0a78e91683"
+        },
+        {
+          "round": 5,
+          "phase": "shifted",
+          "gain": 0.05009025113967769,
+          "official_rmse": 54.08895862767475,
+          "selected_rmse": 51.379629106130885,
+          "selected_worst_group_rmse": 126.43713185620972,
+          "historical_phase_rmse": {
+            "initial": 42.87772175853613,
+            "shifted": 51.379629106130885
+          },
+          "selected_checkpoint_sha256": "sha256:916d7855591d45503d6c3e7c39da227be6793c4180b1af3df10beb4f68648d53"
+        },
+        {
+          "round": 6,
+          "phase": "shifted",
+          "gain": 0.05009025113967769,
+          "official_rmse": 54.08895862767475,
+          "selected_rmse": 51.379629106130885,
+          "selected_worst_group_rmse": 126.43713185620972,
+          "historical_phase_rmse": {
+            "initial": 42.87772175853613,
+            "shifted": 51.379629106130885
+          },
+          "selected_checkpoint_sha256": "sha256:916d7855591d45503d6c3e7c39da227be6793c4180b1af3df10beb4f68648d53"
+        },
+        {
+          "round": 7,
+          "phase": "shifted",
+          "gain": 0.05009025113967769,
+          "official_rmse": 54.08895862767475,
+          "selected_rmse": 51.379629106130885,
+          "selected_worst_group_rmse": 126.43713185620972,
+          "historical_phase_rmse": {
+            "initial": 42.87772175853613,
+            "shifted": 51.379629106130885
+          },
+          "selected_checkpoint_sha256": "sha256:916d7855591d45503d6c3e7c39da227be6793c4180b1af3df10beb4f68648d53"
+        },
+        {
+          "round": 8,
+          "phase": "recovery",
+          "gain": 0.07246707713199241,
+          "official_rmse": 52.86857256611151,
+          "selected_rmse": 49.03734164010477,
+          "selected_worst_group_rmse": 126.43713185620972,
+          "historical_phase_rmse": {
+            "initial": 42.87772175853613,
+            "recovery": 49.03734164010477,
+            "shifted": 51.379629106130885
+          },
+          "selected_checkpoint_sha256": "sha256:916d7855591d45503d6c3e7c39da227be6793c4180b1af3df10beb4f68648d53"
+        },
+        {
+          "round": 9,
+          "phase": "recovery",
+          "gain": 0.07246707713199241,
+          "official_rmse": 52.86857256611151,
+          "selected_rmse": 49.03734164010477,
+          "selected_worst_group_rmse": 126.43713185620972,
+          "historical_phase_rmse": {
+            "initial": 42.87772175853613,
+            "recovery": 49.03734164010477,
+            "shifted": 51.379629106130885
+          },
+          "selected_checkpoint_sha256": "sha256:916d7855591d45503d6c3e7c39da227be6793c4180b1af3df10beb4f68648d53"
+        },
+        {
+          "round": 10,
+          "phase": "recovery",
+          "gain": 0.07303981871850895,
+          "official_rmse": 52.86857256611151,
+          "selected_rmse": 49.00706160997639,
+          "selected_worst_group_rmse": 124.4665884478241,
+          "historical_phase_rmse": {
+            "initial": 42.74247709784904,
+            "recovery": 49.00706160997639,
+            "shifted": 51.38555043397883
+          },
+          "selected_checkpoint_sha256": "sha256:5fe666ee1b1e11e2beed9d72f909502ea8b2b17fb41d2210d7b6d308672ccc5b"
+        }
+      ]
+    }
+  }
+}

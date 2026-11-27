@@ -16,6 +16,9 @@ AMPLITUDE = {"mean_abs", "peak", "peak_to_peak", "rms"}
 GAIN_PAIRS = ((.5,.5),(.75,.75),(1.33,1.33),(2.,2.),(.5,2.),(2.,.5),(.75,1.33),(1.33,.75))
 SCHEMA = "vibration-transfer-v1"
 MIN_TRANSFER_SNAPSHOTS = 6
+B_ANCHOR_KEY = "school_b_transfer_anchor"
+B_SHORT_PROTECTION_KEY = "school_b_short_protection"
+B_TRANSFER_DOSE_KEY = "school_b_transfer_dose"
 BAND_ENERGIES = ("band1_energy_0_2k", "band2_energy_2k_6k", "band3_energy_6k_12k")
 
 
@@ -160,6 +163,44 @@ def conditional_shrink(prediction, configuration):
     return np.expm1(retain * measured + (1 - retain) * prior)
 
 
+def short_protected_prediction(anchor, candidate, boundary):
+    life = np.clip(anchor / max(boundary, 1.), 0, 1)
+    return anchor + (.4 + .6 * life) * (candidate - anchor)
+
+
+def store_transfer_anchor(candidate, parent):
+    if B_ANCHOR_KEY not in candidate.meta:
+        candidate.meta[B_ANCHOR_KEY] = {name: tensor.tolist() for name, tensor in parent.params.items()}
+
+
+def fit_short_protection(targets, groups):
+    """Use the short-life protection if the fitting window lacks failure endpoints."""
+    cohorts = [targets[groups == group] for group in np.unique(groups)]
+    if any(rows.min() < 1. for rows in cohorts):
+        return None
+    return float(np.median([np.median(rows) for rows in cohorts]))
+
+
+def anchor_prediction(model, x):
+    weights = {name: np.asarray(values) for name, values in model.meta[B_ANCHOR_KEY].items()}
+    hidden = np.tanh(model.normalized(x) @ weights["w1"] + weights["b1"])
+    logits = hidden @ weights["w2"] + weights["b2"]
+    return np.maximum(0., logits[:, 0] * model.meta["target_scale"] + model.meta["target_mean"])
+
+
+def apply_anchor_protection(model, x, prediction):
+    boundary = model.meta.get(B_SHORT_PROTECTION_KEY)
+    dose = model.meta.get(B_TRANSFER_DOSE_KEY)
+    if boundary is None and dose is None:
+        return prediction
+    anchor = anchor_prediction(model, x)
+    if boundary is not None:
+        prediction = short_protected_prediction(anchor, prediction, boundary)
+    if dose is not None:
+        prediction = anchor + dose * (prediction - anchor)
+    return prediction
+
+
 def empirical_rank(knots, values):
     return np.interp(values, knots, GATE_LEVELS)
 
@@ -239,6 +280,21 @@ def check_histogram(hist):
 
 def check_transfer(parent):
     meta=parent.meta
+    anchor = meta.get(B_ANCHOR_KEY)
+    if anchor is not None:
+        if not isinstance(anchor, dict) or set(anchor) != set(parent.params):
+            raise ValueError("B transfer anchor tensors missing")
+        for name, values in anchor.items():
+            tensor = np.asarray(values, dtype=float)
+            if tensor.shape != parent.params[name].shape or not np.isfinite(tensor).all():
+                raise ValueError("invalid B transfer anchor tensor")
+    protection = meta.get(B_SHORT_PROTECTION_KEY)
+    if protection is not None and (anchor is None or type(protection) not in (int, float)
+                                   or not math.isfinite(protection) or protection < 1.):
+        raise ValueError("invalid B short-life protection")
+    dose = meta.get(B_TRANSFER_DOSE_KEY)
+    if dose is not None and (anchor is None or type(dose) not in (int, float) or not 0 < dose <= 1):
+        raise ValueError("invalid B transfer dose")
     strategy=meta.get("school_b_prediction")
     shrink = meta.get("school_b_conditional_shrink")
     if shrink is not None:
@@ -317,7 +373,7 @@ def predict_model(model, x):
     result = current + confidence * (forecast - current)
     shrink = model.meta.get("school_b_conditional_shrink")
     if shrink is None:
-        return result
+        return apply_anchor_protection(model, x, result)
     prediction = conditional_shrink(result, shrink)
     spectral = conf.get("spectral_residual")
     if spectral is not None:
@@ -332,7 +388,9 @@ def predict_model(model, x):
             weight = (ranks[selection] - spectral["threshold"]) / (1 - spectral["threshold"])
             prediction[selection] += weight * (robust - prediction[selection])
     offset = conf.get("out_of_bearing_offset_minutes")
-    return prediction if offset is None else np.maximum(0., prediction + offset)
+    if offset is not None:
+        prediction = np.maximum(0., prediction + offset)
+    return apply_anchor_protection(model, x, prediction)
 
 
 def update_prediction(parent,x,y,groups,weights,recipe):

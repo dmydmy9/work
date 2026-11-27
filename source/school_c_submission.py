@@ -13,28 +13,29 @@ from baselines.data import flatten
 from baselines.model import Model
 import numpy as np
 
-from school_c_recipes import RECIPES, continue_parent, group_ids, metrics
-from school_c_kernel import compile_regime_kernel, predict_regime_kernel
+from school_c_recipes import CAP_RECIPE, CITY_RECIPES, continue_parent, group_ids, metrics
+from school_c_kernel import RUL_CAP_KEY, SETTINGS_PATH, compile_regime_kernel, predict_regime_kernel, validate_rul_caps
 from school_cache import RoundCache, check_candidate_upload, file_digest, fingerprint, projection_digest
 from school_planner import history_evidence, planner_messages, rank_untried_actions
-from school_runtime import request_plan, run_trials, write_candidate
+from school_runtime import request_plan, run_trials, scope_regressions, scope_rmse, write_candidate
 
 
 CODE_FILES = ("school_c_submission.py", "school_c_recipes.py", "school_c_kernel.py", "school_runtime.py", "school_cache.py",
               "school_planner.py", "school_profile.py")
 BASELINE_FILES = ("baselines/model.py", "baselines/data.py", "baselines/predict.py", "baselines/__init__.py")
-PREFERENCES = ("regime-kernel-5", "conservative-5", "official-5", "engine-balanced-5", "accelerated-5")
-DESCRIPTIONS = {"regime-kernel-5": "continue with lower learning rate and refit nonlinear sensor residuals by regime",
+PREFERENCES = (CAP_RECIPE, "regime-kernel-5", "conservative-5", "official-5", "engine-balanced-5", "accelerated-5")
+DESCRIPTIONS = {CAP_RECIPE: "fit regime residuals with a high RUL prediction cap estimated on training data",
+                "regime-kernel-5": "continue with lower learning rate and refit nonlinear sensor residuals by regime",
                 "conservative-5": "lower the official learning rate by four",
                 "official-5": "continue at the official learning rate",
                 "engine-balanced-5": "sample engines with equal probability at the official rate",
                 "accelerated-5": "double the official learning rate"}
 SYSTEM = ("Plan one C-MAPSS continuation experiment from the supplied checkpoint. Minimize RMSE in cycles. "
-          "Positive historical gain means lower RMSE. Prior parent results inform choices. "
+          "Protect RUL bands and overestimate tails. Positive historical gain means lower RMSE. "
           "Return JSON only with actions, hypothesis, expected and failure. Choose at most one offered ID. "
           "Use an empty actions array only when existing trials exhaust the useful candidates. "
           "Keep each statement under 12 words.")
-MIN_GAIN = 1e-6
+MIN_GAIN_CYCLES = .025
 C_PATHS = flatten({"sensors": [0] * 21, "settings": [0] * 3})[0]
 
 
@@ -76,7 +77,25 @@ def read_projection(rows, model):
 
 def scorer(model, x, y):
     prediction = predict_regime_kernel(model, x, compile_regime_kernel(model))
-    return metrics(y, prediction), prediction
+    if not np.isfinite(prediction).all():
+        raise ValueError("C predictions must be finite")
+    regimes = np.rint(x[:, model.meta["paths"].index(SETTINGS_PATH)]).astype(int)
+    positive = np.maximum(prediction - y, 0.)
+    result = metrics(y, prediction)
+    result["scope_rmse"] = scope_rmse(y, prediction, (30, 90, 180), regimes)
+    result["overestimate_q99"] = float(np.quantile(positive, .99))
+    result["overestimate_nasa"] = float(np.expm1(positive / 10).sum())
+    return result, prediction
+
+
+def validation_risk(parent, candidate):
+    failures = scope_regressions(parent["scope_rmse"], candidate["scope_rmse"], ratio=1.05, absolute=2.)
+    for key, ratio, floor in (("nasa_score", 1.10, 1.), ("overestimate_q99", 1.05, 2.),
+                              ("overestimate_nasa", 1.10, 1.)):
+        delta = candidate[key] - parent[key]
+        if delta > max(floor, (ratio - 1.) * parent[key]):
+            failures[key] = delta
+    return failures
 
 
 def fallback(context):
@@ -91,6 +110,7 @@ def load_checkpoint(path):
     meta = model.meta
     if (meta["task"], len(meta["paths"]), meta["hidden"], meta["parameter_count"]) != ("regression", 24, 32, 833):
         raise ValueError("unexpected C architecture")
+    validate_rul_caps(model)
     return model
 
 
@@ -119,7 +139,7 @@ def train(rnd):
     source = Path(__file__).resolve().parent
     trainer_id = fingerprint([np.__version__, file_digest(baseline / "model.py"),
                               file_digest(source / "school_c_recipes.py"), file_digest(source / "school_c_kernel.py"),
-                              file_digest(__file__)])
+                              file_digest(source / "school_runtime.py"), file_digest(__file__)])
     pack_id = fingerprint(["C", parent.meta["paths"]])
     evaluation_key = fingerprint([validation_key, trainer_id])
 
@@ -129,33 +149,43 @@ def train(rnd):
         decision_file = state / "c-decisions.json"
         events = json.loads(decision_file.read_bytes()) if decision_file.is_file() else []
         evidence = history_evidence(events, parent_hash=parent_hash, train_key=fit_key,
-                                    evaluation_key=evaluation_key, seed=seed)
+                                    evaluation_key=evaluation_key, seed=seed, compact=True)
         tested = {item["action"] for item in evidence["current"]}
         available = [action for action in PREFERENCES if action not in tested
-                     and (groups is not None or not RECIPES[action][2])]
-        max_tokens = min(256, rnd.max_output_tokens)
-        context = {"profile": "C", "round": rnd.round_index, "parent": parent_hash,
-                   "parent_metrics": parent_metrics, "history": evidence, "preference": available,
+                     and (groups is not None or not CITY_RECIPES[action][2])]
+        # When the fit is identical the ordinary kernel arm would refit the same capped predictor.
+        if RUL_CAP_KEY in parent.meta and parent.meta.get("c_fit_projection") == fit_key:
+            available = [action for action in available if action != "regime-kernel-5"]
+        max_tokens = min(160, rnd.max_output_tokens)
+        context = {"profile": "C", "round": rnd.round_index, "parent": parent_hash[7:19],
+                   "parent_metrics": {key: round(parent_metrics[key], 5) for key in ("rmse", "mae", "overestimate_q99")},
+                   "history": evidence, "preference": available,
                    "available": {action: DESCRIPTIONS[action] for action in available},
                    "budget": {"actions": 1, "max_output_tokens": max_tokens, "wall_seconds": rnd.wall_seconds}}
         cache = RoundCache(state, rnd.round_index)
 
         def fit_candidate(old, data, targets, action, _seed):
-            return continue_parent(old, data, targets, groups, action)
+            trained, losses = continue_parent(old, data, targets, groups, action)
+            if action == CAP_RECIPE:
+                trained.meta["c_fit_projection"] = fit_key
+            return trained, losses
 
         _, plan, used_fallback = request_plan(rnd, context, partial(planner_messages, system=SYSTEM), fallback, max_tokens)
         trials, artifacts, execution = run_trials(
-            rnd, root, cache, plan["actions"], RECIPES, reuse_only=False, pack_id=pack_id,
+            rnd, root, cache, plan["actions"], CITY_RECIPES, reuse_only=False, pack_id=pack_id,
             parent_hash=parent_hash, parent=parent, seed=seed, train_projection=fit_key,
             projection_key=evaluation_key, trainer_id=trainer_id, trainer=fit_candidate, score_projection=scorer,
             x=x, y=y, vx=vx, vy=vy, load_checkpoint=load_checkpoint, prediction_dtype="<f8")
         candidate = trials[0] if trials else None
+        guard_failures = validation_risk(parent_metrics, candidate) if candidate else {}
         config = {"profile": "C", "parent_checkpoint_sha256": parent_hash, "parent_metrics": parent_metrics,
                   "plan": plan, "context": context, "planner_fallback": used_fallback, "trials": trials,
-                  "execution": execution, "fitting_engine_groups_verified": groups is not None}
+                  "execution": execution, "fitting_engine_groups_verified": groups is not None,
+                  "fitting_projection_sha256": fit_key, "validation_projection_sha256": validation_key,
+                  "stage_rejections": guard_failures}
         selected, selected_hash, candidate_bytes = rnd.parent.artifact_id, parent_hash, 0
         measured = None
-        if candidate:
+        if candidate and not guard_failures and parent_metrics["rmse"] - candidate["rmse"] > MIN_GAIN_CYCLES:
             recipe = candidate["recipe"]
             checkpoint, losses = artifacts[recipe]
             candidate_dir = root / "candidate"
@@ -170,16 +200,24 @@ def train(rnd):
                                            change_summary=f"Continued the C parent and Adam state with {recipe}.",
                                            checkpoint_paths=["checkpoint.npz"], code_paths=[*CODE_FILES, *BASELINE_FILES],
                                            predict_argv=["python3", "/app/harness.py", "predict"])
-            value = receipt.get("summary", {}).get("metrics", {}).get("rmse")
+            summary = receipt.get("summary")
+            observed = summary.get("metrics") if isinstance(summary, dict) else None
+            value = observed.get("rmse") if isinstance(observed, dict) else None
             if type(value) in (float, int) and math.isfinite(value) and value >= 0:
                 measured = float(value)
-                if parent_metrics["rmse"] - max(candidate["rmse"], measured) > MIN_GAIN:
+                if parent_metrics["rmse"] - max(candidate["rmse"], measured) > MIN_GAIN_CYCLES:
                     selected, selected_hash = receipt["artifact_id"], digest
         selected_rmse = parent_metrics["rmse"] if selected_hash == parent_hash else measured
+        reason = ("stage_guard" if guard_failures else "no_candidate" if not candidate else
+                  "lower_rmse" if selected_hash != parent_hash else
+                  "below_minimum_gain" if candidate["rmse"] >= parent_metrics["rmse"] - MIN_GAIN_CYCLES else
+                  "host_metric_unavailable" if measured is None else "host_did_not_confirm_gain")
         config.update({"selected_checkpoint_sha256": selected_hash, "selected_rmse": selected_rmse,
-                       "host_candidate_rmse": measured, "cpu_seconds": process_time() - started})
+                       "host_candidate_rmse": measured, "adoption_reason": reason, "minimum_gain_cycles": MIN_GAIN_CYCLES,
+                       "cpu_seconds": process_time() - started})
         outcomes = [{"action": trial["recipe"], "gain": parent_metrics["rmse"] - trial["rmse"],
-                     "rmse": trial["rmse"], "first_round": rnd.round_index} for trial in trials]
+                     "rmse": trial["rmse"], "first_round": rnd.round_index,
+                     "stage_safe": not bool(guard_failures)} for trial in trials]
         events.append({"parent": parent_hash, "training": fit_key, "validation": evaluation_key, "seed": seed,
                        "outcomes": outcomes, "configuration": {"plan": plan, "selected_rmse": selected_rmse}})
         decision_file.write_text(json.dumps(events[-10:], allow_nan=False), encoding="utf-8")
@@ -187,7 +225,7 @@ def train(rnd):
         rnd.save_state(state)
         rnd.finish(selected_artifact_id=selected, hypothesis=plan["hypothesis"], configuration=config, seed=seed,
                    change_summary=f"C continuation actions {plan['actions']!r}.",
-                   reason=f"Parent RMSE {parent_metrics['rmse']:.6f}, selected RMSE {selected_rmse:.6f} cycles.",
+                   reason=f"Parent RMSE {parent_metrics['rmse']:.6f}, selected RMSE {selected_rmse:.6f} cycles. {reason}.",
                    history_ids=[record["id"] for record in history], model_call_ids=list(rnd.call_ids))
 
 

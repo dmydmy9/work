@@ -6,6 +6,8 @@ import json
 from pathlib import Path
 import shutil
 
+import numpy as np
+
 from school_cache import array_digest, fingerprint
 from school_planner import parse_plan
 
@@ -74,6 +76,22 @@ def metric_gain(parent, candidate, direction):
     if direction == "lower":
         return parent - candidate
     raise ValueError(f"unsupported metric direction {direction}")
+
+
+def scope_rmse(targets, predictions, bands, groups=None):
+    """Measure disjoint RUL bands and verified cohorts on one validation projection."""
+    squared = (predictions - targets) ** 2
+    band = np.digitize(targets, bands)
+    definitions = [(f"rul:{index}", band == index) for index in range(len(bands) + 1)]
+    if groups is not None:
+        definitions.extend((f"cohort:{key}", groups == key) for key in np.unique(groups))
+    return {key: float(np.sqrt(squared[mask].mean())) for key, mask in definitions if np.count_nonzero(mask) >= 8}
+
+
+def scope_regressions(parent, candidate, *, ratio, absolute):
+    """Compare aligned scores with an absolute floor for nearly perfect parent cohorts."""
+    return {key: score - parent[key] for key, score in candidate.items()
+            if score - parent[key] > max(absolute, (ratio - 1.) * parent[key])}
 
 
 def write_candidate(directory, checkpoint, report, *, source_dir, baseline_dir, code_files):

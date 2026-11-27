@@ -5,10 +5,11 @@ import re
 
 import numpy as np
 
-from school_c_kernel import METADATA_KEY, fit_regime_kernel
+from school_c_kernel import METADATA_KEY, RUL_CAP_KEY, fit_regime_kernel, fit_rul_caps
 
 
 # Keep batch size and optimizer-step budget equal across the first comparisons.
+CAP_RECIPE = "regime-kernel-cap-5"
 RECIPES = {
     "regime-kernel-5": (5, .0005, False),
     "official-5": (5, .002, False),
@@ -16,6 +17,7 @@ RECIPES = {
     "accelerated-5": (5, .004, False),
     "engine-balanced-5": (5, .002, True),
 }
+CITY_RECIPES = {**RECIPES, CAP_RECIPE: RECIPES["regime-kernel-5"]}
 ENGINE_ID = re.compile(r"(fd00[1-4])_train_(u\d+)_c\d+", re.ASCII)
 
 
@@ -32,15 +34,17 @@ def group_ids(ids, *, allow_opaque=False):
 
 
 def continue_parent(parent, features, targets, groups, recipe, *, epochs=None):
-    default_epochs, rate, balance = RECIPES[recipe]
+    default_epochs, rate, balance = CITY_RECIPES[recipe]
     if epochs is None:
         epochs = default_epochs
     model = deepcopy(parent)
     model.meta.update(learning_rate=rate, batch_size=256)
     if not balance:
         losses = model.fit(features, targets, epochs)
-        if recipe == "regime-kernel-5":
+        if recipe in ("regime-kernel-5", CAP_RECIPE):
             model.meta[METADATA_KEY] = fit_regime_kernel(model, features, targets)
+        if recipe == CAP_RECIPE:
+            model.meta[RUL_CAP_KEY] = fit_rul_caps(model.meta["paths"], features, targets)
         return model, losses
 
     _, inverse, counts = np.unique(groups, return_inverse=True, return_counts=True)

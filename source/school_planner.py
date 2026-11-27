@@ -57,7 +57,7 @@ def parse_plan(text, context):
     return plan
 
 
-def history_evidence(events, *, parent_hash, train_key, evaluation_key, seed):
+def history_evidence(events, *, parent_hash, train_key, evaluation_key, seed, compact=False):
     current = {}
     groups = {}
     for event in reversed(events):
@@ -71,10 +71,17 @@ def history_evidence(events, *, parent_hash, train_key, evaluation_key, seed):
             continue
         for outcome in event["outcomes"]:
             destination.setdefault(outcome["action"], outcome)
-    # Preserve all current evidence up to the small action limit and summarize two older parents.
+    def for_planner(records, limit):
+        rows = list(records.values())[:limit]
+        if not compact:
+            return rows
+        return [{"action": row["action"], "gain": round(row["gain"], 3),
+                 "stage_safe": row.get("stage_safe", True), "first_round": row["first_round"]} for row in rows]
+
     return {
-        "current": list(current.values())[:12],
-        "prior": [{"parent": identity, "outcomes": list(group.values())[:4]}
+        "current": for_planner(current, 6 if compact else 12),
+        "prior": [{"parent": identity[7:19] if compact else identity,
+                   "outcomes": for_planner(group, 2 if compact else 4)}
                   for identity, group in list(groups.items())[:2]],
     }
 
@@ -105,7 +112,7 @@ def rank_untried_actions(context):
     prior_gains = {name: 0.0 for name in context["available"]}
     for group in history["prior"]:
         for outcome in group["outcomes"]:
-            if outcome["action"] in prior_gains:
+            if outcome["action"] in prior_gains and outcome.get("stage_safe", True):
                 prior_gains[outcome["action"]] += outcome["gain"]
     preference = context["preference"]
     candidates = sorted((name for name in preference if name not in tested),

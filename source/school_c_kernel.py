@@ -5,6 +5,7 @@ import numpy as np
 
 SETTINGS_PATH = '[["key","settings"],["index",0]]'
 METADATA_KEY = "c_regime_kernel_v1"
+RUL_CAP_KEY = "c_fitted_rul_caps_v1"
 FEATURE_COUNT = 96
 
 
@@ -19,7 +20,7 @@ def kernel_basis(x, center, scale, active, frequencies, phase):
     return kernel * np.sqrt(2 / kernel.shape[1])
 
 
-def fit_regime_kernel(model, x, truth, *, width=.7, penalty=.004, strength=1.):
+def fit_regime_kernel(model, x, truth, *, width=.7, penalty=.004, strength=1., tail_weight=0.):
     paths = model.meta["paths"]
     regimes = np.rint(x[:, paths.index(SETTINGS_PATH)]).astype(int)
     sensors = np.asarray([index for index, path in enumerate(paths) if '["key","sensors"]' in path])
@@ -48,8 +49,15 @@ def fit_regime_kernel(model, x, truth, *, width=.7, penalty=.004, strength=1.):
         frequencies = rng.normal(0, 1 / max(median * width, 1e-3), size=(len(active), FEATURE_COUNT))
         phase = rng.uniform(0, 2 * np.pi, FEATURE_COUNT)
         design = np.column_stack((linear[selected], kernel_basis(rows, center, scale, active, frequencies, phase)))
-        gram = design.T @ design + len(design) * penalty * np.eye(design.shape[1])
-        coefficients = np.linalg.solve(gram, design.T @ residual[selected])
+        ridge = len(design) * penalty * np.eye(design.shape[1])
+        coefficients = np.linalg.solve(design.T @ design + ridge, design.T @ residual[selected])
+        if tail_weight:
+            # Apply one bounded reweighting from the original fit. Estimate using fitting errors only.
+            error = np.clip(design @ coefficients, -60, 60) - residual[selected]
+            asymmetric = np.where(error > 0, error / 10, -error / 13)
+            weights = 1 + tail_weight * np.expm1(np.clip(asymmetric - 3, 0, np.log(9)))
+            weighted_design = design.T * weights
+            coefficients = np.linalg.solve(weighted_design @ design + ridge, weighted_design @ residual[selected])
         corrections[str(regime)] = {"active": active.tolist(), "center": center.tolist(), "scale": scale.tolist(),
                                     "frequencies": frequencies.tolist(), "phase": phase.tolist(),
                                     "coefficients": coefficients.tolist()}
@@ -86,7 +94,7 @@ def compile_regime_kernel(model, metadata=None):
 def predict_regime_kernel(model, x, compiled):
     predicted = model.predict(x)
     if compiled is None:
-        return predicted
+        return apply_rul_caps(model, x, predicted)
     strength, settings, corrections = compiled
     regimes = np.rint(x[:, settings]).astype(int)
     linear = linear_basis(model, x)
@@ -97,4 +105,36 @@ def predict_regime_kernel(model, x, compiled):
         selected = regimes == regime
         design = np.column_stack((linear[selected], kernel_basis(x[selected], center, scale, active, frequencies, phase)))
         predicted[selected] += strength * np.clip(design @ coefficients, -60, 60)
-    return np.maximum(0, predicted)
+    return apply_rul_caps(model, x, np.maximum(0, predicted))
+
+
+def fit_rul_caps(paths, x, targets):
+    regimes = np.rint(x[:, paths.index(SETTINGS_PATH)]).astype(int)
+    return {"global": float(np.quantile(targets, .95)),
+            "regimes": {str(key): float(np.quantile(targets[regimes == key], .95))
+                        for key in np.unique(regimes) if np.count_nonzero(regimes == key) >= 256}}
+
+
+def validate_rul_caps(model):
+    caps = model.meta.get(RUL_CAP_KEY)
+    if caps is None:
+        return
+    if not isinstance(caps, dict) or set(caps) != {"global", "regimes"} or not isinstance(caps["regimes"], dict):
+        raise ValueError("invalid C fitted RUL caps")
+    values = [caps["global"], *caps["regimes"].values()]
+    if any(type(value) not in (int, float) or not np.isfinite(value) or value < 0 for value in values):
+        raise ValueError("invalid C fitted RUL cap values")
+    if any(str(int(key)) != key for key in caps["regimes"]):
+        raise ValueError("invalid C fitted RUL cap regime")
+
+
+def apply_rul_caps(model, x, predictions):
+    caps = model.meta.get(RUL_CAP_KEY)
+    if caps is None:
+        return predictions
+    settings = model.meta["paths"].index(SETTINGS_PATH)
+    regimes = np.rint(x[:, settings]).astype(int)
+    maximum = np.full(len(x), caps["global"])
+    for key, cap in caps["regimes"].items():
+        maximum[regimes == int(key)] = cap
+    return np.minimum(predictions, maximum)

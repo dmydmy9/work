@@ -1,0 +1,533 @@
+[
+  {
+    "pack": "B",
+    "source": "matched drift replay",
+    "round": 5,
+    "history_round": 1,
+    "finding": "Old rejection was qualified by previous training projection. The same recipe became eligible and was adopted after fitting coverage expanded.",
+    "before": {
+      "adoption": {
+        "accepted": false,
+        "gain": 0.0,
+        "margin": 1e-06,
+        "measurement_source": "local",
+        "reason": "stage_guard",
+        "selected_rmse": 245.14929367610208
+      },
+      "execution": {
+        "cpu_seconds": 1.7896397439999998,
+        "optimizer_steps": 1,
+        "reused_candidates": 0,
+        "reused_scores": 0,
+        "scored_candidates": 1,
+        "trained_candidates": 1,
+        "training_rows": 3982
+      },
+      "fitting_projection_sha256": "0f1cb925f02caa390b3de3877fbdcf067fa588ca391c50401822d4509b2f3e30",
+      "historical_bands_missing": [],
+      "parent_checkpoint_sha256": "sha256:c7d819fcee9d25459c583b5ffdb35593d4a47b524ed152d0226bf81a283314b4",
+      "parent_prediction_sha256": "12bdf5ba5364765e35e372e63b0bb1d2cea7621413040d88189745ede2452e4f",
+      "plan": {
+        "actions": [
+          "transfer-coverage-quarter"
+        ],
+        "expected": "Improve on the same public projection.",
+        "failure": "Keep the measured parent when unsafe.",
+        "hypothesis": "Measure the best supported untried recipe."
+      },
+      "planner_fallback": false,
+      "planner_issue": null,
+      "profile": "B",
+      "raw_reply": "{\"actions\":[\"transfer-coverage-quarter\"],\"hypothesis\":\"Measure the best supported untried recipe.\",\"expected\":\"Improve on the same public projection.\",\"failure\":\"Keep the measured parent when unsafe.\"}",
+      "recipe": null,
+      "reuse_only": false,
+      "screening": "whole-bearing and whole-condition training projections",
+      "stage_rejections": {
+        "transfer-coverage-quarter": {
+          "cohort:Bearing2_3": 19.096941062882763
+        }
+      },
+      "trials": [
+        {
+          "actual_optimizer_steps": 1,
+          "actual_training_rows": 3982,
+          "cache": {
+            "checkpoint_sha256": "sha256:82c8f30c40cfbdc9667545a84cf506511410cde6c89ce7a7a7d32aace2c0fa6d",
+            "prediction_sha256": "8e18b40fac85c72d5ec280c4c5657efb21472ea63fe7417cbdfbc9c7aceb2215",
+            "score_first_round": 1,
+            "score_key": "0cb5e1702795c1e0944dda5cdf01623ca4409b9a9fb6027717d36937538c4f92",
+            "score_reused_from_round": null,
+            "training_key": "91d8dd670355816486a80262a476766780452a97cd1d3effc6cf2a3153292a36",
+            "training_reused_from_round": null
+          },
+          "final_steps": 826,
+          "initial_steps": 825,
+          "mae": 162.01705230848597,
+          "recipe": "transfer-coverage-quarter",
+          "rmse": 248.02784226662686,
+          "scope_rmse": {
+            "cohort:Bearing1_3": 474.6323624411257,
+            "cohort:Bearing2_3": 146.923917648493,
+            "cohort:Bearing3_3": 221.68582226287543,
+            "rul:0": 266.2358756212664,
+            "rul:1": 129.7556521374225
+          },
+          "training_rows": 3982
+        }
+      ],
+      "validation_bearings_verified": true,
+      "validation_projection_sha256": "97f6c88e2668125a371ffadf52f1df4c0604c2adf9fc52030e58ec1723bde4b5"
+    },
+    "after": {
+      "adoption": {
+        "accepted": true,
+        "gain": 7.823235329852736,
+        "margin": 1e-06,
+        "measurement_source": "host",
+        "reason": "lower_rmse",
+        "selected_rmse": 237.32605834624934
+      },
+      "execution": {
+        "cpu_seconds": 2.25071531,
+        "optimizer_steps": 1,
+        "reused_candidates": 0,
+        "reused_scores": 0,
+        "scored_candidates": 1,
+        "trained_candidates": 1,
+        "training_rows": 5970
+      },
+      "fitting_projection_sha256": "12294551ade2d8559fb66f9c51ec68786435eef913e9f302e6e425c74adc2c12",
+      "historical_bands_missing": [],
+      "parent_checkpoint_sha256": "sha256:c7d819fcee9d25459c583b5ffdb35593d4a47b524ed152d0226bf81a283314b4",
+      "parent_prediction_sha256": "12bdf5ba5364765e35e372e63b0bb1d2cea7621413040d88189745ede2452e4f",
+      "plan": {
+        "actions": [
+          "transfer-coverage-quarter"
+        ],
+        "expected": "Improve on the same public projection.",
+        "failure": "Keep the measured parent when unsafe.",
+        "hypothesis": "Measure the best supported untried recipe."
+      },
+      "planner_fallback": false,
+      "planner_issue": null,
+      "profile": "B",
+      "raw_reply": "{\"actions\":[\"transfer-coverage-quarter\"],\"hypothesis\":\"Measure the best supported untried recipe.\",\"expected\":\"Improve on the same public projection.\",\"failure\":\"Keep the measured parent when unsafe.\"}",
+      "recipe": "transfer-coverage-quarter",
+      "reuse_only": false,
+      "screening": "whole-bearing and whole-condition training projections",
+      "stage_rejections": {},
+      "trials": [
+        {
+          "actual_optimizer_steps": 1,
+          "actual_training_rows": 5970,
+          "cache": {
+            "checkpoint_sha256": "sha256:3bed78459f60a87ca56a638d035f0c9dda0202f03b3e74b4dd576b53ba0a932d",
+            "prediction_sha256": "a7dc071ecffdb4e34ea0986cfe1d7c83c27032d3fa47761a8142be58ab0dfc80",
+            "score_first_round": 5,
+            "score_key": "a9ffbe6483b5edc0218349ede778a2aa0db6de1f4c863713dc62efbdf6eda35b",
+            "score_reused_from_round": null,
+            "training_key": "d58625c8a23ec5f270a59b1849806e4fcf2a2fad31a43366b4e2c082b0dbd922",
+            "training_reused_from_round": null
+          },
+          "final_steps": 826,
+          "initial_steps": 825,
+          "mae": 151.84914672664848,
+          "recipe": "transfer-coverage-quarter",
+          "rmse": 237.32605834624934,
+          "scope_rmse": {
+            "cohort:Bearing1_3": 463.7370210371322,
+            "cohort:Bearing2_3": 125.33333894417758,
+            "cohort:Bearing3_3": 216.96822544448307,
+            "rul:0": 254.20738849056937,
+            "rul:1": 129.3406934651464
+          },
+          "training_rows": 5970
+        }
+      ],
+      "validation_bearings_verified": true,
+      "validation_projection_sha256": "97f6c88e2668125a371ffadf52f1df4c0604c2adf9fc52030e58ec1723bde4b5"
+    }
+  },
+  {
+    "pack": "B",
+    "source": "matched drift replay",
+    "round": 8,
+    "history_round": 6,
+    "finding": "The last adopted checkpoint had measured RUL bands missing from the narrower validation projection. Retained the parent.",
+    "narrowed": {
+      "adoption": {
+        "accepted": false,
+        "gain": 0.0,
+        "margin": 1e-06,
+        "measurement_source": "local",
+        "reason": "historical_scope_unobserved",
+        "selected_rmse": 189.40641549242022
+      },
+      "execution": {
+        "cpu_seconds": 1.151394301,
+        "optimizer_steps": 0,
+        "reused_candidates": 0,
+        "reused_scores": 0,
+        "scored_candidates": 0,
+        "trained_candidates": 0,
+        "training_rows": 0
+      },
+      "fitting_projection_sha256": "12294551ade2d8559fb66f9c51ec68786435eef913e9f302e6e425c74adc2c12",
+      "historical_bands_missing": [
+        "rul:1"
+      ],
+      "parent_checkpoint_sha256": "sha256:f035374b1ef0f103209928fdc3e57ef0398f98c7ca669993d26f8bea0f7aef72",
+      "parent_prediction_sha256": "15ac957fcdaf226696a2155d9f88ba49e8cb838a6ac8c8b6bef82414e8da6ca3",
+      "plan": {
+        "actions": [],
+        "expected": "Improve on the same public projection.",
+        "failure": "Keep the measured parent when unsafe.",
+        "hypothesis": "Measure the best supported untried recipe."
+      },
+      "planner_fallback": false,
+      "planner_issue": null,
+      "profile": "B",
+      "raw_reply": "{\"actions\":[],\"hypothesis\":\"Measure the best supported untried recipe.\",\"expected\":\"Improve on the same public projection.\",\"failure\":\"Keep the measured parent when unsafe.\"}",
+      "recipe": null,
+      "reuse_only": true,
+      "screening": "whole-bearing and whole-condition training projections",
+      "stage_rejections": {},
+      "trials": [],
+      "validation_bearings_verified": true,
+      "validation_projection_sha256": "65facc4d78ad7d4ee74fde6108f3f7e7a0d55973e177d07df722139eb4e03480"
+    },
+    "previous_same_parent": {
+      "adoption": {
+        "accepted": false,
+        "gain": 0.0,
+        "margin": 1e-06,
+        "measurement_source": "local",
+        "reason": "stage_guard",
+        "selected_rmse": 230.5378235867653
+      },
+      "execution": {
+        "cpu_seconds": 0.8643687390000001,
+        "optimizer_steps": 47,
+        "reused_candidates": 0,
+        "reused_scores": 0,
+        "scored_candidates": 1,
+        "trained_candidates": 1,
+        "training_rows": 5970
+      },
+      "fitting_projection_sha256": "12294551ade2d8559fb66f9c51ec68786435eef913e9f302e6e425c74adc2c12",
+      "historical_bands_missing": [],
+      "parent_checkpoint_sha256": "sha256:f035374b1ef0f103209928fdc3e57ef0398f98c7ca669993d26f8bea0f7aef72",
+      "parent_prediction_sha256": "b6fe4399c7485f9651b219e059babd6e1bd920d778d415050e5b246b0baac334",
+      "plan": {
+        "actions": [
+          "calibrated-update-1"
+        ],
+        "expected": "Improve on the same public projection.",
+        "failure": "Keep the measured parent when unsafe.",
+        "hypothesis": "Measure the best supported untried recipe."
+      },
+      "planner_fallback": false,
+      "planner_issue": null,
+      "profile": "B",
+      "raw_reply": "{\"actions\":[\"calibrated-update-1\"],\"hypothesis\":\"Measure the best supported untried recipe.\",\"expected\":\"Improve on the same public projection.\",\"failure\":\"Keep the measured parent when unsafe.\"}",
+      "recipe": null,
+      "reuse_only": false,
+      "screening": "whole-bearing and whole-condition training projections",
+      "stage_rejections": {
+        "calibrated-update-1": {
+          "cohort:Bearing1_3": 23.850233645460264
+        }
+      },
+      "trials": [
+        {
+          "actual_optimizer_steps": 47,
+          "actual_training_rows": 5970,
+          "cache": {
+            "checkpoint_sha256": "sha256:2b5709da68d32a10aaa4ff937f1d95ef95add7c138eef66ac90a9bf6e03510c1",
+            "prediction_sha256": "f06fe9b8e18221007474f91495f0073907cb0757fb92035f888db3761c1922b2",
+            "score_first_round": 7,
+            "score_key": "c069d907cbe5596ff7465c25ee8fff05e29808beb01e2038bef5dda91c045040",
+            "score_reused_from_round": null,
+            "training_key": "405b7c9c0e3524f78cd70bd3369b490bd60749a9b45c14dce609c0dcdd454c47",
+            "training_reused_from_round": null
+          },
+          "final_steps": 913,
+          "initial_steps": 866,
+          "mae": 152.40836758341533,
+          "recipe": "calibrated-update-1",
+          "rmse": 238.7717684602096,
+          "scope_rmse": {
+            "cohort:Bearing1_3": 471.79417687429554,
+            "cohort:Bearing2_3": 121.15781041707719,
+            "cohort:Bearing3_3": 217.51783644291248,
+            "rul:0": 256.8986025725296,
+            "rul:1": 118.90413552785533
+          },
+          "training_rows": 5970
+        }
+      ],
+      "validation_bearings_verified": true,
+      "validation_projection_sha256": "97f6c88e2668125a371ffadf52f1df4c0604c2adf9fc52030e58ec1723bde4b5"
+    }
+  },
+  {
+    "pack": "C",
+    "source": "byte-exact PyTRiO replay",
+    "round": 3,
+    "history_round": 2,
+    "finding": "The capped continuation was already measured without sufficient gain on this parent and projection. Reused that evidence and preserved the parent.",
+    "tested": {
+      "adoption_reason": "below_minimum_gain",
+      "context": {
+        "available": {
+          "accelerated-5": "double the official learning rate",
+          "conservative-5": "lower the official learning rate by four",
+          "engine-balanced-5": "sample engines with equal probability at the official rate",
+          "official-5": "continue at the official learning rate",
+          "regime-kernel-cap-5": "fit regime residuals with a high RUL prediction cap estimated on training data"
+        },
+        "budget": {
+          "actions": 1,
+          "max_output_tokens": 128,
+          "wall_seconds": 60
+        },
+        "history": {
+          "current": [],
+          "prior": [
+            {
+              "outcomes": [
+                {
+                  "action": "regime-kernel-cap-5",
+                  "first_round": 1,
+                  "gain": 3.789,
+                  "stage_safe": true
+                }
+              ],
+              "parent": "98ec6e30e38a"
+            }
+          ]
+        },
+        "parent": "cfc9ce0dae0b",
+        "parent_metrics": {
+          "mae": 35.19522,
+          "overestimate_q99": 94.1244,
+          "rmse": 49.07947
+        },
+        "preference": [
+          "regime-kernel-cap-5",
+          "conservative-5",
+          "official-5",
+          "engine-balanced-5",
+          "accelerated-5"
+        ],
+        "profile": "C",
+        "round": 2
+      },
+      "cpu_seconds": 2.221926681,
+      "execution": {
+        "optimizer_steps": 2210,
+        "reused_candidates": 0,
+        "reused_scores": 0,
+        "scored_candidates": 1,
+        "trained_candidates": 1,
+        "training_rows": 565445
+      },
+      "fitting_engine_groups_verified": true,
+      "fitting_projection_sha256": "52143d73e53c7fb895826b6dc3c97242385732e5653a832d09354a73a29abdac",
+      "host_candidate_rmse": null,
+      "minimum_gain_cycles": 0.025,
+      "parent_checkpoint_sha256": "sha256:cfc9ce0dae0b351f7ffbbe71957a8aa678d1ebb2a729833fe238693ad4ebe895",
+      "parent_metrics": {
+        "mae": 35.19521985034898,
+        "nasa_score": 1722241393.6115723,
+        "overestimate_nasa": 178374958.2179853,
+        "overestimate_q99": 94.12439974887562,
+        "rmse": 49.07947472629151,
+        "scope_rmse": {
+          "cohort:0": 45.26927314926369,
+          "cohort:10": 52.43442229838225,
+          "cohort:20": 49.295854858773616,
+          "cohort:25": 50.154474145920794,
+          "cohort:35": 51.78511322154175,
+          "cohort:42": 52.71297820533127,
+          "rul:0": 16.122316575127588,
+          "rul:1": 39.269738554654616,
+          "rul:2": 37.75251552865562,
+          "rul:3": 83.21380635331249
+        }
+      },
+      "plan": {
+        "actions": [
+          "regime-kernel-cap-5"
+        ],
+        "expected": "Lower RMSE with safe RUL bands.",
+        "failure": "RUL bands breached or RMSE rises.",
+        "hypothesis": "High RUL cap protects tails and lowers RMSE."
+      },
+      "planner_fallback": false,
+      "profile": "C",
+      "selected_checkpoint_sha256": "sha256:cfc9ce0dae0b351f7ffbbe71957a8aa678d1ebb2a729833fe238693ad4ebe895",
+      "selected_rmse": 49.07947472629151,
+      "stage_rejections": {},
+      "trials": [
+        {
+          "actual_optimizer_steps": 2210,
+          "actual_training_rows": 565445,
+          "cache": {
+            "checkpoint_sha256": "sha256:b6e6ebc06d5c6be93c7602f2ab5112e708bd52d9676b57459fdc2c40ebee6571",
+            "prediction_sha256": "fc48ceab80af5366b9e256d9a83497d80fe65d54e9992e789974d81134221287",
+            "score_first_round": 2,
+            "score_key": "0ff54dcc67c32c29792944a53eb3fed0ec4c795c3d63c780a9c613f3e0951123",
+            "score_reused_from_round": null,
+            "training_key": "8e87060faf1ec59091b468a5321549b2cc1274541b77f351c7fb138fcd545495",
+            "training_reused_from_round": null
+          },
+          "final_steps": 11050,
+          "initial_steps": 8840,
+          "mae": 35.18835248060814,
+          "nasa_score": 1719401989.3042178,
+          "overestimate_nasa": 179399580.71917856,
+          "overestimate_q99": 94.2763108859594,
+          "recipe": "regime-kernel-cap-5",
+          "rmse": 49.0728531330568,
+          "scope_rmse": {
+            "cohort:0": 45.2480425604289,
+            "cohort:10": 52.43871039320954,
+            "cohort:20": 49.29894228128491,
+            "cohort:25": 50.16275678895761,
+            "cohort:35": 51.78071393416345,
+            "cohort:42": 52.7130327078532,
+            "rul:0": 16.140251028067173,
+            "rul:1": 39.25213338559179,
+            "rul:2": 37.7675286499557,
+            "rul:3": 83.19052162261701
+          },
+          "training_rows": 565445
+        }
+      ],
+      "validation_projection_sha256": "50df71c6a0fe147a9f3386398daff998efe26a5327cf50d1ef7024354bab850e"
+    },
+    "follow_up": {
+      "adoption_reason": "no_candidate",
+      "context": {
+        "available": {
+          "accelerated-5": "double the official learning rate",
+          "conservative-5": "lower the official learning rate by four",
+          "engine-balanced-5": "sample engines with equal probability at the official rate",
+          "official-5": "continue at the official learning rate"
+        },
+        "budget": {
+          "actions": 1,
+          "max_output_tokens": 128,
+          "wall_seconds": 60
+        },
+        "history": {
+          "current": [
+            {
+              "action": "regime-kernel-cap-5",
+              "first_round": 2,
+              "gain": 0.007,
+              "stage_safe": true
+            }
+          ],
+          "prior": [
+            {
+              "outcomes": [
+                {
+                  "action": "regime-kernel-cap-5",
+                  "first_round": 1,
+                  "gain": 3.789,
+                  "stage_safe": true
+                }
+              ],
+              "parent": "98ec6e30e38a"
+            }
+          ]
+        },
+        "parent": "cfc9ce0dae0b",
+        "parent_metrics": {
+          "mae": 35.19522,
+          "overestimate_q99": 94.1244,
+          "rmse": 49.07947
+        },
+        "preference": [
+          "conservative-5",
+          "official-5",
+          "engine-balanced-5",
+          "accelerated-5"
+        ],
+        "profile": "C",
+        "round": 3
+      },
+      "cpu_seconds": 1.363651561,
+      "execution": {
+        "optimizer_steps": 0,
+        "reused_candidates": 0,
+        "reused_scores": 0,
+        "scored_candidates": 0,
+        "trained_candidates": 0,
+        "training_rows": 0
+      },
+      "fitting_engine_groups_verified": true,
+      "fitting_projection_sha256": "52143d73e53c7fb895826b6dc3c97242385732e5653a832d09354a73a29abdac",
+      "host_candidate_rmse": null,
+      "minimum_gain_cycles": 0.025,
+      "parent_checkpoint_sha256": "sha256:cfc9ce0dae0b351f7ffbbe71957a8aa678d1ebb2a729833fe238693ad4ebe895",
+      "parent_metrics": {
+        "mae": 35.19521985034898,
+        "nasa_score": 1722241393.6115723,
+        "overestimate_nasa": 178374958.2179853,
+        "overestimate_q99": 94.12439974887562,
+        "rmse": 49.07947472629151,
+        "scope_rmse": {
+          "cohort:0": 45.26927314926369,
+          "cohort:10": 52.43442229838225,
+          "cohort:20": 49.295854858773616,
+          "cohort:25": 50.154474145920794,
+          "cohort:35": 51.78511322154175,
+          "cohort:42": 52.71297820533127,
+          "rul:0": 16.122316575127588,
+          "rul:1": 39.269738554654616,
+          "rul:2": 37.75251552865562,
+          "rul:3": 83.21380635331249
+        }
+      },
+      "plan": {
+        "actions": [],
+        "expected": "No further RMSE reduction possible.",
+        "failure": "No viable actions remain.",
+        "hypothesis": "Existing trials exhausted useful candidates."
+      },
+      "planner_fallback": false,
+      "profile": "C",
+      "selected_checkpoint_sha256": "sha256:cfc9ce0dae0b351f7ffbbe71957a8aa678d1ebb2a729833fe238693ad4ebe895",
+      "selected_rmse": 49.07947472629151,
+      "stage_rejections": {},
+      "trials": [],
+      "validation_projection_sha256": "50df71c6a0fe147a9f3386398daff998efe26a5327cf50d1ef7024354bab850e"
+    },
+    "planner_history": {
+      "current": [
+        {
+          "action": "regime-kernel-cap-5",
+          "first_round": 2,
+          "gain": 0.007,
+          "stage_safe": true
+        }
+      ],
+      "prior": [
+        {
+          "outcomes": [
+            {
+              "action": "regime-kernel-cap-5",
+              "first_round": 1,
+              "gain": 3.789,
+              "stage_safe": true
+            }
+          ],
+          "parent": "98ec6e30e38a"
+        }
+      ]
+    }
+  }
+]
